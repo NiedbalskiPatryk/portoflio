@@ -50,7 +50,7 @@ const Footer: React.FC<FooterProps> = ({
     >
       <Box
         sx={{
-          maxWidth: "lg",
+          maxWidth: { xs: "100%", lg: "1200px" },
           mx: "auto",
         }}
       >
