@@ -84,3 +84,27 @@ Architecture & Design Methodology
 - Avoid building large, monolithic components.
 - Keep clear separation between layout, structure, and presentation.
 - Name components and folders according to their atomic level.
+
+Structure example:
+
+components/
+├── atoms/
+│ ├── Button/
+│ │ └── Button.tsx
+│
+├── molecules/
+│ ├── NavigationMenu/
+│ ├── CTAGroup/
+│
+├── organisms/
+│ ├── Header/
+│ ├── HeroSection/
+│ ├── ServicesGrid/
+│ ├── ProjectsSection/
+│
+├── templates/
+│ ├── PortfolioLayout/
+│ ├── SectionWrapper/
+│
+└── pages/ (or app/)
+└── HomePage/

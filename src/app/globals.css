@@ -1,14 +1,4 @@
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
+/* Global styles - MUI CssBaseline handles most resets */
 
 html,
 body {
@@ -16,27 +6,29 @@ body {
   overflow-x: hidden;
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
 }
 
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
+/* Anchor scroll offset for fixed header */
+html {
+  scroll-padding-top: 80px;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+/* Smooth theme transitions */
+body,
+body * {
+  transition: background-color 0.3s ease, border-color 0.3s ease, color 0.2s ease;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
+/* Faster transitions for interactive elements */
+.MuiChip-root,
+.MuiButton-root {
+  transition: background-color 0.15s ease, border-color 0.15s ease, color 0.15s ease, transform 0.15s ease !important;
+}
+
+/* Preserve marquee animation - only transition colors */
+[style*="translateX"] {
+  transition: color 0.2s ease !important;
 }

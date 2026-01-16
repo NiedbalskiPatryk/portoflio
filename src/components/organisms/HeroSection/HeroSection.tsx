@@ -1,0 +1,183 @@
+"use client";
+
+import Box from "@mui/material/Box";
+import Container from "@mui/material/Container";
+import Typography from "@mui/material/Typography";
+import Stack from "@mui/material/Stack";
+import { useTheme } from "@mui/material/styles";
+import { LocationBadge, CTAGroup, TechStackMarquee } from "@/components/molecules";
+import FloatingCode from "@/components/atoms/FloatingCode";
+
+interface HeroSectionProps {
+  location: string;
+  name: string;
+  role: string;
+  description: string;
+  primaryCTA: {
+    label: string;
+    onClick?: () => void;
+    href?: string;
+  };
+  secondaryCTA: {
+    label: string;
+    onClick?: () => void;
+    href?: string;
+  };
+  technologies: string[];
+}
+
+export default function HeroSection({
+  location,
+  name,
+  role,
+  description,
+  primaryCTA,
+  secondaryCTA,
+  technologies,
+}: HeroSectionProps) {
+  const theme = useTheme();
+  const { gradientStart, gradientMid, gradientEnd } = theme.palette.surface;
+
+  return (
+    <Box
+      id="home"
+      component="section"
+      sx={{
+        minHeight: "100vh",
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        justifyContent: "center",
+        py: { xs: 4, md: 6 },
+        position: "relative",
+        overflow: "hidden",
+      }}
+    >
+      {/* Floating code snippets */}
+      <FloatingCode
+        snippet={`<div className="hero">
+  <h1>Hello World</h1>
+</div>`}
+        position="left"
+        offsetY="15%"
+        delay={0}
+      />
+      <FloatingCode
+        snippet={`const App = () => {
+  return <Layout />;
+};`}
+        position="left"
+        offsetY="60%"
+        delay={200}
+      />
+      <FloatingCode
+        snippet={`interface Props {
+  name: string;
+  role: string;
+}`}
+        position="right"
+        offsetY="20%"
+        delay={100}
+      />
+      <FloatingCode
+        snippet={`.container {
+  display: flex;
+  align-items: center;
+}`}
+        position="right"
+        offsetY="65%"
+        delay={300}
+      />
+
+      {/* Gradient circle background */}
+      <Box
+        sx={{
+          position: "absolute",
+          top: "50%",
+          left: "50%",
+          transform: "translate(-50%, -50%)",
+          width: { xs: "350px", sm: "500px", md: "700px" },
+          height: { xs: "350px", sm: "500px", md: "700px" },
+          borderRadius: "50%",
+          background: `radial-gradient(circle, ${gradientStart} 0%, ${gradientMid} 30%, ${gradientEnd} 50%, transparent 70%)`,
+          filter: "blur(40px)",
+          pointerEvents: "none",
+          zIndex: 0,
+        }}
+      />
+      <Container maxWidth="md" sx={{ position: "relative", zIndex: 1 }}>
+        <Stack
+          spacing={{ xs: 3, sm: 4 }}
+          alignItems="center"
+          textAlign="center"
+        >
+          {/* Location badge */}
+          <LocationBadge location={location} />
+
+          {/* Heading */}
+          <Box>
+            <Typography
+              variant="h1"
+              component="h1"
+              color="text.primary"
+              sx={{
+                fontSize: { xs: "2rem", sm: "2.5rem", md: "3.5rem" },
+                mb: 1,
+              }}
+            >
+              {name}
+            </Typography>
+            <Typography
+              variant="h2"
+              component="h2"
+              color="text.secondary"
+              sx={{
+                fontSize: { xs: "1.25rem", sm: "1.75rem", md: "2.5rem" },
+              }}
+            >
+              {role}
+            </Typography>
+          </Box>
+
+          {/* Description */}
+          <Typography
+            variant="body1"
+            color="text.secondary"
+            sx={{
+              maxWidth: 600,
+              fontSize: { xs: "0.875rem", md: "1rem" },
+              display: "-webkit-box",
+              WebkitLineClamp: { xs: 3, sm: 4 },
+              WebkitBoxOrient: "vertical",
+              overflow: "hidden",
+            }}
+          >
+            {description}
+          </Typography>
+
+          {/* CTA Buttons */}
+          <CTAGroup
+            primaryCTA={{ ...primaryCTA, variant: "outlined" }}
+            secondaryCTA={{ ...secondaryCTA, variant: "outlined" }}
+          />
+
+          {/* Technologies */}
+          <Box sx={{ pt: { xs: 2, md: 4 }, width: "100%" }}>
+            <Typography
+              variant="caption"
+              color="text.secondary"
+              sx={{
+                mb: 2,
+                display: "block",
+                fontSize: { xs: "0.7rem", md: "0.75rem" },
+              }}
+            >
+              Technologies I use
+            </Typography>
+            <TechStackMarquee technologies={technologies} speed={35} />
+          </Box>
+        </Stack>
+      </Container>
+    </Box>
+  );
+}

@@ -51,7 +51,7 @@ const FAQList: React.FC<FAQListProps> = ({
   }
 
   return (
-    <Stack spacing={{ xs: 2.5, md: 3 }}>
+    <Stack spacing={{ xs: 3, md: 4 }}>
       {items.map((item) => {
         const isExpanded = expandedId === item.id;
         const defaultExpanded = defaultExpandedIds.includes(item.id);

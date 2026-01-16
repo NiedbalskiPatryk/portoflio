@@ -40,6 +40,7 @@ const Footer: React.FC<FooterProps> = ({
     <Box
       component="footer"
       sx={{
+        width: "100%",
         mt: { xs: 6, md: 8 },
         borderTop: 1,
         borderColor: "divider",

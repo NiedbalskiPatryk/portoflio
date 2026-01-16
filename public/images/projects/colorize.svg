@@ -1,0 +1,13 @@
+<svg width="1200" height="675" viewBox="0 0 1200 675" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="675" fill="#121212"/>
+  <rect x="60" y="60" width="1080" height="555" rx="24" fill="#1B1B1B" stroke="#2B2B2B" stroke-width="2"/>
+  <rect x="120" y="140" width="360" height="28" rx="6" fill="#2B2B2B"/>
+  <rect x="120" y="190" width="280" height="20" rx="6" fill="#262626"/>
+  <rect x="120" y="230" width="320" height="20" rx="6" fill="#262626"/>
+  <rect x="640" y="160" width="360" height="40" rx="10" fill="#232323"/>
+  <rect x="640" y="220" width="360" height="40" rx="10" fill="#252525"/>
+  <rect x="640" y="280" width="360" height="40" rx="10" fill="#272727"/>
+  <rect x="640" y="340" width="360" height="40" rx="10" fill="#292929"/>
+  <text x="120" y="420" fill="#5A5A5A" font-size="28" font-family="Arial, Helvetica, sans-serif">Colorize</text>
+  <text x="120" y="460" fill="#3F3F3F" font-size="18" font-family="Arial, Helvetica, sans-serif">Client project placeholder</text>
+</svg>
