@@ -62,9 +62,9 @@ const servicesData = {
     },
     {
       icon: <BrushOutlinedIcon />,
-      title: "UX Experience",
+      title: "Automation & Tooling",
       description:
-        "A great user experience is key to retaining visitors. I focus on intuitive navigation, accessibility, and engaging interfaces to create websites that users love to interact with.",
+        "I help streamline business processes through smart automation. From workflow optimization to building internal tools and admin panels, I create solutions that save time and reduce manual work.",
     },
     {
       icon: <FlashOnOutlinedIcon />,
@@ -80,36 +80,28 @@ const projectsData = {
   description: "Selected work across product, commerce, and brand experiences.",
   projects: [
     {
-      id: "mscs",
-      name: "MSCSC",
+      id: "parkiza",
+      name: "Parkiza",
       summary:
-        "A vibrant ReactJS website for MSCSC, celebrating science, math, and space exploration.",
-      tags: ["React", "TypeScript", "Community"],
-      previewImage: "/images/projects/mscsc.svg",
+        "Enterprise parking reservation system with admin panel and booking interface. Built with Node.js, NestJS, TypeScript, MySQL on backend and React on frontend.",
+      tags: ["Node.js", "NestJS", "React", "MySQL", "TypeScript"],
+      previewImage: "/parkiza.svg",
     },
     {
-      id: "weather-compass",
-      name: "Weather Compass",
+      id: "signalos",
+      name: "SignalOS",
       summary:
-        "A forecasting platform with interactive data visuals and location insights.",
-      tags: ["Next.js", "MUI", "Data Viz"],
-      previewImage: "/images/projects/weather-compass.svg",
+        "Building management operating system with multiple integrated applications. Full-stack solution leveraging modern JavaScript, React, Node.js, and cloud technologies.",
+      tags: ["Next.js", "React", "Node.js", "TypeScript", "Enterprise"],
+      previewImage: "/signal.png",
     },
     {
-      id: "astro-fest",
-      name: "Astro Fest 1.0",
+      id: "areoactive",
+      name: "Areoactive",
       summary:
-        "Event landing experience with immersive visuals and ticketing flows.",
-      tags: ["Branding", "UX", "Marketing"],
-      previewImage: "/images/projects/astro-fest.svg",
-    },
-    {
-      id: "colorize",
-      name: "Colorize",
-      summary:
-        "A modern brand showcase that highlights palette systems and design assets.",
-      tags: ["Design System", "UI", "CMS"],
-      previewImage: "/images/projects/colorize.svg",
+        "High-performance landing page built according to client specifications. Responsive design with modern UI/UX principles.",
+      tags: ["Next.js", "React", "Responsive Design"],
+      previewImage: "/areoactive.webp",
     },
   ],
 };
