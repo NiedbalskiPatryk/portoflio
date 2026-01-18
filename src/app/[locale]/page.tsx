@@ -120,7 +120,7 @@ export default async function Home() {
     ],
     primaryCTA: {
       label: t("about.primaryCTA"),
-      href: "/cv.pdf",
+      href: "/PatrykNiedbalskiCV.pdf",
     },
     secondaryCTA: {
       label: t("about.secondaryCTA"),
