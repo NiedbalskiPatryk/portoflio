@@ -1,12 +1,16 @@
 "use client";
 
+import FloatingCode from "@/components/atoms/FloatingCode";
+import {
+  CTAGroup,
+  LocationBadge,
+  TechStackMarquee,
+} from "@/components/molecules";
 import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
-import Typography from "@mui/material/Typography";
 import Stack from "@mui/material/Stack";
 import { useTheme } from "@mui/material/styles";
-import { LocationBadge, CTAGroup, TechStackMarquee } from "@/components/molecules";
-import FloatingCode from "@/components/atoms/FloatingCode";
+import Typography from "@mui/material/Typography";
 
 interface HeroSectionProps {
   location: string;
@@ -17,11 +21,13 @@ interface HeroSectionProps {
     label: string;
     onClick?: () => void;
     href?: string;
+    color?: "default" | "light";
   };
   secondaryCTA: {
     label: string;
     onClick?: () => void;
     href?: string;
+    color?: "default" | "light";
   };
   technologies: string[];
 }
@@ -157,8 +163,16 @@ export default function HeroSection({
 
           {/* CTA Buttons */}
           <CTAGroup
-            primaryCTA={{ ...primaryCTA, variant: "outlined" }}
-            secondaryCTA={{ ...secondaryCTA, variant: "outlined" }}
+            primaryCTA={{
+              ...primaryCTA,
+              variant: "outlined",
+              color: primaryCTA.color,
+            }}
+            secondaryCTA={{
+              ...secondaryCTA,
+              variant: "outlined",
+              color: secondaryCTA.color,
+            }}
           />
 
           {/* Technologies */}

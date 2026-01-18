@@ -19,11 +19,13 @@ const ProjectPreview: React.FC<ProjectPreviewProps> = ({ project }) => {
         sx={{
           width: "100%",
           aspectRatio: "16 / 9",
-          borderRadius: 2,
+          borderRadius: 3,
           overflow: "hidden",
-          border: "1px solid",
-          borderColor: "divider",
-          backgroundColor: (theme) => theme.palette.action.hover,
+          border: "2px solid",
+          borderColor: (theme) =>
+            theme.palette.mode === "light" ? "#e0e0e0" : "#2B2B2B",
+          backgroundColor: (theme) =>
+            theme.palette.mode === "light" ? "#f5f5f5" : "#1B1B1B",
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
@@ -31,6 +33,7 @@ const ProjectPreview: React.FC<ProjectPreviewProps> = ({ project }) => {
       >
         {hasImage ? (
           <Box
+            key={project?.id ?? "empty"}
             component="img"
             src={project?.previewImage}
             alt={project?.name ?? "Project preview"}
@@ -39,6 +42,11 @@ const ProjectPreview: React.FC<ProjectPreviewProps> = ({ project }) => {
               height: "100%",
               objectFit: "cover",
               display: "block",
+              animation: "previewFade 1000ms ease-out",
+              "@keyframes previewFade": {
+                "0%": { opacity: 0, transform: "scale(1.02)" },
+                "100%": { opacity: 1, transform: "scale(1)" },
+              },
             }}
           />
         ) : (

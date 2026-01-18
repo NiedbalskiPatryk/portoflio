@@ -1,0 +1,129 @@
+{
+  "metadata": {
+    "title": "Patryk Niedbalski - Software Engineer",
+    "description": "Full-stack programista specjalizujący się w nowoczesnych aplikacjach webowych"
+  },
+  "nav": {
+    "home": "Start",
+    "about": "O mnie",
+    "services": "Usługi",
+    "projects": "Projekty",
+    "faq": "FAQ",
+    "contact": "Kontakt"
+  },
+  "hero": {
+    "location": "Warszawa, Polska",
+    "greeting": "Cześć, jestem Patryk",
+    "role": "Software Engineer",
+    "description": "Pomagam firmom tworzyć szybkie i niezawodne aplikacje webowe, które będą przyjazne dla użytkowników. Od pomysłu do wdrożenia - jestem tu, żeby pomóc to zrealizować.",
+    "primaryCTA": "O mnie",
+    "secondaryCTA": "Zobacz co robię",
+    "techLabel": "Technologie, z którymi pracuję"
+  },
+  "about": {
+    "heading": "O mnie",
+    "name": "Patryk Niedbalski",
+    "role": "Software Engineer",
+    "bio": {
+      "paragraph1": "Jestem programistą, który naprawdę lubi zamieniać złożone problemy w proste, eleganckie rozwiązania. Dla mnie kod to nie tylko funkcjonalność - to tworzenie doświadczeń, które są naturalne i intuicyjne.",
+      "paragraph2": "Przez większość swojej kariery pracowałem w firmach o różnych profilach - od startupów i software house’ów po firmy współpracujące z największymi korporacjami świata, tworząc od wewnętrznych narzędzi po platformy dla klientów. Najlepiej czuję się w zespołach, gdzie dobre pomysły mogą przyjść z każdej strony.",
+      "paragraph3": "Kiedy nie koduję, znajdziesz mnie spędzającego czas z rodziną, podróżującego, czytającego książki lub grającego w piłkę."
+    },
+    "primaryCTA": "Pobierz CV",
+    "secondaryCTA": "Porozmawiajmy"
+  },
+  "services": {
+    "heading": "Co mogę dla Ciebie zrobić",
+    "description": "Niezależnie czy potrzebujesz nowej aplikacji, czy chcesz ulepszyć istniejącą - jestem do dyspozycji.",
+    "items": {
+      "frontend": {
+        "title": "Frontend Development",
+        "description": "Przez pierwsze dwa lata kariery zajmowałem się wyłącznie frontendem, co pomogło mi zgłębić jego tajniki. Znam nowinki, wiem, jak napisać i wdrożyć bardzo szybką stronę, skonfigurować SEO oraz Google Analytics. Jako główną architekturę używam Atomic Design!"
+      },
+      "backend": {
+        "title": "Backend Development",
+        "description": "Solidne fundamenty mają znaczenie. Projektuję i buduję API, bazy danych i logikę serwerową, która skaluje się wraz z Twoim biznesem i chroni Twoje dane. Backendem zajmuję się na co dzień, wzorując się na dobrych praktykach powiązanych z DDD."
+      },
+      "automation": {
+        "title": "Automatyzacja i narzędzia",
+        "description": "Powtarzalne zadania spowalniają. Buduję dedykowane narzędzia i zautomatyzowane procesy, które uwalniają Twój zespół do skupienia się na tym, co naprawdę ważne. Potrzebujesz skryptu, który coś za Ciebie będzie uzupełniał? Przygotowywał? Wysyłał? Daj znać, wspólnie coś wymyślimy!"
+      },
+      "performance": {
+        "title": "Optymalizacja wydajności",
+        "description": "Szybkość wygrywa. Analizuję wąskie gardła i wdrażam optymalizacje, które sprawiają, że aplikacje działają błyskawicznie i utrzymują zaangażowanie użytkowników. Rozłożenie ruchu, wprowadzenie kolejki, renderowanie po stronie serwera - jest wiele rozwiązań na różne problemy."
+      }
+    }
+  },
+  "projects": {
+    "heading": "Projekty, z których jestem dumny",
+    "description": "Wybrane realizacje, w których pomogłem klientom osiągnąć ich cele.",
+    "items": {
+      "parkiza": {
+        "name": "Parkiza",
+        "summary": "Kompletny system rezerwacji parkingowych obsługujący tysiące rezerwacji. Zbudowany z nowoczesnym stackiem włączając NestJS i React, usprawnił operacje całej organizacji."
+      },
+      "signalos": {
+        "name": "SignalOS",
+        "summary": "Zintegrowana platforma zarządzania budynkami, która łączy wiele systemów w jednym miejscu. To rozwiązanie enterprise pomaga facility managerom pracować mądrzej."
+      },
+      "areoactive": {
+        "name": "Areoactive",
+        "summary": "Podstawowy landing page jako pierwszy krok w realizacji naprawdę dużego projektu. Szybki, responsywny i zbudowany z myślą o dalszym rozwoju."
+      }
+    }
+  },
+  "faq": {
+    "heading": "Pytania? Mam odpowiedzi",
+    "description": "Oto co ludzie zwykle chcą wiedzieć zanim zaczniemy współpracę.",
+    "items": {
+      "services": {
+        "question": "Jakie projekty realizujesz?",
+        "answer": "Pracuję nad aplikacjami webowymi każdej wielkości - od prostych stron typu landing, przez systemy administracyjne i MVP dla startupów, po złożone systemy enterprise."
+      },
+      "teams": {
+        "question": "Pracujesz z małymi zespołami czy tylko z dużymi firmami?",
+        "answer": "Z jednymi i drugimi! Lubię szybkie tempo startupów tak samo jak strukturę większych organizacji. Najważniejsze jest to, że razem rozwiązujemy ciekawe problemy."
+      },
+      "timeline": {
+        "question": "Ile trwa typowy projekt?",
+        "answer": "To zależy od zakresu, ale większość projektów trwa od 4 do 12 tygodni. Dam Ci realistyczny harmonogram po szczegółowym omówieniu Twoich potrzeb."
+      },
+      "collaboration": {
+        "question": "Czy możesz pracować z naszym zespołem?",
+        "answer": "Oczywiście. Z natury jestem otwarty, ale też dociekliwy. Kilkuletnia praca w agencji eventowej pomogła mi doszlifować umiejętności miękkie. Jestem przyzwyczajony do współpracy z designerami, product managerami i innymi programistami. Dostosowuję się do Waszych narzędzi i procesów, nie odwrotnie."
+      },
+      "start": {
+        "question": "Jak zacząć współpracę?",
+        "answer": "Po prostu wyślij mi wiadomość z krótkim opisem tego, czego potrzebujesz. Odezwę się, żeby umówić rozmowę i omówić szczegóły."
+      }
+    }
+  },
+  "contact": {
+    "heading": "Zbudujmy coś wspaniałego",
+    "description": "Masz pomysł na projekt? Napisz do mnie, a porozmawiamy o tym, jak mogę pomóc.",
+    "form": {
+      "name": "Twoje imię",
+      "namePlaceholder": "Jan Kowalski",
+      "email": "Email",
+      "emailPlaceholder": "jan@firma.pl",
+      "phone": "Telefon",
+      "phonePlaceholder": "+48 123 456 789",
+      "subject": "Temat",
+      "subjectPlaceholder": "Zapytanie o projekt",
+      "message": "Wiadomość",
+      "messagePlaceholder": "Opowiedz mi o swoim projekcie...",
+      "submit": "Wyślij wiadomość"
+    },
+    "info": {
+      "email": "Email",
+      "phone": "Telefon",
+      "address": "Adres"
+    }
+  },
+  "footer": {
+    "description": "Programista tworzący przemyślane doświadczenia cyfrowe.",
+    "contactHeading": "Kontakt",
+    "navHeading": "Nawigacja",
+    "copyright": "Wszelkie prawa zastrzeżone."
+  }
+}

@@ -4,29 +4,32 @@ import { useState, useEffect } from "react";
 import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
 import Stack from "@mui/material/Stack";
-import Button from "@mui/material/Button";
 import IconButton from "@mui/material/IconButton";
 import MenuIcon from "@mui/icons-material/Menu";
 import LogoText from "@/components/atoms/LogoText";
 import ThemeToggle from "@/components/atoms/ThemeToggle";
+import LanguageSwitcher from "@/components/atoms/LanguageSwitcher";
 import NavigationMenu, {
   type NavItem,
 } from "@/components/molecules/NavigationMenu";
 import MobileDrawer from "@/components/molecules/MobileDrawer";
-
-const NAV_ITEMS: NavItem[] = [
-  { label: "Home", href: "#home" },
-  { label: "Services", href: "#services" },
-  { label: "Projects", href: "#projects" },
-  { label: "About", href: "#about" },
-  { label: "FAQs", href: "#faqs" },
-];
+import { useTranslations } from "next-intl";
 
 const HEADER_HEIGHT = 72;
 
 export default function Header() {
+  const t = useTranslations("nav");
   const [mobileOpen, setMobileOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+
+  const NAV_ITEMS: NavItem[] = [
+    { label: t("home"), href: "#home" },
+    { label: t("about"), href: "#about" },
+    { label: t("services"), href: "#services" },
+    { label: t("projects"), href: "#projects" },
+    { label: t("faq"), href: "#faqs" },
+    { label: t("contact"), href: "#contact" },
+  ];
 
   useEffect(() => {
     const handleScroll = () => {
@@ -73,19 +76,10 @@ export default function Header() {
             {/* Desktop Navigation */}
             <NavigationMenu items={NAV_ITEMS} />
 
-            {/* Right side: Theme toggle + Contact button + Mobile hamburger */}
+            {/* Right side: Language + Theme toggle + Mobile hamburger */}
             <Stack direction="row" alignItems="center" spacing={1}>
+              <LanguageSwitcher />
               <ThemeToggle />
-
-              <Button
-                variant="outlined"
-                href="#contact"
-                sx={{
-                  display: { xs: "none", md: "inline-flex" },
-                }}
-              >
-                Contact
-              </Button>
 
               {/* Mobile hamburger */}
               <IconButton
@@ -107,7 +101,7 @@ export default function Header() {
       <MobileDrawer
         open={mobileOpen}
         onClose={() => setMobileOpen(false)}
-        items={[...NAV_ITEMS, { label: "Contact", href: "#contact" }]}
+        items={NAV_ITEMS}
       />
     </>
   );

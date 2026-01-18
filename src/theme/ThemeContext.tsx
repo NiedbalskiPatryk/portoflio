@@ -33,10 +33,13 @@ export function ThemeContextProvider({
     setMounted(true);
   }, []);
 
-  // Save preference when it changes
+  // Save preference and update body background when it changes
   React.useEffect(() => {
     if (mounted) {
       localStorage.setItem(STORAGE_KEY, mode);
+      const bgColor = mode === "dark" ? "#0a0a0a" : "#ffffff";
+      document.documentElement.style.backgroundColor = bgColor;
+      document.body.style.backgroundColor = bgColor;
     }
   }, [mode, mounted]);
 

@@ -1,0 +1,129 @@
+{
+  "metadata": {
+    "title": "Patryk Niedbalski - Software Engineer",
+    "description": "Full-stack software engineer specializing in modern web applications"
+  },
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "services": "Services",
+    "projects": "Projects",
+    "faq": "FAQ",
+    "contact": "Contact"
+  },
+  "hero": {
+    "location": "Warsaw, Poland",
+    "greeting": "Hi, I'm Patryk",
+    "role": "Software Engineer",
+    "description": "I help businesses build fast, reliable web applications that are user-friendly. From idea to launch, I'm here to help make it happen.",
+    "primaryCTA": "About me",
+    "secondaryCTA": "See what I do",
+    "techLabel": "Technologies I work with"
+  },
+  "about": {
+    "heading": "About",
+    "name": "Patryk Niedbalski",
+    "role": "Software Engineer",
+    "bio": {
+      "paragraph1": "I'm a developer who genuinely enjoys turning complex problems into simple, elegant solutions. For me, code isn't just about functionality - it's about creating experiences that feel natural and effortless.",
+      "paragraph2": "Throughout my career, I've worked in companies with different profiles - from startups and software houses to companies partnering with some of the world’s largest corporations, building everything from internal tools to customer-facing platforms. I thrive in collaborative environments where good ideas can come from anywhere.",
+      "paragraph3": "When I'm not coding, you'll find me spending time with family, traveling, reading books, or playing football."
+    },
+    "primaryCTA": "Download Resume",
+    "secondaryCTA": "Let's talk"
+  },
+  "services": {
+    "heading": "What I can do for you",
+    "description": "Whether you need a new application or want to improve an existing one, I've got you covered.",
+    "items": {
+      "frontend": {
+        "title": "Frontend Development",
+        "description": "I spent my first two years focusing exclusively on frontend, which helped me master its intricacies. I stay up to date with the latest trends and know how to build and deploy blazing-fast websites, configure SEO and Google Analytics setup. I use Atomic Design as my primary architecture!"
+      },
+      "backend": {
+        "title": "Backend Development",
+        "description": "Solid foundations matter. I design and build APIs, databases, and server-side logic that scale with your business and keep your data secure. I work on backend systems daily, following best practices related to Domain-Driven Design."
+      },
+      "automation": {
+        "title": "Automation & Tooling",
+        "description": "Repetitive tasks slow you down. I build custom tools and automated workflows that free up your team to focus on what really matters. Need a script to fill in data, prepare files, or send something automatically? Let me know, we'll figure something out together!"
+      },
+      "performance": {
+        "title": "Performance Optimization",
+        "description": "Speed wins. I analyze bottlenecks and implement optimizations that make your applications lightning fast and keep users engaged. Load balancing, message queues, server-side rendering - there are many solutions for different problems."
+      }
+    }
+  },
+  "projects": {
+    "heading": "Work I'm proud of",
+    "description": "A selection of projects where I helped clients achieve their goals.",
+    "items": {
+      "parkiza": {
+        "name": "Parkiza",
+        "summary": "A complete parking reservation system that handles thousands of bookings. Built with a modern stack including NestJS and React, it streamlined operations for the entire organization."
+      },
+      "signalos": {
+        "name": "SignalOS",
+        "summary": "An integrated building management platform that brings multiple systems under one roof. This enterprise solution helps facility managers work smarter, not harder."
+      },
+      "areoactive": {
+        "name": "Areoactive",
+        "summary": "A high-converting landing page designed to capture attention and drive results. Fast, responsive, and built to perform."
+      }
+    }
+  },
+  "faq": {
+    "heading": "Questions? I've got answers",
+    "description": "Here's what people usually want to know before we start working together.",
+    "items": {
+      "services": {
+        "question": "What kind of projects do you take on?",
+        "answer": "I work on web applications of all sizes - from simple landing pages to admin systems, MVPs for startups to complex enterprise systems."
+      },
+      "teams": {
+        "question": "Do you work with small teams or only big companies?",
+        "answer": "Both! I enjoy the fast pace of startups just as much as the structure of larger organizations. What matters most is that we're solving interesting problems together."
+      },
+      "timeline": {
+        "question": "How long does a typical project take?",
+        "answer": "It depends on scope, but most projects run between 4-12 weeks. I'll give you a realistic timeline after we discuss your needs in detail."
+      },
+      "collaboration": {
+        "question": "Can you work with our existing team?",
+        "answer": "Of course. I'm naturally open-minded but also inquisitive. Several years of working at an event agency helped me polish my soft skills. I'm used to collaborating with designers, product managers, and other developers. I adapt to your tools and processes, not the other way around."
+      },
+      "start": {
+        "question": "How do we get started?",
+        "answer": "Just send me a message with a brief description of what you need. I'll get back to you to schedule a call and discuss the details."
+      }
+    }
+  },
+  "contact": {
+    "heading": "Let's build something great",
+    "description": "Have a project in mind? Drop me a line and let's talk about how I can help.",
+    "form": {
+      "name": "Your name",
+      "namePlaceholder": "John Smith",
+      "email": "Email",
+      "emailPlaceholder": "john@company.com",
+      "phone": "Phone",
+      "phonePlaceholder": "+48 123 456 789",
+      "subject": "Subject",
+      "subjectPlaceholder": "Project inquiry",
+      "message": "Message",
+      "messagePlaceholder": "Tell me about your project...",
+      "submit": "Send Message"
+    },
+    "info": {
+      "email": "Email",
+      "phone": "Phone",
+      "address": "Address"
+    }
+  },
+  "footer": {
+    "description": "Software engineer crafting thoughtful digital experiences.",
+    "contactHeading": "Get in touch",
+    "navHeading": "Navigation",
+    "copyright": "All rights reserved."
+  }
+}
