@@ -18,6 +18,7 @@ interface AboutSectionCTA {
 }
 
 export interface AboutSectionProps {
+  heading: string;
   profileImage: {
     src?: string;
     alt: string;
@@ -30,6 +31,7 @@ export interface AboutSectionProps {
 }
 
 const AboutSection: React.FC<AboutSectionProps> = ({
+  heading,
   profileImage,
   name,
   role,
@@ -63,7 +65,7 @@ const AboutSection: React.FC<AboutSectionProps> = ({
               },
             }}
           >
-            About
+            {heading}
           </Typography>
         </Box>
         <Box

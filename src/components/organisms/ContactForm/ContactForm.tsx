@@ -8,6 +8,7 @@ import Collapse from "@mui/material/Collapse";
 import Stack from "@mui/material/Stack";
 import Typography from "@mui/material/Typography";
 import FormRow from "@/components/molecules/FormRow";
+import { useTranslations } from "next-intl";
 
 export type ContactFieldId =
   | "fullName"
@@ -43,6 +44,7 @@ const ContactForm: React.FC<ContactFormProps> = ({
   formAction,
   formMethod = "POST",
 }) => {
+  const t = useTranslations("contact.form");
   const initialValues = React.useMemo(() => {
     return fields.reduce<Record<ContactFieldId, string>>(
       (acc, field) => {
@@ -172,23 +174,23 @@ const ContactForm: React.FC<ContactFormProps> = ({
             {
               fullName: {
                 id: "fullName",
-                label: "Full name",
+                label: t("name"),
               },
               email: {
                 id: "email",
-                label: "Email",
+                label: t("email"),
               },
               phone: {
                 id: "phone",
-                label: "Phone",
+                label: t("phone"),
               },
               subject: {
                 id: "subject",
-                label: "Subject",
+                label: t("subject"),
               },
               message: {
                 id: "message",
-                label: "Message",
+                label: t("message"),
                 multiline: true,
               },
             }
@@ -198,7 +200,7 @@ const ContactForm: React.FC<ContactFormProps> = ({
             const isEmailField = field.id === "email";
             const error = isEmailField ? isEmailInvalid : false;
             const helperText =
-              isEmailField && error ? "Enter a valid email address." : undefined;
+              isEmailField && error ? t("validation.email") : undefined;
 
             return (
               <FormRow
@@ -261,12 +263,12 @@ const ContactForm: React.FC<ContactFormProps> = ({
       </Button>
       <Collapse in={submitState === "success"} timeout={300} unmountOnExit>
         <Typography variant="body2" color="text.secondary" sx={{ mt: 2 }}>
-          Thanks! Your message has been sent.
+          {t("status.success")}
         </Typography>
       </Collapse>
       <Collapse in={submitState === "error"} timeout={300} unmountOnExit>
         <Typography variant="body2" color="error" sx={{ mt: 2 }}>
-          Something went wrong. Please try again.
+          {t("status.error")}
         </Typography>
       </Collapse>
     </Box>

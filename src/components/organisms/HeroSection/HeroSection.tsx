@@ -17,6 +17,7 @@ interface HeroSectionProps {
   name: string;
   role: string;
   description: string;
+  techLabel: string;
   primaryCTA: {
     label: string;
     onClick?: () => void;
@@ -30,6 +31,12 @@ interface HeroSectionProps {
     color?: "default" | "light";
   };
   technologies: string[];
+  snippets: {
+    leftTop: string;
+    leftMid: string;
+    rightTop: string;
+    rightMid: string;
+  };
 }
 
 export default function HeroSection({
@@ -37,9 +44,11 @@ export default function HeroSection({
   name,
   role,
   description,
+  techLabel,
   primaryCTA,
   secondaryCTA,
   technologies,
+  snippets,
 }: HeroSectionProps) {
   const theme = useTheme();
   const { gradientStart, gradientMid, gradientEnd } = theme.palette.surface;
@@ -61,35 +70,25 @@ export default function HeroSection({
     >
       {/* Floating code snippets */}
       <FloatingCode
-        snippet={`<div className="hero">
-  <h1>Hello World</h1>
-</div>`}
+        snippet={snippets.leftTop}
         position="left"
         offsetY="15%"
         delay={0}
       />
       <FloatingCode
-        snippet={`const App = () => {
-  return <Layout />;
-};`}
+        snippet={snippets.leftMid}
         position="left"
         offsetY="60%"
         delay={200}
       />
       <FloatingCode
-        snippet={`interface Props {
-  name: string;
-  role: string;
-}`}
+        snippet={snippets.rightTop}
         position="right"
         offsetY="20%"
         delay={100}
       />
       <FloatingCode
-        snippet={`.container {
-  display: flex;
-  align-items: center;
-}`}
+        snippet={snippets.rightMid}
         position="right"
         offsetY="65%"
         delay={300}
@@ -186,7 +185,7 @@ export default function HeroSection({
                 fontSize: { xs: "0.7rem", md: "0.75rem" },
               }}
             >
-              Technologies I use
+              {techLabel}
             </Typography>
             <TechStackMarquee technologies={technologies} speed={35} />
           </Box>

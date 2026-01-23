@@ -8,7 +8,7 @@
     "about": "O mnie",
     "services": "Usługi",
     "projects": "Projekty",
-    "faq": "FAQ",
+    "faq": "Pytania",
     "contact": "Kontakt"
   },
   "hero": {
@@ -18,12 +18,19 @@
     "description": "Pomagam firmom tworzyć szybkie i niezawodne aplikacje webowe, które będą przyjazne dla użytkowników. Od pomysłu do wdrożenia - jestem tu, żeby pomóc to zrealizować.",
     "primaryCTA": "O mnie",
     "secondaryCTA": "Zobacz co robię",
-    "techLabel": "Technologie, z którymi pracuję"
+    "techLabel": "Technologie, z którymi pracuję",
+    "snippets": {
+      "leftTop": "<div className=\"hero\">\n  <h1>Hello World</h1>\n</div>",
+      "leftMid": "const App = () => {\n  return <Layout />;\n};",
+      "rightTop": "interface Props {\n  name: string;\n  role: string;\n}",
+      "rightMid": ".container {\n  display: flex;\n  align-items: center;\n}"
+    }
   },
   "about": {
     "heading": "O mnie",
     "name": "Patryk Niedbalski",
     "role": "Software Engineer",
+    "profileImageAlt": "Portret Patryka",
     "bio": {
       "paragraph1": "Jestem programistą, który naprawdę lubi zamieniać złożone problemy w proste, eleganckie rozwiązania. Dla mnie kod to nie tylko funkcjonalność - to tworzenie doświadczeń, które są naturalne i intuicyjne.",
       "paragraph2": "Przez większość swojej kariery pracowałem w firmach o różnych profilach - od startupów i software house’ów po firmy współpracujące z największymi korporacjami świata, tworząc od wewnętrznych narzędzi po platformy dla klientów. Najlepiej czuję się w zespołach, gdzie dobre pomysły mogą przyjść z każdej strony.",
@@ -37,11 +44,11 @@
     "description": "Niezależnie czy potrzebujesz nowej aplikacji, czy chcesz ulepszyć istniejącą - jestem do dyspozycji.",
     "items": {
       "frontend": {
-        "title": "Frontend Development",
+        "title": "Frontend",
         "description": "Przez pierwsze dwa lata kariery zajmowałem się wyłącznie frontendem, co pomogło mi zgłębić jego tajniki. Znam nowinki, wiem, jak napisać i wdrożyć bardzo szybką stronę, skonfigurować SEO oraz Google Analytics. Jako główną architekturę używam Atomic Design!"
       },
       "backend": {
-        "title": "Backend Development",
+        "title": "Backend",
         "description": "Solidne fundamenty mają znaczenie. Projektuję i buduję API, bazy danych i logikę serwerową, która skaluje się wraz z Twoim biznesem i chroni Twoje dane. Backendem zajmuję się na co dzień, wzorując się na dobrych praktykach powiązanych z DDD."
       },
       "automation": {
@@ -104,7 +111,7 @@
     "form": {
       "name": "Twoje imię",
       "namePlaceholder": "Jan Kowalski",
-      "email": "Email",
+      "email": "E-mail",
       "emailPlaceholder": "jan@firma.pl",
       "phone": "Telefon",
       "phonePlaceholder": "+48 123 456 789",
@@ -112,13 +119,28 @@
       "subjectPlaceholder": "Zapytanie o projekt",
       "message": "Wiadomość",
       "messagePlaceholder": "Opowiedz mi o swoim projekcie...",
-      "submit": "Wyślij wiadomość"
+      "submit": "Wyślij wiadomość",
+      "validation": {
+        "email": "Wpisz poprawny adres e-mail."
+      },
+      "status": {
+        "success": "Dzięki! Wiadomość została wysłana.",
+        "error": "Coś poszło nie tak. Spróbuj ponownie."
+      }
     },
     "info": {
-      "email": "Email",
+      "heading": "Dane kontaktowe",
+      "email": "E-mail",
       "phone": "Telefon",
-      "address": "Adres"
+      "address": "Adres",
+      "addressValue": "Warszawa, Polska"
     }
+  },
+  "aria": {
+    "openMenu": "Otwórz menu",
+    "closeMenu": "Zamknij menu",
+    "switchToLightMode": "Przełącz na jasny motyw",
+    "switchToDarkMode": "Przełącz na ciemny motyw"
   },
   "footer": {
     "description": "Programista tworzący przemyślane doświadczenia cyfrowe.",

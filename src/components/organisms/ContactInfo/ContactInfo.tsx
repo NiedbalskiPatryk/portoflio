@@ -6,6 +6,7 @@ import Stack from "@mui/material/Stack";
 import Typography from "@mui/material/Typography";
 import ContactInfoItem from "@/components/molecules/ContactInfoItem";
 import type { ContactInfoItemProps } from "@/components/molecules/ContactInfoItem";
+import { useTranslations } from "next-intl";
 
 export interface ContactInfoProps {
   heading?: string;
@@ -13,11 +14,10 @@ export interface ContactInfoProps {
   items: ContactInfoItemProps[];
 }
 
-const ContactInfo: React.FC<ContactInfoProps> = ({
-  heading = "Contact Info",
-  description,
-  items,
-}) => {
+const ContactInfo: React.FC<ContactInfoProps> = ({ heading, description, items }) => {
+  const t = useTranslations("contact.info");
+  const resolvedHeading = heading ?? t("heading");
+
   return (
     <Box
       sx={{
@@ -28,7 +28,7 @@ const ContactInfo: React.FC<ContactInfoProps> = ({
     >
       <Box sx={{ display: "flex", flexDirection: "column", gap: 1 }}>
         <Typography variant="h4" color="text.primary">
-          {heading}
+          {resolvedHeading}
         </Typography>
         {description && (
           <Typography variant="body2" color="text.secondary">

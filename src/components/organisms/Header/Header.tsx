@@ -18,17 +18,18 @@ import { useTranslations } from "next-intl";
 const HEADER_HEIGHT = 72;
 
 export default function Header() {
-  const t = useTranslations("nav");
+  const tNav = useTranslations("nav");
+  const tAria = useTranslations("aria");
   const [mobileOpen, setMobileOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
   const NAV_ITEMS: NavItem[] = [
-    { label: t("home"), href: "#home" },
-    { label: t("about"), href: "#about" },
-    { label: t("services"), href: "#services" },
-    { label: t("projects"), href: "#projects" },
-    { label: t("faq"), href: "#faqs" },
-    { label: t("contact"), href: "#contact" },
+    { label: tNav("home"), href: "#home" },
+    { label: tNav("about"), href: "#about" },
+    { label: tNav("services"), href: "#services" },
+    { label: tNav("projects"), href: "#projects" },
+    { label: tNav("faq"), href: "#faqs" },
+    { label: tNav("contact"), href: "#contact" },
   ];
 
   useEffect(() => {
@@ -84,7 +85,7 @@ export default function Header() {
               {/* Mobile hamburger */}
               <IconButton
                 onClick={handleMobileToggle}
-                aria-label="Open menu"
+                aria-label={tAria("openMenu")}
                 sx={{
                   display: { xs: "flex", md: "none" },
                   color: "text.primary",

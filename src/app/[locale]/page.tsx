@@ -25,6 +25,7 @@ export default async function Home() {
     name: t("hero.greeting"),
     role: t("hero.role"),
     description: t("hero.description"),
+    techLabel: t("hero.techLabel"),
     primaryCTA: {
       label: t("hero.primaryCTA"),
       href: "#about",
@@ -48,7 +49,12 @@ export default async function Home() {
       "Docker",
       "GCP",
     ],
-    techLabel: t("hero.techLabel"),
+    snippets: {
+      leftTop: t.raw("hero.snippets.leftTop"),
+      leftMid: t.raw("hero.snippets.leftMid"),
+      rightTop: t.raw("hero.snippets.rightTop"),
+      rightMid: t.raw("hero.snippets.rightMid"),
+    },
   };
 
   const servicesData = {
@@ -107,9 +113,10 @@ export default async function Home() {
   };
 
   const aboutData = {
+    heading: t("about.heading"),
     profileImage: {
       src: "/foto.jpeg",
-      alt: "Portrait of Patryk",
+      alt: t("about.profileImageAlt"),
     },
     name: t("about.name"),
     role: t("about.role"),
@@ -167,7 +174,10 @@ export default async function Home() {
     infoItems: [
       { label: t("contact.info.email"), value: "patrykitpapi@gmail.com" },
       { label: t("contact.info.phone"), value: "+48 507 486 286" },
-      { label: t("contact.info.address"), value: "Warsaw, Poland" },
+      {
+        label: t("contact.info.address"),
+        value: t("contact.info.addressValue"),
+      },
     ],
     fields: [
       {
@@ -243,7 +253,7 @@ export default async function Home() {
       {
         id: "address",
         label: t("contact.info.address"),
-        value: "Warsaw, Poland",
+        value: t("contact.info.addressValue"),
       },
     ],
     copyright: `© 2026 Patryk Niedbalski. ${t("footer.copyright")}`,

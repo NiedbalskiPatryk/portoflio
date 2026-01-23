@@ -18,12 +18,19 @@
     "description": "I help businesses build fast, reliable web applications that are user-friendly. From idea to launch, I'm here to help make it happen.",
     "primaryCTA": "About me",
     "secondaryCTA": "See what I do",
-    "techLabel": "Technologies I work with"
+    "techLabel": "Technologies I work with",
+    "snippets": {
+      "leftTop": "<div className=\"hero\">\n  <h1>Hello World</h1>\n</div>",
+      "leftMid": "const App = () => {\n  return <Layout />;\n};",
+      "rightTop": "interface Props {\n  name: string;\n  role: string;\n}",
+      "rightMid": ".container {\n  display: flex;\n  align-items: center;\n}"
+    }
   },
   "about": {
     "heading": "About",
     "name": "Patryk Niedbalski",
     "role": "Software Engineer",
+    "profileImageAlt": "Portrait of Patryk",
     "bio": {
       "paragraph1": "I'm a developer who genuinely enjoys turning complex problems into simple, elegant solutions. For me, code isn't just about functionality - it's about creating experiences that feel natural and effortless.",
       "paragraph2": "Throughout my career, I've worked in companies with different profiles - from startups and software houses to companies partnering with some of the world’s largest corporations, building everything from internal tools to customer-facing platforms. I thrive in collaborative environments where good ideas can come from anywhere.",
@@ -112,13 +119,28 @@
       "subjectPlaceholder": "Project inquiry",
       "message": "Message",
       "messagePlaceholder": "Tell me about your project...",
-      "submit": "Send Message"
+      "submit": "Send Message",
+      "validation": {
+        "email": "Enter a valid email address."
+      },
+      "status": {
+        "success": "Thanks! Your message has been sent.",
+        "error": "Something went wrong. Please try again."
+      }
     },
     "info": {
+      "heading": "Contact info",
       "email": "Email",
       "phone": "Phone",
-      "address": "Address"
+      "address": "Address",
+      "addressValue": "Warsaw, Poland"
     }
+  },
+  "aria": {
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "switchToLightMode": "Switch to light mode",
+    "switchToDarkMode": "Switch to dark mode"
   },
   "footer": {
     "description": "Software engineer crafting thoughtful digital experiences.",

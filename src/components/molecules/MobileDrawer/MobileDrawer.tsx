@@ -7,6 +7,7 @@ import IconButton from "@mui/material/IconButton";
 import CloseIcon from "@mui/icons-material/Close";
 import NavLink from "@/components/atoms/NavLink";
 import type { NavItem } from "@/components/molecules/NavigationMenu";
+import { useTranslations } from "next-intl";
 
 interface MobileDrawerProps {
   open: boolean;
@@ -21,6 +22,8 @@ export default function MobileDrawer({
   items,
   activeHref,
 }: MobileDrawerProps) {
+  const t = useTranslations("aria");
+
   return (
     <Drawer
       anchor="right"
@@ -37,7 +40,7 @@ export default function MobileDrawer({
       <Box sx={{ display: "flex", justifyContent: "flex-end", mb: 2 }}>
         <IconButton
           onClick={onClose}
-          aria-label="Close menu"
+          aria-label={t("closeMenu")}
           sx={{ color: "text.primary" }}
         >
           <CloseIcon />
