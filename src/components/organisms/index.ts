@@ -14,3 +14,7 @@ export { default as ContactSection } from "./ContactSection";
 export type { ContactSectionProps } from "./ContactSection";
 export { default as Footer } from "./Footer";
 export type { FooterProps } from "./Footer";
+export { default as ShowRoomHeader, SHOWROOM_HEADER_HEIGHT } from "./ShowRoomHeader";
+export { default as ShowRoomIntro } from "./ShowRoomIntro";
+export { default as ShowRoomDrawer } from "./ShowRoomDrawer";
+export type { ShowRoomProject } from "./ShowRoomDrawer";

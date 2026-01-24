@@ -26,3 +26,5 @@ export { default as ContactBlock } from "./ContactBlock";
 export type { FooterContactItem, ContactBlockProps } from "./ContactBlock";
 export { default as FooterIdentity } from "./FooterIdentity";
 export type { FooterIdentityProps } from "./FooterIdentity";
+export { default as DockMenu } from "./DockMenu";
+export type { DockMenuItem } from "./DockMenu";

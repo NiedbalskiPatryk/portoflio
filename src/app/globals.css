@@ -5,6 +5,8 @@ body {
   max-width: 100vw;
   overflow-x: hidden;
   min-height: 100vh;
+  /* Prevent flash - JS will set actual color */
+  background-color: var(--initial-bg, #0a0a0a);
 }
 
 /* Always show scrollbar to prevent layout shift */
@@ -22,9 +24,16 @@ html {
   scroll-padding-top: 80px;
 }
 
-/* Smooth theme transitions */
-body,
-body * {
+/* Disable transitions initially to prevent flash */
+html:not(.transitions-enabled) *,
+html:not(.transitions-enabled) *::before,
+html:not(.transitions-enabled) *::after {
+  transition: none !important;
+}
+
+/* Smooth theme transitions (enabled after hydration) */
+html.transitions-enabled body,
+html.transitions-enabled body * {
   transition: background-color 0.3s ease, border-color 0.3s ease, color 0.2s ease;
 }
 

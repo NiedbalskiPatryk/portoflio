@@ -15,10 +15,11 @@ import BrushOutlinedIcon from "@mui/icons-material/BrushOutlined";
 import ComputerOutlinedIcon from "@mui/icons-material/ComputerOutlined";
 import FlashOnOutlinedIcon from "@mui/icons-material/FlashOnOutlined";
 import StorageOutlinedIcon from "@mui/icons-material/StorageOutlined";
-import { getTranslations } from "next-intl/server";
+import { getLocale, getTranslations } from "next-intl/server";
 
 export default async function Home() {
   const t = await getTranslations();
+  const locale = await getLocale();
 
   const heroData = {
     location: t("hero.location"),
@@ -32,8 +33,8 @@ export default async function Home() {
       color: "light" as const,
     },
     secondaryCTA: {
-      label: t("hero.secondaryCTA"),
-      href: "#services",
+      label: t("showRoom.navButton"),
+      href: `/${locale}/show-room`,
     },
     technologies: [
       "JavaScript",

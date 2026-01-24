@@ -24,13 +24,18 @@ export function ThemeContextProvider({
   const [mode, setModeState] = React.useState<ThemeMode>("dark");
   const [mounted, setMounted] = React.useState(false);
 
-  // Mark as mounted
+  // Mark as mounted and enable transitions
   React.useEffect(() => {
     const saved = localStorage.getItem(STORAGE_KEY);
     if (saved === "dark" || saved === "light") {
       setModeState(saved);
     }
     setMounted(true);
+
+    // Enable transitions after a small delay to prevent initial flash
+    requestAnimationFrame(() => {
+      document.documentElement.classList.add("transitions-enabled");
+    });
   }, []);
 
   // Save preference and update body background when it changes
@@ -55,15 +60,6 @@ export function ThemeContextProvider({
     () => ({ mode, toggleTheme, setMode }),
     [mode, toggleTheme, setMode]
   );
-
-  // Prevent flash by not rendering until mounted
-  if (!mounted) {
-    return (
-      <div style={{ visibility: "hidden" }}>
-        <ThemeContext.Provider value={value}>{children}</ThemeContext.Provider>
-      </div>
-    );
-  }
 
   return (
     <ThemeContext.Provider value={value}>{children}</ThemeContext.Provider>

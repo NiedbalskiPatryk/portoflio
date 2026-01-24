@@ -147,5 +147,76 @@
     "contactHeading": "Kontakt",
     "navHeading": "Nawigacja",
     "copyright": "Wszelkie prawa zastrzeżone."
+  },
+  "showRoom": {
+    "navButton": "Showroom",
+    "heading": "Showroom",
+    "description": "Interaktywna galeria przykladowych projektow frontendowych.\n\nRozne style, uklady i funkcjonalnosci - od landing page'ow po bardziej rozbudowane widoki - pokazujace, jak moga wygladac nowoczesne i dopracowane interfejsy uzytkownika.\n\nKazde rozwiazanie moze zostac rozszerzone o dedykowany backend, dopasowany do potrzeb Twojego biznesu.",
+    "cta": "Zobacz projekty. Wybierz kierunek. Zrobmy cos podobnego dla Ciebie.",
+    "backToMain": "Wroc na strone glowna",
+    "browseProjects": "Przegladaj projekty",
+    "comingSoon": "Wkrotce",
+    "projects": {
+      "landingPage": {
+        "title": "Landing Page",
+        "description": "Hero, CTA, Pricing - gradienty i animacje scroll"
+      },
+      "dashboard": {
+        "title": "Dashboard",
+        "description": "Tabele, wykresy, filtry w dark mode"
+      },
+      "ecommerce": {
+        "title": "E-commerce",
+        "description": "Koszyk, lista produktow, hover effects"
+      },
+      "quiz": {
+        "title": "Formularz / Quiz",
+        "description": "Multi-step z walidacja i dynamicznymi efektami"
+      },
+      "portfolio": {
+        "title": "Portfolio",
+        "description": "Grid zdjec, lightbox, masonry layout"
+      },
+      "admin": {
+        "title": "Panel admina",
+        "description": "Sidebar, modale, toggle - minimalistyczny"
+      },
+      "event": {
+        "title": "Strona eventowa",
+        "description": "Agenda, prelegenci, bilety"
+      },
+      "testimonials": {
+        "title": "Opinie",
+        "description": "Carousel opinii z animacjami"
+      },
+      "faq": {
+        "title": "FAQ",
+        "description": "Filtr i akordeony z interakcja"
+      },
+      "newsletter": {
+        "title": "Newsletter",
+        "description": "Floating modal z micro-interactions"
+      },
+      "calculator": {
+        "title": "Kalkulator SaaS",
+        "description": "Przelicznik z state management"
+      },
+      "map": {
+        "title": "Mapa lokalizacji",
+        "description": "Markery i tooltipy dynamiczne"
+      },
+      "pricing": {
+        "title": "Pricing",
+        "description": "Porownanie planow z animowanymi kartami"
+      },
+      "widget": {
+        "title": "Widget eksportu",
+        "description": "Generator PDF/CSV z efektem wow"
+      },
+      "animations": {
+        "title": "Animacje",
+        "description": "Scroll effects i micro-interactions"
+      }
+    }
   }
 }

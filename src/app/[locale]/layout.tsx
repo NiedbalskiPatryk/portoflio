@@ -99,8 +99,11 @@ const themeScript = `
   try {
     var mode = localStorage.getItem('theme-mode');
     var isDark = mode !== 'light';
-    document.documentElement.style.backgroundColor = isDark ? '#0a0a0a' : '#ffffff';
-    document.body.style.backgroundColor = isDark ? '#0a0a0a' : '#ffffff';
+    var bg = isDark ? '#0a0a0a' : '#ffffff';
+    var d = document.documentElement;
+    d.style.setProperty('--initial-bg', bg);
+    d.style.backgroundColor = bg;
+    d.classList.add(isDark ? 'dark' : 'light');
   } catch (e) {}
 })();
 `;

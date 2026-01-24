@@ -9,6 +9,7 @@ import MenuIcon from "@mui/icons-material/Menu";
 import LogoText from "@/components/atoms/LogoText";
 import ThemeToggle from "@/components/atoms/ThemeToggle";
 import LanguageSwitcher from "@/components/atoms/LanguageSwitcher";
+import ShowRoomButton from "@/components/atoms/ShowRoomButton";
 import NavigationMenu, {
   type NavItem,
 } from "@/components/molecules/NavigationMenu";
@@ -20,6 +21,7 @@ const HEADER_HEIGHT = 72;
 export default function Header() {
   const tNav = useTranslations("nav");
   const tAria = useTranslations("aria");
+  const tShowRoom = useTranslations("showRoom");
   const [mobileOpen, setMobileOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
@@ -77,10 +79,11 @@ export default function Header() {
             {/* Desktop Navigation */}
             <NavigationMenu items={NAV_ITEMS} />
 
-            {/* Right side: Language + Theme toggle + Mobile hamburger */}
+            {/* Right side: Language + Theme toggle + ShowRoom + Mobile hamburger */}
             <Stack direction="row" alignItems="center" spacing={1}>
               <LanguageSwitcher />
               <ThemeToggle />
+              <ShowRoomButton label={tShowRoom("navButton")} />
 
               {/* Mobile hamburger */}
               <IconButton

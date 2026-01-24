@@ -147,5 +147,76 @@
     "contactHeading": "Get in touch",
     "navHeading": "Navigation",
     "copyright": "All rights reserved."
+  },
+  "showRoom": {
+    "navButton": "Showroom",
+    "heading": "Showroom",
+    "description": "An interactive gallery of frontend project examples.\n\nVarious styles, layouts and functionalities - from landing pages to more complex views - showcasing what modern, polished user interfaces can look like.\n\nEach solution can be extended with a dedicated backend, tailored to your business needs.",
+    "cta": "Browse projects. Choose a direction. Let's build something similar for you.",
+    "backToMain": "Back to main page",
+    "browseProjects": "Browse projects",
+    "comingSoon": "Coming soon",
+    "projects": {
+      "landingPage": {
+        "title": "Landing Page",
+        "description": "Hero, CTA, Pricing - gradients and scroll animations"
+      },
+      "dashboard": {
+        "title": "Dashboard",
+        "description": "Tables, charts, filters in dark mode"
+      },
+      "ecommerce": {
+        "title": "E-commerce",
+        "description": "Cart, product list, hover effects"
+      },
+      "quiz": {
+        "title": "Form / Quiz",
+        "description": "Multi-step with validation and dynamic effects"
+      },
+      "portfolio": {
+        "title": "Portfolio",
+        "description": "Photo grid, lightbox, masonry layout"
+      },
+      "admin": {
+        "title": "Admin Panel",
+        "description": "Sidebar, modals, toggle - minimalist"
+      },
+      "event": {
+        "title": "Event Page",
+        "description": "Agenda, speakers, tickets"
+      },
+      "testimonials": {
+        "title": "Testimonials",
+        "description": "Carousel with animations"
+      },
+      "faq": {
+        "title": "FAQ",
+        "description": "Filter and accordions with interaction"
+      },
+      "newsletter": {
+        "title": "Newsletter",
+        "description": "Floating modal with micro-interactions"
+      },
+      "calculator": {
+        "title": "SaaS Calculator",
+        "description": "Calculator with state management"
+      },
+      "map": {
+        "title": "Location Map",
+        "description": "Dynamic markers and tooltips"
+      },
+      "pricing": {
+        "title": "Pricing",
+        "description": "Plan comparison with animated cards"
+      },
+      "widget": {
+        "title": "Export Widget",
+        "description": "PDF/CSV generator with wow effect"
+      },
+      "animations": {
+        "title": "Animations",
+        "description": "Scroll effects and micro-interactions"
+      }
+    }
   }
 }
