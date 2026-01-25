@@ -15,11 +15,19 @@ const HEADER_HEIGHT = 72;
 
 interface ShowRoomHeaderProps {
   showThemeToggle?: boolean;
+  backHref?: string;
+  backLabel?: string;
 }
 
-export default function ShowRoomHeader({ showThemeToggle = true }: ShowRoomHeaderProps) {
+export default function ShowRoomHeader({
+  showThemeToggle = true,
+  backHref,
+  backLabel,
+}: ShowRoomHeaderProps) {
   const locale = useLocale();
   const t = useTranslations("showRoom");
+  const resolvedBackHref = backHref ?? `/${locale}/showroom`;
+  const resolvedBackLabel = backLabel ?? t("backToMain");
 
   return (
       <Box
@@ -50,8 +58,8 @@ export default function ShowRoomHeader({ showThemeToggle = true }: ShowRoomHeade
           <Stack direction="row" alignItems="center" spacing={2}>
             <IconButton
               component={Link}
-              href={`/${locale}/show-room`}
-              aria-label={t("backToMain")}
+              href={resolvedBackHref}
+              aria-label={resolvedBackLabel}
               sx={{
                 color: "text.primary",
               }}

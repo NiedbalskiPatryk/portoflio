@@ -17,7 +17,7 @@ export default function ShowRoomButton({ label }: ShowRoomButtonProps) {
   return (
     <Button
       component={Link}
-      href={`/${locale}/show-room`}
+      href={`/${locale}/showroom`}
       variant="contained"
       sx={{
         backgroundColor: isDarkMode ? "#ffffff" : "#0a0a0a",

@@ -13,6 +13,8 @@ interface ShowRoomLayoutProps {
   comingSoonLabel?: string;
   browseProjectsLabel?: string;
   showThemeToggle?: boolean;
+  backHref?: string;
+  backLabel?: string;
 }
 
 export default function ShowRoomLayout({
@@ -22,10 +24,16 @@ export default function ShowRoomLayout({
   comingSoonLabel,
   browseProjectsLabel,
   showThemeToggle = true,
+  backHref,
+  backLabel,
 }: ShowRoomLayoutProps) {
   return (
     <>
-      <ShowRoomHeader showThemeToggle={showThemeToggle} />
+      <ShowRoomHeader
+        showThemeToggle={showThemeToggle}
+        backHref={backHref}
+        backLabel={backLabel}
+      />
       <Box
         component="main"
         sx={{

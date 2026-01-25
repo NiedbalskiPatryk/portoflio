@@ -154,6 +154,7 @@
     "description": "Interaktywna galeria przykladowych projektow frontendowych.\n\nRozne style, uklady i funkcjonalnosci - od landing page'ow po bardziej rozbudowane widoki - pokazujace, jak moga wygladac nowoczesne i dopracowane interfejsy uzytkownika.\n\nKazde rozwiazanie moze zostac rozszerzone o dedykowany backend, dopasowany do potrzeb Twojego biznesu.",
     "cta": "Zobacz projekty. Wybierz kierunek. Zrobmy cos podobnego dla Ciebie.",
     "backToMain": "Wroc na strone glowna",
+    "backToShowroom": "Wroc do showroomu",
     "browseProjects": "Przegladaj projekty",
     "comingSoon": "Wkrotce",
     "projects": {
@@ -216,6 +217,781 @@
       "animations": {
         "title": "Animacje",
         "description": "Scroll effects i micro-interactions"
+      }
+    }
+  },
+  "showRoomProjects": {
+    "landingPage": {
+      "hero": {
+        "badge": "Wersja 2.0 jest juz dostepna",
+        "title": "CloudSync",
+        "subtitle": "Synchronizuj wszystko, wszedzie",
+        "description": "Trzymaj pliki zsynchronizowane na wszystkich urzadzeniach. Szybko, bezpiecznie i bez wysilku.",
+        "cta": {
+          "primary": "Rozpocznij darmowy okres",
+          "secondary": "Zobacz demo"
+        },
+        "socialProof": {
+          "value": "2,000+",
+          "label": "zadowolonych uzytkownikow"
+        },
+        "app": {
+          "name": "CloudSync",
+          "status": "Zsynchronizowano",
+          "files": [
+            { "name": "Projekty", "size": "12 plikow" },
+            { "name": "Dokumenty", "size": "8 plikow" },
+            { "name": "design-system.fig", "size": "2.4 MB" },
+            { "name": "presentation.pdf", "size": "5.1 MB" }
+          ],
+          "storage": {
+            "label": "Wykorzystana pamiec",
+            "value": "24.5 GB / 100 GB"
+          },
+          "notification": {
+            "title": "Synchronizacja zakonczona",
+            "subtitle": "Wszystkie pliki sa aktualne"
+          },
+          "stats": {
+            "label": "Predkosc wysylania",
+            "value": "125 MB/s"
+          }
+        }
+      },
+      "features": {
+        "eyebrow": "Funkcje",
+        "title": "Wszystko, czego potrzebujesz, aby",
+        "titleAccent": "byc na biezaco",
+        "description": "Rozbudowane funkcje, ktore zapewniaja bezpieczenstwo, dostepnosc i synchronizacje plikow na wszystkich urzadzeniach.",
+        "realtime": {
+          "title": "Synchronizacja w czasie rzeczywistym",
+          "description": "Zmiany synchronizuja sie natychmiast na wszystkich urzadzeniach. Bez opoznien, bez konfliktow, bez problemow. Po prostu synchronizacja, ktora dziala."
+        },
+        "security": {
+          "title": "Szyfrowanie end-to-end",
+          "description": "Twoje pliki sa szyfrowane zanim opuszcza urzadzenie. Tylko Ty masz klucze.",
+          "bullets": ["AES-256", "Zero-knowledge", "Wsparcie 2FA"]
+        },
+        "crossPlatform": {
+          "title": "Wieloplatformowe",
+          "description": "Dziala na Windows, Mac, Linux, iOS i Android. Twoje pliki sa z Toba wszedzie."
+        },
+        "collaboration": {
+          "title": "Wspolpraca zespolowa",
+          "description": "Udostepniaj foldery, ustawiaj uprawnienia i pracuj w czasie rzeczywistym z calym zespolem."
+        },
+        "stats": [
+          { "value": "99.9%", "label": "Dostepnosc" },
+          { "value": "150+", "label": "Kraje" },
+          { "value": "<50ms", "label": "Opoznienie" },
+          { "value": "2M+", "label": "Plikow synchronizowanych dziennie" }
+        ]
+      },
+      "pricing": {
+        "eyebrow": "Cennik",
+        "title": "Prosty, przejrzysty",
+        "titleAccent": "cennik",
+        "description": "Wybierz plan dopasowany do potrzeb. Bez ukrytych oplat i niespodzianek.",
+        "popularLabel": "Najpopularniejszy",
+        "plans": [
+          {
+            "id": "free",
+            "name": "Darmowy",
+            "price": "$0",
+            "period": "na zawsze",
+            "description": "Dla uzytku osobistego",
+            "features": ["5 GB pamieci", "1 uzytkownik", "Podstawowe wsparcie", "Aplikacje mobilne"],
+            "cta": "Zacznij",
+            "highlighted": false
+          },
+          {
+            "id": "pro",
+            "name": "Pro",
+            "price": "$9",
+            "period": "/mies",
+            "description": "Dla profesjonalistow",
+            "features": [
+              "100 GB pamieci",
+              "5 uzytkownikow",
+              "Priorytetowe wsparcie",
+              "Zaawansowane udostepnianie",
+              "Historia wersji"
+            ],
+            "cta": "Rozpocznij okres probny",
+            "highlighted": true
+          },
+          {
+            "id": "enterprise",
+            "name": "Enterprise",
+            "price": "Indywidualnie",
+            "period": "",
+            "description": "Dla duzych zespolow",
+            "features": [
+              "Nielimitowana pamiec",
+              "Nielimitowani uzytkownicy",
+              "Wsparcie 24/7",
+              "SSO i SAML",
+              "Konsola admina",
+              "Gwarancja SLA"
+            ],
+            "cta": "Skontaktuj sie",
+            "highlighted": false
+          }
+        ],
+        "trustBadges": ["30-dniowy zwrot pieniedzy", "Anuluj w kazdej chwili", "Bez karty kredytowej"]
+      },
+      "cta": {
+        "eyebrow": "Zaczynajmy",
+        "title": "Gotowy na synchronizacje?",
+        "subtitle": "Dolacz do tysiecy uzytkownikow, ktorzy ufaja CloudSync.",
+        "emailPlaceholder": "Wpisz email",
+        "button": "Rozpocznij darmowy okres",
+        "footnote": "Darmowy 14-dniowy okres. Bez karty kredytowej.",
+        "stats": [
+          { "value": "50K+", "label": "Aktywni uzytkownicy" },
+          { "value": "99.9%", "label": "SLA dostepnosci" },
+          { "value": "24/7", "label": "Wsparcie" }
+        ],
+        "trustedBy": "Zaufali nam zespoly w",
+        "logos": ["Vercel", "Stripe", "Linear", "Notion", "Figma"]
+      },
+      "footer": {
+        "brand": "CloudSync",
+        "tagline": "Stopka w stylu Figma z wyrazna typografia, czystymi kolumnami i subtelnym blaskiem siatki.",
+        "badge": "Zaprojektowane dla workflow w Figma",
+        "groups": [
+          {
+            "title": "Produkt",
+            "links": ["Przeglad", "Synchronizacja", "Bezpieczenstwo", "Cennik", "Lista zmian"]
+          },
+          {
+            "title": "Zasoby",
+            "links": ["Dokumentacja", "API", "Status", "Poradniki", "Szablony"]
+          },
+          {
+            "title": "Spolecznosc",
+            "links": ["Spolecznosc Figma", "Zestaw designu", "Forum", "Tablica opinii"]
+          },
+          {
+            "title": "Firma",
+            "links": ["O nas", "Kariera", "Media", "Informacje prawne", "Kontakt"]
+          }
+        ],
+        "copyright": "2024 CloudSync. Wszelkie prawa zastrzezone.",
+        "socials": ["Twitter", "GitHub", "Dribbble", "Behance"]
+      }
+    },
+    "dashboard": {
+      "hero": {
+        "eyebrow": "Dashboard",
+        "title": "Centrum kontroli wzrostu produktu",
+        "description": "Sledz przychod, aktywacje i retencje w jednym miejscu. Wizualne analizy, filtry w czasie rzeczywistym i czysty ciemny interfejs.",
+        "primaryAction": "Eksportuj raport",
+        "secondaryAction": "Zaplanuj synchronizacje"
+      },
+      "filters": {
+        "timeRangeLabel": "Zakres czasu",
+        "regionLabel": "Region",
+        "searchLabel": "Szukaj",
+        "searchPlaceholder": "Szukaj klientow lub faktur",
+        "segmentsLabel": "Segmenty",
+        "clear": "Wyczysc",
+        "timeRanges": ["Ostatnie 7 dni", "Ostatnie 30 dni", "Kwartal", "Rok"],
+        "regions": ["Globalnie", "EMEA", "Ameryki", "APAC"],
+        "segments": ["SaaS", "Enterprise", "SMB"]
+      },
+      "charts": {
+        "revenueTrend": "Trend przychodu",
+        "weeklyActivity": "Aktywnosc tygodniowa",
+        "spendDistribution": "Rozklad wydatkow",
+        "kpis": [
+          { "label": "Miesieczny przychod", "value": "$128,420", "change": "+12.4%" },
+          { "label": "Aktywni uzytkownicy", "value": "48,092", "change": "+6.8%" },
+          { "label": "Wspolczynnik konwersji", "value": "4.7%", "change": "+0.6%" },
+          { "label": "Sredni czas reakcji", "value": "1.4s", "change": "-0.3s" }
+        ],
+        "lineSeries": [14, 22, 19, 28, 35, 32, 40, 44, 39, 48, 52, 60],
+        "barSeries": [
+          { "label": "Pn", "value": 42 },
+          { "label": "Wt", "value": 28 },
+          { "label": "Sr", "value": 35 },
+          { "label": "Czw", "value": 50 },
+          { "label": "Pt", "value": 46 },
+          { "label": "Sb", "value": 24 },
+          { "label": "Nd", "value": 30 }
+        ],
+        "donutSeries": [
+          { "label": "Produkt", "value": 48, "color": "#6366f1" },
+          { "label": "Marketing", "value": 26, "color": "#22c55e" },
+          { "label": "Operacje", "value": 16, "color": "#f59e0b" },
+          { "label": "Inne", "value": 10, "color": "#ec4899" }
+        ]
+      },
+      "table": {
+        "title": "Ostatnie faktury",
+        "description": "Najnowsze oplaty abonamentowe ze statusem i planem.",
+        "headers": ["Faktura", "Klient", "Plan", "Kwota", "Status", "Data"],
+        "status": {
+          "paid": "Oplacona",
+          "pending": "Oczekujaca",
+          "failed": "Nieudana"
+        },
+        "rows": [
+          {
+            "id": "INV-1201",
+            "customer": "Nova Labs",
+            "plan": "Pro",
+            "amount": "$2,400",
+            "status": "paid",
+            "date": "Aug 12, 2024"
+          },
+          {
+            "id": "INV-1202",
+            "customer": "Pixel Bloom",
+            "plan": "Business",
+            "amount": "$1,780",
+            "status": "pending",
+            "date": "Aug 11, 2024"
+          },
+          {
+            "id": "INV-1203",
+            "customer": "Orbit Cloud",
+            "plan": "Enterprise",
+            "amount": "$6,120",
+            "status": "paid",
+            "date": "Aug 11, 2024"
+          },
+          {
+            "id": "INV-1204",
+            "customer": "Lumen Studio",
+            "plan": "Starter",
+            "amount": "$420",
+            "status": "failed",
+            "date": "Aug 10, 2024"
+          },
+          {
+            "id": "INV-1205",
+            "customer": "Northwind",
+            "plan": "Pro",
+            "amount": "$980",
+            "status": "paid",
+            "date": "Aug 09, 2024"
+          }
+        ]
+      }
+    },
+    "ecommerce": {
+      "header": {
+        "brand": "Atelier Shop",
+        "cartLabel": "Koszyk"
+      },
+      "hero": {
+        "eyebrow": "Kolekcja 2024",
+        "title": "Cicha elegancja",
+        "titleAccent": "dla nowoczesnego studia.",
+        "actions": {
+          "lookbook": "Zobacz lookbook",
+          "shop": "Kup teraz"
+        },
+        "featured": {
+          "title": "Wyroznione stylizacje",
+          "description": "Wyselekcjonowane elementy z edytorskiej kolekcji, stylizowane dla czystej sylwetki studia.",
+          "cta": "Zobacz wszystkie produkty",
+          "add": "Dodaj",
+          "stock": "Dostepne"
+        },
+        "products": [
+          {
+            "id": "look-01",
+            "title": "Column Dress",
+            "category": "Editorial",
+            "price": "$320",
+            "image": "/images/ecommerce/fashion-1.jpg"
+          },
+          {
+            "id": "look-02",
+            "title": "Silk Blazer",
+            "category": "Atelier",
+            "price": "$480",
+            "image": "/images/ecommerce/fashion-2.jpg"
+          },
+          {
+            "id": "look-03",
+            "title": "Tailored Trousers",
+            "category": "Studio",
+            "price": "$210",
+            "image": "/images/ecommerce/fashion-3.jpg"
+          },
+          {
+            "id": "look-04",
+            "title": "Sheer Knit",
+            "category": "Editorial",
+            "price": "$190",
+            "image": "/images/ecommerce/fashion-4.jpg"
+          },
+          {
+            "id": "look-05",
+            "title": "Long Coat",
+            "category": "Atelier",
+            "price": "$560",
+            "image": "/images/ecommerce/fashion-5.jpg"
+          },
+          {
+            "id": "look-06",
+            "title": "Structured Tote",
+            "category": "Accessories",
+            "price": "$150",
+            "image": "/images/ecommerce/fashion-6.jpg"
+          },
+          {
+            "id": "look-07",
+            "title": "Minimal Heel",
+            "category": "Accessories",
+            "price": "$220",
+            "image": "/images/ecommerce/fashion-7.jpg"
+          },
+          {
+            "id": "look-08",
+            "title": "Cropped Jacket",
+            "category": "Studio",
+            "price": "$280",
+            "image": "/images/ecommerce/fashion-8.jpg"
+          }
+        ]
+      },
+      "filters": {
+        "categories": ["Wszystko", "Ready-to-wear", "Odziez wierzchnia", "Akcesoria", "Obuwie", "Archiwum"],
+        "sort": "Sortuj: Nowosci",
+        "view": "Widok: Editorial Archive"
+      },
+      "productGrid": {
+        "addToCart": "Dodaj do koszyka",
+        "stock": "Dostepne",
+        "products": [
+          {
+            "id": "look-01",
+            "title": "Column Dress",
+            "category": "Editorial",
+            "price": "$320",
+            "image": "/images/ecommerce/fashion-1.jpg"
+          },
+          {
+            "id": "look-02",
+            "title": "Silk Blazer",
+            "category": "Atelier",
+            "price": "$480",
+            "image": "/images/ecommerce/fashion-2.jpg"
+          },
+          {
+            "id": "look-03",
+            "title": "Tailored Trousers",
+            "category": "Studio",
+            "price": "$210",
+            "image": "/images/ecommerce/fashion-3.jpg"
+          },
+          {
+            "id": "look-04",
+            "title": "Sheer Knit",
+            "category": "Editorial",
+            "price": "$190",
+            "image": "/images/ecommerce/fashion-4.jpg"
+          },
+          {
+            "id": "look-05",
+            "title": "Long Coat",
+            "category": "Atelier",
+            "price": "$560",
+            "image": "/images/ecommerce/fashion-5.jpg"
+          },
+          {
+            "id": "look-06",
+            "title": "Structured Tote",
+            "category": "Accessories",
+            "price": "$150",
+            "image": "/images/ecommerce/fashion-6.jpg"
+          },
+          {
+            "id": "look-07",
+            "title": "Minimal Heel",
+            "category": "Accessories",
+            "price": "$220",
+            "image": "/images/ecommerce/fashion-7.jpg"
+          },
+          {
+            "id": "look-08",
+            "title": "Cropped Jacket",
+            "category": "Studio",
+            "price": "$280",
+            "image": "/images/ecommerce/fashion-8.jpg"
+          }
+        ]
+      },
+      "editorial": {
+        "eyebrow": "Notatki redakcyjne",
+        "title": "Sylwetka jest",
+        "titleAccent": "przekazem.",
+        "collections": [
+          {
+            "title": "Letni editorial",
+            "description": "Wyblakle lny, zlagodzone krawiectwo, minimalne linie."
+          },
+          {
+            "title": "Studio Edition",
+            "description": "Monochromatyczne podstawy skrojone dla dluzszych sylwetek."
+          },
+          {
+            "title": "Night Shift",
+            "description": "Strukturalne czernie, satynowe akcenty, cichy blask."
+          }
+        ],
+        "looks": [
+          {
+            "id": "editorial-01",
+            "title": "Issue 12",
+            "subtitle": "Linie w ruchu",
+            "image": "/images/ecommerce/fashion-2.jpg"
+          },
+          {
+            "id": "editorial-02",
+            "title": "Issue 13",
+            "subtitle": "Cisza w jedwabiu",
+            "image": "/images/ecommerce/fashion-4.jpg"
+          },
+          {
+            "id": "editorial-03",
+            "title": "Issue 14",
+            "subtitle": "Szklane atelier",
+            "image": "/images/ecommerce/fashion-6.jpg"
+          }
+        ]
+      },
+      "footer": {
+        "brand": "Atelier Studio",
+        "description": "Koncepcja butikowa. Wszystkie wizualizacje to mockupy do showroomu.",
+        "links": ["Regulamin", "Prywatnosc", "Kontakt"]
+      }
+    },
+    "portfolio": {
+      "hero": {
+        "eyebrow": "Portfolio",
+        "title": "Architektura",
+        "titleAccent": "w brutalnych ramach.",
+        "description": "Selekcja surowych struktur, betonowych siatek i odwaznej geometrii.",
+        "stats": {
+          "primary": "08 serii zdjec",
+          "secondary": "Tylko architektura"
+        },
+        "projects": [
+          { "id": "ARCH-01", "image": "/images/portfolio/arch-1.jpg" },
+          { "id": "ARCH-02", "image": "/images/portfolio/arch-2.jpg" },
+          { "id": "ARCH-03", "image": "/images/portfolio/arch-3.jpg" },
+          { "id": "ARCH-04", "image": "/images/portfolio/arch-4.jpg" },
+          { "id": "ARCH-05", "image": "/images/portfolio/arch-5.jpg" },
+          { "id": "ARCH-06", "image": "/images/portfolio/arch-6.jpg" },
+          { "id": "ARCH-07", "image": "/images/portfolio/arch-7.jpg" },
+          { "id": "ARCH-08", "image": "/images/portfolio/arch-8.jpg" },
+          { "id": "ARCH-09", "image": "/images/portfolio/arch-9.jpg" }
+        ]
+      },
+      "projects": {
+        "title": "Archiwum zdjec",
+        "items": [
+          {
+            "id": "ARCH-01",
+            "title": "Concrete Archive",
+            "location": "Rotterdam",
+            "image": "/images/portfolio/arch-1.jpg"
+          },
+          {
+            "id": "ARCH-02",
+            "title": "Glass District",
+            "location": "Copenhagen",
+            "image": "/images/portfolio/arch-2.jpg"
+          },
+          {
+            "id": "ARCH-03",
+            "title": "Stone + Sky",
+            "location": "Lisbon",
+            "image": "/images/portfolio/arch-3.jpg"
+          },
+          {
+            "id": "ARCH-04",
+            "title": "Steel Frame",
+            "location": "Tokyo",
+            "image": "/images/portfolio/arch-4.jpg"
+          },
+          {
+            "id": "ARCH-05",
+            "title": "Raw Loft",
+            "location": "Berlin",
+            "image": "/images/portfolio/arch-5.jpg"
+          },
+          {
+            "id": "ARCH-06",
+            "title": "Grid Habitat",
+            "location": "Seoul",
+            "image": "/images/portfolio/arch-6.jpg"
+          },
+          {
+            "id": "ARCH-07",
+            "title": "Monolith",
+            "location": "Mexico City",
+            "image": "/images/portfolio/arch-7.jpg"
+          },
+          {
+            "id": "ARCH-08",
+            "title": "Vertical Light",
+            "location": "New York",
+            "image": "/images/portfolio/arch-8.jpg"
+          },
+          {
+            "id": "ARCH-09",
+            "title": "Brutal Corridor",
+            "location": "Zurich",
+            "image": "/images/portfolio/arch-9.jpg"
+          }
+        ]
+      },
+      "manifesto": {
+        "title": "Manifest",
+        "description": "Brutalizm utrzymuje interfejs w szczerej formie. Bloki, siatki i glosna typografia sprawiaja, ze prace mowia bez dekoracji.",
+        "highlights": [
+          "Wyrozniony w Brutalist Design Annual 2024.",
+          "Publikacja w Digital Craft magazine, wydanie 41.",
+          "Klienci z branzy mody, kultury i nowych technologii."
+        ],
+        "projects": [
+          { "id": "ARCH-08", "image": "/images/portfolio/arch-8.jpg" },
+          { "id": "ARCH-09", "image": "/images/portfolio/arch-9.jpg" }
+        ]
+      },
+      "contact": {
+        "title": "Zacznij projekt",
+        "description": "Szukasz wyrazistego systemu wizualnego? Zbudujmy kolejna odwazna premiere.",
+        "primaryAction": "Umow rozmowe",
+        "secondaryAction": "Pobierz CV"
+      },
+      "footer": {
+        "brand": "Brutalist Studio",
+        "tagline": "Portfolio architektury i badania wizualne.",
+        "badge": "Otwarci na zlecenia",
+        "details": [
+          { "label": "Studio", "value": "Berlin + Kopenhaga" },
+          { "label": "Email", "value": "hello@brutalist.studio" }
+        ],
+        "links": ["Archiwum", "Druki", "Prasa", "Kontakt"],
+        "legal": "Wszystkie obrazy to koncepty do showroomu."
+      }
+    },
+    "admin": {
+      "header": {
+        "eyebrow": "Panel admina",
+        "title": "Minimalny przeglad operacji",
+        "description": "Uzytkownicy, aktywnosc i sygnaly ryzyka w jednej, czystej przestrzeni.",
+        "actions": {
+          "export": "Eksport",
+          "addUser": "Dodaj uzytkownika"
+        }
+      },
+      "stats": {
+        "items": [
+          { "label": "Aktywni uzytkownicy", "value": "12,480", "change": "+4.2%" },
+          { "label": "Nowe zapisy", "value": "1,284", "change": "+2.1%" },
+          { "label": "Ryzyko churn", "value": "2.4%", "change": "-0.6%" }
+        ]
+      },
+      "table": {
+        "title": "Uzytkownicy",
+        "description": "Zarzadzaj dostepem, statusem i planami.",
+        "searchPlaceholder": "Szukaj uzytkownikow",
+        "reset": "Resetuj",
+        "view": "Podglad",
+        "planOptions": ["Wszystkie plany", "Starter", "Pro", "Business", "Enterprise"],
+        "statusOptions": ["Status", "Aktywny", "Wstrzymany", "Do weryfikacji"],
+        "headers": ["Uzytkownik", "Plan", "Status", "Ostatnio", "Akcja"],
+        "status": {
+          "active": "Aktywny",
+          "paused": "Wstrzymany",
+          "review": "Do weryfikacji"
+        },
+        "rows": [
+          {
+            "id": "USR-9021",
+            "name": "Jules Carter",
+            "plan": "Pro",
+            "status": "active",
+            "lastSeen": "2h temu"
+          },
+          {
+            "id": "USR-9022",
+            "name": "Noa Jensen",
+            "plan": "Business",
+            "status": "active",
+            "lastSeen": "1d temu"
+          },
+          {
+            "id": "USR-9023",
+            "name": "Amara Lee",
+            "plan": "Starter",
+            "status": "paused",
+            "lastSeen": "3d temu"
+          },
+          {
+            "id": "USR-9024",
+            "name": "Kai Morita",
+            "plan": "Pro",
+            "status": "active",
+            "lastSeen": "4h temu"
+          },
+          {
+            "id": "USR-9025",
+            "name": "Lina Rossi",
+            "plan": "Enterprise",
+            "status": "review",
+            "lastSeen": "6d temu"
+          }
+        ]
+      }
+    },
+    "event": {
+      "hero": {
+        "eyebrow": "⚡ najczesciej wybierane",
+        "title": "Velocity",
+        "titleAccent": "Live 2024",
+        "description": "Wydarzenie o wysokiej energii dla koncertow, festiwali i konferencji tech. Dwie noce. Trzy sceny. Zero ciszy.",
+        "actions": {
+          "primary": "Kup bilety",
+          "secondary": "Zobacz zwiastun"
+        },
+        "videoLabel": "Wideo hero",
+        "stats": [
+          { "label": "3 sceny", "value": "48 prelegentow" },
+          { "label": "2 dni", "value": "12 warsztatow" },
+          { "label": "6k uczestnikow", "value": "32 partnerow" }
+        ]
+      },
+      "lineup": {
+        "title": "Lineup",
+        "items": [
+          { "name": "Nova Pulse", "time": "18:30", "stage": "Glowna scena" },
+          { "name": "Circuit Echo", "time": "20:00", "stage": "Glowna scena" },
+          { "name": "Vega Runner", "time": "21:30", "stage": "Glowna scena" },
+          { "name": "Mono Signal", "time": "17:00", "stage": "Studio" },
+          { "name": "Atlas Code", "time": "19:00", "stage": "Studio" },
+          { "name": "Binary Drift", "time": "21:00", "stage": "Studio" }
+        ]
+      },
+      "schedule": {
+        "title": "Harmonogram",
+        "items": [
+          {
+            "time": "10:00",
+            "title": "Otwarcie bram",
+            "detail": "Rejestracja + pakiet powitalny"
+          },
+          {
+            "time": "11:00",
+            "title": "Keynote: Przyszlosc live",
+            "detail": "Glowna scena"
+          },
+          {
+            "time": "13:30",
+            "title": "Blok warsztatow",
+            "detail": "AI, Design Systems, Live Ops"
+          },
+          {
+            "time": "16:00",
+            "title": "Panel: Kultura + Tech",
+            "detail": "Studio"
+          },
+          {
+            "time": "18:30",
+            "title": "Nocny show",
+            "detail": "Glowna scena"
+          }
+        ]
+      },
+      "tickets": {
+        "title": "Bilety",
+        "cta": "Rezerwuj",
+        "items": [
+          {
+            "name": "Standard",
+            "price": "$189",
+            "detail": "Dostep do wszystkich scen + expo"
+          },
+          {
+            "name": "Pro",
+            "price": "$329",
+            "detail": "Standard + warsztaty + lounge"
+          },
+          {
+            "name": "VIP",
+            "price": "$590",
+            "detail": "Pelny dostep + backstage + kolacja"
+          }
+        ]
+      },
+      "footer": {
+        "brand": "Velocity Live",
+        "tagline": "Koncepcja festiwalu na dwie noce i wysoka energia.",
+        "details": [
+          { "label": "Daty", "value": "16-17 sierpnia 2024" },
+          { "label": "Miejsce", "value": "Dzielnica Harbor, Oslo" }
+        ],
+        "links": ["Lineup", "Bilety", "FAQ", "Partnerzy"],
+        "socials": ["Instagram", "YouTube", "TikTok"],
+        "legal": "Koncepcja wydarzenia do prezentacji w showroomie."
+      }
+    },
+    "calculator": {
+      "hero": {
+        "eyebrow": "Czyste UI / Minimalny SaaS",
+        "title": "Kalkulator ROI dla wzrostu SaaS",
+        "description": "Oszacuj wplyw na przychod, oszczednosci kosztow i okres zwrotu w prostym kalkulatorze.",
+        "actions": {
+          "primary": "Policz oszczednosci",
+          "secondary": "Pobierz raport"
+        }
+      },
+      "grid": {
+        "inputsTitle": "Dane wejsciowe",
+        "inputsDescription": "Dopasuj wolumen i zalozenia cenowe.",
+        "inputs": [
+          { "label": "Miesieczne leady", "value": "2400" },
+          { "label": "Wspolczynnik konwersji", "value": "3.2%" },
+          { "label": "Srednia wartosc kontraktu", "value": "$4,500" },
+          { "label": "Cykl sprzedazy (dni)", "value": "32" },
+          { "label": "Koszt operacyjny / miesiac", "value": "$18,000" }
+        ],
+        "updateResults": "Aktualizuj wyniki",
+        "results": {
+          "title": "Wyniki",
+          "roiLabel": "Szacowany roczny ROI",
+          "roiValue": "4.2x",
+          "paybackLabel": "Okres zwrotu",
+          "paybackValue": "5.6 mies.",
+          "impactLabel": "Wplyw na przychod netto",
+          "impactValue": "$150,400 / rok"
+        },
+        "assumptionsTitle": "Zalozenia i oszczednosci",
+        "assumptions": [
+          { "label": "Srednia wartosc transakcji", "value": "$4,500" },
+          { "label": "Wspolczynnik wygranych", "value": "24%" },
+          { "label": "Cykl sprzedazy", "value": "32 dni" }
+        ],
+        "savings": [
+          { "label": "Zaoszczedzone godziny", "value": "180 h / miesiac" },
+          { "label": "Oszczednosci operacyjne", "value": "$38,400 / rok" },
+          { "label": "Wzrost przychodu", "value": "$112,000 / rok" }
+        ]
+      },
+      "footer": {
+        "brand": "Atlas Metrics",
+        "tagline": "Kalkulator ROI dla liderow SaaS i zespolow revenue.",
+        "links": ["Cennik", "Bezpieczenstwo", "Dokumentacja", "Kontakt"],
+        "badges": ["SOC 2 Type II", "GDPR ready", "99.9% uptime"],
+        "legal": "Wartosci sa pogladowe, przygotowane na potrzeby showroomu."
       }
     }
   }

@@ -154,6 +154,7 @@
     "description": "An interactive gallery of frontend project examples.\n\nVarious styles, layouts and functionalities - from landing pages to more complex views - showcasing what modern, polished user interfaces can look like.\n\nEach solution can be extended with a dedicated backend, tailored to your business needs.",
     "cta": "Browse projects. Choose a direction. Let's build something similar for you.",
     "backToMain": "Back to main page",
+    "backToShowroom": "Back to showroom",
     "browseProjects": "Browse projects",
     "comingSoon": "Coming soon",
     "projects": {
@@ -216,6 +217,781 @@
       "animations": {
         "title": "Animations",
         "description": "Scroll effects and micro-interactions"
+      }
+    }
+  },
+  "showRoomProjects": {
+    "landingPage": {
+      "hero": {
+        "badge": "Version 2.0 is here",
+        "title": "CloudSync",
+        "subtitle": "Sync everything, everywhere",
+        "description": "Keep your files synchronized across all devices. Fast, secure, and effortless.",
+        "cta": {
+          "primary": "Start Free Trial",
+          "secondary": "Watch demo"
+        },
+        "socialProof": {
+          "value": "2,000+",
+          "label": "happy users"
+        },
+        "app": {
+          "name": "CloudSync",
+          "status": "Synced",
+          "files": [
+            { "name": "Projects", "size": "12 files" },
+            { "name": "Documents", "size": "8 files" },
+            { "name": "design-system.fig", "size": "2.4 MB" },
+            { "name": "presentation.pdf", "size": "5.1 MB" }
+          ],
+          "storage": {
+            "label": "Storage used",
+            "value": "24.5 GB / 100 GB"
+          },
+          "notification": {
+            "title": "Sync complete",
+            "subtitle": "All files are up to date"
+          },
+          "stats": {
+            "label": "Upload speed",
+            "value": "125 MB/s"
+          }
+        }
+      },
+      "features": {
+        "eyebrow": "Features",
+        "title": "Everything you need to",
+        "titleAccent": "stay in sync",
+        "description": "Powerful features designed to keep your files safe, accessible, and synchronized across all your devices.",
+        "realtime": {
+          "title": "Real-time Sync",
+          "description": "Changes sync instantly across all your devices. No delays, no conflicts, no hassle. Just seamless synchronization that works."
+        },
+        "security": {
+          "title": "End-to-End Encryption",
+          "description": "Your files are encrypted before they leave your device. Only you have the keys.",
+          "bullets": ["AES-256", "Zero-knowledge", "2FA Support"]
+        },
+        "crossPlatform": {
+          "title": "Cross-Platform",
+          "description": "Works seamlessly on Windows, Mac, Linux, iOS, and Android. Your files follow you everywhere."
+        },
+        "collaboration": {
+          "title": "Team Collaboration",
+          "description": "Share folders, set permissions, and work together in real-time with your entire team."
+        },
+        "stats": [
+          { "value": "99.9%", "label": "Uptime" },
+          { "value": "150+", "label": "Countries" },
+          { "value": "<50ms", "label": "Latency" },
+          { "value": "2M+", "label": "Files synced daily" }
+        ]
+      },
+      "pricing": {
+        "eyebrow": "Pricing",
+        "title": "Simple, transparent",
+        "titleAccent": "pricing",
+        "description": "Choose the plan that fits your needs. No hidden fees, no surprises.",
+        "popularLabel": "Most popular",
+        "plans": [
+          {
+            "id": "free",
+            "name": "Free",
+            "price": "$0",
+            "period": "forever",
+            "description": "For personal use",
+            "features": ["5 GB storage", "1 user", "Basic support", "Mobile apps"],
+            "cta": "Get Started",
+            "highlighted": false
+          },
+          {
+            "id": "pro",
+            "name": "Pro",
+            "price": "$9",
+            "period": "/month",
+            "description": "For professionals",
+            "features": [
+              "100 GB storage",
+              "5 users",
+              "Priority support",
+              "Advanced sharing",
+              "Version history"
+            ],
+            "cta": "Start Free Trial",
+            "highlighted": true
+          },
+          {
+            "id": "enterprise",
+            "name": "Enterprise",
+            "price": "Custom",
+            "period": "",
+            "description": "For large teams",
+            "features": [
+              "Unlimited storage",
+              "Unlimited users",
+              "24/7 support",
+              "SSO & SAML",
+              "Admin console",
+              "SLA guarantee"
+            ],
+            "cta": "Contact Sales",
+            "highlighted": false
+          }
+        ],
+        "trustBadges": ["30-day money back", "Cancel anytime", "No credit card required"]
+      },
+      "cta": {
+        "eyebrow": "Get Started",
+        "title": "Ready to sync?",
+        "subtitle": "Join thousands of users who trust CloudSync with their files.",
+        "emailPlaceholder": "Enter your email",
+        "button": "Start Your Free Trial",
+        "footnote": "Free 14-day trial. No credit card required.",
+        "stats": [
+          { "value": "50K+", "label": "Active users" },
+          { "value": "99.9%", "label": "Uptime SLA" },
+          { "value": "24/7", "label": "Support" }
+        ],
+        "trustedBy": "Trusted by teams at",
+        "logos": ["Vercel", "Stripe", "Linear", "Notion", "Figma"]
+      },
+      "footer": {
+        "brand": "CloudSync",
+        "tagline": "A Figma-style product footer with sharp typography, clean columns, and a soft grid glow.",
+        "badge": "Designed for Figma workflows",
+        "groups": [
+          {
+            "title": "Product",
+            "links": ["Overview", "Sync", "Security", "Pricing", "Changelog"]
+          },
+          {
+            "title": "Resources",
+            "links": ["Documentation", "API", "Status", "Guides", "Templates"]
+          },
+          {
+            "title": "Community",
+            "links": ["Figma Community", "Design Kit", "Forum", "Wall of Love"]
+          },
+          {
+            "title": "Company",
+            "links": ["About", "Careers", "Press", "Legal", "Contact"]
+          }
+        ],
+        "copyright": "2024 CloudSync. All rights reserved.",
+        "socials": ["Twitter", "GitHub", "Dribbble", "Behance"]
+      }
+    },
+    "dashboard": {
+      "hero": {
+        "eyebrow": "Dashboard",
+        "title": "Control room for product growth",
+        "description": "Track revenue, activation, and retention in one place. Visual analytics, realtime filters, and a clean dark interface.",
+        "primaryAction": "Export report",
+        "secondaryAction": "Schedule sync"
+      },
+      "filters": {
+        "timeRangeLabel": "Time range",
+        "regionLabel": "Region",
+        "searchLabel": "Search",
+        "searchPlaceholder": "Search clients or invoices",
+        "segmentsLabel": "Segments",
+        "clear": "Clear",
+        "timeRanges": ["Last 7 days", "Last 30 days", "Quarter", "Year"],
+        "regions": ["Global", "EMEA", "Americas", "APAC"],
+        "segments": ["SaaS", "Enterprise", "SMB"]
+      },
+      "charts": {
+        "revenueTrend": "Revenue trend",
+        "weeklyActivity": "Weekly activity",
+        "spendDistribution": "Spend distribution",
+        "kpis": [
+          { "label": "Monthly revenue", "value": "$128,420", "change": "+12.4%" },
+          { "label": "Active users", "value": "48,092", "change": "+6.8%" },
+          { "label": "Conversion rate", "value": "4.7%", "change": "+0.6%" },
+          { "label": "Avg. response", "value": "1.4s", "change": "-0.3s" }
+        ],
+        "lineSeries": [14, 22, 19, 28, 35, 32, 40, 44, 39, 48, 52, 60],
+        "barSeries": [
+          { "label": "Mon", "value": 42 },
+          { "label": "Tue", "value": 28 },
+          { "label": "Wed", "value": 35 },
+          { "label": "Thu", "value": 50 },
+          { "label": "Fri", "value": 46 },
+          { "label": "Sat", "value": 24 },
+          { "label": "Sun", "value": 30 }
+        ],
+        "donutSeries": [
+          { "label": "Product", "value": 48, "color": "#6366f1" },
+          { "label": "Marketing", "value": 26, "color": "#22c55e" },
+          { "label": "Ops", "value": 16, "color": "#f59e0b" },
+          { "label": "Other", "value": 10, "color": "#ec4899" }
+        ]
+      },
+      "table": {
+        "title": "Recent invoices",
+        "description": "Latest subscription charges with status and plan details.",
+        "headers": ["Invoice", "Customer", "Plan", "Amount", "Status", "Date"],
+        "status": {
+          "paid": "Paid",
+          "pending": "Pending",
+          "failed": "Failed"
+        },
+        "rows": [
+          {
+            "id": "INV-1201",
+            "customer": "Nova Labs",
+            "plan": "Pro",
+            "amount": "$2,400",
+            "status": "paid",
+            "date": "Aug 12, 2024"
+          },
+          {
+            "id": "INV-1202",
+            "customer": "Pixel Bloom",
+            "plan": "Business",
+            "amount": "$1,780",
+            "status": "pending",
+            "date": "Aug 11, 2024"
+          },
+          {
+            "id": "INV-1203",
+            "customer": "Orbit Cloud",
+            "plan": "Enterprise",
+            "amount": "$6,120",
+            "status": "paid",
+            "date": "Aug 11, 2024"
+          },
+          {
+            "id": "INV-1204",
+            "customer": "Lumen Studio",
+            "plan": "Starter",
+            "amount": "$420",
+            "status": "failed",
+            "date": "Aug 10, 2024"
+          },
+          {
+            "id": "INV-1205",
+            "customer": "Northwind",
+            "plan": "Pro",
+            "amount": "$980",
+            "status": "paid",
+            "date": "Aug 09, 2024"
+          }
+        ]
+      }
+    },
+    "ecommerce": {
+      "header": {
+        "brand": "Atelier Shop",
+        "cartLabel": "Cart"
+      },
+      "hero": {
+        "eyebrow": "Collection 2024",
+        "title": "Quiet luxury",
+        "titleAccent": "for the modern studio.",
+        "actions": {
+          "lookbook": "View Lookbook",
+          "shop": "Shop now"
+        },
+        "featured": {
+          "title": "Featured looks",
+          "description": "Curated pieces from the editorial selection, styled for a clean studio silhouette.",
+          "cta": "View all products",
+          "add": "Add",
+          "stock": "In stock"
+        },
+        "products": [
+          {
+            "id": "look-01",
+            "title": "Column Dress",
+            "category": "Editorial",
+            "price": "$320",
+            "image": "/images/ecommerce/fashion-1.jpg"
+          },
+          {
+            "id": "look-02",
+            "title": "Silk Blazer",
+            "category": "Atelier",
+            "price": "$480",
+            "image": "/images/ecommerce/fashion-2.jpg"
+          },
+          {
+            "id": "look-03",
+            "title": "Tailored Trousers",
+            "category": "Studio",
+            "price": "$210",
+            "image": "/images/ecommerce/fashion-3.jpg"
+          },
+          {
+            "id": "look-04",
+            "title": "Sheer Knit",
+            "category": "Editorial",
+            "price": "$190",
+            "image": "/images/ecommerce/fashion-4.jpg"
+          },
+          {
+            "id": "look-05",
+            "title": "Long Coat",
+            "category": "Atelier",
+            "price": "$560",
+            "image": "/images/ecommerce/fashion-5.jpg"
+          },
+          {
+            "id": "look-06",
+            "title": "Structured Tote",
+            "category": "Accessories",
+            "price": "$150",
+            "image": "/images/ecommerce/fashion-6.jpg"
+          },
+          {
+            "id": "look-07",
+            "title": "Minimal Heel",
+            "category": "Accessories",
+            "price": "$220",
+            "image": "/images/ecommerce/fashion-7.jpg"
+          },
+          {
+            "id": "look-08",
+            "title": "Cropped Jacket",
+            "category": "Studio",
+            "price": "$280",
+            "image": "/images/ecommerce/fashion-8.jpg"
+          }
+        ]
+      },
+      "filters": {
+        "categories": ["All", "Ready-to-wear", "Outerwear", "Accessories", "Footwear", "Archive"],
+        "sort": "Sort: New arrivals",
+        "view": "View: Editorial Archive"
+      },
+      "productGrid": {
+        "addToCart": "Add to cart",
+        "stock": "In stock",
+        "products": [
+          {
+            "id": "look-01",
+            "title": "Column Dress",
+            "category": "Editorial",
+            "price": "$320",
+            "image": "/images/ecommerce/fashion-1.jpg"
+          },
+          {
+            "id": "look-02",
+            "title": "Silk Blazer",
+            "category": "Atelier",
+            "price": "$480",
+            "image": "/images/ecommerce/fashion-2.jpg"
+          },
+          {
+            "id": "look-03",
+            "title": "Tailored Trousers",
+            "category": "Studio",
+            "price": "$210",
+            "image": "/images/ecommerce/fashion-3.jpg"
+          },
+          {
+            "id": "look-04",
+            "title": "Sheer Knit",
+            "category": "Editorial",
+            "price": "$190",
+            "image": "/images/ecommerce/fashion-4.jpg"
+          },
+          {
+            "id": "look-05",
+            "title": "Long Coat",
+            "category": "Atelier",
+            "price": "$560",
+            "image": "/images/ecommerce/fashion-5.jpg"
+          },
+          {
+            "id": "look-06",
+            "title": "Structured Tote",
+            "category": "Accessories",
+            "price": "$150",
+            "image": "/images/ecommerce/fashion-6.jpg"
+          },
+          {
+            "id": "look-07",
+            "title": "Minimal Heel",
+            "category": "Accessories",
+            "price": "$220",
+            "image": "/images/ecommerce/fashion-7.jpg"
+          },
+          {
+            "id": "look-08",
+            "title": "Cropped Jacket",
+            "category": "Studio",
+            "price": "$280",
+            "image": "/images/ecommerce/fashion-8.jpg"
+          }
+        ]
+      },
+      "editorial": {
+        "eyebrow": "Editorial notes",
+        "title": "The silhouette is",
+        "titleAccent": "the statement.",
+        "collections": [
+          {
+            "title": "Summer Editorial",
+            "description": "Sun-bleached linens, softened tailoring, minimal lines."
+          },
+          {
+            "title": "Studio Edition",
+            "description": "Monochrome staples cut for long silhouettes."
+          },
+          {
+            "title": "Night Shift",
+            "description": "Structured blacks, satin accents, quiet shine."
+          }
+        ],
+        "looks": [
+          {
+            "id": "editorial-01",
+            "title": "Issue 12",
+            "subtitle": "Lines in motion",
+            "image": "/images/ecommerce/fashion-2.jpg"
+          },
+          {
+            "id": "editorial-02",
+            "title": "Issue 13",
+            "subtitle": "Silence in silk",
+            "image": "/images/ecommerce/fashion-4.jpg"
+          },
+          {
+            "id": "editorial-03",
+            "title": "Issue 14",
+            "subtitle": "Glass atelier",
+            "image": "/images/ecommerce/fashion-6.jpg"
+          }
+        ]
+      },
+      "footer": {
+        "brand": "Atelier Studio",
+        "description": "Editorial retail concept. All visuals are mockups for showroom use.",
+        "links": ["Terms", "Privacy", "Contact"]
+      }
+    },
+    "portfolio": {
+      "hero": {
+        "eyebrow": "Portfolio",
+        "title": "Architecture",
+        "titleAccent": "in brutal frames.",
+        "description": "Photo-led selection of raw structures, concrete grids, and bold geometry.",
+        "stats": {
+          "primary": "08 photo series",
+          "secondary": "Architecture only"
+        },
+        "projects": [
+          { "id": "ARCH-01", "image": "/images/portfolio/arch-1.jpg" },
+          { "id": "ARCH-02", "image": "/images/portfolio/arch-2.jpg" },
+          { "id": "ARCH-03", "image": "/images/portfolio/arch-3.jpg" },
+          { "id": "ARCH-04", "image": "/images/portfolio/arch-4.jpg" },
+          { "id": "ARCH-05", "image": "/images/portfolio/arch-5.jpg" },
+          { "id": "ARCH-06", "image": "/images/portfolio/arch-6.jpg" },
+          { "id": "ARCH-07", "image": "/images/portfolio/arch-7.jpg" },
+          { "id": "ARCH-08", "image": "/images/portfolio/arch-8.jpg" },
+          { "id": "ARCH-09", "image": "/images/portfolio/arch-9.jpg" }
+        ]
+      },
+      "projects": {
+        "title": "Photo archive",
+        "items": [
+          {
+            "id": "ARCH-01",
+            "title": "Concrete Archive",
+            "location": "Rotterdam",
+            "image": "/images/portfolio/arch-1.jpg"
+          },
+          {
+            "id": "ARCH-02",
+            "title": "Glass District",
+            "location": "Copenhagen",
+            "image": "/images/portfolio/arch-2.jpg"
+          },
+          {
+            "id": "ARCH-03",
+            "title": "Stone + Sky",
+            "location": "Lisbon",
+            "image": "/images/portfolio/arch-3.jpg"
+          },
+          {
+            "id": "ARCH-04",
+            "title": "Steel Frame",
+            "location": "Tokyo",
+            "image": "/images/portfolio/arch-4.jpg"
+          },
+          {
+            "id": "ARCH-05",
+            "title": "Raw Loft",
+            "location": "Berlin",
+            "image": "/images/portfolio/arch-5.jpg"
+          },
+          {
+            "id": "ARCH-06",
+            "title": "Grid Habitat",
+            "location": "Seoul",
+            "image": "/images/portfolio/arch-6.jpg"
+          },
+          {
+            "id": "ARCH-07",
+            "title": "Monolith",
+            "location": "Mexico City",
+            "image": "/images/portfolio/arch-7.jpg"
+          },
+          {
+            "id": "ARCH-08",
+            "title": "Vertical Light",
+            "location": "New York",
+            "image": "/images/portfolio/arch-8.jpg"
+          },
+          {
+            "id": "ARCH-09",
+            "title": "Brutal Corridor",
+            "location": "Zurich",
+            "image": "/images/portfolio/arch-9.jpg"
+          }
+        ]
+      },
+      "manifesto": {
+        "title": "Manifesto",
+        "description": "Brutalism keeps the interface honest. Blocks, grids, and loud typography so the work speaks without decoration.",
+        "highlights": [
+          "Selected for Brutalist Design Annual 2024.",
+          "Featured in Digital Craft magazine, issue 41.",
+          "Clients across fashion, culture, and emerging tech."
+        ],
+        "projects": [
+          { "id": "ARCH-08", "image": "/images/portfolio/arch-8.jpg" },
+          { "id": "ARCH-09", "image": "/images/portfolio/arch-9.jpg" }
+        ]
+      },
+      "contact": {
+        "title": "Start a project",
+        "description": "Looking for a loud visual system? Let's build the next bold release.",
+        "primaryAction": "Book a call",
+        "secondaryAction": "Download CV"
+      },
+      "footer": {
+        "brand": "Brutalist Studio",
+        "tagline": "Architecture portfolio and visual research.",
+        "badge": "Open for commissions",
+        "details": [
+          { "label": "Studio", "value": "Berlin + Copenhagen" },
+          { "label": "Email", "value": "hello@brutalist.studio" }
+        ],
+        "links": ["Archive", "Prints", "Press", "Contact"],
+        "legal": "All imagery is concept work for the showroom."
+      }
+    },
+    "admin": {
+      "header": {
+        "eyebrow": "Admin panel",
+        "title": "Minimal ops overview",
+        "description": "Users, activity, and risk signals in one clean workspace.",
+        "actions": {
+          "export": "Export",
+          "addUser": "Add user"
+        }
+      },
+      "stats": {
+        "items": [
+          { "label": "Active users", "value": "12,480", "change": "+4.2%" },
+          { "label": "New signups", "value": "1,284", "change": "+2.1%" },
+          { "label": "Churn risk", "value": "2.4%", "change": "-0.6%" }
+        ]
+      },
+      "table": {
+        "title": "Users",
+        "description": "Manage access, status, and plans.",
+        "searchPlaceholder": "Search users",
+        "reset": "Reset",
+        "view": "View",
+        "planOptions": ["All plans", "Starter", "Pro", "Business", "Enterprise"],
+        "statusOptions": ["Status", "Active", "Paused", "Review"],
+        "headers": ["User", "Plan", "Status", "Last seen", "Action"],
+        "status": {
+          "active": "Active",
+          "paused": "Paused",
+          "review": "Review"
+        },
+        "rows": [
+          {
+            "id": "USR-9021",
+            "name": "Jules Carter",
+            "plan": "Pro",
+            "status": "active",
+            "lastSeen": "2h ago"
+          },
+          {
+            "id": "USR-9022",
+            "name": "Noa Jensen",
+            "plan": "Business",
+            "status": "active",
+            "lastSeen": "1d ago"
+          },
+          {
+            "id": "USR-9023",
+            "name": "Amara Lee",
+            "plan": "Starter",
+            "status": "paused",
+            "lastSeen": "3d ago"
+          },
+          {
+            "id": "USR-9024",
+            "name": "Kai Morita",
+            "plan": "Pro",
+            "status": "active",
+            "lastSeen": "4h ago"
+          },
+          {
+            "id": "USR-9025",
+            "name": "Lina Rossi",
+            "plan": "Enterprise",
+            "status": "review",
+            "lastSeen": "6d ago"
+          }
+        ]
+      }
+    },
+    "event": {
+      "hero": {
+        "eyebrow": "⚡ most chosen",
+        "title": "Velocity",
+        "titleAccent": "Live 2024",
+        "description": "High-impact event for concerts, festivals, and tech conferences. Two nights. Three stages. Zero quiet moments.",
+        "actions": {
+          "primary": "Get tickets",
+          "secondary": "Watch trailer"
+        },
+        "videoLabel": "Hero video",
+        "stats": [
+          { "label": "3 stages", "value": "48 speakers" },
+          { "label": "2 days", "value": "12 workshops" },
+          { "label": "6k attendees", "value": "32 partners" }
+        ]
+      },
+      "lineup": {
+        "title": "Lineup",
+        "items": [
+          { "name": "Nova Pulse", "time": "18:30", "stage": "Main Stage" },
+          { "name": "Circuit Echo", "time": "20:00", "stage": "Main Stage" },
+          { "name": "Vega Runner", "time": "21:30", "stage": "Main Stage" },
+          { "name": "Mono Signal", "time": "17:00", "stage": "Studio Stage" },
+          { "name": "Atlas Code", "time": "19:00", "stage": "Studio Stage" },
+          { "name": "Binary Drift", "time": "21:00", "stage": "Studio Stage" }
+        ]
+      },
+      "schedule": {
+        "title": "Schedule",
+        "items": [
+          {
+            "time": "10:00",
+            "title": "Gates open",
+            "detail": "Registration + welcome kit"
+          },
+          {
+            "time": "11:00",
+            "title": "Keynote: Future of Live",
+            "detail": "Main Stage"
+          },
+          {
+            "time": "13:30",
+            "title": "Workshops block",
+            "detail": "AI, Design Systems, Live Ops"
+          },
+          {
+            "time": "16:00",
+            "title": "Panel: Culture + Tech",
+            "detail": "Studio Stage"
+          },
+          {
+            "time": "18:30",
+            "title": "Night show",
+            "detail": "Main Stage"
+          }
+        ]
+      },
+      "tickets": {
+        "title": "Tickets",
+        "cta": "Reserve",
+        "items": [
+          {
+            "name": "Standard",
+            "price": "$189",
+            "detail": "Access to all stages + expo"
+          },
+          {
+            "name": "Pro",
+            "price": "$329",
+            "detail": "Standard + workshops + lounge"
+          },
+          {
+            "name": "VIP",
+            "price": "$590",
+            "detail": "All access + backstage + dinner"
+          }
+        ]
+      },
+      "footer": {
+        "brand": "Velocity Live",
+        "tagline": "Two-night festival concept. Built for high impact.",
+        "details": [
+          { "label": "Dates", "value": "Aug 16-17, 2024" },
+          { "label": "Venue", "value": "Harbor District, Oslo" }
+        ],
+        "links": ["Lineup", "Tickets", "FAQ", "Partners"],
+        "socials": ["Instagram", "YouTube", "TikTok"],
+        "legal": "Event concept for showroom showcase."
+      }
+    },
+    "calculator": {
+      "hero": {
+        "eyebrow": "Clean UI / Minimal SaaS",
+        "title": "ROI calculator for SaaS growth",
+        "description": "Estimate revenue impact, cost savings, and payback period with a simple, focused calculator.",
+        "actions": {
+          "primary": "Calculate savings",
+          "secondary": "Download report"
+        }
+      },
+      "grid": {
+        "inputsTitle": "Inputs",
+        "inputsDescription": "Adjust your volume and pricing assumptions.",
+        "inputs": [
+          { "label": "Monthly leads", "value": "2400" },
+          { "label": "Conversion rate", "value": "3.2%" },
+          { "label": "Average contract value", "value": "$4,500" },
+          { "label": "Sales cycle (days)", "value": "32" },
+          { "label": "Ops cost / month", "value": "$18,000" }
+        ],
+        "updateResults": "Update results",
+        "results": {
+          "title": "Results",
+          "roiLabel": "Estimated annual ROI",
+          "roiValue": "4.2x",
+          "paybackLabel": "Payback period",
+          "paybackValue": "5.6 months",
+          "impactLabel": "Net revenue impact",
+          "impactValue": "$150,400 / year"
+        },
+        "assumptionsTitle": "Assumptions & savings",
+        "assumptions": [
+          { "label": "Average deal size", "value": "$4,500" },
+          { "label": "Win rate", "value": "24%" },
+          { "label": "Sales cycle", "value": "32 days" }
+        ],
+        "savings": [
+          { "label": "Manual hours saved", "value": "180 hrs / month" },
+          { "label": "Operational savings", "value": "$38,400 / year" },
+          { "label": "Revenue uplift", "value": "$112,000 / year" }
+        ]
+      },
+      "footer": {
+        "brand": "Atlas Metrics",
+        "tagline": "ROI calculator for SaaS leaders and revenue teams.",
+        "links": ["Pricing", "Security", "Docs", "Contact"],
+        "badges": ["SOC 2 Type II", "GDPR ready", "99.9% uptime"],
+        "legal": "Metrics are illustrative for showroom use."
       }
     }
   }

@@ -34,7 +34,7 @@ export default async function Home() {
     },
     secondaryCTA: {
       label: t("showRoom.navButton"),
-      href: `/${locale}/show-room`,
+      href: `/${locale}/showroom`,
     },
     technologies: [
       "JavaScript",

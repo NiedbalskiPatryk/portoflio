@@ -1,6 +1,5 @@
 "use client";
 
-import FloatingCode from "@/components/atoms/FloatingCode";
 import {
   CTAGroup,
   LocationBadge,
@@ -69,7 +68,7 @@ export default function HeroSection({
       }}
     >
       {/* Floating code snippets */}
-      <FloatingCode
+      {/*   <FloatingCode
         snippet={snippets.leftTop}
         position="left"
         offsetY="15%"
@@ -92,7 +91,7 @@ export default function HeroSection({
         position="right"
         offsetY="65%"
         delay={300}
-      />
+      /> */}
 
       {/* Gradient circle background */}
       <Box
