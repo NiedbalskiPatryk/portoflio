@@ -59,7 +59,7 @@ export default function ShowRoomDrawer({
               ? "rgba(20, 20, 20, 0.95)"
               : "rgba(250, 250, 250, 0.98)",
           backdropFilter: "blur(20px)",
-          borderRadius: 4,
+          borderRadius: 0,
           border: 1,
           borderColor:
             theme.palette.mode === "dark" ? "divider" : "rgba(0, 0, 0, 0.18)",
@@ -100,8 +100,8 @@ export default function ShowRoomDrawer({
         PaperProps={{
           sx: {
             maxHeight: { xs: "85vh", sm: "75vh" },
-            borderTopLeftRadius: 24,
-            borderTopRightRadius: 24,
+            borderTopLeftRadius: 0,
+            borderTopRightRadius: 0,
             bgcolor: "background.default",
           },
         }}
@@ -170,7 +170,7 @@ export default function ShowRoomDrawer({
             transform: "translateX(-50%)",
             width: 40,
             height: 4,
-            borderRadius: 2,
+            borderRadius: 0,
             bgcolor: "divider",
           }}
         />

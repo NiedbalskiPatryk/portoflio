@@ -46,6 +46,7 @@ export default function CTAGroup({ primaryCTA, secondaryCTA }: CTAGroupProps) {
         href={primaryCTA.href}
         sx={{
           width: { xs: "100%", sm: "auto" },
+          borderRadius: 0,
           ...(primaryCTA.color === "light" && getLightButtonSx()),
         }}
       >
@@ -57,6 +58,7 @@ export default function CTAGroup({ primaryCTA, secondaryCTA }: CTAGroupProps) {
         href={secondaryCTA.href}
         sx={{
           width: { xs: "100%", sm: "auto" },
+          borderRadius: 0,
           ...(secondaryCTA.color === "light" && getLightButtonSx()),
         }}
       >

@@ -51,7 +51,7 @@ const ProfileMedia: React.FC<ProfileMediaProps> = ({
           content: '""',
           position: "absolute",
           inset: { xs: -12, md: -18 },
-          borderRadius: 4,
+          borderRadius: 0,
           border: "1px solid",
           borderColor: "divider",
           background:
@@ -71,11 +71,7 @@ const ProfileMedia: React.FC<ProfileMediaProps> = ({
           height: { xs: xsHeight, md: mediaHeight },
           fontSize: { xs: "2rem", md: "2.5rem" },
           fontWeight: 600,
-          border: "1px solid",
-          borderColor: "divider",
           bgcolor: "background.paper",
-          boxShadow:
-            "0 0 0 6px rgba(255, 255, 255, 0.06), 0 0 0 1px rgba(255, 255, 255, 0.2)",
           zIndex: 1,
         }}
       >

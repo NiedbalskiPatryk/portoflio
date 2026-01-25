@@ -20,6 +20,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
   return (
     <Card
       sx={{
+        borderRadius: 0,
         background: (theme) =>
           theme.palette.mode === "dark"
             ? `linear-gradient(120deg, ${theme.palette.surface.gradientStart} 0%, ${theme.palette.surface.gradientMid} 45%, ${theme.palette.surface.gradientEnd} 100%)`

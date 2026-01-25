@@ -19,7 +19,7 @@ const ProjectPreview: React.FC<ProjectPreviewProps> = ({ project }) => {
         sx={{
           width: "100%",
           aspectRatio: "16 / 9",
-          borderRadius: 3,
+          borderRadius: 0,
           overflow: "hidden",
           border: "2px solid",
           borderColor: (theme) =>
@@ -77,7 +77,7 @@ const ProjectPreview: React.FC<ProjectPreviewProps> = ({ project }) => {
                   sx={{
                     px: 1.5,
                     py: 0.5,
-                    borderRadius: 999,
+                    borderRadius: 0,
                     border: "1px solid",
                     borderColor: "divider",
                   }}

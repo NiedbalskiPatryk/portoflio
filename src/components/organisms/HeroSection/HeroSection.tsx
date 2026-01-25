@@ -62,7 +62,7 @@ export default function HeroSection({
       id="home"
       component="section"
       sx={{
-        minHeight: "100vh",
+        minHeight: { xs: "72vh", sm: "85vh", md: "100vh" },
         display: "flex",
         alignItems: "center",
         py: { xs: 6, md: 10 },

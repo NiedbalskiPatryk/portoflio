@@ -59,7 +59,7 @@ export default function TechStackMarquee({
               flexShrink: 0,
               color: "text.primary",
               fontWeight: 500,
-              borderRadius: "8px",
+              borderRadius: 0,
             }}
           />
         ))}

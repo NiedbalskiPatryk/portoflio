@@ -149,7 +149,7 @@ const ContactForm: React.FC<ContactFormProps> = ({
         flexDirection: "column",
         gap: 2,
         p: { xs: 3, sm: 4 },
-        borderRadius: 3,
+        borderRadius: 0,
         border: "1px solid",
         borderColor: "divider",
         background: (theme) =>
@@ -159,6 +159,7 @@ const ContactForm: React.FC<ContactFormProps> = ({
         boxShadow:
           "0 16px 32px rgba(0, 0, 0, 0.08), inset 0 1px 0 rgba(255, 255, 255, 0.04)",
         "& .MuiOutlinedInput-root": {
+          borderRadius: 0,
           backgroundColor: (theme) =>
             theme.palette.mode === "dark"
               ? "rgba(255, 255, 255, 0.04)"
@@ -259,6 +260,7 @@ const ContactForm: React.FC<ContactFormProps> = ({
         sx={{
           mt: 1,
           alignSelf: { xs: "stretch", sm: "flex-start" },
+          borderRadius: 0,
         }}
       >
         {submitLabel}

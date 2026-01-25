@@ -85,7 +85,7 @@ const AboutSection: React.FC<AboutSectionProps> = ({
               flexDirection: "column",
               gap: { xs: 3, md: 4 },
               p: { xs: 3, md: 4 },
-              borderRadius: 4,
+              borderRadius: 0,
               border: "1px solid",
               borderColor: "divider",
               background: (theme) =>
@@ -125,7 +125,7 @@ const AboutSection: React.FC<AboutSectionProps> = ({
               fallbackText={name}
               width={300}
               height={360}
-              variant="rounded"
+              variant="square"
             />
           </Box>
         </Box>

@@ -58,8 +58,9 @@ const ContactSection: React.FC<ContactSectionProps> = ({
         >
           <Box
             sx={{
-              flex: { xs: "1 1 auto", md: "0 0 38%" },
+              flex: { xs: "1 1 auto", md: "0 1 38%" },
               order: { xs: 2, md: 1 },
+              minWidth: 0,
             }}
           >
             <ContactInfo items={infoItems} />
@@ -67,8 +68,9 @@ const ContactSection: React.FC<ContactSectionProps> = ({
 
           <Box
             sx={{
-              flex: { xs: "1 1 auto", md: "0 0 62%" },
+              flex: { xs: "1 1 auto", md: "1 1 0" },
               order: { xs: 1, md: 2 },
+              minWidth: 0,
             }}
           >
           <ContactForm

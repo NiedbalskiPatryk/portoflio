@@ -25,7 +25,7 @@ const ContactInfo: React.FC<ContactInfoProps> = ({ heading, description, items }
         flexDirection: "column",
         gap: 3,
         p: { xs: 3, sm: 4 },
-        borderRadius: 3,
+        borderRadius: 0,
         border: "1px solid",
         borderColor: "divider",
         background: (theme) =>

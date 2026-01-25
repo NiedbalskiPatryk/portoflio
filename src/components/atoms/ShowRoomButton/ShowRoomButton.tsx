@@ -26,7 +26,7 @@ export default function ShowRoomButton({ label }: ShowRoomButtonProps) {
         px: 2.5,
         py: 1,
         fontSize: "0.8rem",
-        borderRadius: 1,
+        borderRadius: 0,
         textDecoration: "none",
         whiteSpace: "nowrap",
         "&:hover": {

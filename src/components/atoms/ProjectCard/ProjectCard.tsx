@@ -38,7 +38,7 @@ export default function ProjectCard({
     <Box
       sx={{
         p: 2.5,
-        borderRadius: 2,
+        borderRadius: 0,
         bgcolor:
           theme.palette.mode === "dark"
             ? "rgba(18, 18, 18, 0.9)"
