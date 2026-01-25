@@ -1,7 +1,6 @@
 "use client";
 
 import Box from "@mui/material/Box";
-import Header, { HEADER_HEIGHT } from "@/components/organisms/Header";
 
 interface PortfolioLayoutProps {
   children: React.ReactNode;
@@ -12,7 +11,7 @@ export default function PortfolioLayout({ children }: PortfolioLayoutProps) {
     <Box
       sx={{
         minHeight: "100vh",
-        bgcolor: "background.default",
+        // bgcolor: "background.default",
       }}
     >
       <Box
@@ -22,11 +21,11 @@ export default function PortfolioLayout({ children }: PortfolioLayoutProps) {
           width: "100%",
         }}
       >
-        <Header />
+        {/* <Header /> */}
         <Box
           component="main"
           sx={{
-            pt: `${HEADER_HEIGHT}px`,
+            // pt: `${HEADER_HEIGHT}px`,
             minHeight: "100vh",
           }}
         >

@@ -1,10 +1,6 @@
 "use client";
 
-import {
-  CTAGroup,
-  LocationBadge,
-  TechStackMarquee,
-} from "@/components/molecules";
+import { CTAGroup, TechStackMarquee } from "@/components/molecules";
 import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
 import Stack from "@mui/material/Stack";
@@ -65,37 +61,15 @@ export default function HeroSection({
         minHeight: { xs: "72vh", sm: "85vh", md: "100vh" },
         display: "flex",
         alignItems: "center",
-        py: { xs: 6, md: 10 },
+        pt: { xs: 12, md: 16 },
+        pb: {
+          xs: 6,
+          md: 10,
+        },
         position: "relative",
         overflow: "hidden",
       }}
     >
-      {/* Floating code snippets */}
-      {/*   <FloatingCode
-        snippet={snippets.leftTop}
-        position="left"
-        offsetY="15%"
-        delay={0}
-      />
-      <FloatingCode
-        snippet={snippets.leftMid}
-        position="left"
-        offsetY="60%"
-        delay={200}
-      />
-      <FloatingCode
-        snippet={snippets.rightTop}
-        position="right"
-        offsetY="20%"
-        delay={100}
-      />
-      <FloatingCode
-        snippet={snippets.rightMid}
-        position="right"
-        offsetY="65%"
-        delay={300}
-      /> */}
-
       <Container maxWidth="lg" sx={{ position: "relative", zIndex: 1 }}>
         <Box
           sx={{
@@ -118,19 +92,16 @@ export default function HeroSection({
               background: isLight
                 ? `radial-gradient(circle at 12% 18%, ${alpha(
                     theme.palette.text.primary,
-                    0.06
+                    0.06,
                   )} 0%, transparent 45%), radial-gradient(circle at 85% 30%, ${alpha(
                     theme.palette.text.primary,
-                    0.04
+                    0.04,
                   )} 0%, transparent 40%)`
                 : `radial-gradient(circle at 12% 18%, ${overlay} 0%, transparent 45%), radial-gradient(circle at 85% 30%, ${gradientMid} 0%, transparent 40%)`,
               pointerEvents: "none",
             }}
           />
-          <Stack
-            spacing={{ xs: 3, md: 4 }}
-            sx={{ position: "relative" }}
-          >
+          <Stack spacing={{ xs: 3, md: 4 }} sx={{ position: "relative" }}>
             <Stack
               spacing={{ xs: 3, md: 4 }}
               alignItems={{ xs: "flex-start", md: "flex-start" }}

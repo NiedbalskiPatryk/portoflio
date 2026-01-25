@@ -6,6 +6,7 @@ import {
   ContactSection,
   FAQSection,
   Footer,
+  Header,
   HeroSection,
   PortfolioLayout,
   ProjectsSection,
@@ -264,27 +265,28 @@ export default async function Home() {
     <>
       <PortfolioLayout>
         <ColorWash>
-            <HeroSection {...heroData} />
+          <Header />
+          <HeroSection {...heroData} />
 
-            <AnimatedSection direction="up" delay={0}>
-              <AboutSection {...aboutData} />
-            </AnimatedSection>
+          <AnimatedSection direction="up" delay={0}>
+            <AboutSection {...aboutData} />
+          </AnimatedSection>
 
-            <AnimatedSection direction="up" delay={100}>
-              <ServicesSection {...servicesData} />
-            </AnimatedSection>
+          <AnimatedSection direction="up" delay={100}>
+            <ServicesSection {...servicesData} />
+          </AnimatedSection>
 
-            <AnimatedSection direction="up" delay={0}>
-              <ProjectsSection {...projectsData} />
-            </AnimatedSection>
+          <AnimatedSection direction="up" delay={0}>
+            <ProjectsSection {...projectsData} />
+          </AnimatedSection>
 
-            <AnimatedSection direction="up" delay={0}>
-              <FAQSection {...faqData} />
-            </AnimatedSection>
+          <AnimatedSection direction="up" delay={0}>
+            <FAQSection {...faqData} />
+          </AnimatedSection>
 
-            <AnimatedSection direction="up" delay={100}>
-              <ContactSection {...contactData} />
-            </AnimatedSection>
+          <AnimatedSection direction="up" delay={100}>
+            <ContactSection {...contactData} />
+          </AnimatedSection>
         </ColorWash>
       </PortfolioLayout>
 

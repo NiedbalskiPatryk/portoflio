@@ -58,9 +58,16 @@ export default function Header() {
           right: 0,
           zIndex: "appBar",
           height: HEADER_HEIGHT,
-          bgcolor: scrolled
-            ? alpha(theme.palette.background.default, 0.9)
-            : alpha(theme.palette.background.default, 0.75),
+          bgcolor:
+            theme.palette.mode === "dark"
+              ? "transparent"
+              : scrolled
+                ? alpha(theme.palette.background.default, 0.9)
+                : alpha(theme.palette.background.default, 0.75),
+          backgroundImage:
+            theme.palette.mode === "dark"
+              ? `linear-gradient(120deg, ${theme.palette.surface.gradientStart} 0%, ${theme.palette.surface.gradientMid} 45%, ${theme.palette.surface.gradientEnd} 100%)`
+              : "none",
           borderBottom: "1px solid",
           borderColor: scrolled
             ? theme.palette.divider
