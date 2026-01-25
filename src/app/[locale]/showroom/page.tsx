@@ -65,6 +65,7 @@ export default async function ShowRoomPage() {
       browseProjectsLabel={t("browseProjects")}
       backHref={`/${locale}`}
       backLabel={t("backToMain")}
+      useColorWash
     >
       <ShowRoomIntro
         heading={t("heading")}

@@ -41,7 +41,7 @@ const Footer: React.FC<FooterProps> = ({
       component="footer"
       sx={{
         width: "100%",
-        mt: { xs: 6, md: 8 },
+        mt: 0,
         borderTop: 1,
         borderColor: "divider",
         bgcolor: "background.paper",

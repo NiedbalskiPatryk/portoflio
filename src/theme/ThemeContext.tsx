@@ -2,7 +2,7 @@
 
 import * as React from "react";
 
-type ThemeMode = "dark" | "light";
+export type ThemeMode = "dark" | "light";
 
 interface ThemeContextValue {
   mode: ThemeMode;
@@ -18,10 +18,12 @@ const STORAGE_KEY = "theme-mode";
 
 export function ThemeContextProvider({
   children,
+  initialMode = "dark",
 }: {
   children: React.ReactNode;
+  initialMode?: ThemeMode;
 }) {
-  const [mode, setModeState] = React.useState<ThemeMode>("dark");
+  const [mode, setModeState] = React.useState<ThemeMode>(initialMode);
   const [mounted, setMounted] = React.useState(false);
 
   // Mark as mounted and enable transitions
@@ -42,6 +44,7 @@ export function ThemeContextProvider({
   React.useEffect(() => {
     if (mounted) {
       localStorage.setItem(STORAGE_KEY, mode);
+      document.cookie = `${STORAGE_KEY}=${mode}; path=/; max-age=31536000; samesite=lax`;
       const bgColor = mode === "dark" ? "#0a0a0a" : "#ffffff";
       document.documentElement.style.backgroundColor = bgColor;
       document.body.style.backgroundColor = bgColor;

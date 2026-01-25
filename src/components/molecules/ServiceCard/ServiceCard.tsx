@@ -20,14 +20,22 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
   return (
     <Card
       sx={{
-        backgroundColor: "transparent",
+        background: (theme) =>
+          theme.palette.mode === "dark"
+            ? `linear-gradient(120deg, ${theme.palette.surface.gradientStart} 0%, ${theme.palette.surface.gradientMid} 45%, ${theme.palette.surface.gradientEnd} 100%)`
+            : theme.palette.background.paper,
         border: "1px solid",
         borderColor: "divider",
+        boxShadow:
+          "0 12px 30px rgba(0, 0, 0, 0.08), inset 0 1px 0 rgba(255, 255, 255, 0.04)",
         transition: "all 0.2s ease-in-out",
         height: "100%",
         "&:hover": {
           borderColor: "text.secondary",
-          backgroundColor: "rgba(255, 255, 255, 0.02)",
+          background: (theme) =>
+            theme.palette.mode === "dark"
+              ? `linear-gradient(120deg, ${theme.palette.surface.gradientMid} 0%, ${theme.palette.surface.gradientStart} 45%, ${theme.palette.surface.gradientEnd} 100%)`
+              : "rgba(255, 255, 255, 0.95)",
         },
       }}
     >

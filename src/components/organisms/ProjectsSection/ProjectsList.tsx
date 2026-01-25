@@ -2,7 +2,6 @@
 
 import React from "react";
 import Box from "@mui/material/Box";
-import Divider from "@mui/material/Divider";
 import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
 import Typography from "@mui/material/Typography";
@@ -31,8 +30,16 @@ const ProjectsList: React.FC<ProjectsListProps> = ({
   }
 
   return (
-    <List disablePadding sx={{ width: "100%" }}>
-      {projects.map((project, index) => {
+    <List
+      disablePadding
+      sx={{
+        width: "100%",
+        display: "flex",
+        flexDirection: "column",
+        gap: 1.5,
+      }}
+    >
+      {projects.map((project) => {
         const isSelected = project.id === activeId;
         return (
           <React.Fragment key={project.id}>
@@ -44,9 +51,6 @@ const ProjectsList: React.FC<ProjectsListProps> = ({
                 onSelect={onSelect}
               />
             </ListItem>
-            {index < projects.length - 1 && (
-              <Divider sx={{ borderColor: "divider" }} />
-            )}
           </React.Fragment>
         );
       })}

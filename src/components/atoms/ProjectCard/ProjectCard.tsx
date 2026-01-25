@@ -41,14 +41,18 @@ export default function ProjectCard({
         borderRadius: 2,
         bgcolor:
           theme.palette.mode === "dark"
-            ? "rgba(255, 255, 255, 0.05)"
-            : "rgba(0, 0, 0, 0.03)",
+            ? "rgba(18, 18, 18, 0.9)"
+            : theme.palette.background.paper,
         border: 1,
         borderColor: "divider",
         height: "100%",
         display: "flex",
         flexDirection: "column",
         transition: "all 0.2s ease",
+        boxShadow:
+          theme.palette.mode === "dark"
+            ? "0 12px 26px rgba(0, 0, 0, 0.35)"
+            : "0 12px 26px rgba(0, 0, 0, 0.08)",
         cursor: isReady ? "pointer" : "default",
         opacity: isReady ? 1 : 0.6,
         "&:hover": isReady

@@ -22,22 +22,32 @@ const ProjectListItem: React.FC<ProjectListItemProps> = ({
       selected={selected}
       onClick={() => onSelect?.(id)}
       aria-selected={selected}
-      sx={{
+      sx={(theme) => ({
         alignItems: "flex-start",
         justifyContent: "flex-start",
-        px: 0,
+        px: { xs: 2, sm: 2.5 },
         py: 2,
-        borderLeft: "2px solid",
-        borderLeftColor: selected ? "primary.main" : "transparent",
-        backgroundColor: (theme) =>
-          selected ? theme.palette.action.selected : "transparent",
+        borderRadius: 0,
+        border: "1px solid",
+        borderColor: "divider",
+        background: selected
+          ? `linear-gradient(120deg, ${theme.palette.surface.gradientStart} 0%, ${theme.palette.surface.gradientMid} 45%, ${theme.palette.surface.gradientEnd} 100%)`
+          : theme.palette.mode === "dark"
+            ? "rgba(18, 18, 18, 0.6)"
+            : theme.palette.background.paper,
+        boxShadow: selected
+          ? "0 10px 22px rgba(0, 0, 0, 0.25)"
+          : "none",
         "&:hover": {
-          backgroundColor: (theme) => theme.palette.action.hover,
+          background:
+            theme.palette.mode === "dark"
+              ? `linear-gradient(120deg, ${theme.palette.surface.gradientMid} 0%, ${theme.palette.surface.gradientStart} 45%, ${theme.palette.surface.gradientEnd} 100%)`
+              : "rgba(255, 255, 255, 0.95)",
         },
         "&.Mui-selected:hover": {
-          backgroundColor: (theme) => theme.palette.action.selected,
+          background: `linear-gradient(120deg, ${theme.palette.surface.gradientMid} 0%, ${theme.palette.surface.gradientStart} 45%, ${theme.palette.surface.gradientEnd} 100%)`,
         },
-      }}
+      })}
     >
       <Typography
         variant="h6"
@@ -46,7 +56,7 @@ const ProjectListItem: React.FC<ProjectListItemProps> = ({
           fontSize: { xs: "1rem", md: "1.1rem" },
           fontWeight: selected ? 600 : 500,
           lineHeight: 1.4,
-          pl: 2,
+          pl: 0,
           display: "-webkit-box",
           WebkitLineClamp: 2,
           WebkitBoxOrient: "vertical",

@@ -51,48 +51,6 @@ export default function EcommerceFilters() {
               </Button>
             ))}
           </Stack>
-          <Stack direction="row" spacing={1.5} alignItems="center">
-            <Button
-              variant="outlined"
-              size="small"
-              sx={{
-                borderRadius: 0,
-                borderColor: "rgba(20,20,20,0.2)",
-                color: "#6b6b6b",
-                textTransform: "uppercase",
-                letterSpacing: "0.12em",
-                fontSize: "0.7rem",
-                px: 2,
-                py: 0.6,
-                "&:hover": {
-                  borderColor: "#141414",
-                  color: "#141414",
-                },
-              }}
-            >
-              {t("sort")}
-            </Button>
-            <Button
-              variant="outlined"
-              size="small"
-              sx={{
-                borderRadius: 0,
-                borderColor: "rgba(20,20,20,0.2)",
-                color: "#6b6b6b",
-                textTransform: "uppercase",
-                letterSpacing: "0.12em",
-                fontSize: "0.7rem",
-                px: 2,
-                py: 0.6,
-                "&:hover": {
-                  borderColor: "#141414",
-                  color: "#141414",
-                },
-              }}
-            >
-              {t("view")}
-            </Button>
-          </Stack>
         </Stack>
       </Box>
     </Container>

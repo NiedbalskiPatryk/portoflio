@@ -7,10 +7,11 @@ import createCache from "@emotion/cache";
 import { ThemeProvider } from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline";
 import { createAppTheme } from "./theme";
-import { ThemeContextProvider, useThemeMode } from "./ThemeContext";
+import { ThemeContextProvider, useThemeMode, type ThemeMode } from "./ThemeContext";
 
 interface ThemeRegistryProps {
   children: React.ReactNode;
+  initialMode?: ThemeMode;
 }
 
 function ThemeProviderWithMode({ children }: { children: React.ReactNode }) {
@@ -25,7 +26,10 @@ function ThemeProviderWithMode({ children }: { children: React.ReactNode }) {
   );
 }
 
-export default function ThemeRegistry({ children }: ThemeRegistryProps) {
+export default function ThemeRegistry({
+  children,
+  initialMode,
+}: ThemeRegistryProps) {
   const [{ cache, flush }] = React.useState(() => {
     const cache = createCache({ key: "mui" });
     cache.compat = true;
@@ -68,7 +72,7 @@ export default function ThemeRegistry({ children }: ThemeRegistryProps) {
 
   return (
     <CacheProvider value={cache}>
-      <ThemeContextProvider>
+      <ThemeContextProvider initialMode={initialMode}>
         <ThemeProviderWithMode>{children}</ThemeProviderWithMode>
       </ThemeContextProvider>
     </CacheProvider>

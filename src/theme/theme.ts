@@ -32,8 +32,8 @@ const tokens = {
       paper: "#121212",
     },
     text: {
-      primary: "#ffffff",
-      secondary: "#a0a0a0",
+      primary: "#f7f7f7",
+      secondary: "#d2d2d2",
     },
     divider: "#2a2a2a",
     primary: {
@@ -54,8 +54,8 @@ const tokens = {
       paper: "#f5f5f5",
     },
     text: {
-      primary: "#0a0a0a",
-      secondary: "#666666",
+      primary: "#0b0b0b",
+      secondary: "#2a2a2a",
     },
     divider: "#e0e0e0",
     primary: {

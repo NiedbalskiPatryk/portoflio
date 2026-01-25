@@ -9,6 +9,7 @@ import {
 } from "next-intl/server";
 import { JetBrains_Mono } from "next/font/google";
 import { notFound } from "next/navigation";
+import { cookies } from "next/headers";
 import "../globals.css";
 
 const jetbrainsMono = JetBrains_Mono({
@@ -97,7 +98,10 @@ export async function generateMetadata({
 const themeScript = `
 (function() {
   try {
-    var mode = localStorage.getItem('theme-mode');
+    var cookieMatch = document.cookie.match(/(?:^|; )theme-mode=([^;]+)/);
+    var cookieMode = cookieMatch ? decodeURIComponent(cookieMatch[1]) : null;
+    var storedMode = localStorage.getItem('theme-mode');
+    var mode = cookieMode || storedMode;
     var isDark = mode !== 'light';
     var bg = isDark ? '#0a0a0a' : '#ffffff';
     var d = document.documentElement;
@@ -129,6 +133,8 @@ export default async function LocaleLayout({
 
   setRequestLocale(locale);
   const messages = await getMessages();
+  const themeCookie = (await cookies()).get("theme-mode")?.value;
+  const initialMode = themeCookie === "light" ? "light" : "dark";
 
   return (
     <html lang={locale} suppressHydrationWarning>
@@ -137,7 +143,7 @@ export default async function LocaleLayout({
       </head>
       <body className={jetbrainsMono.variable}>
         <NextIntlClientProvider messages={messages}>
-          <ThemeRegistry>{children}</ThemeRegistry>
+          <ThemeRegistry initialMode={initialMode}>{children}</ThemeRegistry>
         </NextIntlClientProvider>
       </body>
     </html>

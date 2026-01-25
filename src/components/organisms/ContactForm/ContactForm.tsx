@@ -152,15 +152,17 @@ const ContactForm: React.FC<ContactFormProps> = ({
         borderRadius: 3,
         border: "1px solid",
         borderColor: "divider",
-        backgroundColor: (theme) =>
+        background: (theme) =>
           theme.palette.mode === "dark"
-            ? "rgba(10, 10, 10, 0.55)"
-            : theme.palette.background.default,
+            ? `linear-gradient(120deg, ${theme.palette.surface.gradientStart} 0%, ${theme.palette.surface.gradientMid} 45%, ${theme.palette.surface.gradientEnd} 100%)`
+            : theme.palette.background.paper,
+        boxShadow:
+          "0 16px 32px rgba(0, 0, 0, 0.08), inset 0 1px 0 rgba(255, 255, 255, 0.04)",
         "& .MuiOutlinedInput-root": {
           backgroundColor: (theme) =>
             theme.palette.mode === "dark"
-              ? "transparent"
-              : theme.palette.background.default,
+              ? "rgba(255, 255, 255, 0.04)"
+              : theme.palette.common.white,
         },
       }}
     >

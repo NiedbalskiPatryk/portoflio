@@ -2,6 +2,7 @@ import type { ContactSectionProps } from "@/components";
 import {
   AboutSection,
   AnimatedSection,
+  ColorWash,
   ContactSection,
   FAQSection,
   Footer,
@@ -216,7 +217,6 @@ export default async function Home() {
 
   const footerData = {
     name: "Patryk Niedbalski",
-    description: t("footer.description"),
     socialLinks: [
       {
         id: "github",
@@ -263,27 +263,29 @@ export default async function Home() {
   return (
     <>
       <PortfolioLayout>
-        <HeroSection {...heroData} />
+        <ColorWash>
+            <HeroSection {...heroData} />
 
-        <AnimatedSection direction="up" delay={0}>
-          <AboutSection {...aboutData} />
-        </AnimatedSection>
+            <AnimatedSection direction="up" delay={0}>
+              <AboutSection {...aboutData} />
+            </AnimatedSection>
 
-        <AnimatedSection direction="up" delay={100}>
-          <ServicesSection {...servicesData} />
-        </AnimatedSection>
+            <AnimatedSection direction="up" delay={100}>
+              <ServicesSection {...servicesData} />
+            </AnimatedSection>
 
-        <AnimatedSection direction="up" delay={0}>
-          <ProjectsSection {...projectsData} />
-        </AnimatedSection>
+            <AnimatedSection direction="up" delay={0}>
+              <ProjectsSection {...projectsData} />
+            </AnimatedSection>
 
-        <AnimatedSection direction="up" delay={0}>
-          <FAQSection {...faqData} />
-        </AnimatedSection>
+            <AnimatedSection direction="up" delay={0}>
+              <FAQSection {...faqData} />
+            </AnimatedSection>
 
-        <AnimatedSection direction="up" delay={100}>
-          <ContactSection {...contactData} />
-        </AnimatedSection>
+            <AnimatedSection direction="up" delay={100}>
+              <ContactSection {...contactData} />
+            </AnimatedSection>
+        </ColorWash>
       </PortfolioLayout>
 
       <Footer {...footerData} />

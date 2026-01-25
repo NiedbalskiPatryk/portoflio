@@ -88,9 +88,9 @@ const AboutSection: React.FC<AboutSectionProps> = ({
               borderRadius: 4,
               border: "1px solid",
               borderColor: "divider",
-              backgroundColor: (theme) =>
+              background: (theme) =>
                 theme.palette.mode === "dark"
-                  ? "rgba(10, 10, 10, 0.55)"
+                  ? `linear-gradient(120deg, ${theme.palette.surface.gradientStart} 0%, ${theme.palette.surface.gradientMid} 45%, ${theme.palette.surface.gradientEnd} 100%)`
                   : theme.palette.background.paper,
               backdropFilter: "blur(10px)",
             }}

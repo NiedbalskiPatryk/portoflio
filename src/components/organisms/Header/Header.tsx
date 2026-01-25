@@ -15,6 +15,7 @@ import NavigationMenu, {
 } from "@/components/molecules/NavigationMenu";
 import MobileDrawer from "@/components/molecules/MobileDrawer";
 import { useTranslations } from "next-intl";
+import { alpha } from "@mui/material/styles";
 
 const HEADER_HEIGHT = 72;
 
@@ -50,21 +51,26 @@ export default function Header() {
     <>
       <Box
         component="header"
-        sx={{
+        sx={(theme) => ({
           position: "fixed",
           top: 0,
           left: 0,
           right: 0,
           zIndex: "appBar",
           height: HEADER_HEIGHT,
-          bgcolor: "background.default",
-          borderBottom: 1,
-          borderColor: scrolled ? "divider" : "transparent",
+          bgcolor: scrolled
+            ? alpha(theme.palette.background.default, 0.9)
+            : alpha(theme.palette.background.default, 0.75),
+          borderBottom: "1px solid",
+          borderColor: scrolled
+            ? theme.palette.divider
+            : alpha(theme.palette.divider, 0.4),
+          backdropFilter: "blur(16px)",
           boxShadow: scrolled
-            ? "0 4px 20px rgba(0, 0, 0, 0.4)"
-            : "0 0 0 rgba(0, 0, 0, 0)",
+            ? "0 6px 24px rgba(0, 0, 0, 0.35)"
+            : "0 2px 12px rgba(0, 0, 0, 0.15)",
           transition: "box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1), border-color 0.3s cubic-bezier(0.4, 0, 0.2, 1)",
-        }}
+        })}
       >
         <Container maxWidth="lg" sx={{ height: "100%" }}>
           <Stack
