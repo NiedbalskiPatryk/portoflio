@@ -1,21 +1,21 @@
 "use client";
 
-import { useState, useEffect } from "react";
-import Box from "@mui/material/Box";
-import Container from "@mui/material/Container";
-import Stack from "@mui/material/Stack";
-import IconButton from "@mui/material/IconButton";
-import MenuIcon from "@mui/icons-material/Menu";
-import LogoText from "@/components/atoms/LogoText";
-import ThemeToggle from "@/components/atoms/ThemeToggle";
 import LanguageSwitcher from "@/components/atoms/LanguageSwitcher";
+import LogoText from "@/components/atoms/LogoText";
 import ShowRoomButton from "@/components/atoms/ShowRoomButton";
+import ThemeToggle from "@/components/atoms/ThemeToggle";
+import MobileDrawer from "@/components/molecules/MobileDrawer";
 import NavigationMenu, {
   type NavItem,
 } from "@/components/molecules/NavigationMenu";
-import MobileDrawer from "@/components/molecules/MobileDrawer";
-import { useTranslations } from "next-intl";
+import MenuIcon from "@mui/icons-material/Menu";
+import Box from "@mui/material/Box";
+import Container from "@mui/material/Container";
+import IconButton from "@mui/material/IconButton";
+import Stack from "@mui/material/Stack";
 import { alpha } from "@mui/material/styles";
+import { useTranslations } from "next-intl";
+import { useState } from "react";
 
 const HEADER_HEIGHT = 72;
 
@@ -24,7 +24,6 @@ export default function Header() {
   const tAria = useTranslations("aria");
   const tShowRoom = useTranslations("showRoom");
   const [mobileOpen, setMobileOpen] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
 
   const NAV_ITEMS: NavItem[] = [
     { label: tNav("home"), href: "#home" },
@@ -34,14 +33,6 @@ export default function Header() {
     { label: tNav("faq"), href: "#faqs" },
     { label: tNav("contact"), href: "#contact" },
   ];
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 10);
-    };
-    window.addEventListener("scroll", handleScroll, { passive: true });
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
 
   const handleMobileToggle = () => {
     setMobileOpen((prev) => !prev);
@@ -61,22 +52,15 @@ export default function Header() {
           bgcolor:
             theme.palette.mode === "dark"
               ? "transparent"
-              : scrolled
-                ? alpha(theme.palette.background.default, 0.9)
-                : alpha(theme.palette.background.default, 0.75),
+              : alpha(theme.palette.background.default, 0.85),
           backgroundImage:
             theme.palette.mode === "dark"
               ? `linear-gradient(120deg, ${theme.palette.surface.gradientStart} 0%, ${theme.palette.surface.gradientMid} 45%, ${theme.palette.surface.gradientEnd} 100%)`
               : "none",
           borderBottom: "1px solid",
-          borderColor: scrolled
-            ? theme.palette.divider
-            : alpha(theme.palette.divider, 0.4),
+          borderColor: theme.palette.divider,
           backdropFilter: "blur(16px)",
-          boxShadow: scrolled
-            ? "0 6px 24px rgba(0, 0, 0, 0.35)"
-            : "0 2px 12px rgba(0, 0, 0, 0.15)",
-          transition: "box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1), border-color 0.3s cubic-bezier(0.4, 0, 0.2, 1)",
+          boxShadow: "0 4px 16px rgba(0, 0, 0, 0.22)",
         })}
       >
         <Container maxWidth="lg" sx={{ height: "100%" }}>

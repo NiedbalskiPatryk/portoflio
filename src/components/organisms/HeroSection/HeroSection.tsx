@@ -1,6 +1,6 @@
 "use client";
 
-import { CTAGroup, TechStackMarquee } from "@/components/molecules";
+import { CTAGroup, ProfileMedia, TechStackMarquee } from "@/components/molecules";
 import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
 import Stack from "@mui/material/Stack";
@@ -12,6 +12,10 @@ interface HeroSectionProps {
   name: string;
   role: string;
   description: string;
+  profileImage: {
+    src?: string;
+    alt: string;
+  };
   techLabel: string;
   primaryCTA: {
     label: string;
@@ -39,6 +43,7 @@ export default function HeroSection({
   name,
   role,
   description,
+  profileImage,
   techLabel,
   primaryCTA,
   secondaryCTA,
@@ -101,92 +106,116 @@ export default function HeroSection({
               pointerEvents: "none",
             }}
           />
-          <Stack spacing={{ xs: 3, md: 4 }} sx={{ position: "relative" }}>
-            <Stack
-              spacing={{ xs: 3, md: 4 }}
-              alignItems={{ xs: "flex-start", md: "flex-start" }}
-              textAlign="left"
-            >
-              {/* Location badge */}
-              {/* <LocationBadge location={location} /> */}
+          <Box
+            sx={{
+              display: "grid",
+              gridTemplateColumns: {
+                xs: "1fr",
+                md: "minmax(0, 7fr) minmax(0, 5fr)",
+              },
+              gap: { xs: 4, md: 6 },
+              alignItems: "center",
+              position: "relative",
+            }}
+          >
+            <Stack spacing={{ xs: 3, md: 4 }}>
+              <Stack
+                spacing={{ xs: 3, md: 4 }}
+                alignItems={{ xs: "flex-start", md: "flex-start" }}
+                textAlign="left"
+              >
+                {/* Location badge */}
+                {/* <LocationBadge location={location} /> */}
 
-              {/* Heading */}
-              <Box>
+                {/* Heading */}
+                <Box>
+                  <Typography
+                    variant="h1"
+                    component="h1"
+                    color="text.primary"
+                    sx={{
+                      fontSize: { xs: "2rem", sm: "2.6rem", md: "3.6rem" },
+                      mb: 1,
+                    }}
+                  >
+                    {name}
+                  </Typography>
+                  <Typography
+                    variant="h2"
+                    component="h2"
+                    color="text.secondary"
+                    sx={{
+                      fontSize: { xs: "1.2rem", sm: "1.7rem", md: "2.4rem" },
+                    }}
+                  >
+                    {role}
+                  </Typography>
+                </Box>
+
+                {/* Description */}
                 <Typography
-                  variant="h1"
-                  component="h1"
-                  color="text.primary"
-                  sx={{
-                    fontSize: { xs: "2rem", sm: "2.6rem", md: "3.6rem" },
-                    mb: 1,
-                  }}
-                >
-                  {name}
-                </Typography>
-                <Typography
-                  variant="h2"
-                  component="h2"
+                  variant="body1"
                   color="text.secondary"
                   sx={{
-                    fontSize: { xs: "1.2rem", sm: "1.7rem", md: "2.4rem" },
+                    maxWidth: 560,
+                    fontSize: { xs: "0.875rem", md: "1rem" },
+                    display: "-webkit-box",
+                    WebkitLineClamp: { xs: 3, sm: 4 },
+                    WebkitBoxOrient: "vertical",
+                    overflow: "hidden",
                   }}
                 >
-                  {role}
+                  {description}
                 </Typography>
-              </Box>
 
-              {/* Description */}
-              <Typography
-                variant="body1"
-                color="text.secondary"
+                {/* CTA Buttons */}
+                <CTAGroup
+                  primaryCTA={{
+                    ...primaryCTA,
+                    variant: "outlined",
+                    color: primaryCTA.color,
+                  }}
+                  secondaryCTA={{
+                    ...secondaryCTA,
+                    variant: "outlined",
+                    color: secondaryCTA.color,
+                  }}
+                />
+              </Stack>
+
+              {/* Technologies */}
+              <Box
                 sx={{
-                  maxWidth: 560,
-                  fontSize: { xs: "0.875rem", md: "1rem" },
-                  display: "-webkit-box",
-                  WebkitLineClamp: { xs: 3, sm: 4 },
-                  WebkitBoxOrient: "vertical",
-                  overflow: "hidden",
+                  pt: { xs: 2, md: 3 },
+                  borderTop: `1px solid ${border}`,
                 }}
               >
-                {description}
-              </Typography>
-
-              {/* CTA Buttons */}
-              <CTAGroup
-                primaryCTA={{
-                  ...primaryCTA,
-                  variant: "outlined",
-                  color: primaryCTA.color,
-                }}
-                secondaryCTA={{
-                  ...secondaryCTA,
-                  variant: "outlined",
-                  color: secondaryCTA.color,
-                }}
-              />
+                <Typography
+                  variant="caption"
+                  color="text.secondary"
+                  sx={{
+                    mb: 2,
+                    display: "block",
+                    fontSize: { xs: "0.7rem", md: "0.75rem" },
+                  }}
+                >
+                  {techLabel}
+                </Typography>
+                <TechStackMarquee technologies={technologies} speed={35} />
+              </Box>
             </Stack>
 
-            {/* Technologies */}
-            <Box
-              sx={{
-                pt: { xs: 2, md: 3 },
-                borderTop: `1px solid ${border}`,
-              }}
-            >
-              <Typography
-                variant="caption"
-                color="text.secondary"
-                sx={{
-                  mb: 2,
-                  display: "block",
-                  fontSize: { xs: "0.7rem", md: "0.75rem" },
-                }}
-              >
-                {techLabel}
-              </Typography>
-              <TechStackMarquee technologies={technologies} speed={35} />
+            <Box sx={{ display: "flex", justifyContent: "center" }}>
+              <ProfileMedia
+                src={profileImage.src}
+                alt={profileImage.alt}
+                fallbackText={name}
+                width={320}
+                height={400}
+                variant="square"
+              />
             </Box>
-          </Stack>
+          </Box>
         </Box>
       </Container>
     </Box>

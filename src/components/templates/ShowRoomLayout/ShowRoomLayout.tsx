@@ -30,6 +30,14 @@ export default function ShowRoomLayout({
   backHref,
   backLabel,
 }: ShowRoomLayoutProps) {
+  const header = (
+    <ShowRoomHeader
+      showThemeToggle={showThemeToggle}
+      backHref={backHref}
+      backLabel={backLabel}
+    />
+  );
+
   const content = (
     <Box
       component="main"
@@ -43,14 +51,20 @@ export default function ShowRoomLayout({
     </Box>
   );
 
+  const layoutContent = (
+    <>
+      {header}
+      {content}
+    </>
+  );
+
   return (
     <>
-      <ShowRoomHeader
-        showThemeToggle={showThemeToggle}
-        backHref={backHref}
-        backLabel={backLabel}
-      />
-      {useColorWash ? <ColorWash>{content}</ColorWash> : content}
+      {useColorWash ? (
+        <ColorWash>{layoutContent}</ColorWash>
+      ) : (
+        layoutContent
+      )}
       <ShowRoomDrawer
         projects={projects}
         currentProjectId={currentProjectId}

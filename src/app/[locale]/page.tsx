@@ -28,6 +28,10 @@ export default async function Home() {
     name: t("hero.greeting"),
     role: t("hero.role"),
     description: t("hero.description"),
+    profileImage: {
+      src: "/foto.jpeg",
+      alt: t("about.profileImageAlt"),
+    },
     techLabel: t("hero.techLabel"),
     primaryCTA: {
       label: t("hero.primaryCTA"),
@@ -117,10 +121,6 @@ export default async function Home() {
 
   const aboutData = {
     heading: t("about.heading"),
-    profileImage: {
-      src: "/foto.jpeg",
-      alt: t("about.profileImageAlt"),
-    },
     name: t("about.name"),
     role: t("about.role"),
     bio: [

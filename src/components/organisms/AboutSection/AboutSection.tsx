@@ -1,11 +1,6 @@
 "use client";
 
-import {
-  AboutBio,
-  AboutHeader,
-  CTAGroup,
-  ProfileMedia,
-} from "@/components/molecules";
+import { AboutBio, AboutHeader, CTAGroup } from "@/components/molecules";
 import { Typography } from "@mui/material";
 import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
@@ -19,10 +14,6 @@ interface AboutSectionCTA {
 
 export interface AboutSectionProps {
   heading: string;
-  profileImage: {
-    src?: string;
-    alt: string;
-  };
   name: string;
   role: string;
   bio: string[];
@@ -32,7 +23,6 @@ export interface AboutSectionProps {
 
 const AboutSection: React.FC<AboutSectionProps> = ({
   heading,
-  profileImage,
   name,
   role,
   bio,
@@ -70,12 +60,8 @@ const AboutSection: React.FC<AboutSectionProps> = ({
         </Box>
         <Box
           sx={{
-            display: "grid",
-            gridTemplateColumns: {
-              xs: "1fr",
-              md: "minmax(0, 6fr) minmax(0, 4fr)",
-            },
-            gap: { xs: 4, md: 6 },
+            display: "flex",
+            flexDirection: "column",
             alignItems: { xs: "start", md: "center" },
           }}
         >
@@ -110,22 +96,6 @@ const AboutSection: React.FC<AboutSectionProps> = ({
                 href: secondaryCTA.href,
                 variant: "outlined",
               }}
-            />
-          </Box>
-
-          <Box
-            sx={{
-              display: "flex",
-              justifyContent: "center",
-            }}
-          >
-            <ProfileMedia
-              src={profileImage.src}
-              alt={profileImage.alt}
-              fallbackText={name}
-              width={300}
-              height={360}
-              variant="square"
             />
           </Box>
         </Box>
