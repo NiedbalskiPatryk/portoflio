@@ -8,7 +8,7 @@ import {
 import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
 import Stack from "@mui/material/Stack";
-import { useTheme } from "@mui/material/styles";
+import { alpha, useTheme } from "@mui/material/styles";
 import Typography from "@mui/material/Typography";
 
 interface HeroSectionProps {
@@ -50,7 +50,12 @@ export default function HeroSection({
   snippets,
 }: HeroSectionProps) {
   const theme = useTheme();
-  const { gradientStart, gradientMid, gradientEnd } = theme.palette.surface;
+  const { gradientStart, gradientMid, gradientEnd, border, overlay } =
+    theme.palette.surface;
+  const isLight = theme.palette.mode === "light";
+  const frameBorder = isLight
+    ? alpha(theme.palette.text.primary, 0.18)
+    : border;
 
   return (
     <Box
@@ -59,10 +64,8 @@ export default function HeroSection({
       sx={{
         minHeight: "100vh",
         display: "flex",
-        flexDirection: "column",
         alignItems: "center",
-        justifyContent: "center",
-        py: { xs: 4, md: 6 },
+        py: { xs: 6, md: 10 },
         position: "relative",
         overflow: "hidden",
       }}
@@ -93,102 +96,127 @@ export default function HeroSection({
         delay={300}
       /> */}
 
-      {/* Gradient circle background */}
-      <Box
-        sx={{
-          position: "absolute",
-          top: "50%",
-          left: "50%",
-          transform: "translate(-50%, -50%)",
-          width: { xs: "350px", sm: "500px", md: "700px" },
-          height: { xs: "350px", sm: "500px", md: "700px" },
-          borderRadius: "50%",
-          background: `radial-gradient(circle, ${gradientStart} 0%, ${gradientMid} 30%, ${gradientEnd} 50%, transparent 70%)`,
-          filter: "blur(40px)",
-          pointerEvents: "none",
-          zIndex: 0,
-        }}
-      />
-      <Container maxWidth="md" sx={{ position: "relative", zIndex: 1 }}>
-        <Stack
-          spacing={{ xs: 3, sm: 4 }}
-          alignItems="center"
-          textAlign="center"
+      <Container maxWidth="lg" sx={{ position: "relative", zIndex: 1 }}>
+        <Box
+          sx={{
+            position: "relative",
+            border: "1px solid transparent",
+            background: isLight
+              ? theme.palette.background.paper
+              : `linear-gradient(120deg, ${gradientStart} 0%, ${gradientMid} 45%, ${gradientEnd} 100%)`,
+            boxShadow: isLight
+              ? `0 30px 80px rgba(0, 0, 0, 0.08), inset 0 0 0 1px ${frameBorder}`
+              : `inset 0 0 0 1px ${frameBorder}`,
+            overflow: "hidden",
+            p: { xs: 3, sm: 4, md: 6 },
+          }}
         >
-          {/* Location badge */}
-          <LocationBadge location={location} />
-
-          {/* Heading */}
-          <Box>
-            <Typography
-              variant="h1"
-              component="h1"
-              color="text.primary"
-              sx={{
-                fontSize: { xs: "2rem", sm: "2.5rem", md: "3.5rem" },
-                mb: 1,
-              }}
-            >
-              {name}
-            </Typography>
-            <Typography
-              variant="h2"
-              component="h2"
-              color="text.secondary"
-              sx={{
-                fontSize: { xs: "1.25rem", sm: "1.75rem", md: "2.5rem" },
-              }}
-            >
-              {role}
-            </Typography>
-          </Box>
-
-          {/* Description */}
-          <Typography
-            variant="body1"
-            color="text.secondary"
+          <Box
             sx={{
-              maxWidth: 600,
-              fontSize: { xs: "0.875rem", md: "1rem" },
-              display: "-webkit-box",
-              WebkitLineClamp: { xs: 3, sm: 4 },
-              WebkitBoxOrient: "vertical",
-              overflow: "hidden",
-            }}
-          >
-            {description}
-          </Typography>
-
-          {/* CTA Buttons */}
-          <CTAGroup
-            primaryCTA={{
-              ...primaryCTA,
-              variant: "outlined",
-              color: primaryCTA.color,
-            }}
-            secondaryCTA={{
-              ...secondaryCTA,
-              variant: "outlined",
-              color: secondaryCTA.color,
+              position: "absolute",
+              inset: 0,
+              background: isLight
+                ? `radial-gradient(circle at 12% 18%, ${alpha(
+                    theme.palette.text.primary,
+                    0.06
+                  )} 0%, transparent 45%), radial-gradient(circle at 85% 30%, ${alpha(
+                    theme.palette.text.primary,
+                    0.04
+                  )} 0%, transparent 40%)`
+                : `radial-gradient(circle at 12% 18%, ${overlay} 0%, transparent 45%), radial-gradient(circle at 85% 30%, ${gradientMid} 0%, transparent 40%)`,
+              pointerEvents: "none",
             }}
           />
+          <Stack
+            spacing={{ xs: 3, md: 4 }}
+            sx={{ position: "relative" }}
+          >
+            <Stack
+              spacing={{ xs: 3, md: 4 }}
+              alignItems={{ xs: "flex-start", md: "flex-start" }}
+              textAlign="left"
+            >
+              {/* Location badge */}
+              {/* <LocationBadge location={location} /> */}
 
-          {/* Technologies */}
-          <Box sx={{ pt: { xs: 2, md: 4 }, width: "100%" }}>
-            <Typography
-              variant="caption"
-              color="text.secondary"
+              {/* Heading */}
+              <Box>
+                <Typography
+                  variant="h1"
+                  component="h1"
+                  color="text.primary"
+                  sx={{
+                    fontSize: { xs: "2rem", sm: "2.6rem", md: "3.6rem" },
+                    mb: 1,
+                  }}
+                >
+                  {name}
+                </Typography>
+                <Typography
+                  variant="h2"
+                  component="h2"
+                  color="text.secondary"
+                  sx={{
+                    fontSize: { xs: "1.2rem", sm: "1.7rem", md: "2.4rem" },
+                  }}
+                >
+                  {role}
+                </Typography>
+              </Box>
+
+              {/* Description */}
+              <Typography
+                variant="body1"
+                color="text.secondary"
+                sx={{
+                  maxWidth: 560,
+                  fontSize: { xs: "0.875rem", md: "1rem" },
+                  display: "-webkit-box",
+                  WebkitLineClamp: { xs: 3, sm: 4 },
+                  WebkitBoxOrient: "vertical",
+                  overflow: "hidden",
+                }}
+              >
+                {description}
+              </Typography>
+
+              {/* CTA Buttons */}
+              <CTAGroup
+                primaryCTA={{
+                  ...primaryCTA,
+                  variant: "outlined",
+                  color: primaryCTA.color,
+                }}
+                secondaryCTA={{
+                  ...secondaryCTA,
+                  variant: "outlined",
+                  color: secondaryCTA.color,
+                }}
+              />
+            </Stack>
+
+            {/* Technologies */}
+            <Box
               sx={{
-                mb: 2,
-                display: "block",
-                fontSize: { xs: "0.7rem", md: "0.75rem" },
+                pt: { xs: 2, md: 3 },
+                borderTop: `1px solid ${border}`,
               }}
             >
-              {techLabel}
-            </Typography>
-            <TechStackMarquee technologies={technologies} speed={35} />
-          </Box>
-        </Stack>
+              <Typography
+                variant="caption"
+                color="text.secondary"
+                sx={{
+                  mb: 2,
+                  display: "block",
+                  fontSize: { xs: "0.7rem", md: "0.75rem" },
+                }}
+              >
+                {techLabel}
+              </Typography>
+              <TechStackMarquee technologies={technologies} speed={35} />
+            </Box>
+          </Stack>
+        </Box>
       </Container>
     </Box>
   );

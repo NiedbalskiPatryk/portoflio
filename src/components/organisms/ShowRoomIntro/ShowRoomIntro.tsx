@@ -89,31 +89,6 @@ export default function ShowRoomIntro({
             {cta}
           </Typography>
 
-          <Typography
-            variant="caption"
-            color="text.secondary"
-            sx={{
-              mt: 4,
-              display: "flex",
-              alignItems: "center",
-              gap: 1,
-            }}
-          >
-            <Box
-              component="span"
-              sx={{
-                display: "inline-block",
-                animation: "bounce 1.5s ease-in-out infinite",
-                "@keyframes bounce": {
-                  "0%, 100%": { transform: "translateY(0)" },
-                  "50%": { transform: "translateY(6px)" },
-                },
-              }}
-            >
-              ↓
-            </Box>
-            Scroll or use the dock below
-          </Typography>
         </Stack>
       </Container>
     </Box>
