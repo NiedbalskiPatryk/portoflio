@@ -28,6 +28,40 @@ export async function generateMetadata({
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "metadata" });
 
+  const keywordsEn = [
+    "Software Engineer",
+    "Full-Stack Developer",
+    "React Developer",
+    "Next.js Developer",
+    "TypeScript",
+    "Node.js",
+    "NestJS",
+    "Web Development",
+    "Freelance Developer",
+    "Warsaw",
+    "Poland",
+    "Web App Development",
+    "Frontend Developer",
+    "Backend Developer",
+  ];
+
+  const keywordsPl = [
+    "Programista",
+    "Programista Full-Stack",
+    "Programista React",
+    "Next.js",
+    "TypeScript",
+    "Node.js",
+    "Tworzenie stron internetowych",
+    "Tworzenie aplikacji webowych",
+    "Freelancer IT",
+    "Warszawa",
+    "Polska",
+    "Frontend Developer",
+    "Backend Developer",
+    "Web Developer Warszawa",
+  ];
+
   return {
     title: t("title"),
     description: t("description"),
@@ -35,18 +69,7 @@ export async function generateMetadata({
     authors: [{ name: "Patryk Niedbalski" }],
     creator: "Patryk Niedbalski",
     publisher: "Patryk Niedbalski",
-    keywords: [
-      "Software Engineer",
-      "Full-stack Developer",
-      "React",
-      "Next.js",
-      "TypeScript",
-      "Node.js",
-      "NestJS",
-      "Web Development",
-      "Warsaw",
-      "Poland",
-    ],
+    keywords: locale === "pl" ? keywordsPl : keywordsEn,
     robots: {
       index: true,
       follow: true,
@@ -94,6 +117,54 @@ export async function generateMetadata({
   };
 }
 
+const BASE_URL_CLIENT = "https://itpapi.pl";
+
+const jsonLdPerson = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: "Patryk Niedbalski",
+  url: BASE_URL_CLIENT,
+  jobTitle: "Full-Stack Software Engineer",
+  address: {
+    "@type": "PostalAddress",
+    addressLocality: "Warsaw",
+    addressCountry: "PL",
+  },
+  sameAs: [
+    "https://github.com/NiedbalskiPatryk",
+    "https://www.linkedin.com/in/patryk-niedbalski/",
+  ],
+  knowsAbout: [
+    "JavaScript",
+    "TypeScript",
+    "React",
+    "Next.js",
+    "Node.js",
+    "NestJS",
+    "PostgreSQL",
+    "MySQL",
+    "Docker",
+    "SEO",
+    "Web Performance",
+  ],
+  offers: {
+    "@type": "Offer",
+    description: "Freelance and contract web development services",
+    areaServed: "Worldwide",
+  },
+};
+
+const jsonLdWebSite = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  url: BASE_URL_CLIENT,
+  name: "Patryk Niedbalski — Full-Stack Developer",
+  author: {
+    "@type": "Person",
+    name: "Patryk Niedbalski",
+  },
+};
+
 // Inline script to prevent flash of wrong theme
 const themeScript = `
 (function() {
@@ -140,8 +211,22 @@ export default async function LocaleLayout({
     <html lang={locale} suppressHydrationWarning>
       <head>
         <script dangerouslySetInnerHTML={{ __html: themeScript }} />
+        {/* Structured data — Person */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdPerson) }}
+        />
+        {/* Structured data — WebSite */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdWebSite) }}
+        />
+        {/* Google Analytics (GA4) */}
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-8Z9E33KK05" />
+        <script dangerouslySetInnerHTML={{ __html: `window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-8Z9E33KK05');` }} />
       </head>
       <body className={jetbrainsMono.variable}>
+
         <NextIntlClientProvider messages={messages}>
           <ThemeRegistry initialMode={initialMode}>{children}</ThemeRegistry>
         </NextIntlClientProvider>

@@ -28,19 +28,13 @@ const ServicesSection: React.FC<ServicesSectionProps> = ({
       }}
     >
       <Container maxWidth="lg">
-        {/* Section Header - Centered */}
-        <Box
-          sx={{
-            textAlign: "left",
-            mb: { xs: 6, md: 8 },
-          }}
-        >
+        <Box sx={{ mb: { xs: 4, md: 6 } }}>
           <Typography
             variant="h2"
             component="h2"
             color="text.primary"
             sx={{
-              fontSize: { xs: "1.75rem", sm: "2rem", md: "2.25rem" },
+              fontSize: { xs: "1.9rem", sm: "2.2rem", md: "2.5rem" },
               fontWeight: 700,
               mb: 1,
               "&::before": {
@@ -53,28 +47,17 @@ const ServicesSection: React.FC<ServicesSectionProps> = ({
             {heading}
           </Typography>
           {description && (
-            <Typography
-              variant="body2"
-              color="text.secondary"
-              sx={{
-                fontSize: "0.875rem",
-              }}
-            >
+            <Typography variant="body2" color="text.secondary">
               {description}
             </Typography>
           )}
         </Box>
 
-        {/* Service Cards Grid */}
         <Box
           sx={{
             display: "grid",
-            gridTemplateColumns: {
-              xs: "1fr",
-              sm: "repeat(2, 1fr)",
-              md: "repeat(2, 1fr)",
-            },
-            gap: { xs: 3, sm: 4, md: 5 },
+            gridTemplateColumns: { xs: "1fr", sm: "1fr 1fr" },
+            gap: 2,
           }}
         >
           {services.map((service, index) => (
@@ -83,6 +66,7 @@ const ServicesSection: React.FC<ServicesSectionProps> = ({
               icon={service.icon}
               title={service.title}
               description={service.description}
+              index={index}
             />
           ))}
         </Box>

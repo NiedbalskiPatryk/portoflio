@@ -29,6 +29,7 @@ export default function TechStackMarquee({
     <Box
       sx={{
         width: "100%",
+        maxWidth: "100%",
         overflow: "hidden",
         maskImage:
           "linear-gradient(to right, transparent, black 10%, black 90%, transparent)",

@@ -1,6 +1,10 @@
 "use client";
 
-import { CTAGroup, ProfileMedia, TechStackMarquee } from "@/components/molecules";
+import {
+  CTAGroup,
+  ProfileMedia,
+  TechStackMarquee,
+} from "@/components/molecules";
 import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
 import Stack from "@mui/material/Stack";
@@ -23,7 +27,7 @@ interface HeroSectionProps {
     href?: string;
     color?: "default" | "light";
   };
-  secondaryCTA: {
+  secondaryCTA?: {
     label: string;
     onClick?: () => void;
     href?: string;
@@ -63,14 +67,12 @@ export default function HeroSection({
       id="home"
       component="section"
       sx={{
-        minHeight: { xs: "72vh", sm: "85vh", md: "100vh" },
+        minHeight: { xs: "72vh", sm: "85vh", md: "auto" },
         display: "flex",
         alignItems: "center",
-        pt: { xs: 12, md: 16 },
-        pb: {
-          xs: 6,
-          md: 10,
-        },
+        pt: { xs: 12, sm: 14, md: 16, lg: 12, xl: 26 },
+        pb: { xs: 6, md: 6 },
+        px: { xs: 2, sm: 3, md: 0 },
         position: "relative",
         overflow: "hidden",
       }}
@@ -80,6 +82,7 @@ export default function HeroSection({
           sx={{
             position: "relative",
             border: "1px solid transparent",
+            maxWidth: "100%",
             background: isLight
               ? theme.palette.background.paper
               : `linear-gradient(120deg, ${gradientStart} 0%, ${gradientMid} 45%, ${gradientEnd} 100%)`,
@@ -118,11 +121,12 @@ export default function HeroSection({
               position: "relative",
             }}
           >
-            <Stack spacing={{ xs: 3, md: 4 }}>
+            <Stack spacing={{ xs: 3, md: 4 }} sx={{ minWidth: 0, maxWidth: "100%" }}>
               <Stack
                 spacing={{ xs: 3, md: 4 }}
                 alignItems={{ xs: "flex-start", md: "flex-start" }}
                 textAlign="left"
+                sx={{ minWidth: 0 }}
               >
                 {/* Location badge */}
                 {/* <LocationBadge location={location} /> */}
@@ -134,8 +138,9 @@ export default function HeroSection({
                     component="h1"
                     color="text.primary"
                     sx={{
-                      fontSize: { xs: "2rem", sm: "2.6rem", md: "3.6rem" },
+                      fontSize: { xs: "1.5rem", sm: "2.6rem", md: "3.6rem" },
                       mb: 1,
+                      wordBreak: "break-word",
                     }}
                   >
                     {name}
@@ -145,7 +150,8 @@ export default function HeroSection({
                     component="h2"
                     color="text.secondary"
                     sx={{
-                      fontSize: { xs: "1.2rem", sm: "1.7rem", md: "2.4rem" },
+                      fontSize: { xs: "1rem", sm: "1.7rem", md: "2.4rem" },
+                      wordBreak: "break-word",
                     }}
                   >
                     {role}
@@ -159,10 +165,6 @@ export default function HeroSection({
                   sx={{
                     maxWidth: 560,
                     fontSize: { xs: "0.875rem", md: "1rem" },
-                    display: "-webkit-box",
-                    WebkitLineClamp: { xs: 3, sm: 4 },
-                    WebkitBoxOrient: "vertical",
-                    overflow: "hidden",
                   }}
                 >
                   {description}
@@ -175,11 +177,13 @@ export default function HeroSection({
                     variant: "outlined",
                     color: primaryCTA.color,
                   }}
-                  secondaryCTA={{
-                    ...secondaryCTA,
-                    variant: "outlined",
-                    color: secondaryCTA.color,
-                  }}
+                  {...(secondaryCTA && {
+                    secondaryCTA: {
+                      ...secondaryCTA,
+                      variant: "outlined",
+                      color: secondaryCTA.color,
+                    },
+                  })}
                 />
               </Stack>
 
@@ -188,6 +192,8 @@ export default function HeroSection({
                 sx={{
                   pt: { xs: 2, md: 3 },
                   borderTop: `1px solid ${border}`,
+                  maxWidth: "100%",
+                  overflow: "hidden",
                 }}
               >
                 <Typography
@@ -205,7 +211,12 @@ export default function HeroSection({
               </Box>
             </Stack>
 
-            <Box sx={{ display: "flex", justifyContent: "center" }}>
+            <Box
+              sx={{
+                display: { xs: "none", md: "flex" },
+                justifyContent: "center",
+              }}
+            >
               <ProfileMedia
                 src={profileImage.src}
                 alt={profileImage.alt}

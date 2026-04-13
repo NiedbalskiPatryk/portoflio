@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "title": "Patryk Niedbalski - Software Engineer",
-    "description": "Full-stack programista specjalizujący się w nowoczesnych aplikacjach webowych"
+    "title": "Patryk Niedbalski — Programista Full-Stack | React, Next.js, Node.js",
+    "description": "Programista full-stack z Warszawy. Tworzę szybkie, skalowalne aplikacje webowe w React, Next.js, TypeScript i Node.js. Dostępny do współpracy i zleceń."
   },
   "nav": {
     "home": "Start",
@@ -17,7 +17,7 @@
     "role": "Software Engineer",
     "description": "Pomagam firmom tworzyć szybkie i niezawodne aplikacje webowe, które będą przyjazne dla użytkowników. Od pomysłu do wdrożenia - jestem tu, żeby pomóc to zrealizować.",
     "primaryCTA": "O mnie",
-    "secondaryCTA": "Zobacz co robię",
+    "secondaryCTA": "Zobacz projekty",
     "techLabel": "Technologie, z którymi pracuję",
     "snippets": {
       "leftTop": "<div className=\"hero\">\n  <h1>Hello World</h1>\n</div>",
@@ -56,14 +56,20 @@
         "description": "Powtarzalne zadania spowalniają. Buduję dedykowane narzędzia i zautomatyzowane procesy, które uwalniają Twój zespół do skupienia się na tym, co naprawdę ważne. Potrzebujesz skryptu, który coś za Ciebie będzie uzupełniał? Przygotowywał? Wysyłał? Daj znać, wspólnie coś wymyślimy!"
       },
       "performance": {
-        "title": "Optymalizacja wydajności",
-        "description": "Szybkość wygrywa. Analizuję wąskie gardła i wdrażam optymalizacje, które sprawiają, że aplikacje działają błyskawicznie i utrzymują zaangażowanie użytkowników. Rozłożenie ruchu, wprowadzenie kolejki, renderowanie po stronie serwera - jest wiele rozwiązań na różne problemy."
+        "title": "Wydajność i SEO",
+        "description": "Szybkość wygrywa — podobnie jak widoczność. Analizuję wąskie gardła i wdrażam optymalizacje, które sprawiają, że aplikacje działają błyskawicznie. Zajmuję się też konfiguracją SEO, danymi strukturalnymi i Core Web Vitals, żeby strona dobrze się pozycjonowała i jeszcze lepiej ładowała."
       }
     }
   },
   "projects": {
     "heading": "Projekty, z których jestem dumny",
     "description": "Wybrane realizacje, w których pomogłem klientom osiągnąć ich cele.",
+    "visitSite": "Odwiedź stronę",
+    "links": {
+      "website": "Strona",
+      "appStore": "App Store",
+      "googlePlay": "Google Play"
+    },
     "items": {
       "parkiza": {
         "name": "Parkiza",
@@ -76,6 +82,10 @@
       "areoactive": {
         "name": "Areoactive",
         "summary": "Podstawowy landing page jako pierwszy krok w realizacji naprawdę dużego projektu. Szybki, responsywny i zbudowany z myślą o dalszym rozwoju."
+      },
+      "skinscartel": {
+        "name": "SkinsCartel",
+        "summary": "W pełni funkcjonalny marketplace do handlu skinami CS:GO. Zbudowany z naciskiem na wydajność i doświadczenie użytkownika — obsługuje zarządzanie ekwipunkiem w czasie rzeczywistym, bezpieczne transakcje i dopracowany interfejs e-commerce."
       }
     }
   },

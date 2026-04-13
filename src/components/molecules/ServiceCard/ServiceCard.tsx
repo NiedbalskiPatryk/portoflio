@@ -1,8 +1,6 @@
 "use client";
 
 import Box from "@mui/material/Box";
-import Card from "@mui/material/Card";
-import CardContent from "@mui/material/CardContent";
 import Typography from "@mui/material/Typography";
 import React from "react";
 
@@ -10,107 +8,91 @@ export interface ServiceCardProps {
   icon: React.ReactNode;
   title: string;
   description: string;
+  index?: number;
 }
 
 const ServiceCard: React.FC<ServiceCardProps> = ({
   icon,
   title,
   description,
+  index = 0,
 }) => {
+  const num = String(index + 1).padStart(2, "0");
+
   return (
-    <Card
+    <Box
       sx={{
-        borderRadius: 0,
-        background: (theme) =>
-          theme.palette.mode === "dark"
-            ? `linear-gradient(120deg, ${theme.palette.surface.gradientStart} 0%, ${theme.palette.surface.gradientMid} 45%, ${theme.palette.surface.gradientEnd} 100%)`
-            : theme.palette.background.paper,
+        display: "flex",
+        gap: { xs: 2.5, md: 3 },
+        p: { xs: 3, md: 3.5 },
         border: "1px solid",
         borderColor: "divider",
-        boxShadow:
-          "0 12px 30px rgba(0, 0, 0, 0.08), inset 0 1px 0 rgba(255, 255, 255, 0.04)",
-        transition: "all 0.2s ease-in-out",
-        height: "100%",
+        transition: "border-color 0.2s ease, background-color 0.2s ease",
         "&:hover": {
           borderColor: "text.secondary",
-          background: (theme) =>
+          backgroundColor: (theme) =>
             theme.palette.mode === "dark"
-              ? `linear-gradient(120deg, ${theme.palette.surface.gradientMid} 0%, ${theme.palette.surface.gradientStart} 45%, ${theme.palette.surface.gradientEnd} 100%)`
-              : "rgba(255, 255, 255, 0.95)",
+              ? "rgba(255,255,255,0.02)"
+              : "rgba(0,0,0,0.01)",
         },
       }}
     >
-      <CardContent
+      {/* Icon */}
+      <Box
         sx={{
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "flex-start",
-          p: { xs: 3, md: 4 },
-          height: "100%",
-          "&:last-child": {
-            pb: { xs: 3, md: 4 },
-          },
+          flexShrink: 0,
+          color: "text.primary",
+          mt: 0.25,
+          "& > svg": { width: 28, height: 28 },
         }}
       >
-        {/* Icon */}
+        {icon}
+      </Box>
+
+      {/* Text */}
+      <Box sx={{ flex: 1, minWidth: 0 }}>
         <Box
           sx={{
             display: "flex",
-            alignItems: "center",
-            textAlign: "center",
-            width: "100%",
+            justifyContent: "space-between",
+            alignItems: "baseline",
+            mb: 1,
+            gap: 1,
           }}
         >
-          <Box
-            sx={{
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              width: 56,
-              height: 56,
-              mb: 3,
-              mr: 2,
-              color: "text.primary",
-              "& > svg": {
-                width: 56,
-                height: 56,
-              },
-            }}
-          >
-            {icon}
-          </Box>
-          <Box>
-            <Typography
-              variant="h6"
-              component="h3"
-              color="text.primary"
-              sx={{
-                fontSize: { xs: "1rem", md: "1.125rem" },
-                fontWeight: 500,
-                mb: 1.5,
-                lineHeight: 1.4,
-              }}
-            >
-              {title}
-            </Typography>
-          </Box>
-        </Box>
-
-        {/* Content */}
-        <Box sx={{ flexGrow: 1, width: "100%" }}>
           <Typography
-            variant="body2"
-            color="text.secondary"
+            variant="h6"
+            component="h3"
+            color="text.primary"
             sx={{
-              lineHeight: 1.6,
-              fontSize: "0.875rem",
+              fontSize: { xs: "0.95rem", md: "1rem" },
+              fontWeight: 600,
+              lineHeight: 1.3,
             }}
           >
-            {description}
+            {title}
+          </Typography>
+          <Typography
+            sx={{
+              fontFamily: "monospace",
+              fontSize: "0.7rem",
+              color: "text.disabled",
+              flexShrink: 0,
+            }}
+          >
+            {num}
           </Typography>
         </Box>
-      </CardContent>
-    </Card>
+
+        <Typography
+          variant="body2"
+          color="text.secondary"
+          sx={{ lineHeight: 1.75, fontSize: "0.82rem" }}
+        >
+          {description}
+        </Typography>
+      </Box>
+    </Box>
   );
 };
 

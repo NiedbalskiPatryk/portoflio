@@ -9,9 +9,9 @@ body {
   background-color: var(--initial-bg, #0a0a0a);
 }
 
-/* Always show scrollbar to prevent layout shift */
+/* Auto scrollbar */
 html {
-  overflow-y: scroll;
+  overflow-y: auto;
 }
 
 /* Smooth scrolling */

@@ -18,11 +18,13 @@ export default function ColorWash({ children }: ColorWashProps) {
     <Box
       sx={{
         position: "relative",
-        overflow: "hidden",
         "&::before": {
           content: '""',
-          position: "absolute",
-          inset: 0,
+          position: "fixed",
+          top: 0,
+          left: 0,
+          right: 0,
+          bottom: 0,
           background,
           pointerEvents: "none",
           zIndex: 0,

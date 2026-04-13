@@ -14,7 +14,7 @@ interface CTAButton {
 
 interface CTAGroupProps {
   primaryCTA: CTAButton;
-  secondaryCTA: CTAButton;
+  secondaryCTA?: CTAButton;
 }
 
 export default function CTAGroup({ primaryCTA, secondaryCTA }: CTAGroupProps) {
@@ -52,18 +52,20 @@ export default function CTAGroup({ primaryCTA, secondaryCTA }: CTAGroupProps) {
       >
         {primaryCTA.label}
       </Button>
-      <Button
-        variant={secondaryCTA.variant || "outlined"}
-        onClick={secondaryCTA.onClick}
-        href={secondaryCTA.href}
-        sx={{
-          width: { xs: "100%", sm: "auto" },
-          borderRadius: 0,
-          ...(secondaryCTA.color === "light" && getLightButtonSx()),
-        }}
-      >
-        {secondaryCTA.label}
-      </Button>
+      {secondaryCTA && (
+        <Button
+          variant={secondaryCTA.variant || "outlined"}
+          onClick={secondaryCTA.onClick}
+          href={secondaryCTA.href}
+          sx={{
+            width: { xs: "100%", sm: "auto" },
+            borderRadius: 0,
+            ...(secondaryCTA.color === "light" && getLightButtonSx()),
+          }}
+        >
+          {secondaryCTA.label}
+        </Button>
+      )}
     </Stack>
   );
 }

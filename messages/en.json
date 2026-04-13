@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "title": "Patryk Niedbalski - Software Engineer",
-    "description": "Full-stack software engineer specializing in modern web applications"
+    "title": "Patryk Niedbalski — Full-Stack Developer | React, Next.js, Node.js",
+    "description": "Full-stack software engineer based in Warsaw, Poland. I build fast, scalable web applications using React, Next.js, TypeScript, and Node.js. Available for freelance and contract work."
   },
   "nav": {
     "home": "Home",
@@ -17,7 +17,7 @@
     "role": "Software Engineer",
     "description": "I help businesses build fast, reliable web applications that are user-friendly. From idea to launch, I'm here to help make it happen.",
     "primaryCTA": "About me",
-    "secondaryCTA": "See what I do",
+    "secondaryCTA": "See my projects",
     "techLabel": "Technologies I work with",
     "snippets": {
       "leftTop": "<div className=\"hero\">\n  <h1>Hello World</h1>\n</div>",
@@ -56,14 +56,20 @@
         "description": "Repetitive tasks slow you down. I build custom tools and automated workflows that free up your team to focus on what really matters. Need a script to fill in data, prepare files, or send something automatically? Let me know, we'll figure something out together!"
       },
       "performance": {
-        "title": "Performance Optimization",
-        "description": "Speed wins. I analyze bottlenecks and implement optimizations that make your applications lightning fast and keep users engaged. Load balancing, message queues, server-side rendering - there are many solutions for different problems."
+        "title": "Performance & SEO",
+        "description": "Speed wins — and so does visibility. I analyze bottlenecks and implement optimizations that make your applications lightning fast. I also handle SEO configuration, structured data, and Core Web Vitals so your site ranks well and loads even better."
       }
     }
   },
   "projects": {
     "heading": "Work I'm proud of",
     "description": "A selection of projects where I helped clients achieve their goals.",
+    "visitSite": "Visit site",
+    "links": {
+      "website": "Website",
+      "appStore": "App Store",
+      "googlePlay": "Google Play"
+    },
     "items": {
       "parkiza": {
         "name": "Parkiza",
@@ -76,6 +82,10 @@
       "areoactive": {
         "name": "Areoactive",
         "summary": "A high-converting landing page designed to capture attention and drive results. Fast, responsive, and built to perform."
+      },
+      "skinscartel": {
+        "name": "SkinsCartel",
+        "summary": "A fully-featured CS:GO skin trading marketplace. Built with a focus on performance and user experience, it handles real-time inventory management, secure transactions, and a sleek e-commerce interface."
       }
     }
   },

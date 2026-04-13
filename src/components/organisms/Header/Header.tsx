@@ -14,7 +14,7 @@ import Container from "@mui/material/Container";
 import IconButton from "@mui/material/IconButton";
 import Stack from "@mui/material/Stack";
 import { alpha } from "@mui/material/styles";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import { useState } from "react";
 
 const HEADER_HEIGHT = 72;
@@ -23,15 +23,21 @@ export default function Header() {
   const tNav = useTranslations("nav");
   const tAria = useTranslations("aria");
   const tShowRoom = useTranslations("showRoom");
+  const locale = useLocale();
   const [mobileOpen, setMobileOpen] = useState(false);
 
   const NAV_ITEMS: NavItem[] = [
     { label: tNav("home"), href: "#home" },
     { label: tNav("about"), href: "#about" },
-    { label: tNav("services"), href: "#services" },
     { label: tNav("projects"), href: "#projects" },
+    { label: tNav("services"), href: "#services" },
     { label: tNav("faq"), href: "#faqs" },
     { label: tNav("contact"), href: "#contact" },
+  ];
+
+  const MOBILE_NAV_ITEMS: NavItem[] = [
+    ...NAV_ITEMS,
+    // { label: tShowRoom("navButton"), href: `/${locale}/showroom` },
   ];
 
   const handleMobileToggle = () => {
@@ -80,7 +86,7 @@ export default function Header() {
             <Stack direction="row" alignItems="center" spacing={1}>
               <LanguageSwitcher />
               <ThemeToggle />
-              <ShowRoomButton label={tShowRoom("navButton")} />
+              {/* <ShowRoomButton label={tShowRoom("navButton")} /> */}
 
               {/* Mobile hamburger */}
               <IconButton
@@ -102,7 +108,7 @@ export default function Header() {
       <MobileDrawer
         open={mobileOpen}
         onClose={() => setMobileOpen(false)}
-        items={NAV_ITEMS}
+        items={MOBILE_NAV_ITEMS}
       />
     </>
   );

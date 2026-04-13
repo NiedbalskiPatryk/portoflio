@@ -39,8 +39,8 @@ export default async function Home() {
       color: "light" as const,
     },
     secondaryCTA: {
-      label: t("showRoom.navButton"),
-      href: `/${locale}/showroom`,
+      label: t("hero.secondaryCTA"),
+      href: "#projects",
     },
     technologies: [
       "JavaScript",
@@ -94,6 +94,7 @@ export default async function Home() {
   const projectsData = {
     heading: t("projects.heading"),
     description: t("projects.description"),
+    visitSiteLabel: t("projects.visitSite"),
     projects: [
       {
         id: "parkiza",
@@ -101,13 +102,32 @@ export default async function Home() {
         summary: t("projects.items.parkiza.summary"),
         tags: ["Node.js", "NestJS", "React", "MySQL", "TypeScript"],
         previewImage: "/parkiza.png",
+        links: [
+          { href: "https://www.parkiza.com/pl", label: t("projects.links.website") },
+          { href: "https://apps.apple.com/pl/app/parkiza/id1628817206?l=pl", label: t("projects.links.appStore") },
+          { href: "https://play.google.com/store/apps/details?id=io.signalos.parking&hl=pl", label: t("projects.links.googlePlay") },
+        ],
+        media: [
+          { type: "image" as const, src: "/parkiza.png" },
+          { type: "video" as const, src: "/parkiza.MP4" },
+          { type: "image" as const, src: "/parkiza2.png" },
+        ],
       },
       {
-        id: "signalos",
-        name: t("projects.items.signalos.name"),
-        summary: t("projects.items.signalos.summary"),
-        tags: ["Next.js", "React", "Node.js", "TypeScript", "Enterprise"],
-        previewImage: "/signalos.png",
+        id: "skinscartel",
+        name: t("projects.items.skinscartel.name"),
+        summary: t("projects.items.skinscartel.summary"),
+        tags: ["Next.js", "React", "TypeScript", "E-commerce", "Node.js"],
+        previewImage: "/skinscartel.png",
+        links: [
+          { href: "https://skinscartel.com/", label: t("projects.links.website") },
+        ],
+        media: [
+          { type: "image" as const, src: "/skinscartel.png" },
+          { type: "image" as const, src: "/skinscartel2.png" },
+          { type: "image" as const, src: "/skinscartel3.png" },
+          { type: "image" as const, src: "/skinscartel4.png" },
+        ],
       },
       {
         id: "areoactive",
@@ -115,6 +135,24 @@ export default async function Home() {
         summary: t("projects.items.areoactive.summary"),
         tags: ["Next.js", "React", "Responsive Design"],
         previewImage: "/areoactive.png",
+        links: [
+          { href: "https://www.areoactive.com/", label: t("projects.links.website") },
+        ],
+        media: [
+          { type: "image" as const, src: "/areoactive.png" },
+          { type: "image" as const, src: "/areoactive2.png" },
+          { type: "image" as const, src: "/areoactive3.png" },
+        ],
+      },
+      {
+        id: "signalos",
+        name: t("projects.items.signalos.name"),
+        summary: t("projects.items.signalos.summary"),
+        tags: ["Next.js", "React", "Node.js", "TypeScript", "Enterprise"],
+        previewImage: "/signalos.png",
+        links: [
+          { href: "https://www.signalos.io/", label: t("projects.links.website") },
+        ],
       },
     ],
   };
@@ -234,9 +272,9 @@ export default async function Home() {
     navHeading: t("footer.navHeading"),
     navItems: [
       { id: "home", label: t("nav.home"), href: "#home" },
-      { id: "services", label: t("nav.services"), href: "#services" },
-      { id: "projects", label: t("nav.projects"), href: "#projects" },
       { id: "about", label: t("nav.about"), href: "#about" },
+      { id: "projects", label: t("nav.projects"), href: "#projects" },
+      { id: "services", label: t("nav.services"), href: "#services" },
       { id: "faqs", label: t("nav.faq"), href: "#faqs" },
     ],
     contactItems: [
@@ -272,12 +310,12 @@ export default async function Home() {
             <AboutSection {...aboutData} />
           </AnimatedSection>
 
-          <AnimatedSection direction="up" delay={100}>
-            <ServicesSection {...servicesData} />
-          </AnimatedSection>
-
           <AnimatedSection direction="up" delay={0}>
             <ProjectsSection {...projectsData} />
+          </AnimatedSection>
+
+          <AnimatedSection direction="up" delay={100}>
+            <ServicesSection {...servicesData} />
           </AnimatedSection>
 
           <AnimatedSection direction="up" delay={0}>

@@ -28,12 +28,12 @@ export default function ScrollProgressBar() {
         bottom: 0,
         left: 0,
         width: "100%",
-        height: 4,
+        height: 6,
         zIndex: 9999,
         backgroundColor: (theme) =>
           theme.palette.mode === "light"
-            ? "rgba(0, 0, 0, 0.1)"
-            : "rgba(255, 255, 255, 0.1)",
+            ? "rgba(0, 0, 0, 0.15)"
+            : "rgba(255, 255, 255, 0.15)",
       }}
     >
       <Box
@@ -42,8 +42,8 @@ export default function ScrollProgressBar() {
           width: `${scrollProgress}%`,
           backgroundColor: (theme) =>
             theme.palette.mode === "light"
-              ? "rgba(0, 0, 0, 0.6)"
-              : "rgba(255, 255, 255, 0.8)",
+              ? "rgba(0, 0, 0, 0.7)"
+              : "rgba(255, 255, 255, 0.9)",
           transition: "width 0.1s ease-out",
         }}
       />
