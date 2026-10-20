@@ -63,7 +63,10 @@ const ProjectGridCard: React.FC<ProjectGridCardProps> = ({
               key={`${project.id}-${activeMediaIdx}-video`}
               component="video"
               src={displaySrc}
+              poster={activeMedia?.poster}
               controls
+              playsInline
+              preload="metadata"
               sx={{
                 width: "100%",
                 height: "100%",
@@ -78,6 +81,8 @@ const ProjectGridCard: React.FC<ProjectGridCardProps> = ({
               component="img"
               src={displaySrc}
               alt={project.name}
+              loading="lazy"
+              decoding="async"
               sx={{
                 width: "100%",
                 height: "100%",
@@ -147,6 +152,8 @@ const ProjectGridCard: React.FC<ProjectGridCardProps> = ({
                     component="img"
                     src={thumbSrc}
                     alt={`Preview ${idx + 1}`}
+                    loading="lazy"
+                    decoding="async"
                     sx={{
                       width: "100%",
                       height: "100%",

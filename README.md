@@ -1,36 +1,43 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Patryk Niedbalski · Portfolio
 
-## Getting Started
+Source code of my personal website: **[itpapi.pl](https://itpapi.pl)**.
 
-First, run the development server:
+![Portfolio preview](public/og-image.png)
+
+Full-stack developer (React, Next.js, Node.js, NestJS) based in Warsaw. The site presents my projects and services, and includes a **Showroom** (`/[locale]/showroom`) with interactive demos: landing page, dashboard, e-commerce, event page, portfolio, admin panel and a SaaS calculator.
+
+## Stack
+
+- [Next.js](https://nextjs.org) 16 (App Router) + React 19 + TypeScript
+- [MUI](https://mui.com) 7 with a custom light/dark theme
+- [next-intl](https://next-intl.dev) for Polish and English (`messages/pl.json`, `messages/en.json`)
+- Components organised with Atomic Design (`src/components/atoms` → `templates`)
+- SEO: metadata, Open Graph, JSON-LD, `sitemap.ts`, `robots.ts`
+- Contact form via Formspree, analytics via Google Analytics
+
+## Running locally
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
+npm run dev     # http://localhost:3000
+npm run build   # production build
+npm run lint
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Project structure
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```
+src/
+  app/[locale]/          # pages (home + showroom demos)
+  components/            # atoms, molecules, organisms, templates
+  i18n/                  # next-intl routing and request config
+  theme/                 # MUI theme and theme context
+messages/                # translations (pl, en)
+public/                  # images, video, CV
+docs/                    # prompts and task contracts used for AI-assisted development
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Contact
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Website: [itpapi.pl](https://itpapi.pl)
+- GitHub: [@NiedbalskiPatryk](https://github.com/NiedbalskiPatryk)

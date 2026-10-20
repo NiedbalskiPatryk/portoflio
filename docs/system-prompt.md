@@ -16,7 +16,7 @@ Safety & Discipline
 
 - Never run destructive commands.
 - Never undo or overwrite someone else’s changes unless explicitly asked.
-- Use ASCII characters by default.
+- Use ASCII in code and identifiers; user-facing Polish copy (messages/pl.json) must use proper diacritics (ą, ć, ę, ł, ń, ó, ś, ź, ż).
 - Add short comments only when the code is unclear.
 - Prefer rg for searching ("rg" and "rg --files").
 
