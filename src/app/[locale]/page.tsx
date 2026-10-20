@@ -101,16 +101,20 @@ export default async function Home() {
         name: t("projects.items.parkiza.name"),
         summary: t("projects.items.parkiza.summary"),
         tags: ["Node.js", "NestJS", "React", "MySQL", "TypeScript"],
-        previewImage: "/parkiza.png",
+        previewImage: "/parkiza.webp",
         links: [
           { href: "https://www.parkiza.com/pl", label: t("projects.links.website") },
           { href: "https://apps.apple.com/pl/app/parkiza/id1628817206?l=pl", label: t("projects.links.appStore") },
           { href: "https://play.google.com/store/apps/details?id=io.signalos.parking&hl=pl", label: t("projects.links.googlePlay") },
         ],
         media: [
-          { type: "image" as const, src: "/parkiza.png" },
-          { type: "video" as const, src: "/parkiza.MP4" },
-          { type: "image" as const, src: "/parkiza2.png" },
+          { type: "image" as const, src: "/parkiza.webp" },
+          {
+            type: "video" as const,
+            src: "/parkiza.mp4",
+            poster: "/parkiza-poster.webp",
+          },
+          { type: "image" as const, src: "/parkiza2.webp" },
         ],
       },
       {
@@ -118,15 +122,15 @@ export default async function Home() {
         name: t("projects.items.skinscartel.name"),
         summary: t("projects.items.skinscartel.summary"),
         tags: ["Next.js", "React", "TypeScript", "E-commerce", "Node.js"],
-        previewImage: "/skinscartel.png",
+        previewImage: "/skinscartel.webp",
         links: [
           { href: "https://skinscartel.com/", label: t("projects.links.website") },
         ],
         media: [
-          { type: "image" as const, src: "/skinscartel.png" },
-          { type: "image" as const, src: "/skinscartel2.png" },
-          { type: "image" as const, src: "/skinscartel3.png" },
-          { type: "image" as const, src: "/skinscartel4.png" },
+          { type: "image" as const, src: "/skinscartel.webp" },
+          { type: "image" as const, src: "/skinscartel2.webp" },
+          { type: "image" as const, src: "/skinscartel3.webp" },
+          { type: "image" as const, src: "/skinscartel4.webp" },
         ],
       },
       {
@@ -134,14 +138,14 @@ export default async function Home() {
         name: t("projects.items.areoactive.name"),
         summary: t("projects.items.areoactive.summary"),
         tags: ["Next.js", "React", "Responsive Design"],
-        previewImage: "/areoactive.png",
+        previewImage: "/areoactive-1.webp",
         links: [
           { href: "https://www.areoactive.com/", label: t("projects.links.website") },
         ],
         media: [
-          { type: "image" as const, src: "/areoactive.png" },
-          { type: "image" as const, src: "/areoactive2.png" },
-          { type: "image" as const, src: "/areoactive3.png" },
+          { type: "image" as const, src: "/areoactive-1.webp" },
+          { type: "image" as const, src: "/areoactive2.webp" },
+          { type: "image" as const, src: "/areoactive3.webp" },
         ],
       },
       {
@@ -149,7 +153,7 @@ export default async function Home() {
         name: t("projects.items.signalos.name"),
         summary: t("projects.items.signalos.summary"),
         tags: ["Next.js", "React", "Node.js", "TypeScript", "Enterprise"],
-        previewImage: "/signalos.png",
+        previewImage: "/signalos.webp",
         links: [
           { href: "https://www.signalos.io/", label: t("projects.links.website") },
         ],

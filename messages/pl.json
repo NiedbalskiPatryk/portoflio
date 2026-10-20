@@ -161,12 +161,12 @@
   "showRoom": {
     "navButton": "Showroom",
     "heading": "Showroom",
-    "description": "Interaktywna galeria przykladowych projektow frontendowych.\n\nRozne style, uklady i funkcjonalnosci - od landing page'ow po bardziej rozbudowane widoki - pokazujace, jak moga wygladac nowoczesne i dopracowane interfejsy uzytkownika.\n\nKazde rozwiazanie moze zostac rozszerzone o dedykowany backend, dopasowany do potrzeb Twojego biznesu.",
-    "cta": "Zobacz projekty. Wybierz kierunek. Zrobmy cos podobnego dla Ciebie.",
-    "backToMain": "Wroc na strone glowna",
-    "backToShowroom": "Wroc do showroomu",
-    "browseProjects": "Przegladaj projekty",
-    "comingSoon": "Wkrotce",
+    "description": "Interaktywna galeria przykładowych projektów frontendowych.\n\nRozne style, układy i funkcjonalności - od landing page'ow po bardziej rozbudowane widoki - pokazujące, jak mogą wyglądać nowoczesne i dopracowane interfejsy użytkownika.\n\nKazde rozwiązanie może zostać rozszerzone o dedykowany backend, dopasowany do potrzeb Twojego biznesu.",
+    "cta": "Zobacz projekty. Wybierz kierunek. Zróbmy coś podobnego dla Ciebie.",
+    "backToMain": "Wróć na stronę główną",
+    "backToShowroom": "Wróć do showroomu",
+    "browseProjects": "Przeglądaj projekty",
+    "comingSoon": "Wkrótce",
     "projects": {
       "landingPage": {
         "title": "Landing Page",
@@ -178,15 +178,15 @@
       },
       "ecommerce": {
         "title": "E-commerce",
-        "description": "Koszyk, lista produktow, hover effects"
+        "description": "Koszyk, lista produktów, hover effects"
       },
       "quiz": {
         "title": "Formularz / Quiz",
-        "description": "Multi-step z walidacja i dynamicznymi efektami"
+        "description": "Multi-step z walidacją i dynamicznymi efektami"
       },
       "portfolio": {
         "title": "Portfolio",
-        "description": "Grid zdjec, lightbox, masonry layout"
+        "description": "Grid zdjęć, lightbox, masonry layout"
       },
       "admin": {
         "title": "Panel admina",
@@ -202,7 +202,7 @@
       },
       "faq": {
         "title": "FAQ",
-        "description": "Filtr i akordeony z interakcja"
+        "description": "Filtr i akordeony z interakcją"
       },
       "newsletter": {
         "title": "Newsletter",
@@ -218,7 +218,7 @@
       },
       "pricing": {
         "title": "Pricing",
-        "description": "Porownanie planow z animowanymi kartami"
+        "description": "Porównanie planów z animowanymi kartami"
       },
       "widget": {
         "title": "Widget eksportu",
@@ -233,37 +233,37 @@
   "showRoomProjects": {
     "landingPage": {
       "hero": {
-        "badge": "Wersja 2.0 jest juz dostepna",
+        "badge": "Wersja 2.0 jest już dostępna",
         "title": "CloudSync",
-        "subtitle": "Synchronizuj wszystko, wszedzie",
-        "description": "Trzymaj pliki zsynchronizowane na wszystkich urzadzeniach. Szybko, bezpiecznie i bez wysilku.",
+        "subtitle": "Synchronizuj wszystko, wszędzie",
+        "description": "Trzymaj pliki zsynchronizowane na wszystkich urządzeniach. Szybko, bezpiecznie i bez wysiłku.",
         "cta": {
           "primary": "Rozpocznij darmowy okres",
           "secondary": "Zobacz demo"
         },
         "socialProof": {
           "value": "2,000+",
-          "label": "zadowolonych uzytkownikow"
+          "label": "zadowolonych użytkowników"
         },
         "app": {
           "name": "CloudSync",
           "status": "Zsynchronizowano",
           "files": [
-            { "name": "Projekty", "size": "12 plikow" },
-            { "name": "Dokumenty", "size": "8 plikow" },
+            { "name": "Projekty", "size": "12 plików" },
+            { "name": "Dokumenty", "size": "8 plików" },
             { "name": "design-system.fig", "size": "2.4 MB" },
             { "name": "presentation.pdf", "size": "5.1 MB" }
           ],
           "storage": {
-            "label": "Wykorzystana pamiec",
+            "label": "Wykorzystana pamięć",
             "value": "24.5 GB / 100 GB"
           },
           "notification": {
-            "title": "Synchronizacja zakonczona",
-            "subtitle": "Wszystkie pliki sa aktualne"
+            "title": "Synchronizacja zakończona",
+            "subtitle": "Wszystkie pliki są aktualne"
           },
           "stats": {
-            "label": "Predkosc wysylania",
+            "label": "Prędkość wysyłania",
             "value": "125 MB/s"
           }
         }
@@ -271,37 +271,37 @@
       "features": {
         "eyebrow": "Funkcje",
         "title": "Wszystko, czego potrzebujesz, aby",
-        "titleAccent": "byc na biezaco",
-        "description": "Rozbudowane funkcje, ktore zapewniaja bezpieczenstwo, dostepnosc i synchronizacje plikow na wszystkich urzadzeniach.",
+        "titleAccent": "być na bieżąco",
+        "description": "Rozbudowane funkcje, które zapewniają bezpieczeństwo, dostępność i synchronizacje plików na wszystkich urządzeniach.",
         "realtime": {
           "title": "Synchronizacja w czasie rzeczywistym",
-          "description": "Zmiany synchronizuja sie natychmiast na wszystkich urzadzeniach. Bez opoznien, bez konfliktow, bez problemow. Po prostu synchronizacja, ktora dziala."
+          "description": "Zmiany synchronizują się natychmiast na wszystkich urządzeniach. Bez opóźnień, bez konfliktów, bez problemów. Po prostu synchronizacja, która działa."
         },
         "security": {
           "title": "Szyfrowanie end-to-end",
-          "description": "Twoje pliki sa szyfrowane zanim opuszcza urzadzenie. Tylko Ty masz klucze.",
+          "description": "Twoje pliki są szyfrowane zanim opuszczą urządzenie. Tylko Ty masz klucze.",
           "bullets": ["AES-256", "Zero-knowledge", "Wsparcie 2FA"]
         },
         "crossPlatform": {
           "title": "Wieloplatformowe",
-          "description": "Dziala na Windows, Mac, Linux, iOS i Android. Twoje pliki sa z Toba wszedzie."
+          "description": "Działa na Windows, Mac, Linux, iOS i Android. Twoje pliki są z Tobą wszędzie."
         },
         "collaboration": {
-          "title": "Wspolpraca zespolowa",
-          "description": "Udostepniaj foldery, ustawiaj uprawnienia i pracuj w czasie rzeczywistym z calym zespolem."
+          "title": "Współpraca zespołowa",
+          "description": "Udostępniaj foldery, ustawiaj uprawnienia i pracuj w czasie rzeczywistym z całym zespołem."
         },
         "stats": [
-          { "value": "99.9%", "label": "Dostepnosc" },
+          { "value": "99.9%", "label": "Dostępność" },
           { "value": "150+", "label": "Kraje" },
-          { "value": "<50ms", "label": "Opoznienie" },
-          { "value": "2M+", "label": "Plikow synchronizowanych dziennie" }
+          { "value": "<50ms", "label": "Opóźnienie" },
+          { "value": "2M+", "label": "Plików synchronizowanych dziennie" }
         ]
       },
       "pricing": {
         "eyebrow": "Cennik",
         "title": "Prosty, przejrzysty",
         "titleAccent": "cennik",
-        "description": "Wybierz plan dopasowany do potrzeb. Bez ukrytych oplat i niespodzianek.",
+        "description": "Wybierz plan dopasowany do potrzeb. Bez ukrytych opłat i niespodzianek.",
         "popularLabel": "Najpopularniejszy",
         "plans": [
           {
@@ -309,8 +309,8 @@
             "name": "Darmowy",
             "price": "$0",
             "period": "na zawsze",
-            "description": "Dla uzytku osobistego",
-            "features": ["5 GB pamieci", "1 uzytkownik", "Podstawowe wsparcie", "Aplikacje mobilne"],
+            "description": "Dla użytku osobistego",
+            "features": ["5 GB pamięci", "1 użytkownik", "Podstawowe wsparcie", "Aplikacje mobilne"],
             "cta": "Zacznij",
             "highlighted": false
           },
@@ -319,15 +319,15 @@
             "name": "Pro",
             "price": "$9",
             "period": "/mies",
-            "description": "Dla profesjonalistow",
+            "description": "Dla profesjonalistów",
             "features": [
-              "100 GB pamieci",
-              "5 uzytkownikow",
+              "100 GB pamięci",
+              "5 użytkowników",
               "Priorytetowe wsparcie",
-              "Zaawansowane udostepnianie",
+              "Zaawansowane udostępnianie",
               "Historia wersji"
             ],
-            "cta": "Rozpocznij okres probny",
+            "cta": "Rozpocznij okres próbny",
             "highlighted": true
           },
           {
@@ -335,59 +335,59 @@
             "name": "Enterprise",
             "price": "Indywidualnie",
             "period": "",
-            "description": "Dla duzych zespolow",
+            "description": "Dla dużych zespołów",
             "features": [
-              "Nielimitowana pamiec",
-              "Nielimitowani uzytkownicy",
+              "Nielimitowana pamięć",
+              "Nielimitowani użytkownicy",
               "Wsparcie 24/7",
               "SSO i SAML",
               "Konsola admina",
               "Gwarancja SLA"
             ],
-            "cta": "Skontaktuj sie",
+            "cta": "Skontaktuj się",
             "highlighted": false
           }
         ],
-        "trustBadges": ["30-dniowy zwrot pieniedzy", "Anuluj w kazdej chwili", "Bez karty kredytowej"]
+        "trustBadges": ["30-dniowy zwrot pieniędzy", "Anuluj w każdej chwili", "Bez karty kredytowej"]
       },
       "cta": {
         "eyebrow": "Zaczynajmy",
-        "title": "Gotowy na synchronizacje?",
-        "subtitle": "Dolacz do tysiecy uzytkownikow, ktorzy ufaja CloudSync.",
+        "title": "Gotowy na synchronizację?",
+        "subtitle": "Dołącz do tysięcy użytkowników, którzy ufają CloudSync.",
         "emailPlaceholder": "Wpisz email",
         "button": "Rozpocznij darmowy okres",
         "footnote": "Darmowy 14-dniowy okres. Bez karty kredytowej.",
         "stats": [
-          { "value": "50K+", "label": "Aktywni uzytkownicy" },
-          { "value": "99.9%", "label": "SLA dostepnosci" },
+          { "value": "50K+", "label": "Aktywni użytkownicy" },
+          { "value": "99.9%", "label": "SLA dostępności" },
           { "value": "24/7", "label": "Wsparcie" }
         ],
-        "trustedBy": "Zaufali nam zespoly w",
+        "trustedBy": "Zaufali nam zespoły w",
         "logos": ["Vercel", "Stripe", "Linear", "Notion", "Figma"]
       },
       "footer": {
         "brand": "CloudSync",
-        "tagline": "Stopka w stylu Figma z wyrazna typografia, czystymi kolumnami i subtelnym blaskiem siatki.",
+        "tagline": "Stopka w stylu Figma z wyraźna typografia, czystymi kolumnami i subtelnym blaskiem siatki.",
         "badge": "Zaprojektowane dla workflow w Figma",
         "groups": [
           {
             "title": "Produkt",
-            "links": ["Przeglad", "Synchronizacja", "Bezpieczenstwo", "Cennik", "Lista zmian"]
+            "links": ["Przegląd", "Synchronizacja", "Bezpieczeństwo", "Cennik", "Lista zmian"]
           },
           {
             "title": "Zasoby",
             "links": ["Dokumentacja", "API", "Status", "Poradniki", "Szablony"]
           },
           {
-            "title": "Spolecznosc",
-            "links": ["Spolecznosc Figma", "Zestaw designu", "Forum", "Tablica opinii"]
+            "title": "Społeczność",
+            "links": ["Społeczność Figma", "Zestaw designu", "Forum", "Tablica opinii"]
           },
           {
             "title": "Firma",
             "links": ["O nas", "Kariera", "Media", "Informacje prawne", "Kontakt"]
           }
         ],
-        "copyright": "2024 CloudSync. Wszelkie prawa zastrzezone.",
+        "copyright": "2024 CloudSync. Wszelkie prawa zastrzeżone.",
         "socials": ["Twitter", "GitHub", "Dribbble", "Behance"]
       }
     },
@@ -395,40 +395,40 @@
       "hero": {
         "eyebrow": "Dashboard",
         "title": "Centrum kontroli wzrostu produktu",
-        "description": "Sledz przychod, aktywacje i retencje w jednym miejscu. Wizualne analizy, filtry w czasie rzeczywistym i czysty ciemny interfejs.",
+        "description": "Śledź przychód, aktywacje i retencję w jednym miejscu. Wizualne analizy, filtry w czasie rzeczywistym i czysty ciemny interfejs.",
         "primaryAction": "Eksportuj raport",
-        "secondaryAction": "Zaplanuj synchronizacje"
+        "secondaryAction": "Zaplanuj synchronizację"
       },
       "filters": {
         "timeRangeLabel": "Zakres czasu",
         "regionLabel": "Region",
         "searchLabel": "Szukaj",
-        "searchPlaceholder": "Szukaj klientow lub faktur",
+        "searchPlaceholder": "Szukaj klientów lub faktur",
         "segmentsLabel": "Segmenty",
-        "clear": "Wyczysc",
-        "timeRanges": ["Ostatnie 7 dni", "Ostatnie 30 dni", "Kwartal", "Rok"],
+        "clear": "Wyczyść",
+        "timeRanges": ["Ostatnie 7 dni", "Ostatnie 30 dni", "Kwartał", "Rok"],
         "regions": ["Globalnie", "EMEA", "Ameryki", "APAC"],
         "segments": ["SaaS", "Enterprise", "SMB"]
       },
       "charts": {
         "revenueTrend": "Trend przychodu",
-        "weeklyActivity": "Aktywnosc tygodniowa",
-        "spendDistribution": "Rozklad wydatkow",
+        "weeklyActivity": "Aktywność tygodniowa",
+        "spendDistribution": "Rozkład wydatków",
         "kpis": [
-          { "label": "Miesieczny przychod", "value": "$128,420", "change": "+12.4%" },
-          { "label": "Aktywni uzytkownicy", "value": "48,092", "change": "+6.8%" },
-          { "label": "Wspolczynnik konwersji", "value": "4.7%", "change": "+0.6%" },
-          { "label": "Sredni czas reakcji", "value": "1.4s", "change": "-0.3s" }
+          { "label": "Miesięczny przychód", "value": "$128,420", "change": "+12.4%" },
+          { "label": "Aktywni użytkownicy", "value": "48,092", "change": "+6.8%" },
+          { "label": "Współczynnik konwersji", "value": "4.7%", "change": "+0.6%" },
+          { "label": "Średni czas reakcji", "value": "1.4s", "change": "-0.3s" }
         ],
         "lineSeries": [14, 22, 19, 28, 35, 32, 40, 44, 39, 48, 52, 60],
         "barSeries": [
-          { "label": "Pn", "value": 42 },
+          { "label": "Pon", "value": 42 },
           { "label": "Wt", "value": 28 },
-          { "label": "Sr", "value": 35 },
+          { "label": "Śr", "value": 35 },
           { "label": "Czw", "value": 50 },
           { "label": "Pt", "value": 46 },
-          { "label": "Sb", "value": 24 },
-          { "label": "Nd", "value": 30 }
+          { "label": "Sob", "value": 24 },
+          { "label": "Ndz", "value": 30 }
         ],
         "donutSeries": [
           { "label": "Produkt", "value": 48, "color": "#6366f1" },
@@ -439,11 +439,11 @@
       },
       "table": {
         "title": "Ostatnie faktury",
-        "description": "Najnowsze oplaty abonamentowe ze statusem i planem.",
+        "description": "Najnowsze opłaty abonamentowe ze statusem i planem.",
         "headers": ["Faktura", "Klient", "Plan", "Kwota", "Status", "Data"],
         "status": {
-          "paid": "Oplacona",
-          "pending": "Oczekujaca",
+          "paid": "Opłacona",
+          "pending": "Oczekująca",
           "failed": "Nieudana"
         },
         "rows": [
@@ -504,11 +504,11 @@
           "shop": "Kup teraz"
         },
         "featured": {
-          "title": "Wyroznione stylizacje",
+          "title": "Wyróżnione stylizacje",
           "description": "Wyselekcjonowane elementy z edytorskiej kolekcji, stylizowane dla czystej sylwetki studia.",
           "cta": "Zobacz wszystkie produkty",
           "add": "Dodaj",
-          "stock": "Dostepne"
+          "stock": "Dostępne"
         },
         "products": [
           {
@@ -570,13 +570,13 @@
         ]
       },
       "filters": {
-        "categories": ["Wszystko", "Ready-to-wear", "Odziez wierzchnia", "Akcesoria", "Obuwie", "Archiwum"],
-        "sort": "Sortuj: Nowosci",
+        "categories": ["Wszystko", "Ready-to-wear", "Odzież wierzchnia", "Akcesoria", "Obuwie", "Archiwum"],
+        "sort": "Sortuj: Nowości",
         "view": "Widok: Editorial Archive"
       },
       "productGrid": {
         "addToCart": "Dodaj do koszyka",
-        "stock": "Dostepne",
+        "stock": "Dostępne",
         "products": [
           {
             "id": "look-01",
@@ -643,11 +643,11 @@
         "collections": [
           {
             "title": "Letni editorial",
-            "description": "Wyblakle lny, zlagodzone krawiectwo, minimalne linie."
+            "description": "Wyblakłe lny, złagodzone krawiectwo, minimalne linie."
           },
           {
             "title": "Studio Edition",
-            "description": "Monochromatyczne podstawy skrojone dla dluzszych sylwetek."
+            "description": "Monochromatyczne podstawy skrojone dla dłuższych sylwetek."
           },
           {
             "title": "Night Shift",
@@ -678,7 +678,7 @@
       "footer": {
         "brand": "Atelier Studio",
         "description": "Koncepcja butikowa. Wszystkie wizualizacje to mockupy do showroomu.",
-        "links": ["Regulamin", "Prywatnosc", "Kontakt"]
+        "links": ["Regulamin", "Prywatność", "Kontakt"]
       }
     },
     "portfolio": {
@@ -686,9 +686,9 @@
         "eyebrow": "Portfolio",
         "title": "Architektura",
         "titleAccent": "w brutalnych ramach.",
-        "description": "Selekcja surowych struktur, betonowych siatek i odwaznej geometrii.",
+        "description": "Selekcja surowych struktur, betonowych siatek i odważnej geometrii.",
         "stats": {
-          "primary": "08 serii zdjec",
+          "primary": "08 serii zdjęć",
           "secondary": "Tylko architektura"
         },
         "projects": [
@@ -704,7 +704,7 @@
         ]
       },
       "projects": {
-        "title": "Archiwum zdjec",
+        "title": "Archiwum zdjęć",
         "items": [
           {
             "id": "ARCH-01",
@@ -764,11 +764,11 @@
       },
       "manifesto": {
         "title": "Manifest",
-        "description": "Brutalizm utrzymuje interfejs w szczerej formie. Bloki, siatki i glosna typografia sprawiaja, ze prace mowia bez dekoracji.",
+        "description": "Brutalizm utrzymuje interfejs w szczerej formie. Bloki, siatki i głośna typografia sprawiają, że prace mówią bez dekoracji.",
         "highlights": [
-          "Wyrozniony w Brutalist Design Annual 2024.",
+          "Wyróżniony w Brutalist Design Annual 2024.",
           "Publikacja w Digital Craft magazine, wydanie 41.",
-          "Klienci z branzy mody, kultury i nowych technologii."
+          "Klienci z branży mody, kultury i nowych technologii."
         ],
         "projects": [
           { "id": "ARCH-08", "image": "/images/portfolio/arch-8.jpg" },
@@ -777,8 +777,8 @@
       },
       "contact": {
         "title": "Zacznij projekt",
-        "description": "Szukasz wyrazistego systemu wizualnego? Zbudujmy kolejna odwazna premiere.",
-        "primaryAction": "Umow rozmowe",
+        "description": "Szukasz wyrazistego systemu wizualnego? Zbudujmy kolejna odważna premiere.",
+        "primaryAction": "Umów rozmowę",
         "secondaryAction": "Pobierz CV"
       },
       "footer": {
@@ -796,29 +796,29 @@
     "admin": {
       "header": {
         "eyebrow": "Panel admina",
-        "title": "Minimalny przeglad operacji",
-        "description": "Uzytkownicy, aktywnosc i sygnaly ryzyka w jednej, czystej przestrzeni.",
+        "title": "Minimalny przegląd operacji",
+        "description": "Użytkownicy, aktywność i sygnały ryzyka w jednej, czystej przestrzeni.",
         "actions": {
           "export": "Eksport",
-          "addUser": "Dodaj uzytkownika"
+          "addUser": "Dodaj użytkownika"
         }
       },
       "stats": {
         "items": [
-          { "label": "Aktywni uzytkownicy", "value": "12,480", "change": "+4.2%" },
+          { "label": "Aktywni użytkownicy", "value": "12,480", "change": "+4.2%" },
           { "label": "Nowe zapisy", "value": "1,284", "change": "+2.1%" },
           { "label": "Ryzyko churn", "value": "2.4%", "change": "-0.6%" }
         ]
       },
       "table": {
-        "title": "Uzytkownicy",
-        "description": "Zarzadzaj dostepem, statusem i planami.",
-        "searchPlaceholder": "Szukaj uzytkownikow",
+        "title": "Użytkownicy",
+        "description": "Zarządzaj dostępem, statusem i planami.",
+        "searchPlaceholder": "Szukaj użytkowników",
         "reset": "Resetuj",
-        "view": "Podglad",
+        "view": "Podgląd",
         "planOptions": ["Wszystkie plany", "Starter", "Pro", "Business", "Enterprise"],
         "statusOptions": ["Status", "Aktywny", "Wstrzymany", "Do weryfikacji"],
-        "headers": ["Uzytkownik", "Plan", "Status", "Ostatnio", "Akcja"],
+        "headers": ["Użytkownik", "Plan", "Status", "Ostatnio", "Akcja"],
         "status": {
           "active": "Aktywny",
           "paused": "Wstrzymany",
@@ -865,27 +865,27 @@
     },
     "event": {
       "hero": {
-        "eyebrow": "⚡ najczesciej wybierane",
+        "eyebrow": "⚡ najczęściej wybierane",
         "title": "Velocity",
         "titleAccent": "Live 2024",
-        "description": "Wydarzenie o wysokiej energii dla koncertow, festiwali i konferencji tech. Dwie noce. Trzy sceny. Zero ciszy.",
+        "description": "Wydarzenie o wysokiej energii dla koncertów, festiwali i konferencji tech. Dwie noce. Trzy sceny. Zero ciszy.",
         "actions": {
           "primary": "Kup bilety",
           "secondary": "Zobacz zwiastun"
         },
         "videoLabel": "Wideo hero",
         "stats": [
-          { "label": "3 sceny", "value": "48 prelegentow" },
-          { "label": "2 dni", "value": "12 warsztatow" },
-          { "label": "6k uczestnikow", "value": "32 partnerow" }
+          { "label": "3 sceny", "value": "48 prelegentów" },
+          { "label": "2 dni", "value": "12 warsztatów" },
+          { "label": "6k uczestników", "value": "32 partnerów" }
         ]
       },
       "lineup": {
         "title": "Lineup",
         "items": [
-          { "name": "Nova Pulse", "time": "18:30", "stage": "Glowna scena" },
-          { "name": "Circuit Echo", "time": "20:00", "stage": "Glowna scena" },
-          { "name": "Vega Runner", "time": "21:30", "stage": "Glowna scena" },
+          { "name": "Nova Pulse", "time": "18:30", "stage": "Główna scena" },
+          { "name": "Circuit Echo", "time": "20:00", "stage": "Główna scena" },
+          { "name": "Vega Runner", "time": "21:30", "stage": "Główna scena" },
           { "name": "Mono Signal", "time": "17:00", "stage": "Studio" },
           { "name": "Atlas Code", "time": "19:00", "stage": "Studio" },
           { "name": "Binary Drift", "time": "21:00", "stage": "Studio" }
@@ -901,12 +901,12 @@
           },
           {
             "time": "11:00",
-            "title": "Keynote: Przyszlosc live",
-            "detail": "Glowna scena"
+            "title": "Keynote: Przyszłość live",
+            "detail": "Główna scena"
           },
           {
             "time": "13:30",
-            "title": "Blok warsztatow",
+            "title": "Blok warsztatów",
             "detail": "AI, Design Systems, Live Ops"
           },
           {
@@ -917,7 +917,7 @@
           {
             "time": "18:30",
             "title": "Nocny show",
-            "detail": "Glowna scena"
+            "detail": "Główna scena"
           }
         ]
       },
@@ -928,7 +928,7 @@
           {
             "name": "Standard",
             "price": "$189",
-            "detail": "Dostep do wszystkich scen + expo"
+            "detail": "Dostęp do wszystkich scen + expo"
           },
           {
             "name": "Pro",
@@ -938,13 +938,13 @@
           {
             "name": "VIP",
             "price": "$590",
-            "detail": "Pelny dostep + backstage + kolacja"
+            "detail": "Pełny dostęp + backstage + kolacja"
           }
         ]
       },
       "footer": {
         "brand": "Velocity Live",
-        "tagline": "Koncepcja festiwalu na dwie noce i wysoka energia.",
+        "tagline": "Koncepcja festiwalu na dwie noce i wysoką energię.",
         "details": [
           { "label": "Daty", "value": "16-17 sierpnia 2024" },
           { "label": "Miejsce", "value": "Dzielnica Harbor, Oslo" }
@@ -958,21 +958,21 @@
       "hero": {
         "eyebrow": "Czyste UI / Minimalny SaaS",
         "title": "Kalkulator ROI dla wzrostu SaaS",
-        "description": "Oszacuj wplyw na przychod, oszczednosci kosztow i okres zwrotu w prostym kalkulatorze.",
+        "description": "Oszacuj wpływ na przychód, oszczędności kosztów i okres zwrotu w prostym kalkulatorze.",
         "actions": {
-          "primary": "Policz oszczednosci",
+          "primary": "Policz oszczędności",
           "secondary": "Pobierz raport"
         }
       },
       "grid": {
-        "inputsTitle": "Dane wejsciowe",
-        "inputsDescription": "Dopasuj wolumen i zalozenia cenowe.",
+        "inputsTitle": "Dane wejściowe",
+        "inputsDescription": "Dopasuj wolumen i założenia cenowe.",
         "inputs": [
-          { "label": "Miesieczne leady", "value": "2400" },
-          { "label": "Wspolczynnik konwersji", "value": "3.2%" },
-          { "label": "Srednia wartosc kontraktu", "value": "$4,500" },
-          { "label": "Cykl sprzedazy (dni)", "value": "32" },
-          { "label": "Koszt operacyjny / miesiac", "value": "$18,000" }
+          { "label": "Miesięczne leady", "value": "2400" },
+          { "label": "Współczynnik konwersji", "value": "3.2%" },
+          { "label": "Średnia wartość kontraktu", "value": "$4,500" },
+          { "label": "Cykl sprzedaży (dni)", "value": "32" },
+          { "label": "Koszt operacyjny / miesiąc", "value": "$18,000" }
         ],
         "updateResults": "Aktualizuj wyniki",
         "results": {
@@ -981,27 +981,27 @@
           "roiValue": "4.2x",
           "paybackLabel": "Okres zwrotu",
           "paybackValue": "5.6 mies.",
-          "impactLabel": "Wplyw na przychod netto",
+          "impactLabel": "Wpływ na przychód netto",
           "impactValue": "$150,400 / rok"
         },
-        "assumptionsTitle": "Zalozenia i oszczednosci",
+        "assumptionsTitle": "Założenia i oszczędności",
         "assumptions": [
-          { "label": "Srednia wartosc transakcji", "value": "$4,500" },
-          { "label": "Wspolczynnik wygranych", "value": "24%" },
-          { "label": "Cykl sprzedazy", "value": "32 dni" }
+          { "label": "Średnia wartość transakcji", "value": "$4,500" },
+          { "label": "Współczynnik wygranych", "value": "24%" },
+          { "label": "Cykl sprzedaży", "value": "32 dni" }
         ],
         "savings": [
-          { "label": "Zaoszczedzone godziny", "value": "180 h / miesiac" },
-          { "label": "Oszczednosci operacyjne", "value": "$38,400 / rok" },
+          { "label": "Zaoszczędzone godziny", "value": "180 h / miesiąc" },
+          { "label": "Oszczędności operacyjne", "value": "$38,400 / rok" },
           { "label": "Wzrost przychodu", "value": "$112,000 / rok" }
         ]
       },
       "footer": {
         "brand": "Atlas Metrics",
-        "tagline": "Kalkulator ROI dla liderow SaaS i zespolow revenue.",
-        "links": ["Cennik", "Bezpieczenstwo", "Dokumentacja", "Kontakt"],
+        "tagline": "Kalkulator ROI dla liderów SaaS i zespołów revenue.",
+        "links": ["Cennik", "Bezpieczeństwo", "Dokumentacja", "Kontakt"],
         "badges": ["SOC 2 Type II", "GDPR ready", "99.9% uptime"],
-        "legal": "Wartosci sa pogladowe, przygotowane na potrzeby showroomu."
+        "legal": "Wartości są poglądowe, przygotowane na potrzeby showroomu."
       }
     }
   }
