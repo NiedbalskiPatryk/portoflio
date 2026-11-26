@@ -1,26 +1,15 @@
 import { ImageResponse } from "next/og";
+import BrandMark from "@/components/atoms/BrandMark/BrandMark";
 
 export const size = { width: 180, height: 180 };
 export const contentType = "image/png";
 
+// iOS rounds the corners itself, so the tile is drawn square.
 export default function AppleIcon() {
   return new ImageResponse(
     (
-      <div
-        style={{
-          width: "100%",
-          height: "100%",
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-          background: "#0a0a0a",
-          color: "#fafafa",
-          fontSize: 88,
-          fontWeight: 700,
-          fontFamily: "monospace",
-        }}
-      >
-        PN
+      <div style={{ width: "100%", height: "100%", display: "flex" }}>
+        <BrandMark size={180} rounded={false} />
       </div>
     ),
     size,
