@@ -95,10 +95,6 @@ export async function POST(request: Request) {
 
   // Bot checks: pretend success so bots get no signal.
   const elapsedMs = Number(read("elapsedMs"));
-  if (read("contact_hp") !== "") {
-    console.info("[contact] Dropped as bot: honeypot filled");
-    return Response.json({ ok: true });
-  }
   if (!Number.isFinite(elapsedMs) || elapsedMs < MIN_FILL_TIME_MS) {
     console.info(`[contact] Dropped as bot: filled too fast (elapsedMs=${read("elapsedMs")})`);
     return Response.json({ ok: true });

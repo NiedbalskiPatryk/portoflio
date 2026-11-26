@@ -50,7 +50,6 @@ const ContactForm: React.FC<ContactFormProps> = ({
   const t = useTranslations("contact.form");
   const locale = useLocale();
   const mountedAtRef = React.useRef(0);
-  const honeypotRef = React.useRef<HTMLInputElement>(null);
 
   React.useEffect(() => {
     mountedAtRef.current = Date.now();
@@ -117,7 +116,6 @@ const ContactForm: React.FC<ContactFormProps> = ({
       Object.entries(values).forEach(([key, value]) => {
         formData.append(key, value);
       });
-      formData.append("contact_hp", honeypotRef.current?.value ?? "");
       formData.append("elapsedMs", String(Date.now() - mountedAtRef.current));
       formData.append("locale", locale);
 
@@ -181,23 +179,6 @@ const ContactForm: React.FC<ContactFormProps> = ({
         },
       }}
     >
-      {/* Honeypot: hidden from people, bots tend to fill it in. */}
-      <Box
-        aria-hidden="true"
-        sx={{ position: "absolute", left: "-10000px", width: "1px", height: "1px", overflow: "hidden" }}
-      >
-        <input
-          ref={honeypotRef}
-          type="text"
-          name="contact_hp"
-          tabIndex={-1}
-          autoComplete="off"
-          data-1p-ignore
-          data-lpignore="true"
-          data-bwignore
-          defaultValue=""
-        />
-      </Box>
       <Stack spacing={2}>
         {(() => {
           const fieldMap = fields.reduce<Record<ContactFieldId, ContactFormField>>(
