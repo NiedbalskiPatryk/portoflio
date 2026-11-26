@@ -53,6 +53,7 @@ const ContactInfo: React.FC<ContactInfoProps> = ({ heading, description, items }
             key={`${item.label}-${item.value}`}
             label={item.label}
             value={item.value}
+            href={item.href}
           />
         ))}
       </Stack>

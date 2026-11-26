@@ -2,14 +2,16 @@
 
 import React from "react";
 import Box from "@mui/material/Box";
+import Link from "@mui/material/Link";
 import Typography from "@mui/material/Typography";
 
 export interface ContactInfoItemProps {
   label: string;
   value: string;
+  href?: string;
 }
 
-const ContactInfoItem: React.FC<ContactInfoItemProps> = ({ label, value }) => {
+const ContactInfoItem: React.FC<ContactInfoItemProps> = ({ label, value, href }) => {
   return (
     <Box
       sx={{
@@ -30,7 +32,20 @@ const ContactInfoItem: React.FC<ContactInfoItemProps> = ({ label, value }) => {
         color="text.primary"
         sx={{ wordBreak: "break-word" }}
       >
-        {value}
+        {href ? (
+          <Link
+            href={href}
+            color="inherit"
+            underline="hover"
+            {...(href.startsWith("http")
+              ? { target: "_blank", rel: "noopener noreferrer" }
+              : {})}
+          >
+            {value}
+          </Link>
+        ) : (
+          value
+        )}
       </Typography>
     </Box>
   );

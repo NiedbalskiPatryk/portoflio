@@ -1,7 +1,7 @@
 {
   "metadata": {
     "title": "Patryk Niedbalski — Full-Stack Developer | React, Next.js, Node.js",
-    "description": "Full-stack software engineer based in Warsaw, Poland. I build fast, scalable web applications using React, Next.js, TypeScript, and Node.js. Available for freelance and contract work."
+    "description": "Full-stack developer based in Warsaw, Poland. I build websites, web applications and business systems with React, Next.js and Node.js. Available for projects and open to long-term B2B or full-time roles."
   },
   "nav": {
     "home": "Home",
@@ -14,10 +14,10 @@
   "hero": {
     "location": "Warsaw, Poland",
     "greeting": "Hi, I'm Patryk",
-    "role": "Software Engineer",
-    "description": "I help businesses build fast, reliable web applications that are user-friendly. From idea to launch, I'm here to help make it happen.",
-    "primaryCTA": "About me",
-    "secondaryCTA": "See my projects",
+    "role": "Full-Stack Developer",
+    "description": "I design and build websites, web applications and business systems - from a landing page to a booking platform or an admin panel. I take care of the whole thing: frontend, backend and deployment.",
+    "primaryCTA": "Let's talk about your project",
+    "secondaryCTA": "See my work",
     "techLabel": "Technologies I work with",
     "snippets": {
       "leftTop": "<div className=\"hero\">\n  <h1>Hello World</h1>\n</div>",
@@ -29,41 +29,42 @@
   "about": {
     "heading": "About",
     "name": "Patryk Niedbalski",
-    "role": "Software Engineer",
+    "role": "Full-Stack Developer",
     "profileImageAlt": "Portrait of Patryk",
     "bio": {
-      "paragraph1": "I'm a developer who genuinely enjoys turning complex problems into simple, elegant solutions. For me, code isn't just about functionality - it's about creating experiences that feel natural and effortless.",
+      "paragraph1": "I'm a full-stack developer based in Warsaw. I enjoy turning complex problems into simple solutions - the kind that are just easy to use.",
       "paragraph2": "Throughout my career, I've worked in companies with different profiles - from startups and software houses to companies partnering with some of the world’s largest corporations, building everything from internal tools to customer-facing platforms. I thrive in collaborative environments where good ideas can come from anywhere.",
+      "availability": "I currently build projects for businesses and I'm open to a long-term role - B2B contract or full-time - in a team that builds a product. If you're hiring, send me a message or reach out on LinkedIn.",
       "paragraph3": "When I'm not coding, you'll find me spending time with family, traveling, reading books, or playing football."
     },
-    "primaryCTA": "Download Resume",
-    "secondaryCTA": "Let's talk"
+    "cta": "Let's talk",
+    "linkedinCTA": "LinkedIn"
   },
   "services": {
     "heading": "How I can help",
-    "description": "Whether you need a new application or want to improve an existing one, I've got you covered.",
+    "description": "A new website, a custom system, or improving what you already have - I handle the whole thing, from idea to launch.",
     "items": {
       "frontend": {
-        "title": "Frontend Development",
-        "description": "I spent my first two years focusing exclusively on frontend, which helped me master its intricacies. I stay up to date with the latest trends and know how to build and deploy blazing-fast websites, configure SEO and Google Analytics setup. I use Atomic Design as my primary architecture!"
+        "title": "Websites & web apps",
+        "description": "Company websites, landing pages and web apps that load fast, work well on mobile and guide visitors towards getting in touch or buying. From the interface to deployment and analytics setup."
       },
       "backend": {
-        "title": "Backend Development",
-        "description": "Solid foundations matter. I design and build APIs, databases, and server-side logic that scale with your business and keep your data secure. I work on backend systems daily, following best practices related to Domain-Driven Design."
+        "title": "Business systems & admin panels",
+        "description": "Booking systems, admin panels, payment and third-party API integrations. I design the database and business logic so the system grows with your company and keeps your data safe."
       },
       "automation": {
-        "title": "Automation & Tooling",
-        "description": "Repetitive tasks slow you down. I build custom tools and automated workflows that free up your team to focus on what really matters. Need a script to fill in data, prepare files, or send something automatically? Let me know, we'll figure something out together!"
+        "title": "Automation",
+        "description": "Copying data by hand, sending the same emails, stitching reports together in Excel? I build tools and scripts that do it for you and give your team their time back."
       },
       "performance": {
-        "title": "Performance & SEO",
-        "description": "Speed wins — and so does visibility. I analyze bottlenecks and implement optimizations that make your applications lightning fast. I also handle SEO configuration, structured data, and Core Web Vitals so your site ranks well and loads even better."
+        "title": "Speed & search visibility",
+        "description": "I speed up existing websites and apps, improve Core Web Vitals, and set up technical SEO and analytics - so your site is easier to find and doesn't lose customers to slow loading."
       }
     }
   },
   "projects": {
-    "heading": "Work I'm proud of",
-    "description": "A selection of projects where I helped clients achieve their goals.",
+    "heading": "Selected work",
+    "description": "Projects I've worked on - from platforms for large organisations to a marketplace and company websites.",
     "visitSite": "Visit site",
     "links": {
       "website": "Website",
@@ -81,7 +82,7 @@
       },
       "areoactive": {
         "name": "Areoactive",
-        "summary": "A high-converting landing page designed to capture attention and drive results. Fast, responsive, and built to perform."
+        "summary": "A launch website for a new venture - fast, responsive and built to grow together with the product."
       },
       "skinscartel": {
         "name": "SkinsCartel",
@@ -91,33 +92,37 @@
   },
   "faq": {
     "heading": "Questions? I've got answers",
-    "description": "Here's what people usually want to know before we start working together.",
+    "description": "What's worth knowing before we start working together.",
     "items": {
       "services": {
         "question": "What kind of projects do you take on?",
-        "answer": "I work on web applications of all sizes - from simple landing pages to admin systems, MVPs for startups to complex enterprise systems."
+        "answer": "Company websites and landing pages, online stores, booking systems, admin panels, MVPs for startups and automations. I work with small businesses as well as large organisations."
       },
-      "teams": {
-        "question": "Do you work with small teams or only big companies?",
-        "answer": "Both! I enjoy the fast pace of startups just as much as the structure of larger organizations. What matters most is that we're solving interesting problems together."
+      "pricing": {
+        "question": "How much does a website or app cost?",
+        "answer": "It depends on scope. After a short call I prepare a quote broken down into stages, so you know exactly what you're paying for and when you'll get it."
       },
       "timeline": {
-        "question": "How long does a typical project take?",
-        "answer": "It depends on scope, but most projects run between 4-12 weeks. I'll give you a realistic timeline after we discuss your needs in detail."
+        "question": "How long does a project take?",
+        "answer": "A simple website usually takes a few weeks; larger apps and systems take longer. I'll give you a realistic timeline once we've discussed the scope."
       },
       "collaboration": {
         "question": "Can you work with our existing team?",
-        "answer": "Of course. I'm naturally open-minded but also inquisitive. Several years of working at an event agency helped me polish my soft skills. I'm used to collaborating with designers, product managers, and other developers. I adapt to your tools and processes, not the other way around."
+        "answer": "Of course. I work alongside designers, product managers and other developers every day. I adapt to your tools and processes, not the other way around."
+      },
+      "hiring": {
+        "question": "Are you open to a long-term or full-time role?",
+        "answer": "Yes. Alongside client projects I'm open to a long-term B2B contract or a full-time role in a product team. Send me a message or reach out on LinkedIn."
       },
       "start": {
         "question": "How do we get started?",
-        "answer": "Just send me a message with a brief description of what you need. I'll get back to you to schedule a call and discuss the details."
+        "answer": "Send me a message with a short description of what you need. I'll get back to you to set up a call and go through the details."
       }
     }
   },
   "contact": {
-    "heading": "Let's build something great",
-    "description": "Have a project in mind? Drop me a line and let's talk about how I can help.",
+    "heading": "Let's talk",
+    "description": "Tell me briefly what you need - a website, a system, an automation, or someone to join your team. I'll get back to you to set up a call.",
     "form": {
       "name": "Your name",
       "namePlaceholder": "John Smith",
@@ -126,16 +131,16 @@
       "phone": "Phone",
       "phonePlaceholder": "+48 123 456 789",
       "subject": "Subject",
-      "subjectPlaceholder": "Project inquiry",
+      "subjectPlaceholder": "E.g. company website, booking system, job opportunity",
       "message": "Message",
-      "messagePlaceholder": "Tell me about your project...",
+      "messagePlaceholder": "What would you like to build? Any deadline or budget in mind?",
       "submit": "Send Message",
       "validation": {
         "email": "Enter a valid email address."
       },
       "status": {
-        "success": "Thanks! Your message has been sent.",
-        "error": "Something went wrong. Please try again."
+        "success": "Thanks! Your message has arrived - I'll get back to you soon. I've also sent a confirmation to your email.",
+        "error": "Your message couldn't be sent. Please email me directly at patrykitpapi@gmail.com or call +48 507 486 286."
       }
     },
     "info": {
@@ -143,7 +148,8 @@
       "email": "Email",
       "phone": "Phone",
       "address": "Address",
-      "addressValue": "Warsaw, Poland"
+      "addressValue": "Warsaw, Poland",
+      "linkedin": "LinkedIn"
     }
   },
   "aria": {
@@ -153,7 +159,7 @@
     "switchToDarkMode": "Switch to dark mode"
   },
   "footer": {
-    "description": "Software engineer crafting thoughtful digital experiences.",
+    "description": "Websites, web apps and business systems. Open to B2B contracts and full-time roles.",
     "contactHeading": "Get in touch",
     "navHeading": "Navigation",
     "copyright": "All rights reserved."
@@ -348,7 +354,11 @@
             "highlighted": false
           }
         ],
-        "trustBadges": ["30-day money back", "Cancel anytime", "No credit card required"]
+        "trustBadges": [
+          "30-day money back",
+          "Cancel anytime",
+          "No credit card required"
+        ]
       },
       "cta": {
         "eyebrow": "Get Started",
@@ -570,7 +580,14 @@
         ]
       },
       "filters": {
-        "categories": ["All", "Ready-to-wear", "Outerwear", "Accessories", "Footwear", "Archive"],
+        "categories": [
+          "All",
+          "Ready-to-wear",
+          "Outerwear",
+          "Accessories",
+          "Footwear",
+          "Archive"
+        ],
         "sort": "Sort: New arrivals",
         "view": "View: Editorial Archive"
       },
@@ -914,11 +931,7 @@
             "title": "Panel: Culture + Tech",
             "detail": "Studio Stage"
           },
-          {
-            "time": "18:30",
-            "title": "Night show",
-            "detail": "Main Stage"
-          }
+          { "time": "18:30", "title": "Night show", "detail": "Main Stage" }
         ]
       },
       "tickets": {
@@ -1003,6 +1016,19 @@
         "badges": ["SOC 2 Type II", "GDPR ready", "99.9% uptime"],
         "legal": "Metrics are illustrative for showroom use."
       }
+    }
+  },
+  "consent": {
+    "text": "This site uses Google Analytics cookies for visit statistics. They're only enabled if you accept.",
+    "accept": "Accept",
+    "reject": "Reject"
+  },
+  "contactEmail": {
+    "autoReply": {
+      "subject": "Thanks for your message - Patryk Niedbalski",
+      "greeting": "Hi,",
+      "body": "thank you for reaching out through the form on itpapi.pl. Your message has arrived and I'll get back to you as soon as I can.\n\nIf you'd like to add anything, just reply to this email.",
+      "signature": "Best regards,\nPatryk Niedbalski\nitpapi.pl"
     }
   }
 }
