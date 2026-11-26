@@ -11,7 +11,7 @@ SYSTEM CONSTRAINTS:
 - Use MUI components and theming system
 - Follow Atomic Design principles
 - Minimize changes, UI-only tasks
-- Use ASCII characters by default
+- Use ASCII in code and identifiers; user-facing Polish copy (messages/pl.json) must use proper diacritics (ą, ć, ę, ł, ń, ó, ś, ź, ż)
 
 PROJECT GOAL:
 Build a modern, dark-themed developer portfolio website inspired by a provided reference design.

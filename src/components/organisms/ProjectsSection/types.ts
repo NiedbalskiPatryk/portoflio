@@ -2,6 +2,7 @@ export interface ProjectMedia {
   type: "image" | "video";
   src: string;
   thumbnail?: string;
+  poster?: string;
 }
 
 export interface ProjectLink {

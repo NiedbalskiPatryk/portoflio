@@ -452,13 +452,13 @@
         ],
         "lineSeries": [14, 22, 19, 28, 35, 32, 40, 44, 39, 48, 52, 60],
         "barSeries": [
-          { "label": "Pn", "value": 42 },
+          { "label": "Pon", "value": 42 },
           { "label": "Wt", "value": 28 },
           { "label": "Śr", "value": 35 },
           { "label": "Czw", "value": 50 },
           { "label": "Pt", "value": 46 },
-          { "label": "Sb", "value": 24 },
-          { "label": "Nd", "value": 30 }
+          { "label": "Sob", "value": 24 },
+          { "label": "Ndz", "value": 30 }
         ],
         "donutSeries": [
           { "label": "Produkt", "value": 48, "color": "#6366f1" },
@@ -979,7 +979,7 @@
       },
       "footer": {
         "brand": "Velocity Live",
-        "tagline": "Koncepcja festiwalu na dwie noce i wysoka energia.",
+        "tagline": "Koncepcja festiwalu na dwie noce i wysoką energię.",
         "details": [
           { "label": "Daty", "value": "16-17 sierpnia 2024" },
           { "label": "Miejsce", "value": "Dzielnica Harbor, Oslo" }

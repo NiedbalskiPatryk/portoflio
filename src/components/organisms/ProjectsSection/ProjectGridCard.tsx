@@ -63,8 +63,10 @@ const ProjectGridCard: React.FC<ProjectGridCardProps> = ({
               key={`${project.id}-${activeMediaIdx}-video`}
               component="video"
               src={displaySrc}
-              preload="metadata"
+              poster={activeMedia?.poster}
               controls
+              playsInline
+              preload="metadata"
               sx={{
                 width: "100%",
                 height: "100%",
