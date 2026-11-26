@@ -106,7 +106,7 @@
       },
       "pricing": {
         "question": "Ile kosztuje strona lub aplikacja?",
-        "answer": "Prosta strona (landing page) kosztuje od 2 000 zł netto, strona z panelem do zarządzania od 2 000 do 4 000 zł netto, a systemy na miarę wyceniam indywidualnie. Po krótkiej rozmowie przygotuję dokładną wycenę z podziałem na etapy."
+        "answer": "Prosta strona (landing page) kosztuje od 2 000 zł, strona z panelem do zarządzania od 3 500 zł, a systemy na miarę wyceniam indywidualnie (kwoty netto). Po krótkiej rozmowie przygotuję dokładną wycenę z podziałem na etapy."
       },
       "timeline": {
         "question": "Ile trwa realizacja?",
@@ -1115,17 +1115,17 @@
   },
   "pricing": {
     "heading": "Cennik",
-    "description": "Orientacyjne ceny netto. Dokładną wycenę przygotuję po krótkiej rozmowie o zakresie projektu.",
+    "description": "Orientacyjne ceny. Dokładną wycenę przygotuję po krótkiej rozmowie o zakresie projektu.",
     "cta": "Zapytaj o wycenę",
     "plans": {
       "landing": {
         "title": "Landing page",
-        "price": "od 2 000 zł netto",
+        "price": "od 2 000 zł",
         "description": "Prosta, jednostronicowa strona, która przedstawia Twoją ofertę i zbiera zapytania od klientów."
       },
       "cms": {
         "title": "Strona + panel do zarządzania",
-        "price": "2 000 – 4 000 zł netto",
+        "price": "od 3 500 zł",
         "description": "Strona z wieloma podstronami i panelem, w którym samodzielnie zarządzasz treściami, oraz z potrzebnymi integracjami."
       },
       "custom": {
@@ -1133,6 +1133,7 @@
         "price": "Wycena indywidualna",
         "description": "Systemy rezerwacji, panele administracyjne, automatyzacje i integracje. Zakres i koszt ustalamy po analizie Twoich potrzeb."
       }
-    }
+    },
+    "note": "Podane ceny są kwotami netto."
   }
 }

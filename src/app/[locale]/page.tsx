@@ -97,6 +97,7 @@ export default async function Home() {
   const pricingData = {
     heading: t("pricing.heading"),
     description: t("pricing.description"),
+    note: t("pricing.note"),
     ctaLabel: t("pricing.cta"),
     ctaHref: "#contact",
     plans: [

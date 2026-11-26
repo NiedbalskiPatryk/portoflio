@@ -16,6 +16,7 @@ export interface PricingSectionProps {
   heading: string;
   description?: string;
   plans: PricingPlan[];
+  note?: string;
   ctaLabel: string;
   ctaHref: string;
 }
@@ -24,6 +25,7 @@ const PricingSection: React.FC<PricingSectionProps> = ({
   heading,
   description,
   plans,
+  note,
   ctaLabel,
   ctaHref,
 }) => {
@@ -111,6 +113,17 @@ const PricingSection: React.FC<PricingSectionProps> = ({
             </Box>
           ))}
         </Box>
+
+        {note && (
+          <Typography
+            variant="caption"
+            color="text.secondary"
+            component="p"
+            sx={{ mt: 1.5 }}
+          >
+            {note}
+          </Typography>
+        )}
 
         <Box sx={{ mt: { xs: 3, md: 4 } }}>
           <Button variant="outlined" href={ctaHref} sx={{ borderRadius: 0 }}>
