@@ -51,6 +51,11 @@ const FormRow: React.FC<FormRowProps> = ({
       error={error}
       helperText={helperText}
       fullWidth
+      sx={{
+        "& .MuiOutlinedInput-root, & .MuiOutlinedInput-notchedOutline": {
+          borderRadius: 0,
+        },
+      }}
     />
   );
 };

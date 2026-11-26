@@ -282,7 +282,12 @@ const ContactForm: React.FC<ContactFormProps> = ({
       <Typography variant="caption" color="text.secondary">
         {t.rich("privacyNotice", {
           link: (chunks) => (
-            <Link href={`/${locale}/privacy`} color="inherit" underline="always">
+            <Link
+              href={`/${locale}/privacy`}
+              color="inherit"
+              underline="always"
+              sx={{ textDecoration: "underline" }}
+            >
               {chunks}
             </Link>
           ),
