@@ -117,7 +117,7 @@ const ContactForm: React.FC<ContactFormProps> = ({
       Object.entries(values).forEach(([key, value]) => {
         formData.append(key, value);
       });
-      formData.append("website", honeypotRef.current?.value ?? "");
+      formData.append("contact_hp", honeypotRef.current?.value ?? "");
       formData.append("elapsedMs", String(Date.now() - mountedAtRef.current));
       formData.append("locale", locale);
 
@@ -189,9 +189,12 @@ const ContactForm: React.FC<ContactFormProps> = ({
         <input
           ref={honeypotRef}
           type="text"
-          name="website"
+          name="contact_hp"
           tabIndex={-1}
           autoComplete="off"
+          data-1p-ignore
+          data-lpignore="true"
+          data-bwignore
           defaultValue=""
         />
       </Box>

@@ -53,7 +53,7 @@ function singleLine(value: string): string {
 async function sendEmail(
   apiKey: string,
   payload: Record<string, unknown>
-): Promise<void> {
+): Promise<string | undefined> {
   const response = await fetch(RESEND_URL, {
     method: "POST",
     headers: {
@@ -66,6 +66,9 @@ async function sendEmail(
   if (!response.ok) {
     throw new Error(`Resend ${response.status}: ${await response.text()}`);
   }
+
+  const data = (await response.json().catch(() => ({}))) as { id?: string };
+  return data.id;
 }
 
 export async function POST(request: Request) {
@@ -92,7 +95,12 @@ export async function POST(request: Request) {
 
   // Bot checks: pretend success so bots get no signal.
   const elapsedMs = Number(read("elapsedMs"));
-  if (read("website") !== "" || !Number.isFinite(elapsedMs) || elapsedMs < MIN_FILL_TIME_MS) {
+  if (read("contact_hp") !== "") {
+    console.info("[contact] Dropped as bot: honeypot filled");
+    return Response.json({ ok: true });
+  }
+  if (!Number.isFinite(elapsedMs) || elapsedMs < MIN_FILL_TIME_MS) {
+    console.info(`[contact] Dropped as bot: filled too fast (elapsedMs=${read("elapsedMs")})`);
     return Response.json({ ok: true });
   }
 
@@ -154,7 +162,7 @@ export async function POST(request: Request) {
   `;
 
   try {
-    await sendEmail(apiKey, {
+    const ownerEmailId = await sendEmail(apiKey, {
       from: fromEmail,
       to: [toEmail],
       reply_to: values.email,
@@ -162,6 +170,7 @@ export async function POST(request: Request) {
       text: ownerText,
       html: ownerHtml,
     });
+    console.info(`[contact] Owner notification sent (resend id: ${ownerEmailId})`);
   } catch (error) {
     console.error("[contact] Owner notification failed", error);
     return Response.json({ error: "send_failed" }, { status: 502 });
@@ -171,13 +180,14 @@ export async function POST(request: Request) {
   // cannot be abused to send arbitrary content to third-party addresses.
   try {
     const t = await getTranslations({ locale, namespace: "contactEmail.autoReply" });
-    await sendEmail(apiKey, {
+    const autoReplyId = await sendEmail(apiKey, {
       from: fromEmail,
       to: [values.email],
       reply_to: toEmail,
       subject: t("subject"),
       text: [t("greeting"), "", t("body"), "", t("signature")].join("\n"),
     });
+    console.info(`[contact] Auto-reply sent (resend id: ${autoReplyId})`);
   } catch (error) {
     console.error("[contact] Auto-reply failed", error);
   }
