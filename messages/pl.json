@@ -106,7 +106,7 @@
       },
       "pricing": {
         "question": "Ile kosztuje strona lub aplikacja?",
-        "answer": "Prosta strona (landing page) kosztuje od 2 000 zł, rozbudowana strona z CMS od 2 000 do 4 000 zł, a systemy na miarę wyceniam indywidualnie. Po krótkiej rozmowie przygotuję dokładną wycenę z podziałem na etapy."
+        "answer": "Prosta strona (landing page) kosztuje od 2 000 zł netto, strona z panelem do zarządzania od 2 000 do 4 000 zł netto, a systemy na miarę wyceniam indywidualnie. Po krótkiej rozmowie przygotuję dokładną wycenę z podziałem na etapy."
       },
       "timeline": {
         "question": "Ile trwa realizacja?",
@@ -1073,7 +1073,7 @@
     "sections": {
       "controller": {
         "heading": "1. Administrator danych",
-        "body": "Administratorem Twoich danych osobowych jest Patryk Niedbalski, Warszawa, Polska (serwis ITPapi, www.itpapi.pl).\n\nKontakt w sprawach danych osobowych: patrykitpapi@gmail.com."
+        "body": "Administratorem Twoich danych osobowych jest Patryk Niedbalski, NIP: 1132813373, Warszawa, Polska (serwis ITPapi, www.itpapi.pl).\n\nKontakt w sprawach danych osobowych: patrykitpapi@gmail.com."
       },
       "data": {
         "heading": "2. Jakie dane zbieram i po co",
@@ -1115,18 +1115,18 @@
   },
   "pricing": {
     "heading": "Cennik",
-    "description": "Orientacyjne ceny. Dokładną wycenę przygotuję po krótkiej rozmowie o zakresie projektu.",
+    "description": "Orientacyjne ceny netto. Dokładną wycenę przygotuję po krótkiej rozmowie o zakresie projektu.",
     "cta": "Zapytaj o wycenę",
     "plans": {
       "landing": {
         "title": "Landing page",
-        "price": "od 2 000 zł",
+        "price": "od 2 000 zł netto",
         "description": "Prosta, jednostronicowa strona, która przedstawia Twoją ofertę i zbiera zapytania od klientów."
       },
       "cms": {
-        "title": "Rozbudowana strona z CMS",
-        "price": "2 000 – 4 000 zł",
-        "description": "Strona z wieloma podstronami i panelem CMS, w którym samodzielnie edytujesz treści, oraz z potrzebnymi integracjami."
+        "title": "Strona + panel do zarządzania",
+        "price": "2 000 – 4 000 zł netto",
+        "description": "Strona z wieloma podstronami i panelem, w którym samodzielnie zarządzasz treściami, oraz z potrzebnymi integracjami."
       },
       "custom": {
         "title": "System na miarę",

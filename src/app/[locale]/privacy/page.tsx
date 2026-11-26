@@ -6,9 +6,6 @@ import Typography from "@mui/material/Typography";
 import type { Metadata } from "next";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 
-// TODO (owner): add business details (e.g. NIP, registered address) to the
-// controller section in messages if required; intentionally not shown yet.
-
 const SECTION_KEYS = [
   "controller",
   "data",

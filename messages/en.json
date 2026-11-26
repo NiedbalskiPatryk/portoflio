@@ -106,7 +106,7 @@
       },
       "pricing": {
         "question": "How much does a website or app cost?",
-        "answer": "A simple landing page starts at 2,000 PLN, an extended website with a CMS costs 2,000–4,000 PLN, and custom systems are quoted individually. After a short call I'll prepare an exact quote broken down into stages."
+        "answer": "A simple landing page starts at 2,000 PLN net, a website with a management panel costs 2,000–4,000 PLN net, and custom systems are quoted individually. After a short call I'll prepare an exact quote broken down into stages."
       },
       "timeline": {
         "question": "How long does a project take?",
@@ -1051,7 +1051,7 @@
     "sections": {
       "controller": {
         "heading": "1. Data controller",
-        "body": "The controller of your personal data is Patryk Niedbalski, Warsaw, Poland (ITPapi, www.itpapi.pl).\n\nContact for data protection matters: patrykitpapi@gmail.com."
+        "body": "The controller of your personal data is Patryk Niedbalski, Tax ID (NIP): 1132813373, Warsaw, Poland (ITPapi, www.itpapi.pl).\n\nContact for data protection matters: patrykitpapi@gmail.com."
       },
       "data": {
         "heading": "2. What data I collect and why",
@@ -1093,18 +1093,18 @@
   },
   "pricing": {
     "heading": "Pricing",
-    "description": "Indicative prices. I'll prepare an exact quote after a short call about your project's scope.",
+    "description": "Indicative net prices (excl. VAT). I'll prepare an exact quote after a short call about your project's scope.",
     "cta": "Ask for a quote",
     "plans": {
       "landing": {
         "title": "Landing page",
-        "price": "from 2,000 PLN",
+        "price": "from 2,000 PLN net",
         "description": "A simple one-page website that presents your offer and collects enquiries from customers."
       },
       "cms": {
-        "title": "Extended website with CMS",
-        "price": "2,000 – 4,000 PLN",
-        "description": "A multi-page website with a CMS panel where you edit the content yourself, plus the integrations you need."
+        "title": "Website + management panel",
+        "price": "2,000 – 4,000 PLN net",
+        "description": "A multi-page website with a panel where you manage the content yourself, plus the integrations you need."
       },
       "custom": {
         "title": "Custom system",
