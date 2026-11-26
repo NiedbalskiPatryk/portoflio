@@ -9,7 +9,8 @@
     "services": "Services",
     "projects": "Projects",
     "faq": "FAQ",
-    "contact": "Contact"
+    "contact": "Contact",
+    "pricing": "Pricing"
   },
   "hero": {
     "location": "Warsaw, Poland",
@@ -74,21 +75,26 @@
     "items": {
       "parkiza": {
         "name": "Parkiza",
-        "summary": "A complete parking reservation system that handles thousands of bookings. Built with a modern stack including NestJS and React, it streamlined operations for the entire organization."
+        "summary": "A complete parking reservation system that handles thousands of bookings. Built with a modern stack including NestJS and React, it streamlined operations for the entire organization.",
+        "role": "Project Leader / Backend Developer"
       },
       "signalos": {
         "name": "SignalOS",
-        "summary": "An integrated building management platform that brings multiple systems under one roof. This enterprise solution helps facility managers work smarter, not harder."
+        "summary": "An integrated building management platform that brings multiple systems under one roof. This enterprise solution helps facility managers work smarter, not harder.",
+        "role": "Full-Stack Developer"
       },
       "areoactive": {
         "name": "Areoactive",
-        "summary": "A launch website for a new venture - fast, responsive and built to grow together with the product."
+        "summary": "A launch website for a new venture - fast, responsive and built to grow together with the product.",
+        "role": "Freelance project"
       },
       "skinscartel": {
         "name": "SkinsCartel",
-        "summary": "A fully-featured CS:GO skin trading marketplace. Built with a focus on performance and user experience, it handles real-time inventory management, secure transactions, and a sleek e-commerce interface."
+        "summary": "A fully-featured CS:GO skin trading marketplace. Built with a focus on performance and user experience, it handles real-time inventory management, secure transactions, and a sleek e-commerce interface.",
+        "role": "Tech Lead"
       }
-    }
+    },
+    "roleLabel": "My role"
   },
   "faq": {
     "heading": "Questions? I've got answers",
@@ -100,7 +106,7 @@
       },
       "pricing": {
         "question": "How much does a website or app cost?",
-        "answer": "It depends on scope. After a short call I prepare a quote broken down into stages, so you know exactly what you're paying for and when you'll get it."
+        "answer": "A simple landing page starts at 2,000 PLN, an extended website with a CMS costs 2,000–4,000 PLN, and custom systems are quoted individually. After a short call I'll prepare an exact quote broken down into stages."
       },
       "timeline": {
         "question": "How long does a project take?",
@@ -141,7 +147,8 @@
       "status": {
         "success": "Thanks! Your message has arrived - I'll get back to you soon. I've also sent a confirmation to your email.",
         "error": "Your message couldn't be sent. Please email me directly at patrykitpapi@gmail.com or call +48 507 486 286."
-      }
+      },
+      "privacyNotice": "The data controller is Patryk Niedbalski. Details in the <link>privacy policy</link>."
     },
     "info": {
       "heading": "Contact info",
@@ -162,7 +169,9 @@
     "description": "Websites, web apps and business systems. Open to B2B contracts and full-time roles.",
     "contactHeading": "Get in touch",
     "navHeading": "Navigation",
-    "copyright": "All rights reserved."
+    "copyright": "All rights reserved.",
+    "privacyLink": "Privacy policy",
+    "cookieSettings": "Cookie settings"
   },
   "showRoom": {
     "navButton": "Showroom",
@@ -1021,7 +1030,8 @@
   "consent": {
     "text": "This site uses Google Analytics cookies for visit statistics. They're only enabled if you accept.",
     "accept": "Accept",
-    "reject": "Reject"
+    "reject": "Reject",
+    "privacyLink": "Privacy policy"
   },
   "contactEmail": {
     "autoReply": {
@@ -1029,6 +1039,78 @@
       "greeting": "Hi,",
       "body": "thank you for reaching out through the form on itpapi.pl. Your message has arrived and I'll get back to you as soon as I can.\n\nIf you'd like to add anything, just reply to this email.",
       "signature": "Best regards,\nPatryk Niedbalski\nitpapi.pl"
+    }
+  },
+  "privacy": {
+    "metaTitle": "Privacy Policy | ITPapi",
+    "metaDescription": "ITPapi privacy policy: data controller, contact form, cookies and your rights as a data subject.",
+    "heading": "Privacy Policy",
+    "intro": "Below I explain in plain language how I process personal data in line with the GDPR.",
+    "lastUpdated": "Last updated: 26.11.2026",
+    "backToHome": "← Back to home",
+    "sections": {
+      "controller": {
+        "heading": "1. Data controller",
+        "body": "The controller of your personal data is Patryk Niedbalski, Warsaw, Poland (ITPapi, www.itpapi.pl).\n\nContact for data protection matters: patrykitpapi@gmail.com."
+      },
+      "data": {
+        "heading": "2. What data I collect and why",
+        "body": "When you write to me through the contact form, I process the data you provide: full name, email address, phone number (optional), subject and message.\n\nI use it to respond to your inquiry and to take steps before entering into a contract, if you ask for that, and to carry on correspondence.\n\nAfter submitting the form you receive an automatic confirmation email with fixed text. Form data is not stored in a database on this site; it reaches me as an email."
+      },
+      "legalBasis": {
+        "heading": "3. Legal basis",
+        "body": "Art. 6(1)(b) GDPR – processing is necessary to take steps at your request prior to entering into a contract.\n\nArt. 6(1)(f) GDPR – the controller's legitimate interest in handling correspondence and answering inquiries.\n\nAnalytics (Google Analytics) runs only with your consent (Art. 6(1)(a) GDPR and consent for access to information on your device)."
+      },
+      "recipients": {
+        "heading": "4. Recipients of data",
+        "body": "Your data may be processed by the providers whose services I use:\n\nVercel Inc. – website hosting.\n\nResend – delivery of the form email and the automatic reply.\n\nGoogle – Google Analytics, only if you consent to analytics cookies.\n\nI do not share data with anyone else unless required by law."
+      },
+      "transfers": {
+        "heading": "5. Transfers outside the EEA",
+        "body": "These providers are based or operate infrastructure in the United States, so your data may be transferred outside the European Economic Area.\n\nTransfers rely on safeguards provided for in the GDPR, in particular the European Commission's adequacy decision on the EU-US Data Privacy Framework for certified recipients, or standard contractual clauses. You can ask me for information about the safeguards applied."
+      },
+      "retention": {
+        "heading": "6. How long I keep data",
+        "body": "I keep data for as long as needed to handle your inquiry and any resulting cooperation, and afterwards until potential claims become time-barred, unless you object to the processing or request erasure earlier and there is no legal obstacle.\n\nAnalytics data processed by Google is subject to that provider's retention rules."
+      },
+      "rights": {
+        "heading": "7. Your rights",
+        "body": "You have the right to access, rectify and erase your data, to restrict processing, to data portability, and to object to processing based on legitimate interest.\n\nWhere processing is based on consent, you may withdraw it at any time without affecting the lawfulness of processing carried out before withdrawal.\n\nYou also have the right to lodge a complaint with the President of the Personal Data Protection Office (UODO), ul. Stawki 2, 00-193 Warsaw, Poland.\n\nTo exercise your rights, email patrykitpapi@gmail.com."
+      },
+      "voluntary": {
+        "heading": "8. Providing data is voluntary",
+        "body": "Providing data is voluntary, but your name, email address and message are needed for me to reply. Without them I cannot handle your inquiry."
+      },
+      "automated": {
+        "heading": "9. Automated decisions",
+        "body": "I do not make automated decisions about you and do not use profiling."
+      },
+      "cookies": {
+        "heading": "10. Cookies and local storage",
+        "body": "This site uses the following items:\n\ntheme-mode (cookie and localStorage) – remembers your light/dark theme choice; functional and needed for the setting to work.\n\ncookie-consent (localStorage) – remembers your cookie choice.\n\n_ga and _ga_* (Google Analytics cookies, ID G-8Z9E33KK05) – visit statistics; set only after you give consent.\n\nYou can change your choice at any time with the \"Cookie settings\" button in the site footer. Rejecting or withdrawing consent deletes the Google Analytics cookies."
+      }
+    }
+  },
+  "pricing": {
+    "heading": "Pricing",
+    "description": "Indicative prices. I'll prepare an exact quote after a short call about your project's scope.",
+    "cta": "Ask for a quote",
+    "plans": {
+      "landing": {
+        "title": "Landing page",
+        "price": "from 2,000 PLN",
+        "description": "A simple one-page website that presents your offer and collects enquiries from customers."
+      },
+      "cms": {
+        "title": "Extended website with CMS",
+        "price": "2,000 – 4,000 PLN",
+        "description": "A multi-page website with a CMS panel where you edit the content yourself, plus the integrations you need."
+      },
+      "custom": {
+        "title": "Custom system",
+        "price": "Custom quote",
+        "description": "Booking systems, admin panels, automations and integrations. Scope and cost are agreed after analysing your needs."
+      }
     }
   }
 }

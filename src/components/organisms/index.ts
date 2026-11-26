@@ -2,6 +2,8 @@ export { default as Header, HEADER_HEIGHT } from "./Header";
 export { default as HeroSection } from "./HeroSection";
 export { default as ServicesSection } from "./ServicesSection";
 export type { ServicesSectionProps } from "./ServicesSection";
+export { default as PricingSection } from "./PricingSection";
+export type { PricingSectionProps } from "./PricingSection";
 export { default as ProjectsSection } from "./ProjectsSection";
 export type { ProjectsSectionProps } from "./ProjectsSection";
 export { default as AboutSection } from "./AboutSection";

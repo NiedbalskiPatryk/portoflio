@@ -27,12 +27,13 @@ export default function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
 
   const NAV_ITEMS: NavItem[] = [
-    { label: tNav("home"), href: "#home" },
-    { label: tNav("services"), href: "#services" },
-    { label: tNav("projects"), href: "#projects" },
-    { label: tNav("about"), href: "#about" },
-    { label: tNav("faq"), href: "#faqs" },
-    { label: tNav("contact"), href: "#contact" },
+    { label: tNav("home"), href: `/${locale}#home` },
+    { label: tNav("services"), href: `/${locale}#services` },
+    { label: tNav("pricing"), href: `/${locale}#pricing` },
+    { label: tNav("projects"), href: `/${locale}#projects` },
+    { label: tNav("about"), href: `/${locale}#about` },
+    { label: tNav("faq"), href: `/${locale}#faqs` },
+    { label: tNav("contact"), href: `/${locale}#contact` },
   ];
 
   const MOBILE_NAV_ITEMS: NavItem[] = [

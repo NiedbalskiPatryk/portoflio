@@ -4,15 +4,17 @@ import Box from "@mui/material/Box";
 import Link from "@mui/material/Link";
 import Typography from "@mui/material/Typography";
 import { useTheme } from "@mui/material/styles";
+import { useLocale } from "next-intl";
 import BrandMark from "@/components/atoms/BrandMark";
 
 export default function LogoText() {
   const theme = useTheme();
+  const locale = useLocale();
   const isDark = theme.palette.mode === "dark";
 
   return (
     <Link
-      href="#"
+      href={`/${locale}#home`}
       underline="none"
       aria-label="ITPapi"
       sx={{ display: "inline-flex", alignItems: "center", gap: 1.25 }}

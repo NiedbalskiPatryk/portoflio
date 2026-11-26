@@ -9,6 +9,7 @@ import {
   Header,
   HeroSection,
   PortfolioLayout,
+  PricingSection,
   ProjectsSection,
   ScrollProgressBar,
   ServicesSection,
@@ -93,6 +94,30 @@ export default async function Home() {
     ],
   };
 
+  const pricingData = {
+    heading: t("pricing.heading"),
+    description: t("pricing.description"),
+    ctaLabel: t("pricing.cta"),
+    ctaHref: "#contact",
+    plans: [
+      {
+        title: t("pricing.plans.landing.title"),
+        price: t("pricing.plans.landing.price"),
+        description: t("pricing.plans.landing.description"),
+      },
+      {
+        title: t("pricing.plans.cms.title"),
+        price: t("pricing.plans.cms.price"),
+        description: t("pricing.plans.cms.description"),
+      },
+      {
+        title: t("pricing.plans.custom.title"),
+        price: t("pricing.plans.custom.price"),
+        description: t("pricing.plans.custom.description"),
+      },
+    ],
+  };
+
   const projectsData = {
     heading: t("projects.heading"),
     description: t("projects.description"),
@@ -102,6 +127,7 @@ export default async function Home() {
         id: "parkiza",
         name: t("projects.items.parkiza.name"),
         summary: t("projects.items.parkiza.summary"),
+        role: `${t("projects.roleLabel")}: ${t("projects.items.parkiza.role")}`,
         tags: ["Node.js", "NestJS", "React", "MySQL", "TypeScript"],
         previewImage: "/parkiza.webp",
         links: [
@@ -123,6 +149,7 @@ export default async function Home() {
         id: "skinscartel",
         name: t("projects.items.skinscartel.name"),
         summary: t("projects.items.skinscartel.summary"),
+        role: `${t("projects.roleLabel")}: ${t("projects.items.skinscartel.role")}`,
         tags: ["Next.js", "React", "TypeScript", "E-commerce", "Node.js"],
         previewImage: "/skinscartel.webp",
         links: [
@@ -139,6 +166,7 @@ export default async function Home() {
         id: "areoactive",
         name: t("projects.items.areoactive.name"),
         summary: t("projects.items.areoactive.summary"),
+        role: `${t("projects.roleLabel")}: ${t("projects.items.areoactive.role")}`,
         tags: ["Next.js", "React", "Responsive Design"],
         previewImage: "/areoactive-1.webp",
         links: [
@@ -154,6 +182,7 @@ export default async function Home() {
         id: "signalos",
         name: t("projects.items.signalos.name"),
         summary: t("projects.items.signalos.summary"),
+        role: `${t("projects.roleLabel")}: ${t("projects.items.signalos.role")}`,
         tags: ["Next.js", "React", "Node.js", "TypeScript", "Enterprise"],
         previewImage: "/signalos.webp",
         links: [
@@ -301,6 +330,7 @@ export default async function Home() {
     navItems: [
       { id: "home", label: t("nav.home"), href: "#home" },
       { id: "services", label: t("nav.services"), href: "#services" },
+      { id: "pricing", label: t("nav.pricing"), href: "#pricing" },
       { id: "projects", label: t("nav.projects"), href: "#projects" },
       { id: "about", label: t("nav.about"), href: "#about" },
       { id: "faqs", label: t("nav.faq"), href: "#faqs" },
@@ -336,6 +366,10 @@ export default async function Home() {
 
           <AnimatedSection direction="up" delay={0}>
             <ServicesSection {...servicesData} />
+          </AnimatedSection>
+
+          <AnimatedSection direction="up" delay={0}>
+            <PricingSection {...pricingData} />
           </AnimatedSection>
 
           <AnimatedSection direction="up" delay={0}>

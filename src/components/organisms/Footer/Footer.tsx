@@ -2,7 +2,10 @@
 
 import React from "react";
 import Box from "@mui/material/Box";
+import Link from "@mui/material/Link";
 import Typography from "@mui/material/Typography";
+import { useLocale, useTranslations } from "next-intl";
+import { openCookieSettings } from "@/components/organisms/CookieConsent/CookieConsent";
 import ContactBlock, {
   type FooterContactItem,
 } from "@/components/molecules/ContactBlock";
@@ -36,6 +39,9 @@ const Footer: React.FC<FooterProps> = ({
   contactItems,
   copyright,
 }) => {
+  const t = useTranslations("footer");
+  const locale = useLocale();
+
   return (
     <Box
       component="footer"
@@ -108,19 +114,41 @@ const Footer: React.FC<FooterProps> = ({
           </Box>
         </Box>
 
-        <Typography
-          variant="caption"
-          color="text.secondary"
+        <Box
           sx={{
-            display: "block",
+            display: "flex",
+            flexWrap: "wrap",
+            alignItems: "center",
+            justifyContent: "space-between",
+            gap: 1.5,
             mt: { xs: 3, md: 4 },
             pt: { xs: 3, md: 4 },
             borderTop: "1px solid",
             borderColor: "divider",
           }}
         >
-          {copyright}
-        </Typography>
+          <Typography variant="caption" color="text.secondary">
+            {copyright}
+          </Typography>
+          <Box sx={{ display: "flex", flexWrap: "wrap", gap: 2 }}>
+            <Link
+              href={`/${locale}/privacy`}
+              variant="caption"
+              color="text.secondary"
+            >
+              {t("privacyLink")}
+            </Link>
+            <Link
+              component="button"
+              type="button"
+              variant="caption"
+              color="text.secondary"
+              onClick={openCookieSettings}
+            >
+              {t("cookieSettings")}
+            </Link>
+          </Box>
+        </Box>
       </Box>
     </Box>
   );

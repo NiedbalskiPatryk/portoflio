@@ -19,7 +19,7 @@ const jetbrainsMono = JetBrains_Mono({
   display: "swap",
 });
 
-const BASE_URL = "https://itpapi.pl";
+const BASE_URL = "https://www.itpapi.pl";
 
 export async function generateMetadata({
   params,
@@ -105,7 +105,7 @@ export async function generateMetadata({
   };
 }
 
-const BASE_URL_CLIENT = "https://itpapi.pl";
+const BASE_URL_CLIENT = "https://www.itpapi.pl";
 
 const jsonLdPerson = {
   "@context": "https://schema.org",

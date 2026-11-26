@@ -14,6 +14,7 @@ export interface ProjectItem {
   id: string;
   name: string;
   summary?: string;
+  role?: string;
   tags?: string[];
   previewImage?: string;
   url?: string;

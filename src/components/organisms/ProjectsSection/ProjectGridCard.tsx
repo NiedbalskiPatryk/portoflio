@@ -228,6 +228,16 @@ const ProjectGridCard: React.FC<ProjectGridCardProps> = ({
           )}
         </Box>
 
+        {project.role && (
+          <Typography
+            variant="caption"
+            color="text.primary"
+            sx={{ fontWeight: 600, letterSpacing: "0.02em" }}
+          >
+            {project.role}
+          </Typography>
+        )}
+
         {project.summary && (
           <Typography
             variant="body2"
