@@ -13,11 +13,13 @@ import {
   ScrollProgressBar,
   ServicesSection,
 } from "@/components";
-import BrushOutlinedIcon from "@mui/icons-material/BrushOutlined";
 import ComputerOutlinedIcon from "@mui/icons-material/ComputerOutlined";
 import FlashOnOutlinedIcon from "@mui/icons-material/FlashOnOutlined";
+import SettingsSuggestOutlinedIcon from "@mui/icons-material/SettingsSuggestOutlined";
 import StorageOutlinedIcon from "@mui/icons-material/StorageOutlined";
 import { getLocale, getTranslations } from "next-intl/server";
+
+const LINKEDIN_URL = "https://www.linkedin.com/in/patryk-niedbalski/";
 
 export default async function Home() {
   const t = await getTranslations();
@@ -35,7 +37,7 @@ export default async function Home() {
     techLabel: t("hero.techLabel"),
     primaryCTA: {
       label: t("hero.primaryCTA"),
-      href: "#about",
+      href: "#contact",
       color: "light" as const,
     },
     secondaryCTA: {
@@ -79,7 +81,7 @@ export default async function Home() {
         description: t("services.items.backend.description"),
       },
       {
-        icon: <BrushOutlinedIcon />,
+        icon: <SettingsSuggestOutlinedIcon />,
         title: t("services.items.automation.title"),
         description: t("services.items.automation.description"),
       },
@@ -168,15 +170,16 @@ export default async function Home() {
     bio: [
       t("about.bio.paragraph1"),
       t("about.bio.paragraph2"),
+      t("about.bio.availability"),
       t("about.bio.paragraph3"),
     ],
     primaryCTA: {
-      label: t("about.primaryCTA"),
-      href: "/PatrykNiedbalskiCV.pdf",
+      label: t("about.cta"),
+      href: "#contact",
     },
     secondaryCTA: {
-      label: t("about.secondaryCTA"),
-      href: "#contact",
+      label: t("about.linkedinCTA"),
+      href: LINKEDIN_URL,
     },
   };
 
@@ -191,9 +194,9 @@ export default async function Home() {
         answer: t("faq.items.services.answer"),
       },
       {
-        id: "teams",
-        question: t("faq.items.teams.question"),
-        answer: t("faq.items.teams.answer"),
+        id: "pricing",
+        question: t("faq.items.pricing.question"),
+        answer: t("faq.items.pricing.answer"),
       },
       {
         id: "timeline",
@@ -204,6 +207,11 @@ export default async function Home() {
         id: "collaboration",
         question: t("faq.items.collaboration.question"),
         answer: t("faq.items.collaboration.answer"),
+      },
+      {
+        id: "hiring",
+        question: t("faq.items.hiring.question"),
+        answer: t("faq.items.hiring.answer"),
       },
       {
         id: "get-started",
@@ -217,8 +225,21 @@ export default async function Home() {
     heading: t("contact.heading"),
     subheading: t("contact.description"),
     infoItems: [
-      { label: t("contact.info.email"), value: "patrykitpapi@gmail.com" },
-      { label: t("contact.info.phone"), value: "+48 507 486 286" },
+      {
+        label: t("contact.info.email"),
+        value: "patrykitpapi@gmail.com",
+        href: "mailto:patrykitpapi@gmail.com",
+      },
+      {
+        label: t("contact.info.phone"),
+        value: "+48 507 486 286",
+        href: "tel:+48507486286",
+      },
+      {
+        label: t("contact.info.linkedin"),
+        value: "linkedin.com/in/patryk-niedbalski",
+        href: LINKEDIN_URL,
+      },
       {
         label: t("contact.info.address"),
         value: t("contact.info.addressValue"),
@@ -229,11 +250,13 @@ export default async function Home() {
         id: "fullName",
         label: t("contact.form.name"),
         placeholder: t("contact.form.namePlaceholder"),
+        required: true,
       },
       {
         id: "email",
         label: t("contact.form.email"),
         placeholder: t("contact.form.emailPlaceholder"),
+        required: true,
       },
       {
         id: "phone",
@@ -251,10 +274,11 @@ export default async function Home() {
         placeholder: t("contact.form.messagePlaceholder"),
         multiline: true,
         rows: 5,
+        required: true,
       },
     ],
     submitLabel: t("contact.form.submit"),
-    formAction: "https://formspree.io/f/xbddgboz",
+    formAction: "/api/contact",
     formMethod: "POST" as const,
   };
 
@@ -269,16 +293,16 @@ export default async function Home() {
       {
         id: "linkedin",
         label: "LinkedIn",
-        href: "https://www.linkedin.com/in/patryk-niedbalski/",
+        href: LINKEDIN_URL,
       },
     ],
     contactHeading: t("footer.contactHeading"),
     navHeading: t("footer.navHeading"),
     navItems: [
       { id: "home", label: t("nav.home"), href: "#home" },
-      { id: "about", label: t("nav.about"), href: "#about" },
-      { id: "projects", label: t("nav.projects"), href: "#projects" },
       { id: "services", label: t("nav.services"), href: "#services" },
+      { id: "projects", label: t("nav.projects"), href: "#projects" },
+      { id: "about", label: t("nav.about"), href: "#about" },
       { id: "faqs", label: t("nav.faq"), href: "#faqs" },
     ],
     contactItems: [
@@ -311,15 +335,15 @@ export default async function Home() {
           <HeroSection {...heroData} />
 
           <AnimatedSection direction="up" delay={0}>
-            <AboutSection {...aboutData} />
+            <ServicesSection {...servicesData} />
           </AnimatedSection>
 
           <AnimatedSection direction="up" delay={0}>
             <ProjectsSection {...projectsData} />
           </AnimatedSection>
 
-          <AnimatedSection direction="up" delay={100}>
-            <ServicesSection {...servicesData} />
+          <AnimatedSection direction="up" delay={0}>
+            <AboutSection {...aboutData} />
           </AnimatedSection>
 
           <AnimatedSection direction="up" delay={0}>

@@ -28,9 +28,9 @@ export default function Header() {
 
   const NAV_ITEMS: NavItem[] = [
     { label: tNav("home"), href: "#home" },
-    { label: tNav("about"), href: "#about" },
-    { label: tNav("projects"), href: "#projects" },
     { label: tNav("services"), href: "#services" },
+    { label: tNav("projects"), href: "#projects" },
+    { label: tNav("about"), href: "#about" },
     { label: tNav("faq"), href: "#faqs" },
     { label: tNav("contact"), href: "#contact" },
   ];

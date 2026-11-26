@@ -1,4 +1,5 @@
 import { routing } from "@/i18n/routing";
+import { CookieConsent } from "@/components/organisms";
 import { ThemeRegistry } from "@/theme";
 import type { Metadata } from "next";
 import { NextIntlClientProvider } from "next-intl";
@@ -88,20 +89,11 @@ export async function generateMetadata({
       siteName: "Patryk Niedbalski",
       title: t("title"),
       description: t("description"),
-      images: [
-        {
-          url: "/og-image.png",
-          width: 1200,
-          height: 630,
-          alt: "Patryk Niedbalski - Software Engineer",
-        },
-      ],
     },
     twitter: {
       card: "summary_large_image",
       title: t("title"),
       description: t("description"),
-      images: ["/og-image.png"],
     },
     alternates: {
       canonical: `${BASE_URL}/${locale}`,
@@ -109,10 +101,6 @@ export async function generateMetadata({
         en: `${BASE_URL}/en`,
         pl: `${BASE_URL}/pl`,
       },
-    },
-    icons: {
-      icon: "/favicon.ico",
-      apple: "/apple-touch-icon.png",
     },
   };
 }
@@ -221,14 +209,14 @@ export default async function LocaleLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdWebSite) }}
         />
-        {/* Google Analytics (GA4) */}
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-8Z9E33KK05" />
-        <script dangerouslySetInnerHTML={{ __html: `window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-8Z9E33KK05');` }} />
       </head>
       <body className={jetbrainsMono.variable}>
 
         <NextIntlClientProvider messages={messages}>
-          <ThemeRegistry initialMode={initialMode}>{children}</ThemeRegistry>
+          <ThemeRegistry initialMode={initialMode}>
+            {children}
+            <CookieConsent />
+          </ThemeRegistry>
         </NextIntlClientProvider>
       </body>
     </html>

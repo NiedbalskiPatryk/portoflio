@@ -18,7 +18,7 @@ export interface AboutSectionProps {
   role: string;
   bio: string[];
   primaryCTA: AboutSectionCTA;
-  secondaryCTA: AboutSectionCTA;
+  secondaryCTA?: AboutSectionCTA;
 }
 
 const AboutSection: React.FC<AboutSectionProps> = ({
@@ -90,12 +90,14 @@ const AboutSection: React.FC<AboutSectionProps> = ({
                 href: primaryCTA.href,
                 variant: "contained",
               }}
-              secondaryCTA={{
-                label: secondaryCTA.label,
-                onClick: secondaryCTA.onClick,
-                href: secondaryCTA.href,
-                variant: "outlined",
-              }}
+              secondaryCTA={
+                secondaryCTA && {
+                  label: secondaryCTA.label,
+                  onClick: secondaryCTA.onClick,
+                  href: secondaryCTA.href,
+                  variant: "outlined",
+                }
+              }
             />
           </Box>
         </Box>

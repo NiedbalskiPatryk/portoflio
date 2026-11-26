@@ -1,23 +1,23 @@
 {
   "metadata": {
     "title": "Patryk Niedbalski — Programista Full-Stack | React, Next.js, Node.js",
-    "description": "Programista full-stack z Warszawy. Tworzę szybkie, skalowalne aplikacje webowe w React, Next.js, TypeScript i Node.js. Dostępny do współpracy i zleceń."
+    "description": "Full-stack developer z Warszawy. Tworzę strony, aplikacje webowe i systemy dla firm w React, Next.js i Node.js. Otwarty na zlecenia oraz współpracę B2B lub etat."
   },
   "nav": {
     "home": "Start",
     "about": "O mnie",
     "services": "Usługi",
-    "projects": "Projekty",
+    "projects": "Realizacje",
     "faq": "Pytania",
     "contact": "Kontakt"
   },
   "hero": {
     "location": "Warszawa, Polska",
     "greeting": "Cześć, jestem Patryk",
-    "role": "Software Engineer",
-    "description": "Pomagam firmom tworzyć szybkie i niezawodne aplikacje webowe, które będą przyjazne dla użytkowników. Od pomysłu do wdrożenia - jestem tu, żeby pomóc to zrealizować.",
-    "primaryCTA": "O mnie",
-    "secondaryCTA": "Zobacz projekty",
+    "role": "Full-Stack Developer",
+    "description": "Projektuję i buduję strony, aplikacje webowe i systemy dla firm - od landing page'a po system rezerwacji czy panel administracyjny. Zajmuję się całością: frontendem, backendem i wdrożeniem.",
+    "primaryCTA": "Porozmawiajmy o projekcie",
+    "secondaryCTA": "Zobacz realizacje",
     "techLabel": "Technologie, z którymi pracuję",
     "snippets": {
       "leftTop": "<div className=\"hero\">\n  <h1>Hello World</h1>\n</div>",
@@ -29,41 +29,42 @@
   "about": {
     "heading": "O mnie",
     "name": "Patryk Niedbalski",
-    "role": "Software Engineer",
+    "role": "Full-Stack Developer",
     "profileImageAlt": "Portret Patryka",
     "bio": {
-      "paragraph1": "Jestem programistą, który naprawdę lubi zamieniać złożone problemy w proste, eleganckie rozwiązania. Dla mnie kod to nie tylko funkcjonalność - to tworzenie doświadczeń, które są naturalne i intuicyjne.",
+      "paragraph1": "Jestem full-stack developerem z Warszawy. Lubię zamieniać złożone problemy w proste rozwiązania - takie, z których po prostu wygodnie się korzysta.",
       "paragraph2": "Przez większość swojej kariery pracowałem w firmach o różnych profilach - od startupów i software house’ów po firmy współpracujące z największymi korporacjami świata, tworząc od wewnętrznych narzędzi po platformy dla klientów. Najlepiej czuję się w zespołach, gdzie dobre pomysły mogą przyjść z każdej strony.",
+      "availability": "Obecnie realizuję projekty dla firm i jestem otwarty na stałą współpracę - w modelu B2B lub na etacie, w zespole, który buduje produkt. Jeśli szukasz kogoś do zespołu, napisz przez formularz albo odezwij się na LinkedInie.",
       "paragraph3": "Kiedy nie koduję, znajdziesz mnie spędzającego czas z rodziną, podróżującego, czytającego książki lub grającego w piłkę."
     },
-    "primaryCTA": "Pobierz CV",
-    "secondaryCTA": "Porozmawiajmy"
+    "cta": "Porozmawiajmy",
+    "linkedinCTA": "LinkedIn"
   },
   "services": {
-    "heading": "Czym się zajmuję",
-    "description": "Niezależnie czy potrzebujesz nowej aplikacji, czy chcesz ulepszyć istniejącą - jestem do dyspozycji.",
+    "heading": "Czym mogę Ci pomóc",
+    "description": "Nowa strona, system na zamówienie albo poprawa tego, co już działa - zajmę się całością, od pomysłu do wdrożenia.",
     "items": {
       "frontend": {
-        "title": "Frontend",
-        "description": "Przez pierwsze dwa lata kariery zajmowałem się wyłącznie frontendem, co pomogło mi zgłębić jego tajniki. Znam nowinki, wiem, jak napisać i wdrożyć bardzo szybką stronę, skonfigurować SEO oraz Google Analytics. Jako główną architekturę używam Atomic Design!"
+        "title": "Strony i aplikacje webowe",
+        "description": "Strony firmowe, landing page'e i aplikacje, które szybko się ładują, dobrze działają na telefonie i prowadzą użytkownika do kontaktu albo zakupu. Od interfejsu po wdrożenie i podpięcie analityki."
       },
       "backend": {
-        "title": "Backend",
-        "description": "Solidne fundamenty mają znaczenie. Projektuję i buduję API, bazy danych i logikę serwerową, która skaluje się wraz z Twoim biznesem i chroni Twoje dane. Backendem zajmuję się na co dzień, wzorując się na dobrych praktykach powiązanych z DDD."
+        "title": "Systemy i panele dla firm",
+        "description": "Systemy rezerwacji, panele administracyjne, integracje z płatnościami i zewnętrznymi API. Projektuję bazę danych i logikę tak, żeby system rósł razem z Twoją firmą i bezpiecznie przechowywał dane."
       },
       "automation": {
-        "title": "Automatyzacja i narzędzia",
-        "description": "Powtarzalne zadania spowalniają. Buduję dedykowane narzędzia i zautomatyzowane procesy, które uwalniają Twój zespół do skupienia się na tym, co naprawdę ważne. Potrzebujesz skryptu, który coś za Ciebie będzie uzupełniał? Przygotowywał? Wysyłał? Daj znać, wspólnie coś wymyślimy!"
+        "title": "Automatyzacja",
+        "description": "Ręczne przepisywanie danych, wysyłanie tych samych maili, raporty sklejane w Excelu? Buduję narzędzia i skrypty, które robią to za Ciebie i oszczędzają czas Twojego zespołu."
       },
       "performance": {
-        "title": "Wydajność i SEO",
-        "description": "Szybkość wygrywa — podobnie jak widoczność. Analizuję wąskie gardła i wdrażam optymalizacje, które sprawiają, że aplikacje działają błyskawicznie. Zajmuję się też konfiguracją SEO, danymi strukturalnymi i Core Web Vitals, żeby strona dobrze się pozycjonowała i jeszcze lepiej ładowała."
+        "title": "Szybkość i widoczność w Google",
+        "description": "Przyspieszam istniejące strony i aplikacje, poprawiam Core Web Vitals, konfiguruję SEO techniczne i analitykę - żeby strona była łatwiej znajdowana i nie traciła klientów przez wolne ładowanie."
       }
     }
   },
   "projects": {
-    "heading": "Projekty, z których jestem dumny",
-    "description": "Wybrane realizacje, w których pomogłem klientom osiągnąć ich cele.",
+    "heading": "Wybrane realizacje",
+    "description": "Projekty, przy których pracowałem - od platform dla dużych organizacji po marketplace i strony firmowe.",
     "visitSite": "Odwiedź stronę",
     "links": {
       "website": "Strona",
@@ -81,7 +82,7 @@
       },
       "areoactive": {
         "name": "Areoactive",
-        "summary": "Podstawowy landing page jako pierwszy krok w realizacji naprawdę dużego projektu. Szybki, responsywny i zbudowany z myślą o dalszym rozwoju."
+        "summary": "Strona startowa nowego projektu - szybka, responsywna i przygotowana pod dalszą rozbudowę produktu."
       },
       "skinscartel": {
         "name": "SkinsCartel",
@@ -91,33 +92,37 @@
   },
   "faq": {
     "heading": "Pytania? Mam odpowiedzi",
-    "description": "Oto co ludzie zwykle chcą wiedzieć zanim zaczniemy współpracę.",
+    "description": "Co zwykle warto wiedzieć, zanim zaczniemy współpracę.",
     "items": {
       "services": {
         "question": "Jakie projekty realizujesz?",
-        "answer": "Pracuję nad aplikacjami webowymi każdej wielkości - od prostych stron typu landing, przez systemy administracyjne i MVP dla startupów, po złożone systemy enterprise."
+        "answer": "Strony firmowe i landing page'e, sklepy, systemy rezerwacji, panele administracyjne, MVP dla startupów i automatyzacje. Pracuję zarówno z małymi firmami, jak i z dużymi organizacjami."
       },
-      "teams": {
-        "question": "Pracujesz z małymi zespołami czy tylko z dużymi firmami?",
-        "answer": "Z jednymi i drugimi! Lubię szybkie tempo startupów tak samo jak strukturę większych organizacji. Najważniejsze jest to, że razem rozwiązujemy ciekawe problemy."
+      "pricing": {
+        "question": "Ile kosztuje strona lub aplikacja?",
+        "answer": "To zależy od zakresu. Po krótkiej rozmowie przygotowuję wycenę z podziałem na etapy, żebyś dokładnie wiedział, za co płacisz i kiedy co dostaniesz."
       },
       "timeline": {
-        "question": "Ile trwa typowy projekt?",
-        "answer": "To zależy od zakresu, ale większość projektów trwa od 4 do 12 tygodni. Dam Ci realistyczny harmonogram po szczegółowym omówieniu Twoich potrzeb."
+        "question": "Ile trwa realizacja?",
+        "answer": "Prosta strona to zwykle kilka tygodni, większe aplikacje i systemy - odpowiednio dłużej. Realny harmonogram podam po omówieniu zakresu."
       },
       "collaboration": {
         "question": "Czy możesz pracować z naszym zespołem?",
-        "answer": "Oczywiście. Z natury jestem otwarty, ale też dociekliwy. Kilkuletnia praca w agencji eventowej pomogła mi doszlifować umiejętności miękkie. Jestem przyzwyczajony do współpracy z designerami, product managerami i innymi programistami. Dostosowuję się do Waszych narzędzi i procesów, nie odwrotnie."
+        "answer": "Oczywiście. Na co dzień współpracuję z designerami, product managerami i innymi programistami. Dostosowuję się do Waszych narzędzi i procesów, nie odwrotnie."
+      },
+      "hiring": {
+        "question": "Czy jesteś otwarty na stałą współpracę lub etat?",
+        "answer": "Tak. Poza projektami dla klientów jestem otwarty na długoterminową współpracę B2B lub etat w zespole produktowym. Napisz przez formularz albo odezwij się na LinkedInie."
       },
       "start": {
         "question": "Jak zacząć współpracę?",
-        "answer": "Po prostu wyślij mi wiadomość z krótkim opisem tego, czego potrzebujesz. Odezwę się, żeby umówić rozmowę i omówić szczegóły."
+        "answer": "Wyślij wiadomość z krótkim opisem tego, czego potrzebujesz. Odezwę się, żeby umówić rozmowę i omówić szczegóły."
       }
     }
   },
   "contact": {
-    "heading": "Zbudujmy coś wspaniałego",
-    "description": "Masz pomysł na projekt? Napisz do mnie, a porozmawiamy o tym, jak mogę pomóc.",
+    "heading": "Porozmawiajmy",
+    "description": "Opisz krótko, czego potrzebujesz - strony, systemu, automatyzacji albo kogoś do zespołu. Odezwę się i umówimy rozmowę.",
     "form": {
       "name": "Twoje imię",
       "namePlaceholder": "Jan Kowalski",
@@ -126,16 +131,16 @@
       "phone": "Telefon",
       "phonePlaceholder": "+48 123 456 789",
       "subject": "Temat",
-      "subjectPlaceholder": "Zapytanie o projekt",
+      "subjectPlaceholder": "Np. strona firmowa, system rezerwacji, oferta pracy",
       "message": "Wiadomość",
-      "messagePlaceholder": "Opowiedz mi o swoim projekcie...",
+      "messagePlaceholder": "Co chcesz zbudować? Jaki masz termin i budżet (jeśli wiesz)?",
       "submit": "Wyślij wiadomość",
       "validation": {
         "email": "Wpisz poprawny adres e-mail."
       },
       "status": {
-        "success": "Dzięki! Wiadomość została wysłana.",
-        "error": "Coś poszło nie tak. Spróbuj ponownie."
+        "success": "Dzięki! Wiadomość dotarła - odezwę się wkrótce. Potwierdzenie wysłałem też na Twój e-mail.",
+        "error": "Nie udało się wysłać wiadomości. Napisz bezpośrednio na patrykitpapi@gmail.com albo zadzwoń: +48 507 486 286."
       }
     },
     "info": {
@@ -143,7 +148,8 @@
       "email": "E-mail",
       "phone": "Telefon",
       "address": "Adres",
-      "addressValue": "Warszawa, Polska"
+      "addressValue": "Warszawa, Polska",
+      "linkedin": "LinkedIn"
     }
   },
   "aria": {
@@ -153,7 +159,7 @@
     "switchToDarkMode": "Przełącz na ciemny motyw"
   },
   "footer": {
-    "description": "Programista tworzący przemyślane doświadczenia cyfrowe.",
+    "description": "Strony, aplikacje i systemy dla firm. Otwarty na współpracę B2B i etat.",
     "contactHeading": "Kontakt",
     "navHeading": "Nawigacja",
     "copyright": "Wszelkie prawa zastrzeżone."
@@ -161,9 +167,9 @@
   "showRoom": {
     "navButton": "Showroom",
     "heading": "Showroom",
-    "description": "Interaktywna galeria przykładowych projektów frontendowych.\n\nRozne style, układy i funkcjonalności - od landing page'ow po bardziej rozbudowane widoki - pokazujące, jak mogą wyglądać nowoczesne i dopracowane interfejsy użytkownika.\n\nKazde rozwiązanie może zostać rozszerzone o dedykowany backend, dopasowany do potrzeb Twojego biznesu.",
+    "description": "Interaktywna galeria przykładowych projektów frontendowych.\n\nRóżne style, układy i funkcjonalności - od landing page'ów po bardziej rozbudowane widoki - pokazujące, jak mogą wyglądać nowoczesne i dopracowane interfejsy użytkownika.\n\nKażde rozwiązanie może zostać rozszerzone o dedykowany backend, dopasowany do potrzeb Twojego biznesu.",
     "cta": "Zobacz projekty. Wybierz kierunek. Zróbmy coś podobnego dla Ciebie.",
-    "backToMain": "Wróć na stronę główną",
+    "backToMain": "Wróć na stronę główna",
     "backToShowroom": "Wróć do showroomu",
     "browseProjects": "Przeglądaj projekty",
     "comingSoon": "Wkrótce",
@@ -272,7 +278,7 @@
         "eyebrow": "Funkcje",
         "title": "Wszystko, czego potrzebujesz, aby",
         "titleAccent": "być na bieżąco",
-        "description": "Rozbudowane funkcje, które zapewniają bezpieczeństwo, dostępność i synchronizacje plików na wszystkich urządzeniach.",
+        "description": "Rozbudowane funkcje, które zapewniają bezpieczeństwo, dostępność i synchronizację plików na wszystkich urządzeniach.",
         "realtime": {
           "title": "Synchronizacja w czasie rzeczywistym",
           "description": "Zmiany synchronizują się natychmiast na wszystkich urządzeniach. Bez opóźnień, bez konfliktów, bez problemów. Po prostu synchronizacja, która działa."
@@ -310,7 +316,12 @@
             "price": "$0",
             "period": "na zawsze",
             "description": "Dla użytku osobistego",
-            "features": ["5 GB pamięci", "1 użytkownik", "Podstawowe wsparcie", "Aplikacje mobilne"],
+            "features": [
+              "5 GB pamięci",
+              "1 użytkownik",
+              "Podstawowe wsparcie",
+              "Aplikacje mobilne"
+            ],
             "cta": "Zacznij",
             "highlighted": false
           },
@@ -348,7 +359,11 @@
             "highlighted": false
           }
         ],
-        "trustBadges": ["30-dniowy zwrot pieniędzy", "Anuluj w każdej chwili", "Bez karty kredytowej"]
+        "trustBadges": [
+          "30-dniowy zwrot pieniędzy",
+          "Anuluj w każdej chwili",
+          "Bez karty kredytowej"
+        ]
       },
       "cta": {
         "eyebrow": "Zaczynajmy",
@@ -367,12 +382,18 @@
       },
       "footer": {
         "brand": "CloudSync",
-        "tagline": "Stopka w stylu Figma z wyraźna typografia, czystymi kolumnami i subtelnym blaskiem siatki.",
+        "tagline": "Stopka w stylu Figma z wyraźną typografią, czystymi kolumnami i subtelnym blaskiem siatki.",
         "badge": "Zaprojektowane dla workflow w Figma",
         "groups": [
           {
             "title": "Produkt",
-            "links": ["Przegląd", "Synchronizacja", "Bezpieczeństwo", "Cennik", "Lista zmian"]
+            "links": [
+              "Przegląd",
+              "Synchronizacja",
+              "Bezpieczeństwo",
+              "Cennik",
+              "Lista zmian"
+            ]
           },
           {
             "title": "Zasoby",
@@ -380,7 +401,12 @@
           },
           {
             "title": "Społeczność",
-            "links": ["Społeczność Figma", "Zestaw designu", "Forum", "Tablica opinii"]
+            "links": [
+              "Społeczność Figma",
+              "Zestaw designu",
+              "Forum",
+              "Tablica opinii"
+            ]
           },
           {
             "title": "Firma",
@@ -395,7 +421,7 @@
       "hero": {
         "eyebrow": "Dashboard",
         "title": "Centrum kontroli wzrostu produktu",
-        "description": "Śledź przychód, aktywacje i retencję w jednym miejscu. Wizualne analizy, filtry w czasie rzeczywistym i czysty ciemny interfejs.",
+        "description": "Śledź przychód, aktywacje i retencje w jednym miejscu. Wizualne analizy, filtry w czasie rzeczywistym i czysty ciemny interfejs.",
         "primaryAction": "Eksportuj raport",
         "secondaryAction": "Zaplanuj synchronizację"
       },
@@ -415,7 +441,11 @@
         "weeklyActivity": "Aktywność tygodniowa",
         "spendDistribution": "Rozkład wydatków",
         "kpis": [
-          { "label": "Miesięczny przychód", "value": "$128,420", "change": "+12.4%" },
+          {
+            "label": "Miesięczny przychód",
+            "value": "$128,420",
+            "change": "+12.4%"
+          },
           { "label": "Aktywni użytkownicy", "value": "48,092", "change": "+6.8%" },
           { "label": "Współczynnik konwersji", "value": "4.7%", "change": "+0.6%" },
           { "label": "Średni czas reakcji", "value": "1.4s", "change": "-0.3s" }
@@ -570,7 +600,14 @@
         ]
       },
       "filters": {
-        "categories": ["Wszystko", "Ready-to-wear", "Odzież wierzchnia", "Akcesoria", "Obuwie", "Archiwum"],
+        "categories": [
+          "Wszystko",
+          "Ready-to-wear",
+          "Odzież wierzchnia",
+          "Akcesoria",
+          "Obuwie",
+          "Archiwum"
+        ],
         "sort": "Sortuj: Nowości",
         "view": "Widok: Editorial Archive"
       },
@@ -777,7 +814,7 @@
       },
       "contact": {
         "title": "Zacznij projekt",
-        "description": "Szukasz wyrazistego systemu wizualnego? Zbudujmy kolejna odważna premiere.",
+        "description": "Szukasz wyrazistego systemu wizualnego? Zbudujmy kolejną odważną premierę.",
         "primaryAction": "Umów rozmowę",
         "secondaryAction": "Pobierz CV"
       },
@@ -816,7 +853,13 @@
         "searchPlaceholder": "Szukaj użytkowników",
         "reset": "Resetuj",
         "view": "Podgląd",
-        "planOptions": ["Wszystkie plany", "Starter", "Pro", "Business", "Enterprise"],
+        "planOptions": [
+          "Wszystkie plany",
+          "Starter",
+          "Pro",
+          "Business",
+          "Enterprise"
+        ],
         "statusOptions": ["Status", "Aktywny", "Wstrzymany", "Do weryfikacji"],
         "headers": ["Użytkownik", "Plan", "Status", "Ostatnio", "Akcja"],
         "status": {
@@ -909,16 +952,8 @@
             "title": "Blok warsztatów",
             "detail": "AI, Design Systems, Live Ops"
           },
-          {
-            "time": "16:00",
-            "title": "Panel: Kultura + Tech",
-            "detail": "Studio"
-          },
-          {
-            "time": "18:30",
-            "title": "Nocny show",
-            "detail": "Główna scena"
-          }
+          { "time": "16:00", "title": "Panel: Kultura + Tech", "detail": "Studio" },
+          { "time": "18:30", "title": "Nocny show", "detail": "Główna scena" }
         ]
       },
       "tickets": {
@@ -1003,6 +1038,19 @@
         "badges": ["SOC 2 Type II", "GDPR ready", "99.9% uptime"],
         "legal": "Wartości są poglądowe, przygotowane na potrzeby showroomu."
       }
+    }
+  },
+  "consent": {
+    "text": "Ta strona używa plików cookie Google Analytics do statystyk odwiedzin. Włączam je tylko za Twoją zgodą.",
+    "accept": "Akceptuję",
+    "reject": "Odrzucam"
+  },
+  "contactEmail": {
+    "autoReply": {
+      "subject": "Dziękuję za wiadomość - Patryk Niedbalski",
+      "greeting": "Cześć,",
+      "body": "dziękuję za wiadomość wysłaną przez formularz na itpapi.pl. Dotarła do mnie i odezwę się najszybciej, jak to możliwe.\n\nJeśli chcesz coś dodać, po prostu odpowiedz na tego maila.",
+      "signature": "Pozdrawiam,\nPatryk Niedbalski\nitpapi.pl"
     }
   }
 }

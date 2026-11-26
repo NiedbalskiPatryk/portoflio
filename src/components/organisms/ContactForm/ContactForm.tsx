@@ -8,7 +8,7 @@ import Collapse from "@mui/material/Collapse";
 import Stack from "@mui/material/Stack";
 import Typography from "@mui/material/Typography";
 import FormRow from "@/components/molecules/FormRow";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 
 export type ContactFieldId =
   | "fullName"
@@ -23,6 +23,7 @@ export interface ContactFormField {
   placeholder?: string;
   multiline?: boolean;
   rows?: number;
+  required?: boolean;
 }
 
 export interface ContactFormProps {
@@ -36,6 +37,8 @@ export interface ContactFormProps {
 
 const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
+type WindowWithGtag = Window & { gtag?: (...args: unknown[]) => void };
+
 const ContactForm: React.FC<ContactFormProps> = ({
   fields,
   submitLabel,
@@ -45,6 +48,12 @@ const ContactForm: React.FC<ContactFormProps> = ({
   formMethod = "POST",
 }) => {
   const t = useTranslations("contact.form");
+  const locale = useLocale();
+  const mountedAtRef = React.useRef(0);
+
+  React.useEffect(() => {
+    mountedAtRef.current = Date.now();
+  }, []);
   const initialValues = React.useMemo(() => {
     return fields.reduce<Record<ContactFieldId, string>>(
       (acc, field) => {
@@ -107,6 +116,8 @@ const ContactForm: React.FC<ContactFormProps> = ({
       Object.entries(values).forEach(([key, value]) => {
         formData.append(key, value);
       });
+      formData.append("elapsedMs", String(Date.now() - mountedAtRef.current));
+      formData.append("locale", locale);
 
       const response = await fetch(formAction, {
         method: formMethod,
@@ -121,6 +132,7 @@ const ContactForm: React.FC<ContactFormProps> = ({
       }
 
       setSubmitState("success");
+      (window as WindowWithGtag).gtag?.("event", "generate_lead");
       setValues(initialValues);
       setTouched({
         fullName: false,
@@ -217,6 +229,7 @@ const ContactForm: React.FC<ContactFormProps> = ({
                 type={field.id === "email" ? "email" : "text"}
                 multiline={field.multiline}
                 rows={field.rows}
+                required={field.required}
                 disabled={isFormDisabled}
                 error={error}
                 helperText={helperText}
@@ -265,16 +278,22 @@ const ContactForm: React.FC<ContactFormProps> = ({
       >
         {submitLabel}
       </Button>
-      <Collapse in={submitState === "success"} timeout={300} unmountOnExit>
-        <Typography variant="body2" color="text.secondary" sx={{ mt: 2 }}>
-          {t("status.success")}
-        </Typography>
-      </Collapse>
-      <Collapse in={submitState === "error"} timeout={300} unmountOnExit>
-        <Typography variant="body2" color="error" sx={{ mt: 2 }}>
-          {t("status.error")}
-        </Typography>
-      </Collapse>
+      <Box role="status" aria-live="polite">
+        <Collapse in={submitState === "success"} timeout={300} unmountOnExit>
+          <Typography
+            variant="body1"
+            color="success.main"
+            sx={{ mt: 2, fontWeight: 600 }}
+          >
+            {t("status.success")}
+          </Typography>
+        </Collapse>
+        <Collapse in={submitState === "error"} timeout={300} unmountOnExit>
+          <Typography variant="body1" color="error" sx={{ mt: 2 }}>
+            {t("status.error")}
+          </Typography>
+        </Collapse>
+      </Box>
     </Box>
   );
 };

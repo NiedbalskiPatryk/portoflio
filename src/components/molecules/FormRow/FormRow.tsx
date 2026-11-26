@@ -14,6 +14,7 @@ export interface FormRowProps {
   multiline?: boolean;
   rows?: number;
   disabled?: boolean;
+  required?: boolean;
   error?: boolean;
   helperText?: string;
 }
@@ -29,6 +30,7 @@ const FormRow: React.FC<FormRowProps> = ({
   multiline = false,
   rows,
   disabled = false,
+  required = false,
   error = false,
   helperText,
 }) => {
@@ -45,6 +47,7 @@ const FormRow: React.FC<FormRowProps> = ({
       multiline={multiline}
       rows={multiline ? rows : undefined}
       disabled={disabled}
+      required={required}
       error={error}
       helperText={helperText}
       fullWidth

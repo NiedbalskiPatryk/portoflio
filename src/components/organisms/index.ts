@@ -18,3 +18,4 @@ export { default as ShowRoomHeader, SHOWROOM_HEADER_HEIGHT } from "./ShowRoomHea
 export { default as ShowRoomIntro } from "./ShowRoomIntro";
 export { default as ShowRoomDrawer } from "./ShowRoomDrawer";
 export type { ShowRoomProject } from "./ShowRoomDrawer";
+export { default as CookieConsent } from "./CookieConsent";
