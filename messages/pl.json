@@ -9,7 +9,8 @@
     "services": "Usługi",
     "projects": "Realizacje",
     "faq": "Pytania",
-    "contact": "Kontakt"
+    "contact": "Kontakt",
+    "pricing": "Cennik"
   },
   "hero": {
     "location": "Warszawa, Polska",
@@ -74,21 +75,26 @@
     "items": {
       "parkiza": {
         "name": "Parkiza",
-        "summary": "Kompletny system rezerwacji parkingowych obsługujący tysiące rezerwacji. Zbudowany z nowoczesnym stackiem włączając NestJS i React, usprawnił operacje całej organizacji."
+        "summary": "Kompletny system rezerwacji parkingowych obsługujący tysiące rezerwacji. Zbudowany z nowoczesnym stackiem włączając NestJS i React, usprawnił operacje całej organizacji.",
+        "role": "Project Leader / Backend Developer"
       },
       "signalos": {
         "name": "SignalOS",
-        "summary": "Zintegrowana platforma zarządzania budynkami, która łączy wiele systemów w jednym miejscu. To rozwiązanie enterprise pomaga facility managerom pracować mądrzej."
+        "summary": "Zintegrowana platforma zarządzania budynkami, która łączy wiele systemów w jednym miejscu. To rozwiązanie enterprise pomaga facility managerom pracować mądrzej.",
+        "role": "Full-Stack Developer"
       },
       "areoactive": {
         "name": "Areoactive",
-        "summary": "Strona startowa nowego projektu - szybka, responsywna i przygotowana pod dalszą rozbudowę produktu."
+        "summary": "Strona startowa nowego projektu - szybka, responsywna i przygotowana pod dalszą rozbudowę produktu.",
+        "role": "Projekt freelance"
       },
       "skinscartel": {
         "name": "SkinsCartel",
-        "summary": "W pełni funkcjonalny marketplace do handlu skinami CS:GO. Zbudowany z naciskiem na wydajność i doświadczenie użytkownika — obsługuje zarządzanie ekwipunkiem w czasie rzeczywistym, bezpieczne transakcje i dopracowany interfejs e-commerce."
+        "summary": "W pełni funkcjonalny marketplace do handlu skinami CS:GO. Zbudowany z naciskiem na wydajność i doświadczenie użytkownika — obsługuje zarządzanie ekwipunkiem w czasie rzeczywistym, bezpieczne transakcje i dopracowany interfejs e-commerce.",
+        "role": "Tech Lead"
       }
-    }
+    },
+    "roleLabel": "Moja rola"
   },
   "faq": {
     "heading": "Pytania? Mam odpowiedzi",
@@ -100,7 +106,7 @@
       },
       "pricing": {
         "question": "Ile kosztuje strona lub aplikacja?",
-        "answer": "To zależy od zakresu. Po krótkiej rozmowie przygotowuję wycenę z podziałem na etapy, żebyś dokładnie wiedział, za co płacisz i kiedy co dostaniesz."
+        "answer": "Prosta strona (landing page) kosztuje od 2 000 zł, strona z panelem do zarządzania od 3 500 zł, a systemy na miarę wyceniam indywidualnie (kwoty netto). Po krótkiej rozmowie przygotuję dokładną wycenę z podziałem na etapy."
       },
       "timeline": {
         "question": "Ile trwa realizacja?",
@@ -141,7 +147,8 @@
       "status": {
         "success": "Dzięki! Wiadomość dotarła - odezwę się wkrótce. Potwierdzenie wysłałem też na Twój e-mail.",
         "error": "Nie udało się wysłać wiadomości. Napisz bezpośrednio na patrykitpapi@gmail.com albo zadzwoń: +48 507 486 286."
-      }
+      },
+      "privacyNotice": "Administratorem danych jest Patryk Niedbalski. Szczegóły w <link>polityce prywatności</link>."
     },
     "info": {
       "heading": "Dane kontaktowe",
@@ -162,7 +169,9 @@
     "description": "Strony, aplikacje i systemy dla firm. Otwarty na współpracę B2B i etat.",
     "contactHeading": "Kontakt",
     "navHeading": "Nawigacja",
-    "copyright": "Wszelkie prawa zastrzeżone."
+    "copyright": "Wszelkie prawa zastrzeżone.",
+    "privacyLink": "Polityka prywatności",
+    "cookieSettings": "Ustawienia cookies"
   },
   "showRoom": {
     "navButton": "Showroom",
@@ -1043,7 +1052,8 @@
   "consent": {
     "text": "Ta strona używa plików cookie Google Analytics do statystyk odwiedzin. Włączam je tylko za Twoją zgodą.",
     "accept": "Akceptuję",
-    "reject": "Odrzucam"
+    "reject": "Odrzucam",
+    "privacyLink": "Polityka prywatności"
   },
   "contactEmail": {
     "autoReply": {
@@ -1052,5 +1062,78 @@
       "body": "dziękuję za wiadomość wysłaną przez formularz na itpapi.pl. Dotarła do mnie i odezwę się najszybciej, jak to możliwe.\n\nJeśli chcesz coś dodać, po prostu odpowiedz na tego maila.",
       "signature": "Pozdrawiam,\nPatryk Niedbalski\nitpapi.pl"
     }
+  },
+  "privacy": {
+    "metaTitle": "Polityka prywatności | ITPapi",
+    "metaDescription": "Polityka prywatności serwisu ITPapi: administrator danych, formularz kontaktowy, cookies i prawa osób, których dane dotyczą.",
+    "heading": "Polityka prywatności",
+    "intro": "Poniżej wyjaśniam prostym językiem, jak przetwarzam dane osobowe zgodnie z RODO.",
+    "lastUpdated": "Ostatnia aktualizacja: 26.11.2026",
+    "backToHome": "← Wróć na stronę główną",
+    "sections": {
+      "controller": {
+        "heading": "1. Administrator danych",
+        "body": "Administratorem Twoich danych osobowych jest Patryk Niedbalski, NIP: 1132813373, Warszawa, Polska (serwis ITPapi, www.itpapi.pl).\n\nKontakt w sprawach danych osobowych: patrykitpapi@gmail.com."
+      },
+      "data": {
+        "heading": "2. Jakie dane zbieram i po co",
+        "body": "Gdy piszesz do mnie przez formularz kontaktowy, przetwarzam dane, które sam podajesz: imię i nazwisko, adres e-mail, numer telefonu (opcjonalnie), temat oraz treść wiadomości.\n\nWykorzystuję je w celu odpowiedzi na Twoje zapytanie oraz podjęcia działań przed zawarciem umowy, o ile o to prosisz, a także w celu prowadzenia korespondencji.\n\nPo wysłaniu formularza otrzymujesz automatyczną wiadomość potwierdzającą o stałej treści. Dane z formularza nie są zapisywane w bazie danych w serwisie – trafiają do mnie w wiadomości e-mail."
+      },
+      "legalBasis": {
+        "heading": "3. Podstawa prawna",
+        "body": "Art. 6 ust. 1 lit. b RODO – przetwarzanie jest niezbędne do podjęcia działań na Twoje żądanie przed zawarciem umowy.\n\nArt. 6 ust. 1 lit. f RODO – prawnie uzasadniony interes administratora, jakim jest prowadzenie korespondencji i odpowiadanie na zapytania.\n\nAnalityka (Google Analytics) działa wyłącznie za Twoją zgodą (art. 6 ust. 1 lit. a RODO oraz zgoda na dostęp do informacji na urządzeniu)."
+      },
+      "recipients": {
+        "heading": "4. Odbiorcy danych",
+        "body": "Dane mogą być przetwarzane przez dostawców, z których usług korzystam:\n\nVercel Inc. – hosting strony internetowej.\n\nResend – wysyłka wiadomości e-mail z formularza oraz automatycznej odpowiedzi.\n\nGoogle – usługa Google Analytics, wyłącznie jeśli wyrazisz zgodę na cookies analityczne.\n\nPoza tym nie udostępniam danych innym podmiotom, chyba że obowiązek taki wynika z przepisów prawa."
+      },
+      "transfers": {
+        "heading": "5. Przekazywanie danych poza EOG",
+        "body": "Wymienieni dostawcy mają siedziby lub infrastrukturę w Stanach Zjednoczonych, więc Twoje dane mogą być przekazywane poza Europejski Obszar Gospodarczy.\n\nPrzekazanie opiera się na mechanizmach przewidzianych w RODO, w szczególności na decyzji Komisji Europejskiej dotyczącej Programu Ochrony Danych UE–USA (EU-US Data Privacy Framework) w odniesieniu do podmiotów w nim uczestniczących albo na standardowych klauzulach umownych. Możesz poprosić mnie o informacje o zastosowanych zabezpieczeniach."
+      },
+      "retention": {
+        "heading": "6. Jak długo przechowuję dane",
+        "body": "Dane przechowuję tak długo, jak jest to potrzebne do obsłużenia Twojego zapytania i ewentualnej dalszej współpracy, a następnie do czasu przedawnienia potencjalnych roszczeń – chyba że wcześniej zgłosisz sprzeciw wobec przetwarzania lub zażądasz usunięcia danych i nie będzie przeszkód prawnych.\n\nDane analityczne przetwarzane przez Google podlegają zasadom retencji tego dostawcy."
+      },
+      "rights": {
+        "heading": "7. Twoje prawa",
+        "body": "Masz prawo do: dostępu do danych, ich sprostowania, usunięcia, ograniczenia przetwarzania, przenoszenia danych oraz wniesienia sprzeciwu wobec przetwarzania opartego na prawnie uzasadnionym interesie.\n\nJeśli przetwarzanie opiera się na zgodzie, możesz ją wycofać w dowolnym momencie, bez wpływu na zgodność z prawem przetwarzania dokonanego przed jej wycofaniem.\n\nMasz też prawo wniesienia skargi do Prezesa Urzędu Ochrony Danych Osobowych (ul. Stawki 2, 00-193 Warszawa).\n\nAby skorzystać z praw, napisz na: patrykitpapi@gmail.com."
+      },
+      "voluntary": {
+        "heading": "8. Dobrowolność podania danych",
+        "body": "Podanie danych jest dobrowolne, ale imię, adres e-mail i treść wiadomości są potrzebne, abym mógł Ci odpowiedzieć. Bez nich nie mogę obsłużyć zapytania."
+      },
+      "automated": {
+        "heading": "9. Zautomatyzowane decyzje",
+        "body": "Nie podejmuję wobec Ciebie decyzji w sposób zautomatyzowany i nie stosuję profilowania."
+      },
+      "cookies": {
+        "heading": "10. Cookies i pamięć lokalna",
+        "body": "Serwis korzysta z następujących elementów:\n\ntheme-mode (cookie oraz localStorage) – zapamiętuje wybrany motyw jasny/ciemny; element funkcjonalny, niezbędny do działania ustawienia.\n\ncookie-consent (localStorage) – zapamiętuje Twój wybór dotyczący cookies.\n\n_ga oraz _ga_* (cookies Google Analytics, identyfikator G-8Z9E33KK05) – statystyki odwiedzin; ustawiane wyłącznie po wyrażeniu zgody.\n\nWybór możesz zmienić w dowolnym momencie przez przycisk „Ustawienia cookies” w stopce strony. Odrzucenie lub wycofanie zgody usuwa cookies Google Analytics."
+      }
+    }
+  },
+  "pricing": {
+    "heading": "Cennik",
+    "description": "Orientacyjne ceny. Dokładną wycenę przygotuję po krótkiej rozmowie o zakresie projektu.",
+    "cta": "Zapytaj o wycenę",
+    "plans": {
+      "landing": {
+        "title": "Landing page",
+        "price": "od 2 000 zł",
+        "description": "Prosta, jednostronicowa strona, która przedstawia Twoją ofertę i zbiera zapytania od klientów."
+      },
+      "cms": {
+        "title": "Strona + panel do zarządzania",
+        "price": "od 3 500 zł",
+        "description": "Strona z wieloma podstronami i panelem, w którym samodzielnie zarządzasz treściami, oraz z potrzebnymi integracjami."
+      },
+      "custom": {
+        "title": "System na miarę",
+        "price": "Wycena indywidualna",
+        "description": "Systemy rezerwacji, panele administracyjne, automatyzacje i integracje. Zakres i koszt ustalamy po analizie Twoich potrzeb."
+      }
+    },
+    "note": "Podane ceny są kwotami netto."
   }
 }

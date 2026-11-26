@@ -1,16 +1,20 @@
 "use client";
 
-import React, { useSyncExternalStore } from "react";
+import React, { useEffect, useSyncExternalStore } from "react";
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import Script from "next/script";
-import { useTranslations } from "next-intl";
+import Link from "@mui/material/Link";
+import { useLocale, useTranslations } from "next-intl";
 
 const STORAGE_KEY = "cookie-consent";
 const GA_ID = "G-8Z9E33KK05";
 
 type Choice = "accepted" | "rejected" | null;
+
+// True once GA was loaded in this page session (stays true after the choice is reopened).
+let gaLoaded = false;
 
 const listeners = new Set<() => void>();
 
@@ -19,6 +23,31 @@ function subscribe(cb: () => void) {
   return () => {
     listeners.delete(cb);
   };
+}
+
+function deleteGaCookies() {
+  const hostname = window.location.hostname;
+  const parts = hostname.split(".");
+  const parentDomain = parts.length > 2 ? parts.slice(-2).join(".") : hostname;
+  const domains = [hostname, `.${hostname}`, `.${parentDomain}`];
+  document.cookie.split(";").forEach((entry) => {
+    const name = entry.split("=")[0].trim();
+    if (name !== "_ga" && !name.startsWith("_ga_")) return;
+    // No domain attribute removes host-only cookies; the rest cover domain cookies.
+    document.cookie = `${name}=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/`;
+    domains.forEach((domain) => {
+      document.cookie = `${name}=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/; domain=${domain}`;
+    });
+  });
+}
+
+export function openCookieSettings() {
+  try {
+    localStorage.removeItem(STORAGE_KEY);
+  } catch {
+    // ignore
+  }
+  listeners.forEach((cb) => cb());
 }
 
 function getSnapshot(): Choice {
@@ -37,6 +66,7 @@ function getServerSnapshot(): Choice | undefined {
 
 export default function CookieConsent() {
   const t = useTranslations("consent");
+  const locale = useLocale();
   const choice = useSyncExternalStore<Choice | undefined>(
     subscribe,
     getSnapshot,
@@ -49,8 +79,18 @@ export default function CookieConsent() {
     } catch {
       // ignore
     }
+    if (value === "rejected" && gaLoaded) {
+      // gtag is already running in this page; clear its cookies and reload so it stops.
+      deleteGaCookies();
+      window.location.reload();
+      return;
+    }
     listeners.forEach((cb) => cb());
   };
+
+  useEffect(() => {
+    if (choice === "accepted") gaLoaded = true;
+  }, [choice]);
 
   if (choice === undefined) return null;
 
@@ -91,7 +131,12 @@ export default function CookieConsent() {
             gap: 1.5,
           }}
         >
-          <Typography variant="body2">{t("text")}</Typography>
+          <Typography variant="body2">
+            {t("text")}{" "}
+            <Link href={`/${locale}/privacy`} color="inherit" underline="always">
+              {t("privacyLink")}
+            </Link>
+          </Typography>
           <Box sx={{ display: "flex", gap: 1 }}>
             <Button
               fullWidth

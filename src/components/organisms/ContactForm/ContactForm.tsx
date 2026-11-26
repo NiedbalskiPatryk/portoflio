@@ -5,6 +5,7 @@ import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
 import CircularProgress from "@mui/material/CircularProgress";
 import Collapse from "@mui/material/Collapse";
+import Link from "@mui/material/Link";
 import Stack from "@mui/material/Stack";
 import Typography from "@mui/material/Typography";
 import FormRow from "@/components/molecules/FormRow";
@@ -278,6 +279,20 @@ const ContactForm: React.FC<ContactFormProps> = ({
       >
         {submitLabel}
       </Button>
+      <Typography variant="caption" color="text.secondary">
+        {t.rich("privacyNotice", {
+          link: (chunks) => (
+            <Link
+              href={`/${locale}/privacy`}
+              color="inherit"
+              underline="always"
+              sx={{ textDecoration: "underline" }}
+            >
+              {chunks}
+            </Link>
+          ),
+        })}
+      </Typography>
       <Box role="status" aria-live="polite">
         <Collapse in={submitState === "success"} timeout={300} unmountOnExit>
           <Typography
