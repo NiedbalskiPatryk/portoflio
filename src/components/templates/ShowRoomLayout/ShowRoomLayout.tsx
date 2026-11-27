@@ -13,7 +13,6 @@ interface ShowRoomLayoutProps {
   currentProjectId?: string;
   comingSoonLabel?: string;
   browseProjectsLabel?: string;
-  showThemeToggle?: boolean;
   useColorWash?: boolean;
   backHref?: string;
   backLabel?: string;
@@ -25,14 +24,12 @@ export default function ShowRoomLayout({
   currentProjectId,
   comingSoonLabel,
   browseProjectsLabel,
-  showThemeToggle = true,
   useColorWash = false,
   backHref,
   backLabel,
 }: ShowRoomLayoutProps) {
   const header = (
     <ShowRoomHeader
-      showThemeToggle={showThemeToggle}
       backHref={backHref}
       backLabel={backLabel}
     />

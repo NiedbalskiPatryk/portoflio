@@ -2,7 +2,6 @@
 
 import React from "react";
 import Box from "@mui/material/Box";
-import Stack from "@mui/material/Stack";
 import Typography from "@mui/material/Typography";
 import ContactInfoItem from "@/components/molecules/ContactInfoItem";
 import type { ContactInfoItemProps } from "@/components/molecules/ContactInfoItem";
@@ -14,49 +13,39 @@ export interface ContactInfoProps {
   items: ContactInfoItemProps[];
 }
 
+// Compact direct-contact block shown under the form.
 const ContactInfo: React.FC<ContactInfoProps> = ({ heading, description, items }) => {
   const t = useTranslations("contact.info");
   const resolvedHeading = heading ?? t("heading");
 
   return (
     <Box
-      sx={{
-        display: "flex",
-        flexDirection: "column",
-        gap: 3,
-        p: { xs: 3, sm: 4 },
-        borderRadius: 0,
-        border: "1px solid",
-        borderColor: "divider",
-        background: (theme) =>
-          theme.palette.mode === "dark"
-            ? `linear-gradient(120deg, ${theme.palette.surface.gradientStart} 0%, ${theme.palette.surface.gradientMid} 45%, ${theme.palette.surface.gradientEnd} 100%)`
-            : theme.palette.background.paper,
-        boxShadow:
-          "0 16px 32px rgba(0, 0, 0, 0.08), inset 0 1px 0 rgba(255, 255, 255, 0.04)",
-      }}
+      component="section"
+      aria-label={resolvedHeading}
+      sx={{ display: "flex", flexDirection: "column", gap: "1rem", px: { xs: 0, sm: "0.5rem" } }}
     >
-      <Box sx={{ display: "flex", flexDirection: "column", gap: 1 }}>
-        <Typography variant="h4" color="text.primary">
-          {resolvedHeading}
+      {description && (
+        <Typography variant="body2" color="text.secondary">
+          {description}
         </Typography>
-        {description && (
-          <Typography variant="body2" color="text.secondary">
-            {description}
-          </Typography>
-        )}
-      </Box>
-
-      <Stack spacing={2.5}>
+      )}
+      <Box
+        component="ul"
+        sx={{
+          listStyle: "none",
+          m: 0,
+          p: 0,
+          display: "grid",
+          gridTemplateColumns: "repeat(2, minmax(0, 1fr))",
+          gap: "1.25rem 1.5rem",
+        }}
+      >
         {items.map((item) => (
-          <ContactInfoItem
-            key={`${item.label}-${item.value}`}
-            label={item.label}
-            value={item.value}
-            href={item.href}
-          />
+          <Box component="li" key={`${item.label}-${item.value}`} sx={{ minWidth: 0 }}>
+            <ContactInfoItem label={item.label} value={item.value} href={item.href} />
+          </Box>
         ))}
-      </Stack>
+      </Box>
     </Box>
   );
 };

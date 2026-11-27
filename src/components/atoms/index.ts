@@ -1,10 +1,9 @@
 export { default as LogoText } from "./LogoText";
 export { default as NavLink } from "./NavLink";
-export { default as ThemeToggle } from "./ThemeToggle";
-export { default as FloatingCode } from "./FloatingCode";
-export { default as ScrollProgressBar } from "./ScrollProgressBar";
 export { default as AnimatedSection } from "./AnimatedSection";
 export { default as ColorWash } from "./ColorWash";
 export { default as LanguageSwitcher } from "./LanguageSwitcher";
 export { default as ShowRoomButton } from "./ShowRoomButton";
 export { default as ProjectCard } from "./ProjectCard";
+export { default as SectionTab } from "./SectionTab";
+export { default as HandNote } from "./HandNote";

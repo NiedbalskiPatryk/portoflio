@@ -19,6 +19,7 @@ export interface FormRowProps {
   helperText?: string;
 }
 
+// Rounded, filled look comes from the theme (MuiTextField).
 const FormRow: React.FC<FormRowProps> = ({
   id,
   label,
@@ -51,11 +52,6 @@ const FormRow: React.FC<FormRowProps> = ({
       error={error}
       helperText={helperText}
       fullWidth
-      sx={{
-        "& .MuiOutlinedInput-root, & .MuiOutlinedInput-notchedOutline": {
-          borderRadius: 0,
-        },
-      }}
     />
   );
 };

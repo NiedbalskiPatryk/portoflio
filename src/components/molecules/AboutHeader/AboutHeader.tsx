@@ -11,25 +11,22 @@ export interface AboutHeaderProps {
 
 const AboutHeader: React.FC<AboutHeaderProps> = ({ name, role }) => {
   return (
-    <Box>
+    <Box sx={{ display: "flex", flexDirection: "column", gap: "0.35rem" }}>
       <Typography
-        variant="h2"
-        component="h2"
+        variant="h3"
+        component="h3"
         color="text.primary"
-        sx={{
-          fontSize: { xs: "1.75rem", sm: "2rem", md: "2.5rem" },
-          fontWeight: 700,
-          mb: 1,
-        }}
+        sx={{ m: 0, fontSize: { xs: "1.6rem", md: "2rem" } }}
       >
         {name}
       </Typography>
       <Typography
-        variant="h5"
-        component="h3"
+        component="p"
         color="text.secondary"
         sx={{
-          fontSize: { xs: "1rem", sm: "1.125rem", md: "1.25rem" },
+          m: 0,
+          fontFamily: "var(--font-jetbrains-mono), monospace",
+          fontSize: "0.9rem",
           fontWeight: 500,
         }}
       >

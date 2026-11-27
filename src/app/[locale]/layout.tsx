@@ -8,14 +8,40 @@ import {
   getTranslations,
   setRequestLocale,
 } from "next-intl/server";
-import { JetBrains_Mono } from "next/font/google";
+import {
+  Bricolage_Grotesque,
+  Caveat,
+  Instrument_Sans,
+  JetBrains_Mono,
+} from "next/font/google";
 import { notFound } from "next/navigation";
-import { cookies } from "next/headers";
 import "../globals.css";
+
+const instrumentSans = Instrument_Sans({
+  variable: "--font-instrument-sans",
+  subsets: ["latin", "latin-ext"],
+  display: "swap",
+});
 
 const jetbrainsMono = JetBrains_Mono({
   variable: "--font-jetbrains-mono",
-  subsets: ["latin"],
+  subsets: ["latin", "latin-ext"],
+  display: "swap",
+});
+
+// Display face for h1-h3 (B++ signature).
+const bricolage = Bricolage_Grotesque({
+  variable: "--font-bricolage",
+  weight: ["600", "800"],
+  subsets: ["latin", "latin-ext"],
+  display: "swap",
+});
+
+// Handwriting for the decorative HandNote atom.
+const caveat = Caveat({
+  variable: "--font-caveat",
+  weight: ["600", "700"],
+  subsets: ["latin", "latin-ext"],
   display: "swap",
 });
 
@@ -153,24 +179,6 @@ const jsonLdWebSite = {
   },
 };
 
-// Inline script to prevent flash of wrong theme
-const themeScript = `
-(function() {
-  try {
-    var cookieMatch = document.cookie.match(/(?:^|; )theme-mode=([^;]+)/);
-    var cookieMode = cookieMatch ? decodeURIComponent(cookieMatch[1]) : null;
-    var storedMode = localStorage.getItem('theme-mode');
-    var mode = cookieMode || storedMode;
-    var isDark = mode !== 'light';
-    var bg = isDark ? '#0a0a0a' : '#ffffff';
-    var d = document.documentElement;
-    d.style.setProperty('--initial-bg', bg);
-    d.style.backgroundColor = bg;
-    d.classList.add(isDark ? 'dark' : 'light');
-  } catch (e) {}
-})();
-`;
-
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
 }
@@ -192,13 +200,10 @@ export default async function LocaleLayout({
 
   setRequestLocale(locale);
   const messages = await getMessages();
-  const themeCookie = (await cookies()).get("theme-mode")?.value;
-  const initialMode = themeCookie === "light" ? "light" : "dark";
 
   return (
     <html lang={locale} suppressHydrationWarning>
       <head>
-        <script dangerouslySetInnerHTML={{ __html: themeScript }} />
         {/* Structured data — Person */}
         <script
           type="application/ld+json"
@@ -210,10 +215,11 @@ export default async function LocaleLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdWebSite) }}
         />
       </head>
-      <body className={jetbrainsMono.variable}>
-
+      <body
+        className={`${instrumentSans.variable} ${jetbrainsMono.variable} ${bricolage.variable} ${caveat.variable}`}
+      >
         <NextIntlClientProvider messages={messages}>
-          <ThemeRegistry initialMode={initialMode}>
+          <ThemeRegistry>
             {children}
             <CookieConsent />
           </ThemeRegistry>

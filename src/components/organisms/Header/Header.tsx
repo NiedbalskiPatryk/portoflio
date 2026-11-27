@@ -2,14 +2,13 @@
 
 import LanguageSwitcher from "@/components/atoms/LanguageSwitcher";
 import LogoText from "@/components/atoms/LogoText";
-import ShowRoomButton from "@/components/atoms/ShowRoomButton";
-import ThemeToggle from "@/components/atoms/ThemeToggle";
 import MobileDrawer from "@/components/molecules/MobileDrawer";
 import NavigationMenu, {
   type NavItem,
 } from "@/components/molecules/NavigationMenu";
 import MenuIcon from "@mui/icons-material/Menu";
 import Box from "@mui/material/Box";
+import Button from "@mui/material/Button";
 import Container from "@mui/material/Container";
 import IconButton from "@mui/material/IconButton";
 import Stack from "@mui/material/Stack";
@@ -22,27 +21,20 @@ const HEADER_HEIGHT = 72;
 export default function Header() {
   const tNav = useTranslations("nav");
   const tAria = useTranslations("aria");
-  const tShowRoom = useTranslations("showRoom");
   const locale = useLocale();
   const [mobileOpen, setMobileOpen] = useState(false);
 
-  const NAV_ITEMS: NavItem[] = [
-    { label: tNav("home"), href: `/${locale}#home` },
+  const navItems: NavItem[] = [
     { label: tNav("services"), href: `/${locale}#services` },
-    { label: tNav("pricing"), href: `/${locale}#pricing` },
     { label: tNav("projects"), href: `/${locale}#projects` },
+    { label: tNav("process"), href: `/${locale}#process` },
+    { label: tNav("pricing"), href: `/${locale}#pricing` },
     { label: tNav("about"), href: `/${locale}#about` },
-    { label: tNav("faq"), href: `/${locale}#faqs` },
-    { label: tNav("contact"), href: `/${locale}#contact` },
   ];
 
-  const MOBILE_NAV_ITEMS: NavItem[] = [
-    ...NAV_ITEMS,
-    // { label: tShowRoom("navButton"), href: `/${locale}/showroom` },
-  ];
-
-  const handleMobileToggle = () => {
-    setMobileOpen((prev) => !prev);
+  const cta: NavItem = {
+    label: tNav("cta"),
+    href: `/${locale}#contact`,
   };
 
   return (
@@ -56,18 +48,9 @@ export default function Header() {
           right: 0,
           zIndex: "appBar",
           height: HEADER_HEIGHT,
-          bgcolor:
-            theme.palette.mode === "dark"
-              ? "transparent"
-              : alpha(theme.palette.background.default, 0.85),
-          backgroundImage:
-            theme.palette.mode === "dark"
-              ? `linear-gradient(120deg, ${theme.palette.surface.gradientStart} 0%, ${theme.palette.surface.gradientMid} 45%, ${theme.palette.surface.gradientEnd} 100%)`
-              : "none",
-          borderBottom: "1px solid",
-          borderColor: theme.palette.divider,
-          backdropFilter: "blur(16px)",
-          boxShadow: "0 4px 16px rgba(0, 0, 0, 0.22)",
+          bgcolor: alpha(theme.palette.background.default, 0.85),
+          backdropFilter: "blur(14px)",
+          WebkitBackdropFilter: "blur(14px)",
         })}
       >
         <Container maxWidth="lg" sx={{ height: "100%" }}>
@@ -75,27 +58,63 @@ export default function Header() {
             direction="row"
             alignItems="center"
             justifyContent="space-between"
+            gap={2}
             sx={{ height: "100%" }}
           >
-            {/* Logo */}
             <LogoText />
 
-            {/* Desktop Navigation */}
-            <NavigationMenu items={NAV_ITEMS} />
+            <NavigationMenu items={navItems} />
 
-            {/* Right side: Language + Theme toggle + ShowRoom + Mobile hamburger */}
-            <Stack direction="row" alignItems="center" spacing={1}>
+            <Stack direction="row" alignItems="center" gap={{ xs: 0.5, md: 1.5 }}>
               <LanguageSwitcher />
-              <ThemeToggle />
-              {/* <ShowRoomButton label={tShowRoom("navButton")} /> */}
 
-              {/* Mobile hamburger */}
-              <IconButton
-                onClick={handleMobileToggle}
-                aria-label={tAria("openMenu")}
+              <Button
+                href={cta.href}
+                variant="contained"
+                color="primary"
+                size="small"
                 sx={{
-                  display: { xs: "flex", md: "none" },
+                  display: { xs: "none", md: "inline-flex" },
+                  py: "0.8rem",
+                  px: "1.3rem",
+                  fontSize: "0.92rem",
+                  "& .cta-arrow": { transition: "transform 0.2s ease" },
+                  "&:hover .cta-arrow": { transform: "translateX(4px)" },
+                  "&:focus-visible": {
+                    outline: "2px solid",
+                    outlineColor: "text.primary",
+                    outlineOffset: "2px",
+                  },
+                }}
+              >
+                {cta.label}
+                <Box
+                  component="span"
+                  className="cta-arrow"
+                  aria-hidden="true"
+                  sx={{ display: "inline-block", ml: "0.4rem" }}
+                >
+                  →
+                </Box>
+              </Button>
+
+              <IconButton
+                onClick={() => setMobileOpen(true)}
+                aria-label={tAria("openMenu")}
+                aria-expanded={mobileOpen}
+                aria-haspopup="dialog"
+                sx={{
+                  display: { xs: "flex", lg: "none" },
+                  width: 44,
+                  height: 44,
                   color: "text.primary",
+                  bgcolor: "background.paper",
+                  "&:hover": { bgcolor: "background.paper" },
+                  "&:focus-visible": {
+                    outline: "2px solid",
+                    outlineColor: "text.primary",
+                    outlineOffset: "2px",
+                  },
                 }}
               >
                 <MenuIcon />
@@ -105,11 +124,11 @@ export default function Header() {
         </Container>
       </Box>
 
-      {/* Mobile Drawer */}
       <MobileDrawer
         open={mobileOpen}
         onClose={() => setMobileOpen(false)}
-        items={MOBILE_NAV_ITEMS}
+        items={navItems}
+        cta={cta}
       />
     </>
   );

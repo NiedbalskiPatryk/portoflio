@@ -2,6 +2,7 @@
 
 import Stack from "@mui/material/Stack";
 import NavLink from "@/components/atoms/NavLink";
+import { useTranslations } from "next-intl";
 
 export interface NavItem {
   label: string;
@@ -13,17 +14,24 @@ interface NavigationMenuProps {
   activeHref?: string;
 }
 
+// Desktop nav: white pill containing pill links (visible from lg up).
 export default function NavigationMenu({
   items,
   activeHref,
 }: NavigationMenuProps) {
+  const tAria = useTranslations("aria");
+
   return (
     <Stack
       component="nav"
+      aria-label={tAria("mainNavigation")}
       direction="row"
-      spacing={4}
       sx={{
-        display: { xs: "none", md: "flex" },
+        display: { xs: "none", lg: "flex" },
+        gap: "0.25rem",
+        p: "0.3rem",
+        bgcolor: "background.paper",
+        borderRadius: "999px",
       }}
     >
       {items.map((item) => (

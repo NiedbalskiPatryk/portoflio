@@ -10,14 +10,16 @@
     "projects": "Realizacje",
     "faq": "Pytania",
     "contact": "Kontakt",
-    "pricing": "Cennik"
+    "pricing": "Cennik",
+    "process": "Jak pracuję",
+    "cta": "Porozmawiajmy"
   },
   "hero": {
     "location": "Warszawa, Polska",
     "greeting": "Cześć, jestem Patryk",
     "role": "Full-Stack Developer",
-    "description": "Projektuję i buduję strony, aplikacje webowe i systemy dla firm - od landing page'a po system rezerwacji czy panel administracyjny. Zajmuję się całością: frontendem, backendem i wdrożeniem.",
-    "primaryCTA": "Porozmawiajmy o projekcie",
+    "description": "Jestem Patryk, full-stack developer z Warszawy. Od landing page'a po system rezerwacji — projektuję, buduję i wdrażam całość.",
+    "primaryCTA": "Sprawdź, ile to kosztuje",
     "secondaryCTA": "Zobacz realizacje",
     "techLabel": "Technologie, z którymi pracuję",
     "snippets": {
@@ -25,7 +27,27 @@
       "leftMid": "const App = () => {\n  return <Layout />;\n};",
       "rightTop": "interface Props {\n  name: string;\n  role: string;\n}",
       "rightMid": ".container {\n  display: flex;\n  align-items: center;\n}"
-    }
+    },
+    "badge": "Przyjmuję nowe projekty",
+    "title": "Strony i systemy, które pracują na Twoją firmę",
+    "window": {
+      "ariaLabel": "Animacja: strona internetowa powstaje krok po kroku",
+      "url": "twojafirma.pl",
+      "titleLine1": "Twoja firma,",
+      "titleLine2": "online.",
+      "menu": "Usługi · Cennik · Kontakt",
+      "button": "Umów się",
+      "online": "Online"
+    },
+    "steps": {
+      "skeleton": "Szkielet",
+      "content": "Treść",
+      "design": "Projekt",
+      "online": "Online"
+    },
+    "titleBefore": "Strony i systemy, które ",
+    "titleUnderline": "pracują",
+    "titleAfter": " na Twoją firmę"
   },
   "about": {
     "heading": "O mnie",
@@ -39,33 +61,36 @@
       "paragraph3": "Kiedy nie koduję, znajdziesz mnie spędzającego czas z rodziną, podróżującego, czytającego książki lub grającego w piłkę."
     },
     "cta": "Porozmawiajmy",
-    "linkedinCTA": "LinkedIn"
+    "linkedinCTA": "LinkedIn",
+    "openBadge": "Otwarty na B2B i etat",
+    "rolesLabel": "Role",
+    "stackLabel": "Technologie"
   },
   "services": {
     "heading": "Czym mogę Ci pomóc",
     "description": "Nowa strona, system na zamówienie albo poprawa tego, co już działa - zajmę się całością, od pomysłu do wdrożenia.",
     "items": {
       "frontend": {
-        "title": "Strony i aplikacje webowe",
-        "description": "Strony firmowe, landing page'e i aplikacje, które szybko się ładują, dobrze działają na telefonie i prowadzą użytkownika do kontaktu albo zakupu. Od interfejsu po wdrożenie i podpięcie analityki."
+        "title": "Strony i aplikacje",
+        "description": "Szybkie, dobrze działają na telefonie i prowadzą klienta do kontaktu."
       },
       "backend": {
-        "title": "Systemy i panele dla firm",
-        "description": "Systemy rezerwacji, panele administracyjne, integracje z płatnościami i zewnętrznymi API. Projektuję bazę danych i logikę tak, żeby system rósł razem z Twoją firmą i bezpiecznie przechowywał dane."
+        "title": "Systemy i panele",
+        "description": "Rezerwacje, panele administracyjne, integracje z płatnościami."
       },
       "automation": {
         "title": "Automatyzacja",
-        "description": "Ręczne przepisywanie danych, wysyłanie tych samych maili, raporty sklejane w Excelu? Buduję narzędzia i skrypty, które robią to za Ciebie i oszczędzają czas Twojego zespołu."
+        "description": "Narzędzia, które robią powtarzalną pracę za Twój zespół."
       },
       "performance": {
-        "title": "Szybkość i widoczność w Google",
-        "description": "Przyspieszam istniejące strony i aplikacje, poprawiam Core Web Vitals, konfiguruję SEO techniczne i analitykę - żeby strona była łatwiej znajdowana i nie traciła klientów przez wolne ładowanie."
+        "title": "Szybkość i Google",
+        "description": "Przyspieszam strony i poprawiam ich widoczność w wyszukiwarce."
       }
     }
   },
   "projects": {
-    "heading": "Wybrane realizacje",
-    "description": "Projekty, przy których pracowałem - od platform dla dużych organizacji po marketplace i strony firmowe.",
+    "heading": "Nie obiecuję.",
+    "description": "Kliknij projekt, żeby zobaczyć, co to było i za co odpowiadałem.",
     "visitSite": "Odwiedź stronę",
     "links": {
       "website": "Strona",
@@ -76,25 +101,36 @@
       "parkiza": {
         "name": "Parkiza",
         "summary": "Kompletny system rezerwacji parkingowych obsługujący tysiące rezerwacji. Zbudowany z nowoczesnym stackiem włączając NestJS i React, usprawnił operacje całej organizacji.",
-        "role": "Project Leader / Backend Developer"
+        "role": "Project Leader / Backend Developer",
+        "kind": "System rezerwacji parkingów"
       },
       "signalos": {
         "name": "SignalOS",
         "summary": "Zintegrowana platforma zarządzania budynkami, która łączy wiele systemów w jednym miejscu. To rozwiązanie enterprise pomaga facility managerom pracować mądrzej.",
-        "role": "Full-Stack Developer"
+        "role": "Full-Stack Developer",
+        "kind": "Platforma dla budynków"
       },
       "areoactive": {
         "name": "Areoactive",
         "summary": "Strona startowa nowego projektu - szybka, responsywna i przygotowana pod dalszą rozbudowę produktu.",
-        "role": "Projekt freelance"
+        "role": "Projekt freelance",
+        "kind": "Strona startowa"
       },
       "skinscartel": {
         "name": "SkinsCartel",
         "summary": "W pełni funkcjonalny marketplace do handlu skinami CS:GO. Zbudowany z naciskiem na wydajność i doświadczenie użytkownika — obsługuje zarządzanie ekwipunkiem w czasie rzeczywistym, bezpieczne transakcje i dopracowany interfejs e-commerce.",
-        "role": "Tech Lead"
+        "role": "Tech Lead",
+        "kind": "Marketplace"
       }
     },
-    "roleLabel": "Moja rola"
+    "roleLabel": "Moja rola",
+    "headingAccent": "Pokazuję.",
+    "selected": "Wybrany projekt: {name}",
+    "stackLabel": "Technologie",
+    "galleryLabel": "Podgląd projektu {name}",
+    "mediaItemLabel": "{type} {index} z {total}",
+    "mediaVideo": "Wideo",
+    "mediaImage": "Zrzut ekranu"
   },
   "faq": {
     "heading": "Pytania? Mam odpowiedzi",
@@ -157,13 +193,16 @@
       "address": "Adres",
       "addressValue": "Warszawa, Polska",
       "linkedin": "LinkedIn"
-    }
+    },
+    "badge": "Odpowiadam osobiście"
   },
   "aria": {
     "openMenu": "Otwórz menu",
     "closeMenu": "Zamknij menu",
     "switchToLightMode": "Przełącz na jasny motyw",
-    "switchToDarkMode": "Przełącz na ciemny motyw"
+    "switchToDarkMode": "Przełącz na ciemny motyw",
+    "mainNavigation": "Główna nawigacja",
+    "language": "Język"
   },
   "footer": {
     "description": "Strony, aplikacje i systemy dla firm. Otwarty na współpracę B2B i etat.",
@@ -171,7 +210,8 @@
     "navHeading": "Nawigacja",
     "copyright": "Wszelkie prawa zastrzeżone.",
     "privacyLink": "Polityka prywatności",
-    "cookieSettings": "Ustawienia cookies"
+    "cookieSettings": "Ustawienia cookies",
+    "taxId": "NIP {value}"
   },
   "showRoom": {
     "navButton": "Showroom",
@@ -1113,27 +1153,94 @@
       }
     }
   },
-  "pricing": {
-    "heading": "Cennik",
-    "description": "Orientacyjne ceny. Dokładną wycenę przygotuję po krótkiej rozmowie o zakresie projektu.",
-    "cta": "Zapytaj o wycenę",
-    "plans": {
-      "landing": {
-        "title": "Landing page",
-        "price": "od 2 000 zł",
-        "description": "Prosta, jednostronicowa strona, która przedstawia Twoją ofertę i zbiera zapytania od klientów."
+  "process": {
+    "heading": "Od pomysłu do działającej strony w 4 krokach",
+    "description": "Wiesz, co się dzieje na każdym etapie i ile to kosztuje.",
+    "steps": {
+      "talk": {
+        "title": "Rozmowa",
+        "text": "Opowiadasz, czego potrzebujesz. Dopytuję o cele, termin i budżet."
       },
-      "cms": {
-        "title": "Strona + panel do zarządzania",
+      "quote": {
+        "title": "Wycena",
+        "text": "Dostajesz wycenę z podziałem na etapy. Wiesz, za co płacisz i kiedy."
+      },
+      "build": {
+        "title": "Projekt i budowa",
+        "text": "Projektuję i programuję. Pokazuję postępy, żebyś mógł reagować na bieżąco."
+      },
+      "launch": {
+        "title": "Start",
+        "text": "Wdrażam stronę na Twojej domenie i sprawdzam, czy wszystko działa."
+      }
+    }
+  },
+  "mobileCta": {
+    "label": "Szybki kontakt",
+    "text": "Masz projekt?",
+    "button": "Napisz do mnie"
+  },
+  "estimate": {
+    "heading": "Czego potrzebujesz?",
+    "description": "Wybierz rodzaj projektu i dodatki — przygotuję dla Ciebie wiadomość do wysłania.",
+    "typeLegend": "Rodzaj projektu",
+    "extrasLegend": "Co jeszcze?",
+    "types": {
+      "landing": {
+        "label": "Landing page",
+        "price": "od 2 000 zł",
+        "summaryPrice": "od 2 000 zł",
+        "description": "Jedna strona, która przedstawia ofertę i zbiera zapytania."
+      },
+      "panel": {
+        "label": "Strona + panel",
         "price": "od 3 500 zł",
-        "description": "Strona z wieloma podstronami i panelem, w którym samodzielnie zarządzasz treściami, oraz z potrzebnymi integracjami."
+        "summaryPrice": "od 3 500 zł",
+        "description": "Wiele podstron i panel, w którym sam zarządzasz treściami."
       },
       "custom": {
-        "title": "System na miarę",
-        "price": "Wycena indywidualna",
-        "description": "Systemy rezerwacji, panele administracyjne, automatyzacje i integracje. Zakres i koszt ustalamy po analizie Twoich potrzeb."
+        "label": "System na miarę",
+        "price": "wycena",
+        "summaryPrice": "wycena indywidualna",
+        "description": "Rezerwacje, panele, automatyzacje, integracje."
       }
     },
-    "note": "Podane ceny są kwotami netto."
+    "extras": {
+      "form": "Formularz kontaktowy",
+      "cms": "Samodzielna edycja treści",
+      "pay": "Płatności online",
+      "en": "Wersja angielska",
+      "auto": "Automatyzacja (maile, raporty)"
+    },
+    "note": "Podane ceny są kwotami netto. Dokładną wycenę przygotuję po krótkiej rozmowie.",
+    "summary": {
+      "eyebrow": "Twój wybór",
+      "cta": "Wyślij to zapytanie",
+      "prefilled": "Gotowe - wiadomość czeka w formularzu poniżej. Dopisz imię i e-mail."
+    },
+    "message": {
+      "greeting": "Dzień dobry,",
+      "interest": "interesuje mnie: {type}.",
+      "extras": "Potrzebuję też: {extras}.",
+      "closing": "Proszę o wycenę."
+    },
+    "subject": "Wycena: {type}"
+  },
+  "sectionTabs": {
+    "hero": "itpapi.pl / przyjmuję nowe projekty",
+    "services": "01 · usługi",
+    "projects": "02 · realizacje",
+    "process": "03 · jak pracuję",
+    "pricing": "04 · cennik",
+    "about": "05 · o mnie",
+    "faq": "06 · pytania",
+    "contact": "07 · kontakt"
+  },
+  "notes": {
+    "heroStart": "zacznij tutaj",
+    "heroWindow": "tak powstaje Twoja strona",
+    "projectsLed": "tu prowadziłem projekt",
+    "processJargon": "bez żargonu",
+    "estimateClick": "kliknij, policzymy razem"
   }
 }

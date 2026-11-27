@@ -5,8 +5,7 @@ body {
   max-width: 100vw;
   overflow-x: hidden;
   min-height: 100vh;
-  /* Prevent flash - JS will set actual color */
-  background-color: var(--initial-bg, #0a0a0a);
+  background-color: #f6f6f4;
 }
 
 /* Auto scrollbar */
@@ -19,30 +18,13 @@ html {
   scroll-behavior: smooth;
 }
 
-/* Anchor scroll offset for fixed header */
-html {
-  scroll-padding-top: 80px;
+/* Anchor scroll offset for the fixed header (72px) */
+section[id] {
+  scroll-margin-top: 88px;
 }
 
-/* Disable transitions initially to prevent flash */
-html:not(.transitions-enabled) *,
-html:not(.transitions-enabled) *::before,
-html:not(.transitions-enabled) *::after {
-  transition: none !important;
-}
-
-/* Smooth theme transitions (enabled after hydration) */
-html.transitions-enabled body {
-  transition: background-color 0.3s ease, color 0.2s ease;
-}
-
-/* Faster transitions for interactive elements */
-.MuiChip-root,
-.MuiButton-root {
-  transition: background-color 0.15s ease, border-color 0.15s ease, color 0.15s ease, transform 0.15s ease !important;
-}
-
-/* Preserve marquee animation - only transition colors */
-[style*="translateX"] {
-  transition: color 0.2s ease !important;
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
 }

@@ -72,7 +72,6 @@ export default async function CalculatorPage() {
         currentProjectId="calculator"
         comingSoonLabel={t("comingSoon")}
         browseProjectsLabel={t("browseProjects")}
-        showThemeToggle={false}
         backHref={`/${locale}/showroom`}
         backLabel={t("backToShowroom")}
       >

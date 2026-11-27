@@ -10,14 +10,16 @@
     "projects": "Projects",
     "faq": "FAQ",
     "contact": "Contact",
-    "pricing": "Pricing"
+    "pricing": "Pricing",
+    "process": "How I work",
+    "cta": "Let's talk"
   },
   "hero": {
     "location": "Warsaw, Poland",
     "greeting": "Hi, I'm Patryk",
     "role": "Full-Stack Developer",
-    "description": "I design and build websites, web applications and business systems - from a landing page to a booking platform or an admin panel. I take care of the whole thing: frontend, backend and deployment.",
-    "primaryCTA": "Let's talk about your project",
+    "description": "I'm Patryk, a full-stack developer from Warsaw. From a landing page to a booking system — I design, build and launch the whole thing.",
+    "primaryCTA": "See what it costs",
     "secondaryCTA": "See my work",
     "techLabel": "Technologies I work with",
     "snippets": {
@@ -25,7 +27,27 @@
       "leftMid": "const App = () => {\n  return <Layout />;\n};",
       "rightTop": "interface Props {\n  name: string;\n  role: string;\n}",
       "rightMid": ".container {\n  display: flex;\n  align-items: center;\n}"
-    }
+    },
+    "badge": "Open to new projects",
+    "title": "Websites and systems that work for your business",
+    "window": {
+      "ariaLabel": "Animation: a website being built step by step",
+      "url": "yourcompany.com",
+      "titleLine1": "Your business,",
+      "titleLine2": "online.",
+      "menu": "Services · Pricing · Contact",
+      "button": "Book a call",
+      "online": "Online"
+    },
+    "steps": {
+      "skeleton": "Skeleton",
+      "content": "Content",
+      "design": "Design",
+      "online": "Online"
+    },
+    "titleBefore": "Websites and systems that ",
+    "titleUnderline": "work",
+    "titleAfter": " for your business"
   },
   "about": {
     "heading": "About",
@@ -39,33 +61,36 @@
       "paragraph3": "When I'm not coding, you'll find me spending time with family, traveling, reading books, or playing football."
     },
     "cta": "Let's talk",
-    "linkedinCTA": "LinkedIn"
+    "linkedinCTA": "LinkedIn",
+    "openBadge": "Open to B2B and full-time",
+    "rolesLabel": "Roles",
+    "stackLabel": "Technologies"
   },
   "services": {
     "heading": "How I can help",
     "description": "A new website, a custom system, or improving what you already have - I handle the whole thing, from idea to launch.",
     "items": {
       "frontend": {
-        "title": "Websites & web apps",
-        "description": "Company websites, landing pages and web apps that load fast, work well on mobile and guide visitors towards getting in touch or buying. From the interface to deployment and analytics setup."
+        "title": "Websites and apps",
+        "description": "Fast, great on mobile, and built to turn visitors into enquiries."
       },
       "backend": {
-        "title": "Business systems & admin panels",
-        "description": "Booking systems, admin panels, payment and third-party API integrations. I design the database and business logic so the system grows with your company and keeps your data safe."
+        "title": "Systems and dashboards",
+        "description": "Booking systems, admin panels, payment integrations."
       },
       "automation": {
         "title": "Automation",
-        "description": "Copying data by hand, sending the same emails, stitching reports together in Excel? I build tools and scripts that do it for you and give your team their time back."
+        "description": "Tools that handle the repetitive work for your team."
       },
       "performance": {
-        "title": "Speed & search visibility",
-        "description": "I speed up existing websites and apps, improve Core Web Vitals, and set up technical SEO and analytics - so your site is easier to find and doesn't lose customers to slow loading."
+        "title": "Speed and Google",
+        "description": "I speed up websites and improve how they rank in search."
       }
     }
   },
   "projects": {
-    "heading": "Selected work",
-    "description": "Projects I've worked on - from platforms for large organisations to a marketplace and company websites.",
+    "heading": "I don't promise.",
+    "description": "Click a project to see what it was and what I was responsible for.",
     "visitSite": "Visit site",
     "links": {
       "website": "Website",
@@ -76,25 +101,36 @@
       "parkiza": {
         "name": "Parkiza",
         "summary": "A complete parking reservation system that handles thousands of bookings. Built with a modern stack including NestJS and React, it streamlined operations for the entire organization.",
-        "role": "Project Leader / Backend Developer"
+        "role": "Project Leader / Backend Developer",
+        "kind": "Parking reservation system"
       },
       "signalos": {
         "name": "SignalOS",
         "summary": "An integrated building management platform that brings multiple systems under one roof. This enterprise solution helps facility managers work smarter, not harder.",
-        "role": "Full-Stack Developer"
+        "role": "Full-Stack Developer",
+        "kind": "Building management platform"
       },
       "areoactive": {
         "name": "Areoactive",
         "summary": "A launch website for a new venture - fast, responsive and built to grow together with the product.",
-        "role": "Freelance project"
+        "role": "Freelance project",
+        "kind": "Launch website"
       },
       "skinscartel": {
         "name": "SkinsCartel",
         "summary": "A fully-featured CS:GO skin trading marketplace. Built with a focus on performance and user experience, it handles real-time inventory management, secure transactions, and a sleek e-commerce interface.",
-        "role": "Tech Lead"
+        "role": "Tech Lead",
+        "kind": "Marketplace"
       }
     },
-    "roleLabel": "My role"
+    "roleLabel": "My role",
+    "headingAccent": "I show.",
+    "selected": "Selected project: {name}",
+    "stackLabel": "Technologies",
+    "galleryLabel": "{name} previews",
+    "mediaItemLabel": "{type} {index} of {total}",
+    "mediaVideo": "Video",
+    "mediaImage": "Screenshot"
   },
   "faq": {
     "heading": "Questions? I've got answers",
@@ -157,13 +193,16 @@
       "address": "Address",
       "addressValue": "Warsaw, Poland",
       "linkedin": "LinkedIn"
-    }
+    },
+    "badge": "I reply personally"
   },
   "aria": {
     "openMenu": "Open menu",
     "closeMenu": "Close menu",
     "switchToLightMode": "Switch to light mode",
-    "switchToDarkMode": "Switch to dark mode"
+    "switchToDarkMode": "Switch to dark mode",
+    "mainNavigation": "Main navigation",
+    "language": "Language"
   },
   "footer": {
     "description": "Websites, web apps and business systems. Open to B2B contracts and full-time roles.",
@@ -171,7 +210,8 @@
     "navHeading": "Navigation",
     "copyright": "All rights reserved.",
     "privacyLink": "Privacy policy",
-    "cookieSettings": "Cookie settings"
+    "cookieSettings": "Cookie settings",
+    "taxId": "Tax ID (NIP) {value}"
   },
   "showRoom": {
     "navButton": "Showroom",
@@ -1091,27 +1131,94 @@
       }
     }
   },
-  "pricing": {
-    "heading": "Pricing",
-    "description": "Indicative prices. I'll prepare an exact quote after a short call about your project's scope.",
-    "cta": "Ask for a quote",
-    "plans": {
-      "landing": {
-        "title": "Landing page",
-        "price": "from 2,000 PLN",
-        "description": "A simple one-page website that presents your offer and collects enquiries from customers."
+  "process": {
+    "heading": "From idea to a live website in 4 steps",
+    "description": "You know what is happening at every stage and what it costs.",
+    "steps": {
+      "talk": {
+        "title": "Conversation",
+        "text": "You tell me what you need. I ask about goals, timing and budget."
       },
-      "cms": {
-        "title": "Website + management panel",
+      "quote": {
+        "title": "Quote",
+        "text": "You get a quote broken down by stage. You know what you pay for and when."
+      },
+      "build": {
+        "title": "Design and build",
+        "text": "I design and code. I show progress along the way so you can react early."
+      },
+      "launch": {
+        "title": "Launch",
+        "text": "I deploy the site to your domain and check that everything works."
+      }
+    }
+  },
+  "mobileCta": {
+    "label": "Quick contact",
+    "text": "Got a project?",
+    "button": "Message me"
+  },
+  "estimate": {
+    "heading": "What do you need?",
+    "description": "Pick a project type and extras — I'll prepare a message for you to send.",
+    "typeLegend": "Project type",
+    "extrasLegend": "Anything else?",
+    "types": {
+      "landing": {
+        "label": "Landing page",
+        "price": "from 2,000 PLN",
+        "summaryPrice": "from 2,000 PLN",
+        "description": "One page that presents your offer and collects enquiries."
+      },
+      "panel": {
+        "label": "Website + panel",
         "price": "from 3,500 PLN",
-        "description": "A multi-page website with a panel where you manage the content yourself, plus the integrations you need."
+        "summaryPrice": "from 3,500 PLN",
+        "description": "Several pages and a panel where you manage the content yourself."
       },
       "custom": {
-        "title": "Custom system",
-        "price": "Custom quote",
-        "description": "Booking systems, admin panels, automations and integrations. Scope and cost are agreed after analysing your needs."
+        "label": "Custom system",
+        "price": "quote",
+        "summaryPrice": "custom quote",
+        "description": "Bookings, panels, automations, integrations."
       }
     },
-    "note": "All prices are net (excl. VAT)."
+    "extras": {
+      "form": "Contact form",
+      "cms": "Edit content yourself",
+      "pay": "Online payments",
+      "en": "Additional language version",
+      "auto": "Automation (emails, reports)"
+    },
+    "note": "All prices are net (excl. VAT). I'll prepare an exact quote after a short call.",
+    "summary": {
+      "eyebrow": "Your choice",
+      "cta": "Send this enquiry",
+      "prefilled": "Done - your message is waiting in the form below. Just add your name and email."
+    },
+    "message": {
+      "greeting": "Hello,",
+      "interest": "I'm interested in: {type}.",
+      "extras": "I also need: {extras}.",
+      "closing": "Please send me a quote."
+    },
+    "subject": "Quote: {type}"
+  },
+  "sectionTabs": {
+    "hero": "itpapi.pl / taking on new projects",
+    "services": "01 · services",
+    "projects": "02 · work",
+    "process": "03 · how I work",
+    "pricing": "04 · pricing",
+    "about": "05 · about",
+    "faq": "06 · faq",
+    "contact": "07 · contact"
+  },
+  "notes": {
+    "heroStart": "start here",
+    "heroWindow": "this is how your site comes together",
+    "projectsLed": "I led this one",
+    "processJargon": "no jargon",
+    "estimateClick": "click and we'll price it together"
   }
 }

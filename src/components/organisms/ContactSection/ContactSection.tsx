@@ -3,7 +3,10 @@
 import React from "react";
 import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
-import SectionHeader from "@/components/molecules/SectionHeader";
+import Typography from "@mui/material/Typography";
+import Image from "next/image";
+import { useTranslations } from "next-intl";
+import { SectionTab } from "@/components/atoms";
 import ContactForm from "@/components/organisms/ContactForm";
 import ContactInfo from "@/components/organisms/ContactInfo";
 import type {
@@ -21,6 +24,8 @@ export interface ContactSectionProps {
   isDisabled?: boolean;
   formAction?: string;
   formMethod?: "POST" | "GET";
+  photoSrc?: string;
+  photoAlt?: string;
 }
 
 const ContactSection: React.FC<ContactSectionProps> = ({
@@ -33,46 +38,110 @@ const ContactSection: React.FC<ContactSectionProps> = ({
   isDisabled,
   formAction,
   formMethod,
+  photoSrc = "/foto.jpeg",
+  photoAlt,
 }) => {
+  const t = useTranslations("contact");
+  const tAbout = useTranslations("about");
+  const tTabs = useTranslations("sectionTabs");
+
   return (
     <Box
       component="section"
       id="contact"
-      sx={{
-        py: { xs: 4, md: 6 },
-        px: { xs: 2, md: 4 },
-      }}
+      aria-labelledby="contact-heading"
     >
-      <Container maxWidth="lg">
-        <Box sx={{ mb: { xs: 4, md: 6 } }}>
-          <SectionHeader heading={heading} description={subheading} />
+      <Container
+        maxWidth={false}
+        disableGutters
+        sx={{
+          maxWidth: "75rem",
+          px: "1.5rem",
+          pt: "1rem",
+          pb: { xs: "4rem", md: "5rem" },
+          display: "grid",
+          gridTemplateColumns: {
+            xs: "minmax(0, 1fr)",
+            md: "minmax(0, 22fr) minmax(0, 30fr)",
+          },
+          gap: { xs: "2rem", md: "2.5rem" },
+          alignItems: "stretch",
+        }}
+      >
+        <Box
+          component="figure"
+          sx={{
+            m: 0,
+            position: "relative",
+            minHeight: { xs: "22rem", md: "36rem" },
+            borderRadius: "2rem",
+            overflow: "hidden",
+            bgcolor: "#e7e7e3",
+          }}
+        >
+          <Image
+            src={photoSrc}
+            alt={photoAlt ?? tAbout("profileImageAlt")}
+            fill
+            sizes="(max-width: 900px) 100vw, 40vw"
+            style={{ objectFit: "cover", objectPosition: "50% 18%" }}
+          />
+          <Box
+            component="figcaption"
+            sx={{
+              position: "absolute",
+              left: "1.25rem",
+              bottom: "1.25rem",
+              display: "flex",
+              alignItems: "center",
+              gap: "0.5rem",
+              bgcolor: "background.paper",
+              px: "1rem",
+              py: "0.6rem",
+              borderRadius: "999px",
+              fontSize: "0.9rem",
+              fontWeight: 600,
+            }}
+          >
+            <Box
+              component="span"
+              aria-hidden="true"
+              sx={{
+                width: "0.55rem",
+                height: "0.55rem",
+                borderRadius: "999px",
+                bgcolor: "secondary.main",
+              }}
+            />
+            {t("badge")}
+          </Box>
         </Box>
 
         <Box
           sx={{
+            minWidth: 0,
             display: "flex",
-            flexDirection: { xs: "column", md: "row" },
-            gap: { xs: 4, md: 6 },
-            alignItems: "stretch",
+            flexDirection: "column",
+            gap: "1.5rem",
+            justifyContent: "center",
           }}
         >
-          <Box
-            sx={{
-              flex: { xs: "1 1 auto", md: "0 1 38%" },
-              order: { xs: 2, md: 1 },
-              minWidth: 0,
-            }}
+          <SectionTab label={tTabs("contact")} />
+          <Typography
+            id="contact-heading"
+            variant="h2"
+            component="h2"
+            sx={{ m: 0, fontSize: { xs: "2.25rem", md: "3rem" }, lineHeight: 1.05 }}
           >
-            <ContactInfo items={infoItems} />
-          </Box>
-
-          <Box
-            sx={{
-              flex: { xs: "1 1 auto", md: "1 1 0" },
-              order: { xs: 1, md: 2 },
-              minWidth: 0,
-            }}
-          >
+            {heading}
+          </Typography>
+          {subheading && (
+            <Typography
+              sx={{ m: 0, fontSize: "1.1rem", lineHeight: 1.7, color: "text.secondary" }}
+            >
+              {subheading}
+            </Typography>
+          )}
           <ContactForm
             fields={fields}
             submitLabel={submitLabel}
@@ -81,7 +150,7 @@ const ContactSection: React.FC<ContactSectionProps> = ({
             formAction={formAction}
             formMethod={formMethod}
           />
-          </Box>
+          <ContactInfo items={infoItems} />
         </Box>
       </Container>
     </Box>

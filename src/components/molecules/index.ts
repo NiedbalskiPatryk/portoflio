@@ -1,17 +1,8 @@
 export { default as NavigationMenu } from "./NavigationMenu";
 export type { NavItem } from "./NavigationMenu";
 export { default as MobileDrawer } from "./MobileDrawer";
-export { default as LocationBadge } from "./LocationBadge";
-export { default as CTAGroup } from "./CTAGroup";
-export { default as TechStackMarquee } from "./TechStackMarquee";
 export { default as ServiceCard } from "./ServiceCard";
 export type { ServiceCardProps } from "./ServiceCard";
-export { default as ProjectListItem } from "./ProjectListItem";
-export type { ProjectListItemProps } from "./ProjectListItem";
-export { default as SectionHeader } from "./SectionHeader";
-export type { SectionHeaderProps } from "./SectionHeader";
-export { default as ProfileMedia } from "./ProfileMedia";
-export type { ProfileMediaProps } from "./ProfileMedia";
 export { default as AboutHeader } from "./AboutHeader";
 export type { AboutHeaderProps } from "./AboutHeader";
 export { default as AboutBio } from "./AboutBio";
