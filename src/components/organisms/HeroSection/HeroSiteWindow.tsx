@@ -255,11 +255,11 @@ export default function HeroSiteWindow() {
                   }}
                 >
                   <Image
-                    src="/areoactive-1.webp"
+                    src="/parkiza.webp"
                     alt=""
                     fill
                     sizes="(min-width: 1200px) 200px, (min-width: 600px) 30vw, 40vw"
-                    style={{ objectFit: "cover" }}
+                    style={{ objectFit: "cover", objectPosition: "center" }}
                   />
                 </Box>
               </Box>
