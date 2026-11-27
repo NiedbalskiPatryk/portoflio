@@ -17,26 +17,38 @@ const ContactInfoItem: React.FC<ContactInfoItemProps> = ({ label, value, href })
       sx={{
         display: "flex",
         flexDirection: "column",
-        gap: 0.5,
+        gap: "0.25rem",
       }}
     >
       <Typography
-        variant="overline"
+        component="span"
         color="text.secondary"
-        sx={{ letterSpacing: "0.08em" }}
+        sx={{
+          fontSize: "0.78rem",
+          lineHeight: 1.4,
+          textTransform: "uppercase",
+          letterSpacing: "0.08em",
+        }}
       >
         {label}
       </Typography>
       <Typography
-        variant="body1"
+        component="span"
         color="text.primary"
-        sx={{ wordBreak: "break-word" }}
+        sx={{ fontWeight: 600, overflowWrap: "anywhere" }}
       >
         {href ? (
           <Link
             href={href}
             color="inherit"
             underline="hover"
+            sx={{
+              "&:focus-visible": {
+                outline: "2px solid #111111",
+                outlineOffset: "2px",
+                borderRadius: "4px",
+              },
+            }}
             {...(href.startsWith("http")
               ? { target: "_blank", rel: "noopener noreferrer" }
               : {})}

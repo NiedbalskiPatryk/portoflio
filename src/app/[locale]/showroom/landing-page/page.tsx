@@ -74,7 +74,6 @@ export default async function LandingPageDemo() {
         currentProjectId="landing-page"
         comingSoonLabel={t("comingSoon")}
         browseProjectsLabel={t("browseProjects")}
-        showThemeToggle={false}
         backHref={`/${locale}/showroom`}
         backLabel={t("backToShowroom")}
       >

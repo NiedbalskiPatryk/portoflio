@@ -1,232 +1,148 @@
 "use client";
 
-import {
-  CTAGroup,
-  ProfileMedia,
-  TechStackMarquee,
-} from "@/components/molecules";
+import { HEADER_HEIGHT } from "@/components/organisms/Header";
 import Box from "@mui/material/Box";
+import Button from "@mui/material/Button";
 import Container from "@mui/material/Container";
-import Stack from "@mui/material/Stack";
-import { alpha, useTheme } from "@mui/material/styles";
 import Typography from "@mui/material/Typography";
+import { useTranslations } from "next-intl";
+import HeroSiteWindow from "./HeroSiteWindow";
 
-interface HeroSectionProps {
-  location: string;
-  name: string;
-  role: string;
-  description: string;
-  profileImage: {
-    src?: string;
-    alt: string;
-  };
-  techLabel: string;
-  primaryCTA: {
-    label: string;
-    onClick?: () => void;
-    href?: string;
-    color?: "default" | "light";
-  };
-  secondaryCTA?: {
-    label: string;
-    onClick?: () => void;
-    href?: string;
-    color?: "default" | "light";
-  };
-  technologies: string[];
-  snippets: {
-    leftTop: string;
-    leftMid: string;
-    rightTop: string;
-    rightMid: string;
-  };
-}
+const focusRing = {
+  "&:focus-visible": {
+    outline: "2px solid",
+    outlineColor: "text.primary",
+    outlineOffset: "2px",
+  },
+};
 
-export default function HeroSection({
-  location,
-  name,
-  role,
-  description,
-  profileImage,
-  techLabel,
-  primaryCTA,
-  secondaryCTA,
-  technologies,
-  snippets,
-}: HeroSectionProps) {
-  const theme = useTheme();
-  const { gradientStart, gradientMid, gradientEnd, border, overlay } =
-    theme.palette.surface;
-  const isLight = theme.palette.mode === "light";
-  const frameBorder = isLight
-    ? alpha(theme.palette.text.primary, 0.18)
-    : border;
+export default function HeroSection() {
+  const t = useTranslations("hero");
 
   return (
     <Box
       id="home"
       component="section"
       sx={{
-        minHeight: { xs: "72vh", sm: "85vh", md: "auto" },
-        display: "flex",
-        alignItems: "center",
-        pt: { xs: 12, sm: 14, md: 16, lg: 12, xl: 26 },
-        pb: { xs: 6, md: 6 },
-        px: { xs: 2, sm: 3, md: 0 },
-        position: "relative",
-        overflow: "hidden",
+        scrollMarginTop: `${HEADER_HEIGHT}px`,
+        pt: {
+          xs: `calc(${HEADER_HEIGHT}px + 1.5rem)`,
+          md: `calc(${HEADER_HEIGHT}px + 3rem)`,
+        },
+        pb: { xs: "4rem", md: "6rem" },
       }}
     >
-      <Container maxWidth="lg" sx={{ position: "relative", zIndex: 1 }}>
+      <Container
+        maxWidth="lg"
+        sx={{
+          display: "flex",
+          flexWrap: "wrap",
+          alignItems: "center",
+          gap: { xs: "2.5rem", md: "3.5rem" },
+        }}
+      >
         <Box
           sx={{
-            position: "relative",
-            border: "1px solid transparent",
-            maxWidth: "100%",
-            background: isLight
-              ? theme.palette.background.paper
-              : `linear-gradient(120deg, ${gradientStart} 0%, ${gradientMid} 45%, ${gradientEnd} 100%)`,
-            boxShadow: isLight
-              ? `0 30px 80px rgba(0, 0, 0, 0.08), inset 0 0 0 1px ${frameBorder}`
-              : `inset 0 0 0 1px ${frameBorder}`,
-            overflow: "hidden",
-            p: { xs: 3, sm: 4, md: 6 },
+            flex: "999 1 32rem",
+            minWidth: 0,
+            display: "flex",
+            flexDirection: "column",
+            gap: { xs: "1.4rem", md: "1.75rem" },
           }}
         >
           <Box
+            component="span"
             sx={{
-              position: "absolute",
-              inset: 0,
-              background: isLight
-                ? `radial-gradient(circle at 12% 18%, ${alpha(
-                    theme.palette.text.primary,
-                    0.06,
-                  )} 0%, transparent 45%), radial-gradient(circle at 85% 30%, ${alpha(
-                    theme.palette.text.primary,
-                    0.04,
-                  )} 0%, transparent 40%)`
-                : `radial-gradient(circle at 12% 18%, ${overlay} 0%, transparent 45%), radial-gradient(circle at 85% 30%, ${gradientMid} 0%, transparent 40%)`,
-              pointerEvents: "none",
-            }}
-          />
-          <Box
-            sx={{
-              display: "grid",
-              gridTemplateColumns: {
-                xs: "1fr",
-                md: "minmax(0, 7fr) minmax(0, 5fr)",
-              },
-              gap: { xs: 4, md: 6 },
+              display: "inline-flex",
               alignItems: "center",
-              position: "relative",
+              gap: "0.5rem",
+              alignSelf: "flex-start",
+              px: "0.85rem",
+              py: "0.4rem",
+              bgcolor: "background.paper",
+              borderRadius: "999px",
+              fontSize: "0.85rem",
+              fontWeight: 500,
             }}
           >
-            <Stack spacing={{ xs: 3, md: 4 }} sx={{ minWidth: 0, maxWidth: "100%" }}>
-              <Stack
-                spacing={{ xs: 3, md: 4 }}
-                alignItems={{ xs: "flex-start", md: "flex-start" }}
-                textAlign="left"
-                sx={{ minWidth: 0 }}
-              >
-                {/* Location badge */}
-                {/* <LocationBadge location={location} /> */}
-
-                {/* Heading */}
-                <Box>
-                  <Typography
-                    variant="h1"
-                    component="h1"
-                    color="text.primary"
-                    sx={{
-                      fontSize: { xs: "1.5rem", sm: "2.6rem", md: "3.6rem" },
-                      mb: 1,
-                      wordBreak: "break-word",
-                    }}
-                  >
-                    {name}
-                  </Typography>
-                  <Typography
-                    variant="h2"
-                    component="h2"
-                    color="text.secondary"
-                    sx={{
-                      fontSize: { xs: "1rem", sm: "1.7rem", md: "2.4rem" },
-                      wordBreak: "break-word",
-                    }}
-                  >
-                    {role}
-                  </Typography>
-                </Box>
-
-                {/* Description */}
-                <Typography
-                  variant="body1"
-                  color="text.secondary"
-                  sx={{
-                    maxWidth: 560,
-                    fontSize: { xs: "0.875rem", md: "1rem" },
-                  }}
-                >
-                  {description}
-                </Typography>
-
-                {/* CTA Buttons */}
-                <CTAGroup
-                  primaryCTA={{
-                    ...primaryCTA,
-                    variant: "outlined",
-                    color: primaryCTA.color,
-                  }}
-                  {...(secondaryCTA && {
-                    secondaryCTA: {
-                      ...secondaryCTA,
-                      variant: "outlined",
-                      color: secondaryCTA.color,
-                    },
-                  })}
-                />
-              </Stack>
-
-              {/* Technologies */}
-              <Box
-                sx={{
-                  pt: { xs: 2, md: 3 },
-                  borderTop: `1px solid ${border}`,
-                  maxWidth: "100%",
-                  overflow: "hidden",
-                }}
-              >
-                <Typography
-                  variant="caption"
-                  color="text.secondary"
-                  sx={{
-                    mb: 2,
-                    display: "block",
-                    fontSize: { xs: "0.7rem", md: "0.75rem" },
-                  }}
-                >
-                  {techLabel}
-                </Typography>
-                <TechStackMarquee technologies={technologies} speed={35} />
-              </Box>
-            </Stack>
-
             <Box
+              component="span"
+              aria-hidden="true"
               sx={{
-                display: { xs: "none", md: "flex" },
-                justifyContent: "center",
+                width: "0.5rem",
+                height: "0.5rem",
+                borderRadius: "999px",
+                bgcolor: "secondary.main",
+              }}
+            />
+            {t("badge")}
+          </Box>
+
+          <Typography
+            variant="h1"
+            component="h1"
+            sx={{
+              fontSize: {
+                xs: "2.6rem",
+                sm: "3.5rem",
+                md: "4rem",
+                lg: "4.5rem",
+              },
+              overflowWrap: "break-word",
+            }}
+          >
+            {t("title")}
+            <Box component="span" sx={{ color: "secondary.main" }}>
+              .
+            </Box>
+          </Typography>
+
+          <Typography
+            sx={{
+              fontSize: { xs: "1.05rem", md: "1.2rem" },
+              lineHeight: 1.65,
+              color: "text.secondary",
+              maxWidth: "34rem",
+            }}
+          >
+            {t("description")}
+          </Typography>
+
+          <Box sx={{ display: "flex", flexWrap: "wrap", gap: "0.75rem" }}>
+            <Button
+              href="#pricing"
+              variant="contained"
+              color="primary"
+              sx={{
+                py: "1rem",
+                px: "1.6rem",
+                "& .cta-arrow": { transition: "transform 0.2s ease" },
+                "&:hover .cta-arrow": { transform: "translateX(4px)" },
+                ...focusRing,
               }}
             >
-              <ProfileMedia
-                src={profileImage.src}
-                alt={profileImage.alt}
-                fallbackText={name}
-                width={320}
-                height={400}
-                variant="square"
-              />
-            </Box>
+              {t("primaryCTA")}
+              <Box
+                component="span"
+                className="cta-arrow"
+                aria-hidden="true"
+                sx={{ display: "inline-block", ml: "0.5rem" }}
+              >
+                →
+              </Box>
+            </Button>
+            <Button
+              href="#projects"
+              variant="outlined"
+              sx={{ py: "1rem", px: "1.6rem", ...focusRing }}
+            >
+              {t("secondaryCTA")}
+            </Button>
           </Box>
+        </Box>
+
+        <Box sx={{ flex: "1 1 26rem", minWidth: 0 }}>
+          <HeroSiteWindow />
         </Box>
       </Container>
     </Box>

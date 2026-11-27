@@ -23,41 +23,48 @@ const FAQSection: React.FC<FAQSectionProps> = ({
   defaultExpandedIds,
 }) => {
   return (
-    <Box
-      component="section"
-      id="faqs"
-      sx={{
-        py: { xs: 4, md: 6 },
-        px: { xs: 2, md: 4 },
-      }}
-    >
-      <Container maxWidth="lg">
-        <Box sx={{ mb: { xs: 4, md: 6 } }}>
+    <Box component="section" id="faqs" aria-labelledby="faq-heading">
+      <Container
+        maxWidth={false}
+        disableGutters
+        sx={{
+          maxWidth: "75rem",
+          px: "1.5rem",
+          py: { xs: "3rem", md: "4rem" },
+          display: "grid",
+          gridTemplateColumns: {
+            xs: "minmax(0, 1fr)",
+            md: "minmax(0, 4fr) minmax(0, 8fr)",
+          },
+          gap: { xs: "1.5rem", md: "3rem" },
+          alignItems: "start",
+        }}
+      >
+        <Box
+          sx={{
+            display: "flex",
+            flexDirection: "column",
+            gap: "0.75rem",
+            position: { md: "sticky" },
+            top: { md: "6rem" },
+          }}
+        >
           <Typography
+            id="faq-heading"
             variant="h2"
             component="h2"
-            color="text.primary"
-            sx={{
-              fontSize: { xs: "1.9rem", sm: "2.2rem", md: "2.5rem" },
-              fontWeight: 700,
-              mb: 1,
-              "&::before": {
-                content: '"> "',
-                color: "text.secondary",
-                marginRight: 1,
-              },
-            }}
+            sx={{ m: 0, fontSize: { xs: "2.25rem", md: "3rem" } }}
           >
             {heading}
           </Typography>
           {subheading && (
-            <Typography variant="body2" color="text.secondary">
+            <Typography sx={{ m: 0, color: "text.secondary", fontSize: "1.1rem" }}>
               {subheading}
             </Typography>
           )}
         </Box>
 
-        <Box sx={{ width: "100%" }}>
+        <Box sx={{ minWidth: 0 }}>
           <FAQList
             items={items}
             allowMultiple={allowMultiple}

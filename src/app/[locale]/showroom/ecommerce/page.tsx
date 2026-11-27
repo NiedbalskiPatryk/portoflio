@@ -75,7 +75,6 @@ export default async function EcommercePage() {
         currentProjectId="ecommerce"
         comingSoonLabel={t("comingSoon")}
         browseProjectsLabel={t("browseProjects")}
-        showThemeToggle={false}
         backHref={`/${locale}/showroom`}
         backLabel={t("backToShowroom")}
       >

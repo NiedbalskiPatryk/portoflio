@@ -28,7 +28,6 @@ const FAQItem: React.FC<FAQItemProps> = ({
   return (
     <Accordion
       disableGutters
-      square
       defaultExpanded={!isControlled ? defaultExpanded : undefined}
       expanded={isControlled ? expanded : undefined}
       onChange={
@@ -39,18 +38,12 @@ const FAQItem: React.FC<FAQItemProps> = ({
           : undefined
       }
       sx={{
-        border: "1px solid",
-        borderColor: "divider",
-        background: (theme) =>
-          theme.palette.mode === "dark"
-            ? `linear-gradient(120deg, ${theme.palette.surface.gradientStart} 0%, ${theme.palette.surface.gradientMid} 45%, ${theme.palette.surface.gradientEnd} 100%)`
-            : theme.palette.background.paper,
-        "&:before": {
-          display: "none",
-        },
+        transition: "box-shadow 0.25s ease",
         "&.Mui-expanded": {
           margin: 0,
+          boxShadow: "0 1rem 2rem rgba(17, 17, 17, 0.06)",
         },
+        "@media (prefers-reduced-motion: reduce)": { transition: "none" },
       }}
     >
       <QuestionRow id={id} question={question} />
@@ -59,8 +52,8 @@ const FAQItem: React.FC<FAQItemProps> = ({
         role="region"
         aria-labelledby={`faq-${id}-header`}
         sx={{
-          px: { xs: 2, sm: 3 },
-          pb: 2.5,
+          px: { xs: "1.25rem", sm: "1.75rem" },
+          pb: "1.5rem",
           pt: 0,
         }}
       >
@@ -68,6 +61,7 @@ const FAQItem: React.FC<FAQItemProps> = ({
           variant="body1"
           color="text.secondary"
           sx={{
+            m: 0,
             lineHeight: 1.7,
             whiteSpace: "pre-line",
           }}

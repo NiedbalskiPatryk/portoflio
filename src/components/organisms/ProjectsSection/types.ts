@@ -13,7 +13,10 @@ export interface ProjectLink {
 export interface ProjectItem {
   id: string;
   name: string;
+  /** Short category line shown on the card, e.g. "Marketplace". */
+  kind?: string;
   summary?: string;
+  /** Role value only (the "My role" label is rendered by the section). */
   role?: string;
   tags?: string[];
   previewImage?: string;

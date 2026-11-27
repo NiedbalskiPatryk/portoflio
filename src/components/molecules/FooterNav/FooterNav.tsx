@@ -18,29 +18,38 @@ const FooterNav: React.FC<FooterNavProps> = ({ items }) => {
   return (
     <Box component="nav" aria-label="Footer navigation">
       <Box
+        component="ul"
         sx={{
+          listStyle: "none",
+          m: 0,
+          p: 0,
           display: "grid",
           gridTemplateColumns: {
-            xs: "1fr",
-            sm: "repeat(2, minmax(0, 1fr))",
-            md: "1fr",
+            xs: "repeat(2, minmax(0, 1fr))",
+            md: "minmax(0, 1fr)",
           },
-          gap: 1,
+          gap: "0.6rem",
         }}
       >
         {items.map((item) => (
-          <Link
-            key={item.id}
-            href={item.href}
-            variant="body2"
-            color="text.primary"
-            sx={{
-              fontSize: { xs: "0.875rem", md: "1rem" },
-              width: "fit-content",
-            }}
-          >
-            {item.label}
-          </Link>
+          <Box component="li" key={item.id}>
+            <Link
+              href={item.href}
+              color="text.primary"
+              underline="hover"
+              sx={{
+                fontWeight: 500,
+                width: "fit-content",
+                "&:focus-visible": {
+                  outline: "2px solid #111111",
+                  outlineOffset: "2px",
+                  borderRadius: "4px",
+                },
+              }}
+            >
+              {item.label}
+            </Link>
+          </Box>
         ))}
       </Box>
     </Box>

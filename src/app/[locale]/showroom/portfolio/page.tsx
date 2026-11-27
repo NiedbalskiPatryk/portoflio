@@ -74,7 +74,6 @@ export default async function PortfolioPage() {
         currentProjectId="portfolio"
         comingSoonLabel={t("comingSoon")}
         browseProjectsLabel={t("browseProjects")}
-        showThemeToggle={false}
         backHref={`/${locale}/showroom`}
         backLabel={t("backToShowroom")}
       >

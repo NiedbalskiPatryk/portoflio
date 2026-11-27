@@ -10,6 +10,7 @@ import Stack from "@mui/material/Stack";
 import Typography from "@mui/material/Typography";
 import FormRow from "@/components/molecules/FormRow";
 import { useLocale, useTranslations } from "next-intl";
+import { CONTACT_PREFILL_EVENT, type ContactPrefillDetail } from "./prefill";
 
 export type ContactFieldId =
   | "fullName"
@@ -87,6 +88,28 @@ const ContactForm: React.FC<ContactFormProps> = ({
     setValues(initialValues);
   }, [initialValues]);
 
+  // Optional prefill from EstimateSection; the form works the same without it.
+  React.useEffect(() => {
+    const handlePrefill = (event: Event) => {
+      const detail = (event as CustomEvent<ContactPrefillDetail>).detail;
+      if (!detail) return;
+      setValues((prev) => ({
+        ...prev,
+        subject:
+          typeof detail.subject === "string"
+            ? detail.subject.slice(0, 150)
+            : prev.subject,
+        message:
+          typeof detail.message === "string"
+            ? detail.message.slice(0, 5000)
+            : prev.message,
+      }));
+      setSubmitState((prev) => (prev === "submitting" ? prev : "idle"));
+    };
+    window.addEventListener(CONTACT_PREFILL_EVENT, handlePrefill);
+    return () => window.removeEventListener(CONTACT_PREFILL_EVENT, handlePrefill);
+  }, []);
+
   const handleChange = (id: ContactFieldId, value: string) => {
     setValues((prev) => ({ ...prev, [id]: value }));
   };
@@ -161,23 +184,9 @@ const ContactForm: React.FC<ContactFormProps> = ({
         display: "flex",
         flexDirection: "column",
         gap: 2,
-        p: { xs: 3, sm: 4 },
-        borderRadius: 0,
-        border: "1px solid",
-        borderColor: "divider",
-        background: (theme) =>
-          theme.palette.mode === "dark"
-            ? `linear-gradient(120deg, ${theme.palette.surface.gradientStart} 0%, ${theme.palette.surface.gradientMid} 45%, ${theme.palette.surface.gradientEnd} 100%)`
-            : theme.palette.background.paper,
-        boxShadow:
-          "0 16px 32px rgba(0, 0, 0, 0.08), inset 0 1px 0 rgba(255, 255, 255, 0.04)",
-        "& .MuiOutlinedInput-root": {
-          borderRadius: 0,
-          backgroundColor: (theme) =>
-            theme.palette.mode === "dark"
-              ? "rgba(255, 255, 255, 0.04)"
-              : theme.palette.common.white,
-        },
+        p: { xs: "1.25rem", sm: "1.75rem" },
+        borderRadius: "1.5rem",
+        bgcolor: "background.paper",
       }}
     >
       <Stack spacing={2}>
@@ -251,48 +260,85 @@ const ContactForm: React.FC<ContactFormProps> = ({
                 }}
               >
                 {renderField(fieldMap.fullName)}
+                {renderField(fieldMap.email)}
                 {renderField(fieldMap.phone)}
+                {renderField(fieldMap.subject)}
               </Box>
-              {renderField(fieldMap.email)}
-              {renderField(fieldMap.subject)}
               {renderField(fieldMap.message)}
             </>
           );
         })()}
       </Stack>
 
-      <Button
-        type="submit"
-        variant="contained"
-        disabled={isFormDisabled}
-        aria-busy={isSubmittingActive || undefined}
-        startIcon={
-          isSubmittingActive ? (
-            <CircularProgress size={18} color="inherit" />
-          ) : null
-        }
+      <Box
         sx={{
-          mt: 1,
-          alignSelf: { xs: "stretch", sm: "flex-start" },
-          borderRadius: 0,
+          display: "flex",
+          flexWrap: "wrap",
+          alignItems: "center",
+          justifyContent: "space-between",
+          gap: 2,
+          mt: 0.5,
         }}
       >
-        {submitLabel}
-      </Button>
-      <Typography variant="caption" color="text.secondary">
-        {t.rich("privacyNotice", {
-          link: (chunks) => (
-            <Link
-              href={`/${locale}/privacy`}
-              color="inherit"
-              underline="always"
-              sx={{ textDecoration: "underline" }}
-            >
-              {chunks}
-            </Link>
-          ),
-        })}
-      </Typography>
+        <Typography
+          variant="caption"
+          color="text.secondary"
+          sx={{ flex: "1 1 14rem", minWidth: 0 }}
+        >
+          {t.rich("privacyNotice", {
+            link: (chunks) => (
+              <Link
+                href={`/${locale}/privacy`}
+                color="inherit"
+                underline="always"
+                sx={{
+                  textDecoration: "underline",
+                  "&:focus-visible": {
+                    outline: "2px solid #111111",
+                    outlineOffset: "2px",
+                  },
+                }}
+              >
+                {chunks}
+              </Link>
+            ),
+          })}
+        </Typography>
+        <Button
+          type="submit"
+          variant="contained"
+          disabled={isFormDisabled}
+          aria-busy={isSubmittingActive || undefined}
+          startIcon={
+            isSubmittingActive ? (
+              <CircularProgress size={18} color="inherit" />
+            ) : null
+          }
+          sx={{
+            width: { xs: "100%", sm: "auto" },
+            "& .contact-arrow": { transition: "transform 0.2s ease" },
+            "&:hover .contact-arrow": { transform: "translateX(4px)" },
+            "&:focus-visible": {
+              outline: "2px solid #111111",
+              outlineOffset: "2px",
+            },
+            "@media (prefers-reduced-motion: reduce)": {
+              "& .contact-arrow": { transition: "none" },
+              "&:hover .contact-arrow": { transform: "none" },
+            },
+          }}
+        >
+          {submitLabel}
+          <Box
+            component="span"
+            className="contact-arrow"
+            aria-hidden="true"
+            sx={{ ml: "0.5rem" }}
+          >
+            →
+          </Box>
+        </Button>
+      </Box>
       <Box role="status" aria-live="polite">
         <Collapse in={submitState === "success"} timeout={300} unmountOnExit>
           <Typography

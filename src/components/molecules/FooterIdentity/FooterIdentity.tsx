@@ -3,7 +3,6 @@
 import React from "react";
 import Box from "@mui/material/Box";
 import Link from "@mui/material/Link";
-import Stack from "@mui/material/Stack";
 import Typography from "@mui/material/Typography";
 
 export interface FooterIdentityProps {
@@ -24,11 +23,13 @@ const FooterIdentity: React.FC<FooterIdentityProps> = ({
   return (
     <Box>
       <Typography
-        variant="h6"
-        color="text.primary"
+        component="p"
         sx={{
-          fontSize: { xs: "1.1rem", sm: "1.25rem", md: "1.5rem" },
-          fontWeight: 600,
+          m: 0,
+          fontSize: "1.35rem",
+          fontWeight: 700,
+          letterSpacing: "-0.03em",
+          color: "text.primary",
         }}
       >
         {name}
@@ -37,28 +38,53 @@ const FooterIdentity: React.FC<FooterIdentityProps> = ({
         <Typography
           variant="body2"
           color="text.secondary"
-          sx={{
-            mt: 1,
-            maxWidth: { xs: "100%", md: "32ch" },
-          }}
+          sx={{ mt: 1, maxWidth: "32ch" }}
         >
           {description}
         </Typography>
       )}
       {socialLinks.length > 0 && (
-        <Stack direction="row" spacing={2} sx={{ mt: 2, flexWrap: "wrap" }}>
+        <Box
+          component="ul"
+          sx={{
+            listStyle: "none",
+            m: 0,
+            mt: 2,
+            p: 0,
+            display: "flex",
+            flexWrap: "wrap",
+            gap: "0.5rem",
+          }}
+        >
           {socialLinks.map((link) => (
-            <Link
-              key={link.id}
-              href={link.href}
-              variant="body2"
-              color="text.primary"
-              sx={{ fontSize: { xs: "0.875rem", md: "1rem" } }}
-            >
-              {link.label}
-            </Link>
+            <Box component="li" key={link.id}>
+              <Link
+                href={link.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                underline="none"
+                sx={{
+                  display: "inline-block",
+                  px: "1rem",
+                  py: "0.45rem",
+                  borderRadius: "999px",
+                  bgcolor: "background.paper",
+                  fontSize: "0.9rem",
+                  fontWeight: 600,
+                  transition: "box-shadow 0.2s ease",
+                  "&:hover": { boxShadow: "0 0 0 2px #dcdcd8" },
+                  "&:focus-visible": {
+                    outline: "2px solid #111111",
+                    outlineOffset: "2px",
+                  },
+                  "@media (prefers-reduced-motion: reduce)": { transition: "none" },
+                }}
+              >
+                {link.label}
+              </Link>
+            </Box>
           ))}
-        </Stack>
+        </Box>
       )}
     </Box>
   );

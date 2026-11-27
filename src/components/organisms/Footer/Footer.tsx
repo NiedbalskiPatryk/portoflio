@@ -27,7 +27,17 @@ export interface FooterProps {
   navItems: FooterNavItem[];
   contactItems: FooterContactItem[];
   copyright: string;
+  /** Tax ID (NIP) shown next to the copyright line. */
+  taxId?: string;
 }
+
+const linkFocus = {
+  "&:focus-visible": {
+    outline: "2px solid #111111",
+    outlineOffset: "2px",
+    borderRadius: "4px",
+  },
+};
 
 const Footer: React.FC<FooterProps> = ({
   name,
@@ -38,76 +48,63 @@ const Footer: React.FC<FooterProps> = ({
   navItems,
   contactItems,
   copyright,
+  taxId,
 }) => {
   const t = useTranslations("footer");
   const locale = useLocale();
+
+  const headingSx = {
+    fontSize: "0.78rem",
+    lineHeight: 1.4,
+    color: "text.secondary",
+    textTransform: "uppercase",
+    letterSpacing: "0.08em",
+    mb: 2,
+  } as const;
 
   return (
     <Box
       component="footer"
       sx={{
         width: "100%",
-        mt: 0,
-        borderTop: 1,
+        borderTop: "1px solid",
         borderColor: "divider",
-        bgcolor: "background.paper",
-        py: { xs: 6, md: 10 },
-        px: { xs: 2, md: 4 },
+        bgcolor: "background.default",
       }}
     >
       <Box
         sx={{
-          maxWidth: { xs: "100%", lg: "1200px" },
+          maxWidth: "75rem",
           mx: "auto",
+          px: "1.5rem",
+          py: { xs: "3rem", md: "4rem" },
         }}
       >
         <Box
           sx={{
             display: "grid",
             gridTemplateColumns: {
-              xs: "1fr",
-              md: "repeat(3, minmax(0, 1fr))",
+              xs: "minmax(0, 1fr)",
+              md: "minmax(0, 1.3fr) minmax(0, 1fr) minmax(0, 1fr)",
             },
-            gap: { xs: 3, md: 6 },
+            gap: { xs: "2rem", md: "3rem" },
           }}
         >
-          <Box sx={{ pr: { md: 4 } }}>
-            <FooterIdentity
-              name={name}
-              description={description}
-              socialLinks={socialLinks}
-            />
-          </Box>
+          <FooterIdentity
+            name={name}
+            description={description}
+            socialLinks={socialLinks}
+          />
 
-          <Box
-            sx={{
-              pl: { md: 4 },
-              borderLeft: { md: "1px solid" },
-              borderColor: { md: "divider" },
-            }}
-          >
-            <Typography
-              variant="subtitle2"
-              color="text.primary"
-              sx={{ fontWeight: 600, mb: 2 }}
-            >
+          <Box>
+            <Typography component="h2" sx={headingSx}>
               {contactHeading}
             </Typography>
             <ContactBlock items={contactItems} />
           </Box>
 
-          <Box
-            sx={{
-              pl: { md: 4 },
-              borderLeft: { md: "1px solid" },
-              borderColor: { md: "divider" },
-            }}
-          >
-            <Typography
-              variant="subtitle2"
-              color="text.primary"
-              sx={{ fontWeight: 600, mb: 2 }}
-            >
+          <Box>
+            <Typography component="h2" sx={headingSx}>
               {navHeading}
             </Typography>
             <FooterNav items={navItems} />
@@ -120,21 +117,25 @@ const Footer: React.FC<FooterProps> = ({
             flexWrap: "wrap",
             alignItems: "center",
             justifyContent: "space-between",
-            gap: 1.5,
-            mt: { xs: 3, md: 4 },
-            pt: { xs: 3, md: 4 },
+            gap: "0.75rem 1.5rem",
+            mt: { xs: "2.5rem", md: "3rem" },
+            pt: "1.5rem",
             borderTop: "1px solid",
             borderColor: "divider",
+            fontSize: "0.85rem",
+            color: "text.secondary",
           }}
         >
-          <Typography variant="caption" color="text.secondary">
+          <Typography variant="caption" color="text.secondary" component="p" sx={{ m: 0 }}>
             {copyright}
+            {taxId ? ` · ${t("taxId", { value: taxId })}` : ""}
           </Typography>
-          <Box sx={{ display: "flex", flexWrap: "wrap", gap: 2 }}>
+          <Box sx={{ display: "flex", flexWrap: "wrap", gap: "0.5rem 1.25rem" }}>
             <Link
               href={`/${locale}/privacy`}
               variant="caption"
               color="text.secondary"
+              sx={linkFocus}
             >
               {t("privacyLink")}
             </Link>
@@ -144,6 +145,7 @@ const Footer: React.FC<FooterProps> = ({
               variant="caption"
               color="text.secondary"
               onClick={openCookieSettings}
+              sx={linkFocus}
             >
               {t("cookieSettings")}
             </Link>

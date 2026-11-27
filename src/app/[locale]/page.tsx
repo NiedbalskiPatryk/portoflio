@@ -2,133 +2,51 @@ import type { ContactSectionProps } from "@/components";
 import {
   AboutSection,
   AnimatedSection,
-  ColorWash,
   ContactSection,
+  EstimateSection,
   FAQSection,
   Footer,
   Header,
   HeroSection,
-  PortfolioLayout,
-  PricingSection,
+  MobileContactBar,
+  ProcessSection,
   ProjectsSection,
-  ScrollProgressBar,
   ServicesSection,
 } from "@/components";
-import ComputerOutlinedIcon from "@mui/icons-material/ComputerOutlined";
-import FlashOnOutlinedIcon from "@mui/icons-material/FlashOnOutlined";
-import SettingsSuggestOutlinedIcon from "@mui/icons-material/SettingsSuggestOutlined";
-import StorageOutlinedIcon from "@mui/icons-material/StorageOutlined";
-import { getLocale, getTranslations } from "next-intl/server";
+import { getTranslations } from "next-intl/server";
 
 const LINKEDIN_URL = "https://www.linkedin.com/in/patryk-niedbalski/";
 
+const TECHNOLOGIES = [
+  "TypeScript",
+  "JavaScript",
+  "React",
+  "Next.js",
+  "Node.js",
+  "NestJS",
+  "Express",
+  "PostgreSQL",
+  "MySQL",
+  "Docker",
+  "GCP",
+  "Git",
+];
+
 export default async function Home() {
   const t = await getTranslations();
-  const locale = await getLocale();
-
-  const heroData = {
-    location: t("hero.location"),
-    name: t("hero.greeting"),
-    role: t("hero.role"),
-    description: t("hero.description"),
-    profileImage: {
-      src: "/foto.jpeg",
-      alt: t("about.profileImageAlt"),
-    },
-    techLabel: t("hero.techLabel"),
-    primaryCTA: {
-      label: t("hero.primaryCTA"),
-      href: "#contact",
-      color: "light" as const,
-    },
-    secondaryCTA: {
-      label: t("hero.secondaryCTA"),
-      href: "#projects",
-    },
-    technologies: [
-      "JavaScript",
-      "React",
-      "Node",
-      "Express",
-      "Next.js",
-      "TypeScript",
-      "NestJS",
-      "MySQL",
-      "Git",
-      "PostgreSQL",
-      "Docker",
-      "GCP",
-    ],
-    snippets: {
-      leftTop: t.raw("hero.snippets.leftTop"),
-      leftMid: t.raw("hero.snippets.leftMid"),
-      rightTop: t.raw("hero.snippets.rightTop"),
-      rightMid: t.raw("hero.snippets.rightMid"),
-    },
-  };
-
-  const servicesData = {
-    heading: t("services.heading"),
-    description: t("services.description"),
-    services: [
-      {
-        icon: <ComputerOutlinedIcon />,
-        title: t("services.items.frontend.title"),
-        description: t("services.items.frontend.description"),
-      },
-      {
-        icon: <StorageOutlinedIcon />,
-        title: t("services.items.backend.title"),
-        description: t("services.items.backend.description"),
-      },
-      {
-        icon: <SettingsSuggestOutlinedIcon />,
-        title: t("services.items.automation.title"),
-        description: t("services.items.automation.description"),
-      },
-      {
-        icon: <FlashOnOutlinedIcon />,
-        title: t("services.items.performance.title"),
-        description: t("services.items.performance.description"),
-      },
-    ],
-  };
-
-  const pricingData = {
-    heading: t("pricing.heading"),
-    description: t("pricing.description"),
-    note: t("pricing.note"),
-    ctaLabel: t("pricing.cta"),
-    ctaHref: "#contact",
-    plans: [
-      {
-        title: t("pricing.plans.landing.title"),
-        price: t("pricing.plans.landing.price"),
-        description: t("pricing.plans.landing.description"),
-      },
-      {
-        title: t("pricing.plans.cms.title"),
-        price: t("pricing.plans.cms.price"),
-        description: t("pricing.plans.cms.description"),
-      },
-      {
-        title: t("pricing.plans.custom.title"),
-        price: t("pricing.plans.custom.price"),
-        description: t("pricing.plans.custom.description"),
-      },
-    ],
-  };
 
   const projectsData = {
     heading: t("projects.heading"),
+    headingAccent: t("projects.headingAccent"),
     description: t("projects.description"),
     visitSiteLabel: t("projects.visitSite"),
     projects: [
       {
         id: "parkiza",
         name: t("projects.items.parkiza.name"),
+        kind: t("projects.items.parkiza.kind"),
         summary: t("projects.items.parkiza.summary"),
-        role: `${t("projects.roleLabel")}: ${t("projects.items.parkiza.role")}`,
+        role: t("projects.items.parkiza.role"),
         tags: ["Node.js", "NestJS", "React", "MySQL", "TypeScript"],
         previewImage: "/parkiza.webp",
         links: [
@@ -138,19 +56,28 @@ export default async function Home() {
         ],
         media: [
           { type: "image" as const, src: "/parkiza.webp" },
-          {
-            type: "video" as const,
-            src: "/parkiza.mp4",
-            poster: "/parkiza-poster.webp",
-          },
+          { type: "video" as const, src: "/parkiza.mp4", poster: "/parkiza-poster.webp" },
           { type: "image" as const, src: "/parkiza2.webp" },
+        ],
+      },
+      {
+        id: "signalos",
+        name: t("projects.items.signalos.name"),
+        kind: t("projects.items.signalos.kind"),
+        summary: t("projects.items.signalos.summary"),
+        role: t("projects.items.signalos.role"),
+        tags: ["Next.js", "React", "Node.js", "TypeScript", "Enterprise"],
+        previewImage: "/signalos.webp",
+        links: [
+          { href: "https://www.signalos.io/", label: t("projects.links.website") },
         ],
       },
       {
         id: "skinscartel",
         name: t("projects.items.skinscartel.name"),
+        kind: t("projects.items.skinscartel.kind"),
         summary: t("projects.items.skinscartel.summary"),
-        role: `${t("projects.roleLabel")}: ${t("projects.items.skinscartel.role")}`,
+        role: t("projects.items.skinscartel.role"),
         tags: ["Next.js", "React", "TypeScript", "E-commerce", "Node.js"],
         previewImage: "/skinscartel.webp",
         links: [
@@ -166,8 +93,9 @@ export default async function Home() {
       {
         id: "areoactive",
         name: t("projects.items.areoactive.name"),
+        kind: t("projects.items.areoactive.kind"),
         summary: t("projects.items.areoactive.summary"),
-        role: `${t("projects.roleLabel")}: ${t("projects.items.areoactive.role")}`,
+        role: t("projects.items.areoactive.role"),
         tags: ["Next.js", "React", "Responsive Design"],
         previewImage: "/areoactive-1.webp",
         links: [
@@ -177,17 +105,6 @@ export default async function Home() {
           { type: "image" as const, src: "/areoactive-1.webp" },
           { type: "image" as const, src: "/areoactive2.webp" },
           { type: "image" as const, src: "/areoactive3.webp" },
-        ],
-      },
-      {
-        id: "signalos",
-        name: t("projects.items.signalos.name"),
-        summary: t("projects.items.signalos.summary"),
-        role: `${t("projects.roleLabel")}: ${t("projects.items.signalos.role")}`,
-        tags: ["Next.js", "React", "Node.js", "TypeScript", "Enterprise"],
-        previewImage: "/signalos.webp",
-        links: [
-          { href: "https://www.signalos.io/", label: t("projects.links.website") },
         ],
       },
     ],
@@ -200,17 +117,13 @@ export default async function Home() {
     bio: [
       t("about.bio.paragraph1"),
       t("about.bio.paragraph2"),
-      t("about.bio.availability"),
       t("about.bio.paragraph3"),
     ],
-    primaryCTA: {
-      label: t("about.cta"),
-      href: "#contact",
-    },
-    secondaryCTA: {
-      label: t("about.linkedinCTA"),
-      href: LINKEDIN_URL,
-    },
+    availability: t("about.bio.availability"),
+    roles: ["Full-Stack Developer", "Tech Lead", "Project Leader", "Backend Developer"],
+    technologies: TECHNOLOGIES,
+    primaryCTA: { label: t("about.cta"), href: "#contact" },
+    secondaryCTA: { label: t("about.linkedinCTA"), href: LINKEDIN_URL },
   };
 
   const faqData = {
@@ -218,36 +131,12 @@ export default async function Home() {
     subheading: t("faq.description"),
     allowMultiple: true,
     items: [
-      {
-        id: "services",
-        question: t("faq.items.services.question"),
-        answer: t("faq.items.services.answer"),
-      },
-      {
-        id: "pricing",
-        question: t("faq.items.pricing.question"),
-        answer: t("faq.items.pricing.answer"),
-      },
-      {
-        id: "timeline",
-        question: t("faq.items.timeline.question"),
-        answer: t("faq.items.timeline.answer"),
-      },
-      {
-        id: "collaboration",
-        question: t("faq.items.collaboration.question"),
-        answer: t("faq.items.collaboration.answer"),
-      },
-      {
-        id: "hiring",
-        question: t("faq.items.hiring.question"),
-        answer: t("faq.items.hiring.answer"),
-      },
-      {
-        id: "get-started",
-        question: t("faq.items.start.question"),
-        answer: t("faq.items.start.answer"),
-      },
+      { id: "services", question: t("faq.items.services.question"), answer: t("faq.items.services.answer") },
+      { id: "pricing", question: t("faq.items.pricing.question"), answer: t("faq.items.pricing.answer") },
+      { id: "timeline", question: t("faq.items.timeline.question"), answer: t("faq.items.timeline.answer") },
+      { id: "collaboration", question: t("faq.items.collaboration.question"), answer: t("faq.items.collaboration.answer") },
+      { id: "hiring", question: t("faq.items.hiring.question"), answer: t("faq.items.hiring.answer") },
+      { id: "get-started", question: t("faq.items.start.question"), answer: t("faq.items.start.answer") },
     ],
   };
 
@@ -255,57 +144,16 @@ export default async function Home() {
     heading: t("contact.heading"),
     subheading: t("contact.description"),
     infoItems: [
-      {
-        label: t("contact.info.email"),
-        value: "patrykitpapi@gmail.com",
-        href: "mailto:patrykitpapi@gmail.com",
-      },
-      {
-        label: t("contact.info.phone"),
-        value: "+48 507 486 286",
-        href: "tel:+48507486286",
-      },
-      {
-        label: t("contact.info.linkedin"),
-        value: "linkedin.com/in/patryk-niedbalski",
-        href: LINKEDIN_URL,
-      },
-      {
-        label: t("contact.info.address"),
-        value: t("contact.info.addressValue"),
-      },
+      { label: t("contact.info.email"), value: "patrykitpapi@gmail.com", href: "mailto:patrykitpapi@gmail.com" },
+      { label: t("contact.info.phone"), value: "+48 507 486 286", href: "tel:+48507486286" },
+      { label: t("contact.info.linkedin"), value: "linkedin.com/in/patryk-niedbalski", href: LINKEDIN_URL },
     ],
     fields: [
-      {
-        id: "fullName",
-        label: t("contact.form.name"),
-        placeholder: t("contact.form.namePlaceholder"),
-        required: true,
-      },
-      {
-        id: "email",
-        label: t("contact.form.email"),
-        placeholder: t("contact.form.emailPlaceholder"),
-        required: true,
-      },
-      {
-        id: "phone",
-        label: t("contact.form.phone"),
-        placeholder: t("contact.form.phonePlaceholder"),
-      },
-      {
-        id: "subject",
-        label: t("contact.form.subject"),
-        placeholder: t("contact.form.subjectPlaceholder"),
-      },
-      {
-        id: "message",
-        label: t("contact.form.message"),
-        placeholder: t("contact.form.messagePlaceholder"),
-        multiline: true,
-        rows: 5,
-        required: true,
-      },
+      { id: "fullName", label: t("contact.form.name"), placeholder: t("contact.form.namePlaceholder"), required: true },
+      { id: "email", label: t("contact.form.email"), placeholder: t("contact.form.emailPlaceholder"), required: true },
+      { id: "phone", label: t("contact.form.phone"), placeholder: t("contact.form.phonePlaceholder") },
+      { id: "subject", label: t("contact.form.subject"), placeholder: t("contact.form.subjectPlaceholder") },
+      { id: "message", label: t("contact.form.message"), placeholder: t("contact.form.messagePlaceholder"), multiline: true, rows: 5, required: true },
     ],
     submitLabel: t("contact.form.submit"),
     formAction: "/api/contact",
@@ -315,84 +163,64 @@ export default async function Home() {
   const footerData = {
     name: "Patryk Niedbalski",
     socialLinks: [
-      {
-        id: "github",
-        label: "GitHub",
-        href: "https://github.com/NiedbalskiPatryk",
-      },
-      {
-        id: "linkedin",
-        label: "LinkedIn",
-        href: LINKEDIN_URL,
-      },
+      { id: "github", label: "GitHub", href: "https://github.com/NiedbalskiPatryk" },
+      { id: "linkedin", label: "LinkedIn", href: LINKEDIN_URL },
     ],
     contactHeading: t("footer.contactHeading"),
     navHeading: t("footer.navHeading"),
     navItems: [
-      { id: "home", label: t("nav.home"), href: "#home" },
       { id: "services", label: t("nav.services"), href: "#services" },
-      { id: "pricing", label: t("nav.pricing"), href: "#pricing" },
       { id: "projects", label: t("nav.projects"), href: "#projects" },
+      { id: "process", label: t("nav.process"), href: "#process" },
+      { id: "pricing", label: t("nav.pricing"), href: "#pricing" },
       { id: "about", label: t("nav.about"), href: "#about" },
       { id: "faqs", label: t("nav.faq"), href: "#faqs" },
     ],
     contactItems: [
-      {
-        id: "email",
-        label: t("contact.info.email"),
-        value: "patrykitpapi@gmail.com",
-        href: "mailto:patrykitpapi@gmail.com",
-      },
-      {
-        id: "phone",
-        label: t("contact.info.phone"),
-        value: "+48 507 486 286",
-        href: "tel:+48507486286",
-      },
-      {
-        id: "address",
-        label: t("contact.info.address"),
-        value: t("contact.info.addressValue"),
-      },
+      { id: "email", label: t("contact.info.email"), value: "patrykitpapi@gmail.com", href: "mailto:patrykitpapi@gmail.com" },
+      { id: "phone", label: t("contact.info.phone"), value: "+48 507 486 286", href: "tel:+48507486286" },
+      { id: "address", label: t("contact.info.address"), value: t("contact.info.addressValue") },
     ],
     copyright: `© 2026 Patryk Niedbalski. ${t("footer.copyright")}`,
   };
 
   return (
     <>
-      <PortfolioLayout>
-        <ColorWash>
-          <Header />
-          <HeroSection {...heroData} />
+      <Header />
+      <main>
+        <HeroSection />
 
-          <AnimatedSection direction="up" delay={0}>
-            <ServicesSection {...servicesData} />
-          </AnimatedSection>
+        <AnimatedSection direction="up">
+          <ServicesSection />
+        </AnimatedSection>
 
-          <AnimatedSection direction="up" delay={0}>
-            <PricingSection {...pricingData} />
-          </AnimatedSection>
+        <AnimatedSection direction="up">
+          <ProjectsSection {...projectsData} />
+        </AnimatedSection>
 
-          <AnimatedSection direction="up" delay={0}>
-            <ProjectsSection {...projectsData} />
-          </AnimatedSection>
+        <AnimatedSection direction="up">
+          <ProcessSection />
+        </AnimatedSection>
 
-          <AnimatedSection direction="up" delay={0}>
-            <AboutSection {...aboutData} />
-          </AnimatedSection>
+        <AnimatedSection direction="up">
+          <EstimateSection />
+        </AnimatedSection>
 
-          <AnimatedSection direction="up" delay={0}>
-            <FAQSection {...faqData} />
-          </AnimatedSection>
+        <AnimatedSection direction="up">
+          <AboutSection {...aboutData} />
+        </AnimatedSection>
 
-          <AnimatedSection direction="up" delay={100}>
-            <ContactSection {...contactData} />
-          </AnimatedSection>
-        </ColorWash>
-      </PortfolioLayout>
+        <AnimatedSection direction="up">
+          <FAQSection {...faqData} />
+        </AnimatedSection>
 
-      <Footer {...footerData} />
-      <ScrollProgressBar />
+        <AnimatedSection direction="up">
+          <ContactSection {...contactData} />
+        </AnimatedSection>
+      </main>
+
+      <Footer {...footerData} taxId="1132813373" />
+      <MobileContactBar />
     </>
   );
 }

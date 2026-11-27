@@ -1,7 +1,6 @@
 "use client";
 
 import LanguageSwitcher from "@/components/atoms/LanguageSwitcher";
-import ThemeToggle from "@/components/atoms/ThemeToggle";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
@@ -15,13 +14,11 @@ import Link from "next/link";
 const HEADER_HEIGHT = 72;
 
 interface ShowRoomHeaderProps {
-  showThemeToggle?: boolean;
   backHref?: string;
   backLabel?: string;
 }
 
 export default function ShowRoomHeader({
-  showThemeToggle = true,
   backHref,
   backLabel,
 }: ShowRoomHeaderProps) {
@@ -89,7 +86,6 @@ export default function ShowRoomHeader({
           {/* Right side: Language + Theme toggle */}
           <Stack direction="row" alignItems="center" spacing={1}>
             <LanguageSwitcher />
-            {showThemeToggle && <ThemeToggle />}
           </Stack>
         </Stack>
       </Container>

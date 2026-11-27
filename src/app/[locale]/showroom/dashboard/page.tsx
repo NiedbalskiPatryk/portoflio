@@ -73,7 +73,6 @@ export default async function DashboardPage() {
         currentProjectId="dashboard"
         comingSoonLabel={t("comingSoon")}
         browseProjectsLabel={t("browseProjects")}
-        showThemeToggle={false}
         backHref={`/${locale}/showroom`}
         backLabel={t("backToShowroom")}
       >
