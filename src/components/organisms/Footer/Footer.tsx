@@ -31,6 +31,11 @@ export interface FooterProps {
   taxId?: string;
 }
 
+// Mobile PageSpeed Insights score measured on production (2026-11-27). Re-measure after big changes.
+const PAGESPEED_MOBILE_SCORE = 100;
+const PAGESPEED_URL =
+  "https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.itpapi.pl%2F&form_factor=mobile";
+
 const linkFocus = {
   "&:focus-visible": {
     outline: "2px solid #111111",
@@ -130,7 +135,37 @@ const Footer: React.FC<FooterProps> = ({
             {copyright}
             {taxId ? ` · ${t("taxId", { value: taxId })}` : ""}
           </Typography>
-          <Box sx={{ display: "flex", flexWrap: "wrap", gap: "0.5rem 1.25rem" }}>
+          <Box sx={{ display: "flex", flexWrap: "wrap", alignItems: "center", gap: "0.5rem 1.25rem" }}>
+            <Link
+              href={PAGESPEED_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              title={t("pagespeedTitle")}
+              underline="none"
+              sx={{
+                ...linkFocus,
+                display: "inline-flex",
+                alignItems: "center",
+                gap: "0.45rem",
+                px: "0.7rem",
+                py: "0.3rem",
+                borderRadius: "999px",
+                bgcolor: "background.paper",
+                border: "1px solid",
+                borderColor: "divider",
+                fontSize: "0.78rem",
+                fontWeight: 600,
+                color: "text.primary",
+                "&:hover": { borderColor: "#bdbdb8" },
+              }}
+            >
+              <Box
+                component="span"
+                aria-hidden="true"
+                sx={{ width: "0.5rem", height: "0.5rem", borderRadius: "999px", bgcolor: "#0cce6b" }}
+              />
+              {t("pagespeed", { score: PAGESPEED_MOBILE_SCORE })}
+            </Link>
             <Link
               href={`/${locale}/privacy`}
               variant="caption"

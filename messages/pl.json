@@ -211,7 +211,9 @@
     "copyright": "Wszelkie prawa zastrzeżone.",
     "privacyLink": "Polityka prywatności",
     "cookieSettings": "Ustawienia cookies",
-    "taxId": "NIP {value}"
+    "taxId": "NIP {value}",
+    "pagespeed": "PageSpeed {score}/100 na telefonie",
+    "pagespeedTitle": "Sprawdź wynik na pagespeed.web.dev (nowa karta)"
   },
   "showRoom": {
     "navButton": "Showroom",

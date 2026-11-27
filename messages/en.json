@@ -211,7 +211,9 @@
     "copyright": "All rights reserved.",
     "privacyLink": "Privacy policy",
     "cookieSettings": "Cookie settings",
-    "taxId": "Tax ID (NIP) {value}"
+    "taxId": "Tax ID (NIP) {value}",
+    "pagespeed": "PageSpeed {score}/100 on mobile",
+    "pagespeedTitle": "Check the score on pagespeed.web.dev (new tab)"
   },
   "showRoom": {
     "navButton": "Showroom",
