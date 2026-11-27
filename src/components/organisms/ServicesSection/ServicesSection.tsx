@@ -1,5 +1,6 @@
 "use client";
 
+import { SectionTab } from "@/components/atoms";
 import { ServiceCard } from "@/components/molecules";
 import { HEADER_HEIGHT } from "@/components/organisms/Header";
 import Box from "@mui/material/Box";
@@ -61,6 +62,7 @@ const SERVICES = [
 
 const ServicesSection: React.FC<ServicesSectionProps> = ({ heading }) => {
   const t = useTranslations("services");
+  const tTabs = useTranslations("sectionTabs");
 
   return (
     <Box
@@ -76,16 +78,16 @@ const ServicesSection: React.FC<ServicesSectionProps> = ({ heading }) => {
         maxWidth="lg"
         sx={{ display: "flex", flexDirection: "column", gap: 4 }}
       >
-        <Typography
-          variant="h2"
-          component="h2"
-          sx={{
-            fontSize: { xs: "2rem", sm: "2.4rem", md: "2.75rem" },
-            letterSpacing: "-0.04em",
-          }}
-        >
-          {heading ?? t("heading")}
-        </Typography>
+        <Box sx={{ display: "flex", flexDirection: "column", gap: "1.25rem" }}>
+          <SectionTab label={tTabs("services")} />
+          <Typography
+            variant="h2"
+            component="h2"
+            sx={{ fontSize: { xs: "2.25rem", sm: "2.6rem", md: "3rem" } }}
+          >
+            {heading ?? t("heading")}
+          </Typography>
+        </Box>
         <Box
           sx={{
             display: "grid",

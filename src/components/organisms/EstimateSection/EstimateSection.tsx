@@ -6,6 +6,7 @@ import Button from "@mui/material/Button";
 import Container from "@mui/material/Container";
 import Typography from "@mui/material/Typography";
 import { useLocale, useTranslations } from "next-intl";
+import { HandNote, SectionTab } from "@/components/atoms";
 import { dispatchContactPrefill } from "@/components/organisms/ContactForm/prefill";
 import EstimateExtraChip from "./EstimateExtraChip";
 import EstimateTypeOption from "./EstimateTypeOption";
@@ -21,6 +22,8 @@ export type EstimateSectionProps = Record<string, never>;
 
 const EstimateSection: React.FC<EstimateSectionProps> = () => {
   const t = useTranslations("estimate");
+  const tTabs = useTranslations("sectionTabs");
+  const tNotes = useTranslations("notes");
   const locale = useLocale();
 
   const [type, setType] = React.useState<TypeId>("panel");
@@ -85,6 +88,7 @@ const EstimateSection: React.FC<EstimateSectionProps> = () => {
         }}
       >
         <Box sx={{ display: "flex", flexDirection: "column", gap: "0.75rem" }}>
+          <SectionTab label={tTabs("pricing")} sx={{ mb: "0.5rem" }} />
           <Typography
             id="estimate-heading"
             variant="h2"
@@ -247,6 +251,19 @@ const EstimateSection: React.FC<EstimateSectionProps> = () => {
                 →
               </Box>
             </Button>
+            <HandNote
+              text={tNotes("estimateClick")}
+              tone="onDark"
+              arrow="up-left"
+              rotate={-3}
+              sx={{
+                ml: "1.5rem",
+                mt: "-0.75rem",
+                alignItems: "flex-start",
+                fontSize: "1.5rem",
+                "& > span": { mt: "0.9rem" },
+              }}
+            />
             <Typography
               role="status"
               sx={{ m: 0, fontSize: "0.85rem", color: "inverse.textSecondary", minHeight: "1.4em" }}

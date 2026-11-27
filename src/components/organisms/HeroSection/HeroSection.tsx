@@ -1,5 +1,6 @@
 "use client";
 
+import { HandNote, SectionTab } from "@/components/atoms";
 import { HEADER_HEIGHT } from "@/components/organisms/Header";
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
@@ -18,6 +19,8 @@ const focusRing = {
 
 export default function HeroSection() {
   const t = useTranslations("hero");
+  const tTabs = useTranslations("sectionTabs");
+  const tNotes = useTranslations("notes");
 
   return (
     <Box
@@ -50,33 +53,7 @@ export default function HeroSection() {
             gap: { xs: "1.4rem", md: "1.75rem" },
           }}
         >
-          <Box
-            component="span"
-            sx={{
-              display: "inline-flex",
-              alignItems: "center",
-              gap: "0.5rem",
-              alignSelf: "flex-start",
-              px: "0.85rem",
-              py: "0.4rem",
-              bgcolor: "background.paper",
-              borderRadius: "999px",
-              fontSize: "0.85rem",
-              fontWeight: 500,
-            }}
-          >
-            <Box
-              component="span"
-              aria-hidden="true"
-              sx={{
-                width: "0.5rem",
-                height: "0.5rem",
-                borderRadius: "999px",
-                bgcolor: "secondary.main",
-              }}
-            />
-            {t("badge")}
-          </Box>
+          <SectionTab label={tTabs("hero")} />
 
           <Typography
             variant="h1"
@@ -91,7 +68,33 @@ export default function HeroSection() {
               overflowWrap: "break-word",
             }}
           >
-            {t("title")}
+            {t("titleBefore")}
+            <Box component="span" sx={{ position: "relative", whiteSpace: "nowrap" }}>
+              {t("titleUnderline")}
+              <Box
+                component="svg"
+                viewBox="0 0 300 24"
+                preserveAspectRatio="none"
+                aria-hidden="true"
+                sx={{
+                  position: "absolute",
+                  left: "-2%",
+                  bottom: "-0.14em",
+                  width: "104%",
+                  height: "0.22em",
+                  pointerEvents: "none",
+                }}
+              >
+                <path
+                  d="M4 16 C 60 4, 140 4, 296 12"
+                  fill="none"
+                  stroke="#ff5a1f"
+                  strokeWidth="7"
+                  strokeLinecap="round"
+                />
+              </Box>
+            </Box>
+            {t("titleAfter")}
             <Box component="span" sx={{ color: "secondary.main" }}>
               .
             </Box>
@@ -139,10 +142,37 @@ export default function HeroSection() {
               {t("secondaryCTA")}
             </Button>
           </Box>
+
+          <HandNote
+            text={tNotes("heroStart")}
+            tone="onLight"
+            arrow="up-left"
+            rotate={-3}
+            showOnMobile
+            sx={{ ml: "1rem", mt: "-0.25rem", alignItems: "flex-start", "& > span": { mt: "1rem" } }}
+          />
         </Box>
 
-        <Box sx={{ flex: "1 1 26rem", minWidth: 0 }}>
-          <HeroSiteWindow />
+        <Box
+          sx={{
+            flex: "1 1 26rem",
+            minWidth: 0,
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "flex-start",
+            gap: "0.5rem",
+          }}
+        >
+          <Box sx={{ width: "100%" }}>
+            <HeroSiteWindow />
+          </Box>
+          <HandNote
+            text={tNotes("heroWindow")}
+            tone="ink"
+            arrow="up-right"
+            rotate={-3}
+            sx={{ ml: "0.5rem" }}
+          />
         </Box>
       </Container>
     </Box>

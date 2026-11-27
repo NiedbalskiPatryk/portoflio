@@ -27,6 +27,7 @@ const muted = "#4a4a4a";
 const accent = "#ff5a1f";
 const ground = "#f6f6f4";
 const fieldBorder = "#dcdcd8";
+const displayFont = "var(--font-bricolage), system-ui, sans-serif";
 
 export const siteTheme = createTheme({
   palette: {
@@ -54,9 +55,9 @@ export const siteTheme = createTheme({
   shape: { borderRadius: 24 },
   typography: {
     fontFamily: "var(--font-instrument-sans), system-ui, sans-serif",
-    h1: { fontSize: "4.5rem", fontWeight: 700, lineHeight: 1.02, letterSpacing: "-0.045em" },
-    h2: { fontSize: "3rem", fontWeight: 700, lineHeight: 1.08, letterSpacing: "-0.045em" },
-    h3: { fontSize: "1.75rem", fontWeight: 700, lineHeight: 1.2, letterSpacing: "-0.03em" },
+    h1: { fontFamily: displayFont, fontSize: "4.5rem", fontWeight: 800, lineHeight: 1.02, letterSpacing: "-0.05em" },
+    h2: { fontFamily: displayFont, fontSize: "3rem", fontWeight: 800, lineHeight: 1.05, letterSpacing: "-0.05em" },
+    h3: { fontFamily: displayFont, fontSize: "1.75rem", fontWeight: 600, lineHeight: 1.2, letterSpacing: "-0.03em" },
     h4: { fontSize: "1.35rem", fontWeight: 600, lineHeight: 1.3 },
     h5: { fontSize: "1.15rem", fontWeight: 600, lineHeight: 1.35 },
     h6: { fontSize: "1rem", fontWeight: 600, lineHeight: 1.4 },
@@ -68,7 +69,12 @@ export const siteTheme = createTheme({
   components: {
     MuiCssBaseline: {
       styleOverrides: {
-        body: { backgroundColor: ground },
+        // Dotted grid on the light ground; sections with their own background cover it.
+        body: {
+          backgroundColor: ground,
+          backgroundImage: "radial-gradient(#d6d6d0 1.1px, transparent 1.1px)",
+          backgroundSize: "22px 22px",
+        },
         "@media (prefers-reduced-motion: reduce)": {
           "*, *::before, *::after": {
             animationDuration: "0.01ms !important",

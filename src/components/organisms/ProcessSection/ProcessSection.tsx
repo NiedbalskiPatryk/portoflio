@@ -1,5 +1,6 @@
 "use client";
 
+import { HandNote, SectionTab } from "@/components/atoms";
 import { HEADER_HEIGHT } from "@/components/organisms/Header";
 import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
@@ -8,44 +9,82 @@ import { useTranslations } from "next-intl";
 
 const STEPS = ["talk", "quote", "build", "launch"] as const;
 
+// Soft orange band tokens (#c93d0b is AA-safe on both the band and the light ground).
+const BAND_BG = "#ffeee5";
+const EMBER = "#c93d0b";
+const RULE = "#111111";
+
 export default function ProcessSection() {
   const t = useTranslations("process");
+  const tTabs = useTranslations("sectionTabs");
+  const tNotes = useTranslations("notes");
 
   return (
     <Box
       component="section"
       id="process"
+      aria-labelledby="process-heading"
       sx={{
         scrollMarginTop: `${HEADER_HEIGHT}px`,
-        pt: { xs: "4rem", md: "5.5rem" },
-        pb: { xs: 2, md: 4 },
+        bgcolor: BAND_BG,
+        color: "text.primary",
       }}
     >
       <Container
-        maxWidth="lg"
-        sx={{ display: "flex", flexDirection: "column", gap: "2.5rem" }}
+        maxWidth={false}
+        disableGutters
+        sx={{
+          maxWidth: "75rem",
+          px: "1.5rem",
+          py: { xs: "4rem", md: "6rem" },
+          display: "flex",
+          flexDirection: "column",
+          gap: { xs: "2.5rem", md: "3rem" },
+        }}
       >
         <Box
           sx={{
             display: "flex",
             flexDirection: "column",
-            alignItems: "center",
-            textAlign: "center",
-            gap: 2,
+            gap: "1.25rem",
+            minWidth: 0,
           }}
         >
-          <Typography
-            variant="h2"
-            component="h2"
-            sx={{ fontSize: { xs: "2rem", sm: "2.5rem", md: "3rem" } }}
+          <SectionTab label={tTabs("process")} />
+          <Box
+            sx={{
+              display: "flex",
+              flexWrap: "wrap",
+              alignItems: "flex-end",
+              gap: "0.5rem 2rem",
+            }}
           >
-            {t("heading")}
-          </Typography>
+            <Typography
+              id="process-heading"
+              variant="h2"
+              component="h2"
+              sx={{
+                m: 0,
+                maxWidth: "40rem",
+                fontSize: { xs: "2.3rem", sm: "3rem", md: "3.75rem" },
+                lineHeight: 1,
+              }}
+            >
+              {t("heading")}
+            </Typography>
+            <HandNote
+              text={tNotes("processJargon")}
+              tone="onLight"
+              arrow="left"
+              rotate={-3}
+              sx={{ fontSize: "1.7rem", mb: "0.25rem" }}
+            />
+          </Box>
           <Typography
             sx={{
+              m: 0,
               fontSize: { xs: "1rem", md: "1.1rem" },
-              color: "text.secondary",
-              maxWidth: "38rem",
+              maxWidth: "34rem",
             }}
           >
             {t("description")}
@@ -60,70 +99,53 @@ export default function ProcessSection() {
             p: 0,
             display: "grid",
             gridTemplateColumns: {
-              xs: "1fr",
+              xs: "minmax(0, 1fr)",
               sm: "repeat(2, minmax(0, 1fr))",
               lg: "repeat(4, minmax(0, 1fr))",
             },
-            gap: 2,
+            columnGap: "1.5rem",
+            rowGap: { xs: "2rem", lg: 0 },
+            borderTop: `2px solid ${RULE}`,
           }}
         >
-          {STEPS.map((key, index) => {
-            const inverted = index === STEPS.length - 1;
-            const accent = index === 0 || inverted;
-            return (
+          {STEPS.map((key, index) => (
+            <Box
+              component="li"
+              key={key}
+              sx={{
+                pt: "1.75rem",
+                display: "flex",
+                flexDirection: "column",
+                gap: "0.75rem",
+                minWidth: 0,
+              }}
+            >
               <Box
-                component="li"
-                key={key}
+                component="span"
+                aria-hidden="true"
                 sx={{
-                  bgcolor: inverted ? "inverse.background" : "background.paper",
-                  color: inverted ? "#ffffff" : "text.primary",
-                  borderRadius: "1.5rem",
-                  p: { xs: 3, md: 4 },
-                  display: "flex",
-                  flexDirection: "column",
-                  gap: "0.9rem",
-                  transition: "transform 0.25s ease, box-shadow 0.25s ease",
-                  "&:hover": {
-                    transform: "translateY(-4px)",
-                    boxShadow: "0 1rem 2rem rgba(17, 17, 17, 0.08)",
-                  },
+                  fontFamily: "var(--font-bricolage), system-ui, sans-serif",
+                  fontSize: { xs: "4.25rem", md: "5.5rem" },
+                  fontWeight: 800,
+                  lineHeight: 0.9,
+                  letterSpacing: "-0.06em",
+                  color: EMBER,
                 }}
               >
-                <Box
-                  component="span"
-                  aria-hidden="true"
-                  sx={{
-                    width: "2.75rem",
-                    height: "2.75rem",
-                    borderRadius: "999px",
-                    bgcolor: accent ? "secondary.main" : "text.primary",
-                    color: accent ? "secondary.contrastText" : "#ffffff",
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    fontWeight: 700,
-                  }}
-                >
-                  {index + 1}
-                </Box>
-                <Typography
-                  variant="h3"
-                  component="h3"
-                  sx={{ fontSize: "1.2rem", fontWeight: 600, letterSpacing: 0 }}
-                >
-                  {t(`steps.${key}.title`)}
-                </Typography>
-                <Typography
-                  sx={{
-                    color: inverted ? "#cfcfcf" : "text.secondary",
-                    lineHeight: 1.6,
-                  }}
-                >
-                  {t(`steps.${key}.text`)}
-                </Typography>
+                {String(index + 1).padStart(2, "0")}
               </Box>
-            );
-          })}
+              <Typography
+                variant="h3"
+                component="h3"
+                sx={{ fontFamily: "inherit", fontSize: "1.3rem", fontWeight: 600, letterSpacing: 0 }}
+              >
+                {t(`steps.${key}.title`)}
+              </Typography>
+              <Typography sx={{ m: 0, lineHeight: 1.6 }}>
+                {t(`steps.${key}.text`)}
+              </Typography>
+            </Box>
+          ))}
         </Box>
       </Container>
     </Box>

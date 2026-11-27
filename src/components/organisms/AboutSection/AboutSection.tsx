@@ -1,5 +1,6 @@
 "use client";
 
+import { SectionTab } from "@/components/atoms";
 import { AboutBio, AboutHeader } from "@/components/molecules";
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
@@ -68,6 +69,7 @@ const AboutSection: React.FC<AboutSectionProps> = ({
   secondaryCTA,
 }) => {
   const t = useTranslations("about");
+  const tTabs = useTranslations("sectionTabs");
   const darkFocus = { outline: "2px solid #f3f3f1", outlineOffset: "2px" };
 
   return (
@@ -84,14 +86,17 @@ const AboutSection: React.FC<AboutSectionProps> = ({
           gap: { xs: "1.5rem", md: "2rem" },
         }}
       >
-        <Typography
-          id="about-heading"
-          variant="h2"
-          component="h2"
-          sx={{ m: 0, fontSize: { xs: "2.25rem", md: "3rem" } }}
-        >
-          {heading}
-        </Typography>
+        <Box sx={{ display: "flex", flexDirection: "column", gap: "1.25rem" }}>
+          <SectionTab label={tTabs("about")} />
+          <Typography
+            id="about-heading"
+            variant="h2"
+            component="h2"
+            sx={{ m: 0, fontSize: { xs: "2.25rem", md: "3rem" } }}
+          >
+            {heading}
+          </Typography>
+        </Box>
 
         <Box
           sx={{

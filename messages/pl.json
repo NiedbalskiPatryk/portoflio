@@ -44,7 +44,10 @@
       "content": "Treść",
       "design": "Projekt",
       "online": "Online"
-    }
+    },
+    "titleBefore": "Strony i systemy, które ",
+    "titleUnderline": "pracują",
+    "titleAfter": " na Twoją firmę"
   },
   "about": {
     "heading": "O mnie",
@@ -1222,5 +1225,22 @@
       "closing": "Proszę o wycenę."
     },
     "subject": "Wycena: {type}"
+  },
+  "sectionTabs": {
+    "hero": "itpapi.pl / przyjmuję nowe projekty",
+    "services": "01 · usługi",
+    "projects": "02 · realizacje",
+    "process": "03 · jak pracuję",
+    "pricing": "04 · cennik",
+    "about": "05 · o mnie",
+    "faq": "06 · pytania",
+    "contact": "07 · kontakt"
+  },
+  "notes": {
+    "heroStart": "zacznij tutaj",
+    "heroWindow": "tak powstaje Twoja strona",
+    "projectsLed": "tu prowadziłem projekt",
+    "processJargon": "bez żargonu",
+    "estimateClick": "kliknij, policzymy razem"
   }
 }

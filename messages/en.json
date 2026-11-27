@@ -44,7 +44,10 @@
       "content": "Content",
       "design": "Design",
       "online": "Online"
-    }
+    },
+    "titleBefore": "Websites and systems that ",
+    "titleUnderline": "work",
+    "titleAfter": " for your business"
   },
   "about": {
     "heading": "About",
@@ -1200,5 +1203,22 @@
       "closing": "Please send me a quote."
     },
     "subject": "Quote: {type}"
+  },
+  "sectionTabs": {
+    "hero": "itpapi.pl / taking on new projects",
+    "services": "01 · services",
+    "projects": "02 · work",
+    "process": "03 · how I work",
+    "pricing": "04 · pricing",
+    "about": "05 · about",
+    "faq": "06 · faq",
+    "contact": "07 · contact"
+  },
+  "notes": {
+    "heroStart": "start here",
+    "heroWindow": "this is how your site comes together",
+    "projectsLed": "I led this one",
+    "processJargon": "no jargon",
+    "estimateClick": "click and we'll price it together"
   }
 }

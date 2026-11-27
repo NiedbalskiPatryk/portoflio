@@ -5,8 +5,10 @@ import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
 import Typography from "@mui/material/Typography";
 import { useTranslations } from "next-intl";
+import { SectionTab } from "@/components/atoms";
+import ProjectCollage from "./ProjectCollage";
 import ProjectDetail from "./ProjectDetail";
-import ProjectPickCard from "./ProjectPickCard";
+import ProjectPickRow from "./ProjectPickRow";
 import type { ProjectItem } from "./types";
 
 export interface ProjectsSectionProps {
@@ -18,7 +20,7 @@ export interface ProjectsSectionProps {
   visitSiteLabel?: string;
 }
 
-// Dark "Realizacje" band: clickable project cards + detail panel.
+// Dark "Realizacje" band: project list + tilted frame collage + detail panel.
 const ProjectsSection: React.FC<ProjectsSectionProps> = ({
   heading,
   headingAccent,
@@ -27,6 +29,8 @@ const ProjectsSection: React.FC<ProjectsSectionProps> = ({
   visitSiteLabel,
 }) => {
   const t = useTranslations("projects");
+  const tTabs = useTranslations("sectionTabs");
+  const tNotes = useTranslations("notes");
   const [selectedId, setSelectedId] = React.useState(projects[0]?.id ?? "");
   const panelRef = React.useRef<HTMLDivElement>(null);
   const headingId = "projects-heading";
@@ -36,7 +40,7 @@ const ProjectsSection: React.FC<ProjectsSectionProps> = ({
 
   const handlePick = (id: string) => {
     setSelectedId(id);
-    // On narrow screens the panel sits below the grid; bring it into view.
+    // On narrow screens the panel sits below the list; bring it into view.
     const panel = panelRef.current;
     if (panel && panel.getBoundingClientRect().top > window.innerHeight * 0.65) {
       const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
@@ -65,55 +69,90 @@ const ProjectsSection: React.FC<ProjectsSectionProps> = ({
       >
         <Box
           sx={{
-            display: "flex",
-            flexWrap: "wrap",
-            justifyContent: "space-between",
-            alignItems: "flex-end",
-            gap: "1rem",
-          }}
-        >
-          <Typography
-            id={headingId}
-            variant="h2"
-            component="h2"
-            sx={{ m: 0, fontSize: { xs: "2.25rem", md: "3rem" }, color: "inverse.text" }}
-          >
-            {heading}
-            {headingAccent && (
-              <>
-                {" "}
-                <Box component="span" sx={{ color: "secondary.main" }}>
-                  {headingAccent}
-                </Box>
-              </>
-            )}
-          </Typography>
-          {description && (
-            <Typography sx={{ m: 0, color: "inverse.textSecondary", maxWidth: "24rem" }}>
-              {description}
-            </Typography>
-          )}
-        </Box>
-
-        <Box
-          sx={{
             display: "grid",
             gridTemplateColumns: {
-              xs: "repeat(2, minmax(0, 1fr))",
-              sm: "repeat(auto-fit, minmax(14rem, 1fr))",
+              xs: "minmax(0, 1fr)",
+              md: "minmax(0, 5fr) minmax(0, 7fr)",
             },
-            gap: { xs: "0.75rem", sm: "1rem" },
+            gridTemplateAreas: {
+              xs: '"head" "collage" "list"',
+              md: '"head collage" "list collage"',
+            },
+            gridTemplateRows: { md: "auto 1fr" },
+            columnGap: { md: "3rem", lg: "4rem" },
+            rowGap: { xs: "1.75rem", md: "1.75rem" },
+            alignItems: "start",
           }}
         >
-          {projects.map((project) => (
-            <ProjectPickCard
-              key={project.id}
-              project={project}
-              selected={project.id === selected?.id}
-              controlsId={panelId}
+          <Box
+            sx={{
+              gridArea: "head",
+              display: "flex",
+              flexDirection: "column",
+              gap: "1.25rem",
+              minWidth: 0,
+            }}
+          >
+            <SectionTab label={tTabs("projects")} tone="dark" />
+            <Typography
+              id={headingId}
+              variant="h2"
+              component="h2"
+              sx={{
+                m: 0,
+                fontSize: { xs: "2.6rem", md: "3.25rem", lg: "3.75rem" },
+                lineHeight: 1,
+                color: "inverse.text",
+              }}
+            >
+              {heading}
+              {headingAccent && (
+                <>
+                  {" "}
+                  <Box component="span" sx={{ color: "secondary.main" }}>
+                    {headingAccent}
+                  </Box>
+                </>
+              )}
+            </Typography>
+            {description && (
+              <Typography sx={{ m: 0, color: "inverse.textSecondary", maxWidth: "26rem" }}>
+                {description}
+              </Typography>
+            )}
+          </Box>
+
+          <Box
+            component="ul"
+            sx={{
+              gridArea: "list",
+              listStyle: "none",
+              m: 0,
+              p: 0,
+              minWidth: 0,
+              width: "100%",
+              borderTop: "1px solid #2c2c2a",
+            }}
+          >
+            {projects.map((project) => (
+              <ProjectPickRow
+                key={project.id}
+                project={project}
+                selected={project.id === selected?.id}
+                controlsId={panelId}
+                onPick={handlePick}
+              />
+            ))}
+          </Box>
+
+          <Box sx={{ gridArea: "collage", minWidth: 0, alignSelf: "center" }}>
+            <ProjectCollage
+              projects={projects}
+              selectedId={selected?.id}
               onPick={handlePick}
+              parkizaNote={tNotes("projectsLed")}
             />
-          ))}
+          </Box>
         </Box>
 
         {selected && (
