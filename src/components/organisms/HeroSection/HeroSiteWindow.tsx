@@ -354,7 +354,7 @@ export default function HeroSiteWindow() {
                 gap: "0.4rem",
                 fontSize: "0.78rem",
                 fontWeight: 600,
-                color: reached ? "text.primary" : "#757575",
+                color: reached ? "text.primary" : "#6b6b6b",
                 transition: "color 0.3s ease",
               }}
             >

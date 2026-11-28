@@ -103,7 +103,7 @@ export default function MobileDrawer({
               },
             }}
           >
-            {cta.label} <span aria-hidden="true">&nbsp;→</span>
+            {cta.label}
           </Button>
         </Box>
       )}

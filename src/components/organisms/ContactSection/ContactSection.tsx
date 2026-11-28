@@ -6,7 +6,6 @@ import Container from "@mui/material/Container";
 import Typography from "@mui/material/Typography";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
-import { SectionTab } from "@/components/atoms";
 import ContactForm from "@/components/organisms/ContactForm";
 import ContactInfo from "@/components/organisms/ContactInfo";
 import type {
@@ -43,7 +42,6 @@ const ContactSection: React.FC<ContactSectionProps> = ({
 }) => {
   const t = useTranslations("contact");
   const tAbout = useTranslations("about");
-  const tTabs = useTranslations("sectionTabs");
 
   return (
     <Box
@@ -126,7 +124,6 @@ const ContactSection: React.FC<ContactSectionProps> = ({
             justifyContent: "center",
           }}
         >
-          <SectionTab label={tTabs("contact")} />
           <Typography
             id="contact-heading"
             variant="h2"

@@ -119,20 +119,10 @@ export default function HeroSection() {
               sx={{
                 py: "1rem",
                 px: "1.6rem",
-                "& .cta-arrow": { transition: "transform 0.2s ease" },
-                "&:hover .cta-arrow": { transform: "translateX(4px)" },
                 ...focusRing,
               }}
             >
               {t("primaryCTA")}
-              <Box
-                component="span"
-                className="cta-arrow"
-                aria-hidden="true"
-                sx={{ display: "inline-block", ml: "0.5rem" }}
-              >
-                →
-              </Box>
             </Button>
             <Button
               href="#projects"

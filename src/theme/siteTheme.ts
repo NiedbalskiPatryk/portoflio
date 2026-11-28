@@ -75,6 +75,8 @@ export const siteTheme = createTheme({
           backgroundImage: "radial-gradient(#d6d6d0 1.1px, transparent 1.1px)",
           backgroundSize: "22px 22px",
         },
+        // Avoid a single word stranded on the last line of a paragraph.
+        p: { textWrap: "pretty" },
         "@media (prefers-reduced-motion: reduce)": {
           "*, *::before, *::after": {
             animationDuration: "0.01ms !important",

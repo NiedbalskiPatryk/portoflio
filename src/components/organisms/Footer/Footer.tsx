@@ -59,11 +59,10 @@ const Footer: React.FC<FooterProps> = ({
   const locale = useLocale();
 
   const headingSx = {
-    fontSize: "0.78rem",
+    fontSize: "0.82rem",
     lineHeight: 1.4,
+    fontWeight: 600,
     color: "text.secondary",
-    textTransform: "uppercase",
-    letterSpacing: "0.08em",
     mb: 2,
   } as const;
 

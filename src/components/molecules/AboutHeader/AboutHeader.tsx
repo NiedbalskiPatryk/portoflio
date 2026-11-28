@@ -25,7 +25,6 @@ const AboutHeader: React.FC<AboutHeaderProps> = ({ name, role }) => {
         color="text.secondary"
         sx={{
           m: 0,
-          fontFamily: "var(--font-jetbrains-mono), monospace",
           fontSize: "0.9rem",
           fontWeight: 500,
         }}

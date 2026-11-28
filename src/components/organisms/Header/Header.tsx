@@ -78,8 +78,6 @@ export default function Header() {
                   py: "0.8rem",
                   px: "1.3rem",
                   fontSize: "0.92rem",
-                  "& .cta-arrow": { transition: "transform 0.2s ease" },
-                  "&:hover .cta-arrow": { transform: "translateX(4px)" },
                   "&:focus-visible": {
                     outline: "2px solid",
                     outlineColor: "text.primary",
@@ -88,14 +86,6 @@ export default function Header() {
                 }}
               >
                 {cta.label}
-                <Box
-                  component="span"
-                  className="cta-arrow"
-                  aria-hidden="true"
-                  sx={{ display: "inline-block", ml: "0.4rem" }}
-                >
-                  →
-                </Box>
               </Button>
 
               <IconButton

@@ -55,7 +55,7 @@
     "role": "Full-Stack Developer",
     "profileImageAlt": "Portret Patryka",
     "bio": {
-      "paragraph1": "Jestem full-stack developerem z Warszawy. Lubię zamieniać złożone problemy w proste rozwiązania - takie, z których po prostu wygodnie się korzysta.",
+      "paragraph1": "Jestem full-stack developerem z Warszawy. Buduję zarówno to, co widzi Twój klient, jak i to, co działa pod spodem: strony, panele, systemy rezerwacji i integracje.",
       "paragraph2": "Przez większość swojej kariery pracowałem w firmach o różnych profilach - od startupów i software house’ów po firmy współpracujące z największymi korporacjami świata, tworząc od wewnętrznych narzędzi po platformy dla klientów. Najlepiej czuję się w zespołach, gdzie dobre pomysły mogą przyjść z każdej strony.",
       "availability": "Obecnie realizuję projekty dla firm i jestem otwarty na stałą współpracę - w modelu B2B lub na etacie, w zespole, który buduje produkt. Jeśli szukasz kogoś do zespołu, napisz przez formularz albo odezwij się na LinkedInie.",
       "paragraph3": "Kiedy nie koduję, znajdziesz mnie spędzającego czas z rodziną, podróżującego, czytającego książki lub grającego w piłkę."
@@ -100,13 +100,13 @@
     "items": {
       "parkiza": {
         "name": "Parkiza",
-        "summary": "Kompletny system rezerwacji parkingowych obsługujący tysiące rezerwacji. Zbudowany z nowoczesnym stackiem włączając NestJS i React, usprawnił operacje całej organizacji.",
+        "summary": "Aplikacja, w której użytkownik wybiera datę, godzinę i wolne miejsce parkingowe, a potem sam zarządza swoimi rezerwacjami. System obsługuje tysiące rezerwacji.",
         "role": "Project Leader / Backend Developer",
         "kind": "System rezerwacji parkingów"
       },
       "signalos": {
         "name": "SignalOS",
-        "summary": "Zintegrowana platforma zarządzania budynkami, która łączy wiele systemów w jednym miejscu. To rozwiązanie enterprise pomaga facility managerom pracować mądrzej.",
+        "summary": "Platforma, która zbiera systemy budynku w jednym miejscu, żeby zarządca nie musiał przełączać się między kilkoma aplikacjami.",
         "role": "Full-Stack Developer",
         "kind": "Platforma dla budynków"
       },
@@ -118,7 +118,7 @@
       },
       "skinscartel": {
         "name": "SkinsCartel",
-        "summary": "W pełni funkcjonalny marketplace do handlu skinami CS:GO. Zbudowany z naciskiem na wydajność i doświadczenie użytkownika — obsługuje zarządzanie ekwipunkiem w czasie rzeczywistym, bezpieczne transakcje i dopracowany interfejs e-commerce.",
+        "summary": "Marketplace, na którym gracze kupują i sprzedają skiny CS:GO. Ekwipunek aktualizuje się na bieżąco, a każda transakcja jest zabezpieczona.",
         "role": "Tech Lead",
         "kind": "Marketplace"
       }
@@ -133,8 +133,8 @@
     "mediaImage": "Zrzut ekranu"
   },
   "faq": {
-    "heading": "Pytania? Mam odpowiedzi",
-    "description": "Co zwykle warto wiedzieć, zanim zaczniemy współpracę.",
+    "heading": "Zanim napiszesz",
+    "description": "Odpowiedzi na to, o co pytają mnie najczęściej.",
     "items": {
       "services": {
         "question": "Jakie projekty realizujesz?",
@@ -1229,14 +1229,7 @@
     "subject": "Wycena: {type}"
   },
   "sectionTabs": {
-    "hero": "itpapi.pl / przyjmuję nowe projekty",
-    "services": "01 · usługi",
-    "projects": "02 · realizacje",
-    "process": "03 · jak pracuję",
-    "pricing": "04 · cennik",
-    "about": "05 · o mnie",
-    "faq": "06 · pytania",
-    "contact": "07 · kontakt"
+    "hero": "itpapi.pl / przyjmuję nowe projekty"
   },
   "notes": {
     "heroStart": "zacznij tutaj",

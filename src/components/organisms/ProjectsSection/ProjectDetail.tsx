@@ -21,11 +21,10 @@ const focusRing = {
 };
 
 const metaLabelSx = {
-  fontSize: "0.78rem",
+  fontSize: "0.82rem",
+  fontWeight: 600,
   lineHeight: 1.4,
   color: "inverse.textSecondary",
-  textTransform: "uppercase",
-  letterSpacing: "0.08em",
 } as const;
 
 // Organism part: shows the selected project with a browsable media gallery.
@@ -270,7 +269,6 @@ const ProjectDetail: React.FC<ProjectDetailProps> = ({
                       borderRadius: "999px",
                       border: "1px solid rgba(243, 243, 241, 0.28)",
                       color: "inverse.text",
-                      fontFamily: "var(--font-jetbrains-mono), monospace",
                       fontSize: "0.8rem",
                       lineHeight: 1.5,
                     }}

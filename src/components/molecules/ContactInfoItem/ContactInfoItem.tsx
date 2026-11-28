@@ -24,10 +24,9 @@ const ContactInfoItem: React.FC<ContactInfoItemProps> = ({ label, value, href })
         component="span"
         color="text.secondary"
         sx={{
-          fontSize: "0.78rem",
+          fontSize: "0.82rem",
           lineHeight: 1.4,
-          textTransform: "uppercase",
-          letterSpacing: "0.08em",
+          fontWeight: 600,
         }}
       >
         {label}

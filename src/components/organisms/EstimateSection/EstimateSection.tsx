@@ -6,7 +6,7 @@ import Button from "@mui/material/Button";
 import Container from "@mui/material/Container";
 import Typography from "@mui/material/Typography";
 import { useLocale, useTranslations } from "next-intl";
-import { HandNote, SectionTab } from "@/components/atoms";
+import { HandNote } from "@/components/atoms";
 import { dispatchContactPrefill } from "@/components/organisms/ContactForm/prefill";
 import EstimateExtraChip from "./EstimateExtraChip";
 import EstimateTypeOption from "./EstimateTypeOption";
@@ -22,7 +22,6 @@ export type EstimateSectionProps = Record<string, never>;
 
 const EstimateSection: React.FC<EstimateSectionProps> = () => {
   const t = useTranslations("estimate");
-  const tTabs = useTranslations("sectionTabs");
   const tNotes = useTranslations("notes");
   const locale = useLocale();
 
@@ -88,7 +87,6 @@ const EstimateSection: React.FC<EstimateSectionProps> = () => {
         }}
       >
         <Box sx={{ display: "flex", flexDirection: "column", gap: "0.75rem" }}>
-          <SectionTab label={tTabs("pricing")} sx={{ mb: "0.5rem" }} />
           <Typography
             id="estimate-heading"
             variant="h2"
@@ -187,10 +185,9 @@ const EstimateSection: React.FC<EstimateSectionProps> = () => {
             <Typography
               component="span"
               sx={{
-                fontSize: "0.8rem",
+                fontSize: "0.82rem",
+                fontWeight: 600,
                 color: "inverse.textSecondary",
-                textTransform: "uppercase",
-                letterSpacing: "0.08em",
               }}
             >
               {t("summary.eyebrow")}
@@ -237,19 +234,10 @@ const EstimateSection: React.FC<EstimateSectionProps> = () => {
               onClick={handleSend}
               sx={{
                 alignSelf: "flex-start",
-                "& .estimate-arrow": { transition: "transform 0.2s ease" },
-                "&:hover .estimate-arrow": { transform: "translateX(4px)" },
                 "&:focus-visible": { outline: "2px solid #f3f3f1", outlineOffset: "2px" },
-                "@media (prefers-reduced-motion: reduce)": {
-                  "& .estimate-arrow": { transition: "none" },
-                  "&:hover .estimate-arrow": { transform: "none" },
-                },
               }}
             >
               {t("summary.cta")}
-              <Box component="span" className="estimate-arrow" aria-hidden="true" sx={{ ml: "0.5rem" }}>
-                →
-              </Box>
             </Button>
             <HandNote
               text={tNotes("estimateClick")}

@@ -3,7 +3,7 @@ import type { SxProps, Theme } from "@mui/material/styles";
 import React from "react";
 
 export interface SectionTabProps {
-  /** Visible label, e.g. "02 · realizacje". */
+  /** Visible label, e.g. "realizacje". */
   label: string;
   /** "dark" is for the inverse (#111) band. */
   tone?: "light" | "dark";
