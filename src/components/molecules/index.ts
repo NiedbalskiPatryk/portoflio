@@ -1,8 +1,6 @@
 export { default as NavigationMenu } from "./NavigationMenu";
 export type { NavItem } from "./NavigationMenu";
 export { default as MobileDrawer } from "./MobileDrawer";
-export { default as ServiceCard } from "./ServiceCard";
-export type { ServiceCardProps } from "./ServiceCard";
 export { default as AboutHeader } from "./AboutHeader";
 export type { AboutHeaderProps } from "./AboutHeader";
 export { default as AboutBio } from "./AboutBio";

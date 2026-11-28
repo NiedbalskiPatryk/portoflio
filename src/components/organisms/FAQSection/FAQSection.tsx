@@ -4,8 +4,6 @@ import React from "react";
 import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
 import Typography from "@mui/material/Typography";
-import { SectionTab } from "@/components/atoms";
-import { useTranslations } from "next-intl";
 import FAQList from "@/components/organisms/FAQList";
 import type { FAQItemData } from "@/components/organisms/FAQList";
 
@@ -24,7 +22,6 @@ const FAQSection: React.FC<FAQSectionProps> = ({
   allowMultiple = true,
   defaultExpandedIds,
 }) => {
-  const tTabs = useTranslations("sectionTabs");
 
   return (
     <Box component="section" id="faqs" aria-labelledby="faq-heading">
@@ -53,7 +50,6 @@ const FAQSection: React.FC<FAQSectionProps> = ({
             top: { md: "6rem" },
           }}
         >
-          <SectionTab label={tTabs("faq")} sx={{ mb: "0.5rem" }} />
           <Typography
             id="faq-heading"
             variant="h2"

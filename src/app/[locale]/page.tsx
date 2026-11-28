@@ -1,7 +1,6 @@
 import type { ContactSectionProps } from "@/components";
 import {
   AboutSection,
-  AnimatedSection,
   ContactSection,
   EstimateSection,
   FAQSection,
@@ -190,33 +189,19 @@ export default async function Home() {
       <main>
         <HeroSection />
 
-        <AnimatedSection direction="up">
-          <ServicesSection />
-        </AnimatedSection>
+        <ServicesSection />
 
-        <AnimatedSection direction="up">
-          <ProjectsSection {...projectsData} />
-        </AnimatedSection>
+        <ProjectsSection {...projectsData} />
 
-        <AnimatedSection direction="up">
-          <ProcessSection />
-        </AnimatedSection>
+        <ProcessSection />
 
-        <AnimatedSection direction="up">
-          <EstimateSection />
-        </AnimatedSection>
+        <EstimateSection />
 
-        <AnimatedSection direction="up">
-          <AboutSection {...aboutData} />
-        </AnimatedSection>
+        <AboutSection {...aboutData} />
 
-        <AnimatedSection direction="up">
-          <FAQSection {...faqData} />
-        </AnimatedSection>
+        <FAQSection {...faqData} />
 
-        <AnimatedSection direction="up">
-          <ContactSection {...contactData} />
-        </AnimatedSection>
+        <ContactSection {...contactData} />
       </main>
 
       <Footer {...footerData} taxId="1132813373" />

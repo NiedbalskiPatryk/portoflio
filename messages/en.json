@@ -55,7 +55,7 @@
     "role": "Full-Stack Developer",
     "profileImageAlt": "Portrait of Patryk",
     "bio": {
-      "paragraph1": "I'm a full-stack developer based in Warsaw. I enjoy turning complex problems into simple solutions - the kind that are just easy to use.",
+      "paragraph1": "I'm a full-stack developer based in Warsaw. I build both what your customers see and what runs underneath: websites, admin panels, booking systems and integrations.",
       "paragraph2": "Throughout my career, I've worked in companies with different profiles - from startups and software houses to companies partnering with some of the world’s largest corporations, building everything from internal tools to customer-facing platforms. I thrive in collaborative environments where good ideas can come from anywhere.",
       "availability": "I currently build projects for businesses and I'm open to a long-term role - B2B contract or full-time - in a team that builds a product. If you're hiring, send me a message or reach out on LinkedIn.",
       "paragraph3": "When I'm not coding, you'll find me spending time with family, traveling, reading books, or playing football."
@@ -100,13 +100,13 @@
     "items": {
       "parkiza": {
         "name": "Parkiza",
-        "summary": "A complete parking reservation system that handles thousands of bookings. Built with a modern stack including NestJS and React, it streamlined operations for the entire organization.",
+        "summary": "An app where people pick a date, a time and a free parking spot, then manage their own bookings. The system handles thousands of reservations.",
         "role": "Project Leader / Backend Developer",
         "kind": "Parking reservation system"
       },
       "signalos": {
         "name": "SignalOS",
-        "summary": "An integrated building management platform that brings multiple systems under one roof. This enterprise solution helps facility managers work smarter, not harder.",
+        "summary": "A platform that brings a building's systems into one place, so facility managers don't have to switch between several apps.",
         "role": "Full-Stack Developer",
         "kind": "Building management platform"
       },
@@ -118,7 +118,7 @@
       },
       "skinscartel": {
         "name": "SkinsCartel",
-        "summary": "A fully-featured CS:GO skin trading marketplace. Built with a focus on performance and user experience, it handles real-time inventory management, secure transactions, and a sleek e-commerce interface.",
+        "summary": "A marketplace where players buy and sell CS:GO skins. Inventory updates in real time and every transaction is secured.",
         "role": "Tech Lead",
         "kind": "Marketplace"
       }
@@ -133,8 +133,8 @@
     "mediaImage": "Screenshot"
   },
   "faq": {
-    "heading": "Questions? I've got answers",
-    "description": "What's worth knowing before we start working together.",
+    "heading": "Before you write",
+    "description": "Answers to what people ask me most often.",
     "items": {
       "services": {
         "question": "What kind of projects do you take on?",
@@ -176,7 +176,7 @@
       "subjectPlaceholder": "E.g. company website, booking system, job opportunity",
       "message": "Message",
       "messagePlaceholder": "What would you like to build? Any deadline or budget in mind?",
-      "submit": "Send Message",
+      "submit": "Send message",
       "validation": {
         "email": "Enter a valid email address."
       },
@@ -1207,14 +1207,7 @@
     "subject": "Quote: {type}"
   },
   "sectionTabs": {
-    "hero": "itpapi.pl / taking on new projects",
-    "services": "01 · services",
-    "projects": "02 · work",
-    "process": "03 · how I work",
-    "pricing": "04 · pricing",
-    "about": "05 · about",
-    "faq": "06 · faq",
-    "contact": "07 · contact"
+    "hero": "itpapi.pl / taking on new projects"
   },
   "notes": {
     "heroStart": "start here",

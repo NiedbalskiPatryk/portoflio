@@ -316,27 +316,13 @@ const ContactForm: React.FC<ContactFormProps> = ({
           }
           sx={{
             width: { xs: "100%", sm: "auto" },
-            "& .contact-arrow": { transition: "transform 0.2s ease" },
-            "&:hover .contact-arrow": { transform: "translateX(4px)" },
             "&:focus-visible": {
               outline: "2px solid #111111",
               outlineOffset: "2px",
             },
-            "@media (prefers-reduced-motion: reduce)": {
-              "& .contact-arrow": { transition: "none" },
-              "&:hover .contact-arrow": { transform: "none" },
-            },
           }}
         >
           {submitLabel}
-          <Box
-            component="span"
-            className="contact-arrow"
-            aria-hidden="true"
-            sx={{ ml: "0.5rem" }}
-          >
-            →
-          </Box>
         </Button>
       </Box>
       <Box role="status" aria-live="polite">

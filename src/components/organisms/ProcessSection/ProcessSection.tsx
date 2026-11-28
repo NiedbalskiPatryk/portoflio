@@ -1,6 +1,6 @@
 "use client";
 
-import { HandNote, SectionTab } from "@/components/atoms";
+import { HandNote } from "@/components/atoms";
 import { HEADER_HEIGHT } from "@/components/organisms/Header";
 import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
@@ -16,7 +16,6 @@ const RULE = "#111111";
 
 export default function ProcessSection() {
   const t = useTranslations("process");
-  const tTabs = useTranslations("sectionTabs");
   const tNotes = useTranslations("notes");
 
   return (
@@ -50,7 +49,6 @@ export default function ProcessSection() {
             minWidth: 0,
           }}
         >
-          <SectionTab label={tTabs("process")} />
           <Box
             sx={{
               display: "flex",

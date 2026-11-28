@@ -5,7 +5,6 @@ import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
 import Typography from "@mui/material/Typography";
 import { useTranslations } from "next-intl";
-import { SectionTab } from "@/components/atoms";
 import ProjectCollage from "./ProjectCollage";
 import ProjectDetail from "./ProjectDetail";
 import ProjectPickRow from "./ProjectPickRow";
@@ -29,7 +28,6 @@ const ProjectsSection: React.FC<ProjectsSectionProps> = ({
   visitSiteLabel,
 }) => {
   const t = useTranslations("projects");
-  const tTabs = useTranslations("sectionTabs");
   const tNotes = useTranslations("notes");
   const [selectedId, setSelectedId] = React.useState(projects[0]?.id ?? "");
   const panelRef = React.useRef<HTMLDivElement>(null);
@@ -93,7 +91,6 @@ const ProjectsSection: React.FC<ProjectsSectionProps> = ({
               minWidth: 0,
             }}
           >
-            <SectionTab label={tTabs("projects")} tone="dark" />
             <Typography
               id={headingId}
               variant="h2"
@@ -109,9 +106,7 @@ const ProjectsSection: React.FC<ProjectsSectionProps> = ({
               {headingAccent && (
                 <>
                   {" "}
-                  <Box component="span" sx={{ color: "secondary.main" }}>
-                    {headingAccent}
-                  </Box>
+                  {headingAccent}
                 </>
               )}
             </Typography>

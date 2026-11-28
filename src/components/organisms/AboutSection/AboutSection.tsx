@@ -1,6 +1,5 @@
 "use client";
 
-import { SectionTab } from "@/components/atoms";
 import { AboutBio, AboutHeader } from "@/components/molecules";
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
@@ -41,11 +40,10 @@ const cardSx = {
 } as const;
 
 const labelSx = {
-  fontSize: "0.78rem",
+  fontSize: "0.82rem",
+  fontWeight: 600,
   lineHeight: 1.4,
   color: "text.secondary",
-  textTransform: "uppercase",
-  letterSpacing: "0.08em",
 } as const;
 
 const listSx = {
@@ -69,7 +67,6 @@ const AboutSection: React.FC<AboutSectionProps> = ({
   secondaryCTA,
 }) => {
   const t = useTranslations("about");
-  const tTabs = useTranslations("sectionTabs");
   const darkFocus = { outline: "2px solid #f3f3f1", outlineOffset: "2px" };
 
   return (
@@ -87,7 +84,6 @@ const AboutSection: React.FC<AboutSectionProps> = ({
         }}
       >
         <Box sx={{ display: "flex", flexDirection: "column", gap: "1.25rem" }}>
-          <SectionTab label={tTabs("about")} />
           <Typography
             id="about-heading"
             variant="h2"
@@ -227,7 +223,6 @@ const AboutSection: React.FC<AboutSectionProps> = ({
                           borderRadius: "999px",
                           border: "1px solid",
                           borderColor: "divider",
-                          fontFamily: "var(--font-jetbrains-mono), monospace",
                           fontSize: "0.8rem",
                           lineHeight: 1.5,
                         }}

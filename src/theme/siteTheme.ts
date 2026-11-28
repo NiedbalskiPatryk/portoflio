@@ -69,12 +69,11 @@ export const siteTheme = createTheme({
   components: {
     MuiCssBaseline: {
       styleOverrides: {
-        // Dotted grid on the light ground; sections with their own background cover it.
         body: {
           backgroundColor: ground,
-          backgroundImage: "radial-gradient(#d6d6d0 1.1px, transparent 1.1px)",
-          backgroundSize: "22px 22px",
         },
+        // Avoid a single word stranded on the last line of a paragraph.
+        p: { textWrap: "pretty" },
         "@media (prefers-reduced-motion: reduce)": {
           "*, *::before, *::after": {
             animationDuration: "0.01ms !important",
