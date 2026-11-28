@@ -44,14 +44,16 @@ const ServicesSection: React.FC<ServicesSectionProps> = ({ heading }) => {
           </Typography>
         </Box>
 
+        {/* One paper sheet on the dotted ground, rows inside it. */}
         <Box
           component="ul"
           sx={{
             listStyle: "none",
             m: 0,
-            p: 0,
-            borderBottom: "1px solid",
-            borderColor: "divider",
+            px: { xs: "1.5rem", md: "3rem" },
+            py: { xs: "0.5rem", md: "1rem" },
+            bgcolor: "background.paper",
+            borderRadius: "1.5rem",
           }}
         >
           {SERVICE_KEYS.map((key) => (
@@ -60,22 +62,23 @@ const ServicesSection: React.FC<ServicesSectionProps> = ({ heading }) => {
               key={key}
               sx={{
                 display: "grid",
-                gridTemplateColumns: { xs: "1fr", md: "minmax(0, 5fr) minmax(0, 7fr)" },
-                alignItems: "baseline",
-                gap: { xs: "0.5rem", md: "2rem" },
-                py: { xs: "1.5rem", md: "2rem" },
-                borderTop: "1px solid",
-                borderColor: "divider",
+                gridTemplateColumns: { xs: "1fr", md: "minmax(0, 1fr) minmax(0, 1fr)" },
+                alignItems: "center",
+                gap: { xs: "0.5rem", md: "3rem" },
+                py: { xs: "1.5rem", md: "2.25rem" },
+                "& + li": { borderTop: "1px solid rgba(17, 17, 17, 0.12)" },
               }}
             >
               <Typography
                 variant="h3"
                 component="h3"
-                sx={{ fontSize: { xs: "1.5rem", md: "1.9rem" } }}
+                sx={{ fontSize: { xs: "1.6rem", md: "2.25rem" } }}
               >
                 {t(`items.${key}.title`)}
               </Typography>
-              <Typography sx={{ color: "text.secondary", maxWidth: "34rem" }}>
+              <Typography
+                sx={{ color: "text.secondary", fontSize: { md: "1.125rem" }, maxWidth: "30rem" }}
+              >
                 {t(`items.${key}.description`)}
               </Typography>
             </Box>
