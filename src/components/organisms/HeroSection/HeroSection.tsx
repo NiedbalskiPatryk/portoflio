@@ -95,6 +95,9 @@ export default function HeroSection() {
               </Box>
             </Box>
             {t("titleAfter")}
+            <Box component="span" sx={{ color: "secondary.main" }}>
+              .
+            </Box>
           </Typography>
 
           <Typography
